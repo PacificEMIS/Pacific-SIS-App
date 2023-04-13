@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pacific-SIS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="internectconnectionerror">No internet connection.</string>
+    <string name="networkerror">Something Went Wrong.</string>
+    <string name="invalid">Invalid Credentials.</string>
+</resources>

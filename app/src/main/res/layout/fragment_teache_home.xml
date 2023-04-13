@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    tools:context=".ui.teacher.fragment.TeacheHomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_color">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="84dp"
+                    android:background="@drawable/curveheader"
+                    android:padding="24dp">
+
+                    <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Today's Classes"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:padding="24dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:visibility="visible"
+                        android:id="@+id/rvClasses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lnNoData"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/llgreystrokedesign"
+                        android:backgroundTint="@color/white">
+                        <com.opensis.others.customtext.Custom_Text_View
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/large_text"
+                            android:textColor="@color/missing_attendance"
+                            android:text="No Classes Found today"
+                            android:layout_gravity="center"></com.opensis.others.customtext.Custom_Text_View>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:paddingBottom="24dp">
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/lnMissingAttendance"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/llredstrokedesign"
+                    android:paddingLeft="20dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/missing_attendance"></ImageView>
+
+                    <com.opensis.others.customtext.Custom_Text_View_Bold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="16dp"
+                       android:id="@+id/tvMissingAttendance"
+                        android:textColor="@color/missing_attendance"
+                        android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/lnNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:backgroundTint="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/llwhitestrokedesign"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="20dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/notifications_blue_24dp"></ImageView>
+
+                            <com.opensis.others.customtext.Custom_Text_View_Bold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="16dp"
+                                android:text="Notification"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/big_text"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/bar"></View>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvNotification"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            ></androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnShowAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/grey"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.opensis.others.customtext.Custom_Text_View
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Show All"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/lnNotice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:backgroundTint="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/llwhitestrokedesign"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="20dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/notice_blue_48dp"></ImageView>
+
+                            <com.opensis.others.customtext.Custom_Text_View_Bold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="16dp"
+                                android:text="Notice"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/big_text"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/bar"></View>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvNotice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            ></androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnNoticeShowAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/grey"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.opensis.others.customtext.Custom_Text_View
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Show All"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+
+                    android:id="@+id/lnCalender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lnEvent"
+                        android:backgroundTint="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/llwhitestrokedesign"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="20dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/list_bulleted_blue_48dp"></ImageView>
+
+                            <com.opensis.others.customtext.Custom_Text_View_Bold
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="16dp"
+                                android:text="Upcoming Calendar Events"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/big_text"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.12">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/calendar_black_48dp"></ImageView>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/bar"></View>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvCalendar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                           ></androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

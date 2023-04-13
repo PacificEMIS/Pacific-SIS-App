@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@drawable/llwhitestrokedesign"
+        android:backgroundTint="@color/white">
+        <LinearLayout
+            android:background="@drawable/llgreystrokedesign"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/school"></ImageView>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+            <com.opensis.others.customtext.Custom_Text_View_Bold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/big_text"
+                android:textColor="@color/black"
+                android:text="Sodepur High School"
+                android:id="@+id/tvSchoolName"></com.opensis.others.customtext.Custom_Text_View_Bold>
+            <com.opensis.others.customtext.Custom_Text_View
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/medium_text"
+                android:textColor="@color/black"
+                android:text="Sodepur Deshbandhu Nagar,Rail Gate No:1,Sodepur.Sodepur Deshbandhu Nagar,Rail Gate No:1,Sodepur"
+                android:id="@+id/tvSchoolAddress"></com.opensis.others.customtext.Custom_Text_View>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

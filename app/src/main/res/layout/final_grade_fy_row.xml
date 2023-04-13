@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="20dp">
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/llgreystrokedesign"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="20dp"
+        android:orientation="vertical">
+        <com.opensis.others.customtext.Custom_Text_View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bar"
+            android:id="@+id/tvGradeName"></com.opensis.others.customtext.Custom_Text_View>
+        <com.opensis.others.customtext.Custom_EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:textColor="@color/black"
+            android:inputType="number"
+            android:textSize="@dimen/medium_text"
+            android:id="@+id/etGrade"></com.opensis.others.customtext.Custom_EditText>
+    </LinearLayout>
+
+</LinearLayout>

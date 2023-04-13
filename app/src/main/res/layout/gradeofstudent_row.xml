@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/llwhitestrokedesign"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/dummyman"></de.hdodenhof.circleimageview.CircleImageView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+                    <com.opensis.others.customtext.Custom_Text_View_Bold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/medium_text"
+                        android:textColor="@color/black"
+                        android:text="Emily Jones"
+                        android:id="@+id/tvStudentName"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                    <com.opensis.others.customtext.Custom_Text_View
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/small_text"
+                        android:textColor="@color/black"
+                        android:text="ID:11"
+                        android:id="@+id/tvStudentID"></com.opensis.others.customtext.Custom_Text_View>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/llgreystrokedesign"
+                    android:padding="10dp">
+                    <com.opensis.others.customtext.Custom_EditText
+
+                        android:text="19"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:id="@+id/etNumber"
+                        android:textSize="@dimen/medium_text"
+                        android:textColor="@color/black"></com.opensis.others.customtext.Custom_EditText>
+                    <com.opensis.others.customtext.Custom_Text_View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textSize="@dimen/large_text"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"></com.opensis.others.customtext.Custom_Text_View>
+                    <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                        android:id="@+id/tvTotal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20"
+                        android:textSize="@dimen/large_text"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:enabled="false"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/grey">
+        <com.opensis.others.customtext.Custom_EditText
+            android:id="@+id/etComment"
+            android:paddingLeft="5dp"
+            android:textSize="@dimen/small_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="Enter Comment"
+            android:textColorHint="@color/bar"
+            android:enabled="false">
+
+        </com.opensis.others.customtext.Custom_EditText>
+    </LinearLayout>
+
+
+
+</LinearLayout>

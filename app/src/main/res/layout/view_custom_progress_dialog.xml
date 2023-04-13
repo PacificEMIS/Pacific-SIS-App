@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_gravity="center"
+
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:background="@drawable/llgreystrokedesign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:backgroundTint="@color/white">
+      <pl.droidsonroids.gif.GifImageView
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:src="@drawable/loader"
+          />
+      <!--<com.ipurna.customtext.Custom_Text_View_SemiBold
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="13sp"
+          android:textColor="@color/blue"
+          android:text="Loading..."
+          android:textStyle="bold"
+          android:layout_gravity="center|bottom"
+          android:layout_marginBottom="10dp"></com.ipurna.customtext.Custom_Text_View_SemiBold>-->
+
+
+    </FrameLayout>
+
+
+
+
+
+
+</LinearLayout>

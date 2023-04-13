@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.opensis">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Opensis"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.teacher.activity.MarkingPeriodDetailsActivity"
+            android:screenOrientation="userPortrait"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity android:name=".ui.common.activity.SpalshActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.teacher.activity.StudentOfGradeActivity" />
+        <activity android:name=".ui.teacher.activity.AssignmentDetailsActivity" />
+        <activity android:name=".ui.teacher.activity.SchoolDetailsActivity" />
+        <activity
+            android:name=".ui.teacher.activity.ClassDetailsActivity"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".ui.teacher.activity.TeacherDashboardActivity"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".ui.common.activity.LoginActivity"
+            android:screenOrientation="userPortrait"></activity>
+    </application>
+
+</manifest>

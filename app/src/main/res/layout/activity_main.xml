@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.common.activity.LoginActivity"
+    android:background="@mipmap/login_bg"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="bottom|center">
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:gravity="center"
+            android:background="@mipmap/login_logo">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@mipmap/pacific_sis_logo"></ImageView>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/lnWebAddress"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+            <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/large_text"
+                android:textColor="@color/white"
+                android:text="Type your school’s Pacific SIS web address below"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+            <LinearLayout
+
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width = "match_parent"
+                    android:background="@drawable/llwhitestrokedesign"
+                    android:layout_height = "match_parent"
+                    android:id = "@+id/layoutEmail"
+                    style = "@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+                    <EditText
+                        android:layout_width = "match_parent"
+                        android:layout_height = "wrap_content"
+                        android:id = "@+id/etWebAddress"
+                        android:hint = "Pacific Web Address"
+                        android:textColor="@color/white"
+                        android:background="@null"
+                        android:backgroundTint="@color/trasparent"
+                       />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <com.opensis.others.customtext.Custom_Text_View_Bold
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Submit"
+                android:textSize="@dimen/large_text"
+                android:background="@drawable/llwhitestrokedesign"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:id="@+id/tvSubmit"></com.opensis.others.customtext.Custom_Text_View_Bold>
+            <com.opensis.others.customtext.Custom_Text_View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/small_text"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:text="Note:  Mobile access to Pacific SIS must be turned on by school administrator and you must have a valid account to access Pacific SIS via a mobile device.Please contact school administrator if you are unable to login"></com.opensis.others.customtext.Custom_Text_View>
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/lnLogin"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/llwhitestrokedesign"
+                        android:padding="10dp">
+                        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_weight="1"
+                            android:id="@+id/tvUrl"
+                            android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                        <LinearLayout
+                            android:id="@+id/lnEdit"
+                            android:gravity="end"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/edit_white"></ImageView>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="vertical">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width = "match_parent"
+                            android:background="@drawable/llwhitestrokedesign"
+                            android:layout_height = "match_parent"
+                            style = "@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+                            <EditText
+                                android:layout_width = "match_parent"
+                                android:layout_height = "match_parent"
+                                android:id = "@+id/etEmail"
+                                android:hint = "Email Address"
+                                android:textSize="@dimen/large_text"
+                                android:textColor="@color/white"
+                                android:background="@null"
+                                android:backgroundTint="@color/trasparent"
+                                android:inputType = "textEmailAddress"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width = "0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/llwhitestrokedesign"
+                            android:layout_height = "match_parent"
+                            style = "@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+                            <EditText
+                                android:layout_width = "match_parent"
+                                android:layout_height = "match_parent"
+                                android:id = "@+id/etPassword"
+                                android:hint = "Password"
+                                android:textSize="@dimen/large_text"
+                                android:textColor="@color/white"
+                                android:background="@null"
+                                android:backgroundTint="@color/trasparent"
+                                android:inputType = "textPassword"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <com.opensis.others.customtext.Custom_Text_View_Bold
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="Login"
+                        android:textSize="@dimen/large_text"
+                        android:background="@drawable/llwhitestrokedesign"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/tvLogin"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                    <com.opensis.others.customtext.Custom_Text_View_Bold
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="Forgot Username/Password"
+                        android:textSize="@dimen/large_text"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/tvForgotUser"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                    <com.opensis.others.customtext.Custom_Text_View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/small_text"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="10dp"
+                        android:text="Note:  Mobile access to Pacific SIS must be turned on by school administrator and you must have a valid account to access Pacific SIS via a mobile device.Please contact school administrator if you are unable to login"></com.opensis.others.customtext.Custom_Text_View>
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

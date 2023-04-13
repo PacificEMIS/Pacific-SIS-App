@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp">
+    <LinearLayout
+        android:id="@+id/lnAttendance"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="@drawable/llwhiterightsidecurvedesign"
+        android:backgroundTint="@color/green">
+        <com.opensis.others.customtext.Custom_Text_View
+            android:id="@+id/tvAttendanceName"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/medium_text"
+            android:textColor="@color/white"
+            android:text="Persent(P)"></com.opensis.others.customtext.Custom_Text_View>
+
+    </LinearLayout>
+
+</LinearLayout>

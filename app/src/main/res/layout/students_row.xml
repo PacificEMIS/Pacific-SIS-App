@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/llwhitestrokedesign"
+    android:backgroundTint="@color/white"
+    android:layout_marginBottom="20dp"
+    android:padding="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgUser"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/dummyman"></de.hdodenhof.circleimageview.CircleImageView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp">
+            <com.opensis.others.customtext.Custom_Text_View_Bold
+                android:id="@+id/tvStudentName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/big_text"
+                android:textColor="@color/black"
+               ></com.opensis.others.customtext.Custom_Text_View_Bold>
+            <com.opensis.others.customtext.Custom_Text_View
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/medium_text"
+                android:textColor="@color/black"
+               ></com.opensis.others.customtext.Custom_Text_View>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/llwhitestrokedesign"
+    android:backgroundTint="@color/white"
+    android:layout_marginBottom="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.opensis.others.customtext.Custom_Text_View_Bold
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/large_text"
+            android:textColor="@color/black"
+            android:id="@+id/tvAssignmentdetailsName"
+            android:text="Analysyis Chemical Compostion"></com.opensis.others.customtext.Custom_Text_View_Bold>
+        <LinearLayout
+            android:id="@+id/lnMore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:src="@drawable/more_vert_black_24dp"></ImageView>
+        </LinearLayout>
+    </LinearLayout>
+    <com.opensis.others.customtext.Custom_Text_View
+        android:id="@+id/tvPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/medium_text"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:text="Pints : 30"></com.opensis.others.customtext.Custom_Text_View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <com.opensis.others.customtext.Custom_Text_View_Bold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/medium_text"
+                android:textColor="@color/black"
+                android:text="Assigned Date"></com.opensis.others.customtext.Custom_Text_View_Bold>
+            <com.opensis.others.customtext.Custom_Text_View
+                android:id="@+id/tvAssignedDate"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/small_text"
+                android:textColor="@color/black"
+                android:text="Assigned Date"></com.opensis.others.customtext.Custom_Text_View>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <com.opensis.others.customtext.Custom_Text_View_Bold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/medium_text"
+                android:textColor="@color/black"
+                android:text="Due Date"></com.opensis.others.customtext.Custom_Text_View_Bold>
+            <com.opensis.others.customtext.Custom_Text_View
+                android:id="@+id/tvDueDate"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/small_text"
+                android:textColor="@color/black"
+                android:text="Assigned Date"></com.opensis.others.customtext.Custom_Text_View>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

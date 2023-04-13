@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.teacher.activity.TeacherDashboardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lnHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.24"
+                    android:background="@mipmap/headerbg"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="24dp"
+                        android:paddingRight="24dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2">
+
+                            <ImageView
+                                android:id="@+id/imgMenu"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/burgermenu"></ImageView>
+
+                            <LinearLayout
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:background="@drawable/rounddesign"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/imgTenantLogo"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@mipmap/logo_small"></ImageView>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right">
+
+                            <ImageView
+                                android:id="@+id/imgTune"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/tune_white_24dp"></ImageView>
+
+                            <ImageView
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="8dp"
+                                android:src="@drawable/notifications_white_24dp"></ImageView>
+
+                            <ImageView
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="8dp"
+                                android:src="@drawable/search_white_24dp"></ImageView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:id="@+id/lnHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <!--dashboard fragment attached-->
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp">
+
+                    <LinearLayout
+                        android:id="@+id/llHome"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/lnHomeSelected"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:background="@drawable/rounddesign"
+                                android:backgroundTint="@color/text_color"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/imgHome"
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:src="@drawable/home"
+                                    app:tint="@color/white"></ImageView>
+                            </LinearLayout>
+
+                            <ImageView
+
+                                android:id="@+id/imgHomeNormal"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/home"
+                                android:visibility="gone"></ImageView>
+                        </FrameLayout>
+
+                        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Home"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/medium_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/llMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/lnMessageSelected"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:background="@drawable/rounddesign"
+                                android:backgroundTint="@color/text_color"
+                                android:gravity="center"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:src="@drawable/message"
+                                    app:tint="@color/white"></ImageView>
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/imgMessageNormal"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/message"
+                                android:visibility="visible"></ImageView>
+                        </FrameLayout>
+
+                        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Messages"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/medium_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llCourse"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/lnCourseSelected"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:background="@drawable/rounddesign"
+                                android:backgroundTint="@color/text_color"
+                                android:gravity="center"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:src="@drawable/classes"
+                                    app:tint="@color/white"></ImageView>
+                            </LinearLayout>
+
+                            <ImageView
+
+                                android:id="@+id/imgCourseNormal"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/classes"></ImageView>
+                        </FrameLayout>
+
+                        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Classes"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/medium_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llSchedule"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/lnScheduleSelected"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:background="@drawable/rounddesign"
+                                android:backgroundTint="@color/text_color"
+                                android:gravity="center"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:src="@drawable/schedule"
+                                    app:tint="@color/white"></ImageView>
+                            </LinearLayout>
+
+                            <ImageView
+
+                                android:id="@+id/imgScheduleNormal"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/schedule"
+                                android:visibility="visible"></ImageView>
+                        </FrameLayout>
+
+                        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Schedule"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/medium_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/llReport"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/lnReportSelected"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:background="@drawable/rounddesign"
+                                android:backgroundTint="@color/text_color"
+                                android:gravity="center"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:src="@drawable/reports"
+                                    app:tint="@color/white"></ImageView>
+                            </LinearLayout>
+
+                            <ImageView
+
+                                android:id="@+id/imgReportNormal"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/reports"
+                                android:visibility="visible"></ImageView>
+                        </FrameLayout>
+
+                        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Reports"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/medium_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnSchoolTune"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/trasparent1"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/llgreystrokedesign"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/lnCLose"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:gravity="end">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/close_black_48dp"></ImageView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:background="@drawable/llgreystrokedesign"
+                                android:orientation="vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="10dp">
+
+                                <com.opensis.others.customtext.Custom_Text_View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="School"
+                                    android:textColor="@color/bar"
+                                    android:textSize="@dimen/small_text"></com.opensis.others.customtext.Custom_Text_View>
+
+                                <Spinner
+                                    android:id="@+id/spSchool"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"></Spinner>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/llgreystrokedesign"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="10dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingRight="10dp">
+
+                                    <com.opensis.others.customtext.Custom_Text_View
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="School Year"
+                                        android:textColor="@color/bar"
+                                        android:textSize="@dimen/small_text"></com.opensis.others.customtext.Custom_Text_View>
+
+                                    <Spinner
+                                        android:id="@+id/spSchoolYear"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"></Spinner>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginTop="20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/llgreystrokedesign"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="5dp">
+                                    <com.opensis.others.customtext.Custom_Text_View
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/bar"
+                                        android:textSize="@dimen/small_text"
+                                        android:text="Marking Period"></com.opensis.others.customtext.Custom_Text_View>
+                                    <Spinner
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:id="@+id/spMarkingPeriod"></Spinner>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                                android:id="@+id/tvSubmit"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/llwhitestrokedesign"
+                                android:backgroundTint="@color/text_color"
+                                android:gravity="center"
+                                android:text="Submit"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/llDrawerPane"
+        layout="@layout/drawer_layout"
+        android:layout_width="290dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:fitsSystemWindows="false"
+        android:focusableInTouchMode="false" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

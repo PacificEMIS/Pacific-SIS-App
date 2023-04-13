@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:orientation="horizontal">
+    <com.opensis.others.customtext.Custom_Text_View
+        android:layout_gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/large_text"
+        android:textColor="@color/black"
+        android:id="@+id/tvAssignmentName"
+        android:layout_weight="1"
+        android:text="Homework"></com.opensis.others.customtext.Custom_Text_View>
+    <LinearLayout
+        android:id="@+id/lnMore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:gravity="right">
+        <com.opensis.others.customtext.Custom_Text_View
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/medium_text"
+            android:textColor="@color/black"
+            android:id="@+id/tvAssignmentNumber"
+            android:text="40%"></com.opensis.others.customtext.Custom_Text_View>
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_width="30dp"
+            android:layout_height="36dp"
+            android:src="@drawable/more_vert_black_24dp"></ImageView>
+    </LinearLayout>
+
+</LinearLayout>

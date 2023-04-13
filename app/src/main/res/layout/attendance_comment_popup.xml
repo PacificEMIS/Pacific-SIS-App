@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="350dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:backgroundTint="@color/white"
+    android:background="@drawable/llgreystrokedesign"
+    android:padding="20dp">
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.opensis.others.customtext.Custom_Text_View_Bold
+            android:id="@+id/tvStudentName"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/big_text"
+            android:textColor="@color/black"></com.opensis.others.customtext.Custom_Text_View_Bold>
+        <LinearLayout
+            android:id="@+id/lnCLose"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/close_black_48dp"></ImageView>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <com.opensis.others.customtext.Custom_EditText
+        android:id="@+id/etComment"
+        android:textSize="@dimen/medium_text"
+        android:textColor="@color/text_color"
+        android:gravity="top"
+        android:padding="10dp"
+        android:hint="Enter Comment"
+        android:background="@drawable/llgreystrokedesign"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"></com.opensis.others.customtext.Custom_EditText>
+    <com.opensis.others.customtext.Custom_Text_View_SemiBold
+        android:id="@+id/tvSubmit"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/llgreystrokedesign"
+        android:backgroundTint="@color/text_color"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/large_text"
+        android:text="Submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+</LinearLayout>

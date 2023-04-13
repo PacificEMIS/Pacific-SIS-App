@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="350dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:backgroundTint="@color/white"
+    android:background="@drawable/llgreystrokedesign"
+    android:padding="20dp">
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.opensis.others.customtext.Custom_Text_View_Bold
+            android:layout_weight="1"
+            android:text="Select Attendance Status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/big_text"
+            android:textColor="@color/black"></com.opensis.others.customtext.Custom_Text_View_Bold>
+        <LinearLayout
+            android:id="@+id/lnCLose"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/close_black_48dp"></ImageView>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rvAttendanceCode"></androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    >
+    <LinearLayout
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/llgreystrokedesign"
+        android:backgroundTint="@color/white">
+        <com.opensis.others.customtext.Custom_Text_View
+            android:textSize="@dimen/medium_text"
+            android:id="@+id/tvEvent"
+            android:layout_gravity="center"
+            android:textColor="@color/text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></com.opensis.others.customtext.Custom_Text_View>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:backgroundTint="@color/white"
+    android:background="@drawable/llgreystrokedesign">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/lnEdit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/edit_white"
+                android:tint="@color/text_color"
+                android:layout_gravity="center"></ImageView>
+
+            <com.opensis.others.customtext.Custom_Text_View
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tvEdit"
+                android:layout_gravity="center"
+                android:text="Edit Assignment Type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/text_color"
+                ></com.opensis.others.customtext.Custom_Text_View>>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/delete"
+                android:tint="@color/text_color"
+                android:layout_gravity="center"></ImageView>
+
+            <com.opensis.others.customtext.Custom_Text_View
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tvDelte"
+                android:layout_gravity="center"
+                android:text="Delete Assignment Type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/text_color"
+                ></com.opensis.others.customtext.Custom_Text_View>>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>
