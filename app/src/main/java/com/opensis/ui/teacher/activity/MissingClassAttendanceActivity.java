@@ -83,7 +83,7 @@ public class MissingClassAttendanceActivity extends AppCompatActivity implements
     }
 
     private void initView() {
-//
+
         pref = new Pref(MissingClassAttendanceActivity.this);
         imgBack=(ImageView)findViewById(R.id.imgBack);
         attendate=getIntent().getStringExtra("date");
