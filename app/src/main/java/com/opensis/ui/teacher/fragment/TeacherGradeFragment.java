@@ -1,9 +1,12 @@
 package com.opensis.ui.teacher.fragment;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -12,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.opensis.R;
@@ -31,18 +35,15 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 
-public class TeacherGradeFragment extends Fragment {
+public class TeacherGradeFragment extends Fragment implements View.OnClickListener {
 
     View view;
-    RecyclerView rvItem;
-    ArrayList<TeacherGradeModel> itmList=new ArrayList<>();
-    Pref pref;
+    LinearLayout lnChildFragment;
+    TextView tvGradeBook,tvInputGrades;
     int courseSectionID;
-    LinearLayout lnNoData;
-    int academicYear;
     String gradescaletype;
-    LinearLayout lnAccess;
-
+    private FragmentTransaction transaction;
+    int courseID;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -52,152 +53,65 @@ public class TeacherGradeFragment extends Fragment {
         return view;
     }
 
+
     private void initView(){
         courseSectionID= Integer.parseInt(getArguments().getString("courseSectionID"));
         gradescaletype=getArguments().getString("gradescaletype");
-        lnNoData=(LinearLayout)view.findViewById(R.id.lnNoData);
-        lnAccess=(LinearLayout)view.findViewById(R.id.lnAccess);
-        pref=new Pref(getContext());
+        courseID=getArguments().getInt("courseID");
+        lnChildFragment=(LinearLayout) view.findViewById(R.id.lnChildFragment);
+        tvInputGrades=(TextView) view.findViewById(R.id.tvInputGrades);
+        tvGradeBook=(TextView) view.findViewById(R.id.tvGradeBook);
 
-        academicYear=pref.getAcademicYear();
+        viewGradeBookFragment();
 
-        rvItem=(RecyclerView)view.findViewById(R.id.rvItem);
-        rvItem.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
-
-      }
-
-    private void setAdapter(){
-        TeacherGradeAdapter gradeAdapter=new TeacherGradeAdapter(itmList,getContext(),courseSectionID);
-        rvItem.setAdapter(gradeAdapter);
+        tvInputGrades.setOnClickListener(this);
+        tvGradeBook.setOnClickListener(this);
     }
 
-    public void getRefreshToken(JSONObject jsonObject) {
-        String url=pref.getAPI()+"User/RefreshToken";
+    private void viewGradeBookFragment(){
+        Log.d("riku","001");
+
+        GradeBookGradesFragment fragment = new GradeBookGradesFragment();
+        Bundle bundle = new Bundle();
+        bundle.putInt("courseSectionID", courseSectionID);
+        bundle.putString("gradescaletype", gradescaletype);
+        fragment.setArguments(bundle);
+
+        transaction = getChildFragmentManager().beginTransaction();
+        transaction.replace(R.id.lnChildFragment, fragment, "gradebook");
+        transaction.commit();
+
+        tvGradeBook.setTextColor(Color.parseColor("#FFFFFFFF"));
+        tvInputGrades.setTextColor(Color.parseColor("#094990"));
+
+        tvGradeBook.setBackgroundTintList(ContextCompat.getColorStateList(getContext(), R.color.green));
+        tvInputGrades.setBackgroundTintList(ContextCompat.getColorStateList(getContext(), R.color.white));
 
 
-        new PostJsonDataParser(getContext(), Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
-            @Override
-            public void onGetResponse(JSONObject response) {
-                if (response != null) {
-                    Log.d("dashboardresponse",response.toString());
-
-                    try {
-                        boolean _failure = response.optBoolean("_failure");
-                        String _message=response.optString("_message");
-                        if (_failure){
-                            Intent intent=new Intent(getContext(), LoginActivity.class);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
-
-
-                        }else {
-                            String _token=response.optString("_token");
-                            pref.saveToken(_token);
-                            JSONObject jsonObject=new JSONObject();
-                            try {
-                                jsonObject.put("courseSectionId",courseSectionID);
-                                jsonObject.put("SearchValue",null);
-                                jsonObject.put("allCourse",true);
-                                jsonObject.put("includeInactive", false);
-                                jsonObject.put("_tenantName",pref.getTenatName());
-                                jsonObject.put("_userName",pref.getName());
-                                jsonObject.put("_token",pref.getToken());
-                                jsonObject.put("tenantId",AppData.tenatID);
-                                jsonObject.put("schoolId",pref.getSchoolID());
-                                jsonObject.put("academicYear",academicYear);
-                                jsonObject.put("markingPeriodStartDate",pref.getPeriodStartYear());
-                                jsonObject.put("markingPeriodEndDate",pref.getPeriodEndYear());
-                                getGraderBookItem(jsonObject);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        }
-
-
-
-
-
-
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        });
 
 
     }
 
 
-    public void getGraderBookItem(JSONObject jsonObject) {
-        rvItem.setVisibility(View.VISIBLE);
-        lnNoData.setVisibility(View.GONE);
-        itmList.clear();
+    private void viewInputGradeFragment(){
+        Log.d("riku","001");
 
-        String url=pref.getAPI()+"StaffPortalGradebook/getGradebookGrade";
+        InputGradeFragment fragment = new InputGradeFragment();
+        Bundle bundle = new Bundle();
+        bundle.putInt("courseSectionID", courseSectionID);
+        bundle.putString("gradescaletype", gradescaletype);
+        bundle.putInt("courseID",courseID);
+        fragment.setArguments(bundle);
 
+        transaction = getChildFragmentManager().beginTransaction();
+        transaction.replace(R.id.lnChildFragment, fragment, "inputgrade");
+        transaction.commit();
 
-        new PostJsonDataParser(getContext(), Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
-            @Override
-            public void onGetResponse(JSONObject response) {
-                if (response != null) {
-                    Log.d("dashboardresponse",response.toString());
-                    try {
-                        boolean _failure = response.optBoolean("_failure");
-                        String _message=response.optString("_message");
-                        if (_failure){
+        tvGradeBook.setTextColor(Color.parseColor("#094990"));
+        tvInputGrades.setTextColor(Color.parseColor("#FFFFFF"));
 
-                            rvItem.setVisibility(View.GONE);
-                            lnNoData.setVisibility(View.VISIBLE);
-
-                        }else {
-                            JSONArray assignmentsListViewModels = response.optJSONArray("assignmentsListViewModels");
-                            if (assignmentsListViewModels.length() > 0) {
-                                for (int i = 0; i < assignmentsListViewModels.length(); i++) {
-                                    JSONObject obj = assignmentsListViewModels.optJSONObject(i);
-                                    String title=obj.optString("title");
-                                    int assignmentId=obj.optInt("assignmentId");
-                                    int assignmentTypeId=obj.optInt("assignmentTypeId");
-                                    String assignmentTitle=obj.optString("assignmentTitle");
-                                    String assignmentDate=obj.optString("assignmentDate").replace("T00:00:00","");
-                                    String dueDate=obj.optString("dueDate").replace("T00:00:00","");
-
-                                    JSONArray studentsListViewModels=obj.optJSONArray("studentsListViewModels");
-                                    String studentList=studentsListViewModels.toString();
-                                    TeacherGradeModel gradeModel=new TeacherGradeModel();
-                                    gradeModel.setStudentList(studentList);
-                                    gradeModel.setAssignedDate(assignmentDate);
-                                    gradeModel.setDueDate(dueDate);
-                                    gradeModel.setGradeName(assignmentTitle);
-                                    gradeModel.setGradeType(title);
-                                    gradeModel.setGraderID(assignmentId);
-                                    gradeModel.setAssignmentTypeId(assignmentTypeId);
-                                    gradeModel.setGradeList(assignmentsListViewModels.toString());
-                                    itmList.add(gradeModel);
-
-
-                                }
-                                rvItem.setVisibility(View.VISIBLE);
-                                lnNoData.setVisibility(View.GONE);
-
-
-                                setAdapter();
-                            }else {
-
-                            }
-                        }
-
-
-
-
-
-
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        });
+        tvGradeBook.setBackgroundTintList(ContextCompat.getColorStateList(getContext(), R.color.white));
+        tvInputGrades.setBackgroundTintList(ContextCompat.getColorStateList(getContext(), R.color.green));
 
 
 
@@ -205,29 +119,11 @@ public class TeacherGradeFragment extends Fragment {
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-
-        if (gradescaletype.equals("Ungraded")){
-            rvItem.setVisibility(View.GONE);
-            lnNoData.setVisibility(View.GONE);
-            lnAccess.setVisibility(View.VISIBLE);
+    public void onClick(View v) {
+        if (v==tvGradeBook){
+            viewGradeBookFragment();
         }else {
-            JSONObject obj = new JSONObject();
-            JSONObject accessobj = new JSONObject();
-            try {
-                obj.put("tenantId", AppData.tenatID);
-                obj.put("userId", 0);
-                obj.put("userAccessLog", accessobj);
-                obj.put("_tenantName", pref.getTenatName());
-                obj.put("_userName", pref.getName());
-                obj.put("_token", pref.getToken());
-                obj.put("schoolId", pref.getSchoolID());
-                obj.put("email", pref.getEmail());
-                getRefreshToken(obj);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
+            viewInputGradeFragment();
         }
     }
 }

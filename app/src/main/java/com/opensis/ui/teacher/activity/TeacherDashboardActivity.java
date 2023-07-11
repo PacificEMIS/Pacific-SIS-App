@@ -2,23 +2,38 @@ package com.opensis.ui.teacher.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.Manifest;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Base64;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.opensis.R;
@@ -43,6 +58,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.InputStream;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -86,8 +104,17 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
 
     int monthGap;
     Date date,date1;
+    ImageView fabCamera;
+    AlertDialog alerDialog1;
 
-
+    private final int PERMISSION_CODE_CAM = 100;
+    private final int PERMISSION_CODE = 200;
+    private Uri filepath = null;
+    private static final int CAMERA_REQUEST = 1;
+    private static final int REQUEST_GALLERY_CODE = 200;
+    private Uri imageUri, uri;
+    File file;
+    String encodedImage;
 
 
 
@@ -102,6 +129,7 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
 
     private void initView(){
         pref=new Pref(TeacherDashboardActivity.this);
+        fabCamera=(ImageView)findViewById(R.id.fabCamera);
         token=getIntent().getStringExtra("token");
         ImageView imgTenantLogo=(ImageView)findViewById(R.id.imgTenantLogo);
         imgUser=(ImageView)findViewById(R.id.imgUser);
@@ -200,6 +228,7 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
         llsLogout.setOnClickListener(this);
         llsSchedule.setOnClickListener(this);
         llSchedule.setOnClickListener(this);
+        fabCamera.setOnClickListener(this);
 
 
         JSONObject schoolOBJ=new JSONObject();
@@ -479,6 +508,8 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
             viewScheduleFragment();
         }else if (view==llSchedule){
             viewScheduleFragment();
+        }else if (view==fabCamera){
+            camerapopUp();
         }
     }
 
@@ -961,5 +992,272 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
         monthsBetween += end.get(Calendar.MONTH)-start.get(Calendar.MONTH);
         monthsBetween  += (end.get(Calendar.YEAR)-start.get(Calendar.YEAR))*12;
         return monthsBetween;
+    }
+
+
+    private void camerapopUp() {
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(TeacherDashboardActivity.this, R.style.CustomDialogNew);
+        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View dialogView = inflater.inflate(R.layout.picture_popup, null);
+        dialogBuilder.setView(dialogView);
+        LinearLayout lnTakeCamera = (LinearLayout) dialogView.findViewById(R.id.lnTakeCamera);
+        LinearLayout lnGallery = (LinearLayout) dialogView.findViewById(R.id.lnGallery);
+        lnTakeCamera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkTakePermissions();
+            }
+        });
+        lnGallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkPermissions();
+            }
+        });
+
+
+        alerDialog1 = dialogBuilder.create();
+        alerDialog1.setCancelable(true);
+        Window window = alerDialog1.getWindow();
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+        window.setGravity(Gravity.CENTER);
+        alerDialog1.show();
+    }
+
+
+    private void checkTakePermissions() {
+        int cameraPermission = ActivityCompat.checkSelfPermission(TeacherDashboardActivity.this, Manifest.permission.CAMERA);
+        int storagePermission = ActivityCompat.checkSelfPermission(TeacherDashboardActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE);
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (cameraPermission != PackageManager.PERMISSION_GRANTED || storagePermission != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(TeacherDashboardActivity.this, new String[]{Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_CODE_CAM);
+            } else {
+                cameraIntent();
+            }
+        } else {
+            cameraIntent();
+
+        }
+    }
+
+    private void checkPermissions() {
+        int cameraPermission = ActivityCompat.checkSelfPermission(TeacherDashboardActivity.this, Manifest.permission.CAMERA);
+        int storagePermission = ActivityCompat.checkSelfPermission(TeacherDashboardActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE);
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (cameraPermission != PackageManager.PERMISSION_GRANTED ||
+                    storagePermission != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(TeacherDashboardActivity.this, new String[]{Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_CODE);
+            } else {
+
+                galleryIntent();
+            }
+        } else {
+            galleryIntent();
+
+        }
+    }
+
+    private void cameraIntent() {
+
+        ContentValues values = new ContentValues();
+        values.put(MediaStore.Images.Media.TITLE, "Picture");
+        values.put(MediaStore.Images.Media.DESCRIPTION, "From your Camera");
+        imageUri = getContentResolver().insert(
+                MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
+        Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+        cameraIntent.putExtra("android.intent.extras.CAMERA_FACING", 1);
+        cameraIntent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION | Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        startActivityForResult(cameraIntent, CAMERA_REQUEST);
+
+    }
+
+    private String getRealPathFromURIPath(Uri contentURI) {
+        String[] proj = {MediaStore.Images.Media.DATA};
+        Cursor cursor = managedQuery(contentURI, proj, null, null, null);
+        int column_index = cursor
+                .getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+        cursor.moveToFirst();
+        return cursor.getString(column_index);
+    }
+
+    public static Bitmap cropToSquare(Bitmap bitmap) {
+        int width = bitmap.getWidth();
+        int height = bitmap.getHeight();
+        int newWidth = (height > width) ? width : height;
+        int newHeight = (height > width) ? height - (height - width) : height;
+        int cropW = (width - height) / 2;
+        cropW = (cropW < 0) ? 0 : cropW;
+        int cropH = (height - width) / 2;
+        cropH = (cropH < 0) ? 0 : cropH;
+        Bitmap cropImg = Bitmap.createBitmap(bitmap, cropW, cropH, newWidth, newHeight);
+        return cropImg;
+    }
+
+    private void galleryIntent() {
+        Intent openGalleryIntent = new Intent(Intent.ACTION_PICK);
+        openGalleryIntent.setType("image/*");
+        startActivityForResult(openGalleryIntent, REQUEST_GALLERY_CODE);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == PERMISSION_CODE) {
+            if (grantResults.length > 0) {
+                //from gallery pick permission
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+                    galleryIntent();
+                } else {
+
+                    //  startActivityForResult(getTakeImageChooserIntent(), 200);
+                }
+            }
+        } else if (requestCode == PERMISSION_CODE_CAM && grantResults.length > 0) {
+            //from camera take permission
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+                cameraIntent();
+            } else {
+
+            }
+        }
+    }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case CAMERA_REQUEST:
+
+                if (resultCode == Activity.RESULT_OK) {
+                    try {
+                        try {
+
+                            //messageAlert();
+                            String imageurl = /*"file://" +*/ getRealPathFromURIPath(imageUri);
+                            file = new File(imageurl);
+                            alerDialog1.dismiss();
+
+                            BitmapFactory.Options o = new BitmapFactory.Options();
+                            o.inSampleSize = 2;
+                            Bitmap bm = cropToSquare(BitmapFactory.decodeFile(imageurl, o));
+                            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                            bm.compress(Bitmap.CompressFormat.JPEG, 10, baos); //bm is the bitmap object
+                            byte[] b = baos.toByteArray();
+                            encodedImage = Base64.encodeToString(b, Base64.DEFAULT);
+                            JSONObject jsonObject=new JSONObject();
+                            jsonObject.put("staffId",pref.getUserID());
+                            jsonObject.put("staffPhoto",encodedImage);
+                            jsonObject.put("staffThumbnailPhoto",encodedImage);
+                            jsonObject.put("tenantId",AppData.tenatID);
+                            jsonObject.put("updatedBy","3d37d665-24dc-43e4-8d68-407b6d473d19");
+                            JSONObject dataOBJ=new JSONObject();
+                            dataOBJ.put("staffMaster",jsonObject);
+                            dataOBJ.put("_tenantName",pref.getTenatName());
+                            dataOBJ.put("_userName",pref.getName());
+                            dataOBJ.put("_token",pref.getToken());
+                            dataOBJ.put("tenantId",AppData.tenatID);
+                            dataOBJ.put("schoolId",pref.getSchoolID());
+                            addTeacherProfile(dataOBJ);
+
+
+
+                            // al2.dismiss();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    } catch (OutOfMemoryError e) {
+                        e.printStackTrace();
+                    }
+
+                }
+                break;
+            case REQUEST_GALLERY_CODE:
+                if (resultCode == Activity.RESULT_OK) {
+                    InputStream imageStream = null;
+                    try {
+                        try {
+                            uri = data.getData();
+                            String filePath = getRealPathFromURIPath(uri);
+                            file = new File(filePath);
+                            alerDialog1.dismiss();
+                            imageStream = getContentResolver().openInputStream(uri);
+                            Bitmap bm = cropToSquare(BitmapFactory.decodeStream(imageStream));
+                            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                            bm.compress(Bitmap.CompressFormat.JPEG, 10, baos); //bm is the bitmap object
+                            byte[] b = baos.toByteArray();
+                            encodedImage = Base64.encodeToString(b, Base64.DEFAULT);
+
+                            JSONObject jsonObject=new JSONObject();
+                            jsonObject.put("staffId",pref.getUserID());
+                            jsonObject.put("staffPhoto",encodedImage);
+                            jsonObject.put("staffThumbnailPhoto",encodedImage);
+                            jsonObject.put("tenantId",AppData.tenatID);
+                            jsonObject.put("updatedBy","3d37d665-24dc-43e4-8d68-407b6d473d19");
+                            JSONObject dataOBJ=new JSONObject();
+                            dataOBJ.put("staffMaster",jsonObject);
+                            dataOBJ.put("_tenantName",pref.getTenatName());
+                            dataOBJ.put("_userName",pref.getName());
+                            dataOBJ.put("_token",pref.getToken());
+                            dataOBJ.put("tenantId",AppData.tenatID);
+                            dataOBJ.put("schoolId",pref.getSchoolID());
+                            addTeacherProfile(dataOBJ);
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    } catch (OutOfMemoryError e) {
+                        e.printStackTrace();
+                    }
+
+                }
+                break;
+
+
+        }
+    }
+
+
+    public void addTeacherProfile(JSONObject jsonObject) {
+
+        String url=pref.getAPI()+"Staff/addUpdateStaffPhoto";
+
+
+        new PostJsonDataParser(TeacherDashboardActivity.this, Request.Method.PUT,url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
+            @Override
+            public void onGetResponse(JSONObject response) {
+                if (response != null) {
+                    Log.d("dashboardresponse",response.toString());
+
+                    try {
+                        boolean _failure = response.optBoolean("_failure");
+                        String _message=response.optString("_message");
+                        if (_failure){
+
+
+
+                        }else {
+
+                            Toast.makeText(TeacherDashboardActivity.this,_message,Toast.LENGTH_LONG).show();
+                            pref.saveUserPhoto(encodedImage);
+                            byte[] decodedString = Base64.decode(encodedImage, Base64.DEFAULT);
+                            Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                            imgUser.setImageBitmap(decodedByte);
+                        }
+
+
+
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
+
     }
 }

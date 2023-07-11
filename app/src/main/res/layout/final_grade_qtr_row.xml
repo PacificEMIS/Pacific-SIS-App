@@ -19,6 +19,7 @@
        android:text="Total not 100%"
         android:id="@+id/tvQtrHundred"></com.opensis.others.customtext.Custom_Text_View>
     <LinearLayout
+        android:id="@+id/lnQtrGrade"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="64dp"
@@ -43,6 +44,7 @@
             android:id="@+id/etGradeTotal"></com.opensis.others.customtext.Custom_EditText>
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/lnQtrExam"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="64dp"

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.teacher.fragment.InputGradeFragment"
+    android:padding="10dp">
+
+    <!-- TODO: Update blank fragment layout -->
+  <LinearLayout
+      android:layout_width="200dp"
+      android:layout_height="50dp"
+      android:background="@drawable/llgreystrokedesign">
+      <Spinner
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:id="@+id/spMarkingPeriod"></Spinner>
+  </LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp">
+       <com.opensis.others.customtext.Custom_Text_View_SemiBold
+           android:layout_width="0dp"
+           android:layout_weight="0.5"
+           android:layout_height="wrap_content"
+           android:textColor="@color/black"
+           android:textSize="14sp"
+           android:text="Student Details"
+           android:layout_gravity="center"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+       <LinearLayout
+           android:visibility="visible"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:layout_marginLeft="10dp">
+           <com.opensis.others.customtext.Custom_Text_View_SemiBold
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="14sp"
+               android:text="Percent"
+               android:layout_gravity="center"
+               android:textColor="@color/black"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+           <com.suke.widget.SwitchButton
+               android:layout_marginLeft="5dp"
+               android:id="@+id/switch_button"
+               app:sb_checked="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"></com.suke.widget.SwitchButton>
+           <com.opensis.others.customtext.Custom_Text_View_SemiBold
+               android:layout_marginLeft="5dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="14sp"
+               android:text="Letter Grade"
+               android:layout_gravity="center"
+               android:textColor="@color/black"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+       </LinearLayout>
+   </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/rvItem"></androidx.recyclerview.widget.RecyclerView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:gravity="center|right">
+        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/llgreystrokedesign"
+            android:backgroundTint="@color/text_color"
+            android:text="Submit"
+            android:id="@+id/tvSubmit"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="@dimen/big_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+    </LinearLayout>
+
+</LinearLayout>

@@ -141,6 +141,8 @@
                                     android:text="Grades"
                                     android:textColor="@color/white"
                                     android:textSize="@dimen/medium_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+
+
                             </LinearLayout>
                         </HorizontalScrollView>
                     </LinearLayout>

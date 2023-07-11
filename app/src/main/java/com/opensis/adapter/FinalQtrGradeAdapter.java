@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -38,6 +39,19 @@ public class FinalQtrGradeAdapter extends RecyclerView.Adapter<FinalQtrGradeAdap
         myViewHolder.etGradeTotal.setText(itemList.get(i).getGradeTotalMarks());
         myViewHolder.etGradeExam.setText(itemList.get(i).getGradeMarks());
 
+        if (itemList.get(i).isDoesExam()){
+            myViewHolder.lnQtrExam.setVisibility(View.VISIBLE);
+        }else {
+            myViewHolder.lnQtrExam.setVisibility(View.GONE);
+        }
+
+
+        if (itemList.get(i).isDoesGrades()){
+            myViewHolder.lnQtrGrade.setVisibility(View.VISIBLE);
+        }else {
+            myViewHolder.lnQtrGrade.setVisibility(View.GONE);
+        }
+
 
 
 
@@ -52,6 +66,7 @@ public class FinalQtrGradeAdapter extends RecyclerView.Adapter<FinalQtrGradeAdap
     public class MyViewHolder extends RecyclerView.ViewHolder {
         EditText etGradeTotal,etGradeExam;
         TextView tvGradeName,tvGradeTotal,tvGradeExam,tvQtrHundred;
+        LinearLayout lnQtrGrade,lnQtrExam;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -62,6 +77,9 @@ public class FinalQtrGradeAdapter extends RecyclerView.Adapter<FinalQtrGradeAdap
             tvGradeName=(TextView)itemView.findViewById(R.id.tvGradeName);
             tvGradeTotal=(TextView)itemView.findViewById(R.id.tvGradeTotal);
             tvQtrHundred=(TextView) itemView.findViewById(R.id.tvQtrHundred);
+
+            lnQtrExam=(LinearLayout) itemView.findViewById(R.id.lnQtrExam);
+            lnQtrGrade=(LinearLayout) itemView.findViewById(R.id.lnQtrGrade);
 
 
         }

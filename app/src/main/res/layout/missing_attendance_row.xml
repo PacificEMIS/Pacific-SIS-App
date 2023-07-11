@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/llwhitestrokedesign"
+    android:backgroundTint="@color/white"
+    android:layout_marginBottom="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.opensis.others.customtext.Custom_Text_View_Bold
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/small_text"
+                android:text="CHEM002"
+                ></com.opensis.others.customtext.Custom_Text_View_Bold>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.opensis.others.customtext.Custom_Text_View_Bold
+                android:id="@+id/tvCourseName"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/class_color"
+                android:textSize="@dimen/big_text"
+                android:text="CHEM002"></com.opensis.others.customtext.Custom_Text_View_Bold>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/bar"></View>
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                >
+                <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                    android:id="@+id/tvCourseSection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/large_text"
+                    android:text="Chemistry"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="@color/text_color"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounddesign"></LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           >
+
+            <com.opensis.others.customtext.Custom_Text_View
+                android:layout_gravity="center"
+                android:id="@+id/tvGrade"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/medium_text"
+                android:textColor="@color/black"
+                android:text="Period 2"></com.opensis.others.customtext.Custom_Text_View>
+            <com.opensis.others.customtext.Custom_Text_View
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/large_text"
+                android:textColor="@color/black"
+                android:text="-"></com.opensis.others.customtext.Custom_Text_View>
+            <com.opensis.others.customtext.Custom_Text_View
+                android:layout_gravity="center"
+                android:id="@+id/tvPeriod"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/large_text"
+                android:textColor="@color/black"
+                android:text="10:00 AM"></com.opensis.others.customtext.Custom_Text_View>
+            <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                android:layout_marginLeft="10dp"
+                android:layout_width="110dp"
+                android:layout_height="44dp"
+                android:background="@drawable/llwhitestrokedesign"
+                android:backgroundTint="@color/text_color"
+                android:gravity="center"
+                android:textSize="@dimen/medium_text"
+                android:textColor="@color/white"
+                android:text="Take \nAttendance"
+                android:id="@+id/tvTakeAttendance"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

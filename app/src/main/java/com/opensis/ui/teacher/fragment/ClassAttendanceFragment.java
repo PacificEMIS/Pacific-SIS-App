@@ -311,7 +311,7 @@ public class ClassAttendanceFragment extends Fragment implements View.OnClickLis
                                     String studentInternalId=studeOBJ.optString("studentInternalId");
 
                                     String alternateId=Util.getFreshValue(studeOBJ.optString("alternateId"),"-");
-                                    JSONArray studentAttendanceComments=obj.optJSONArray("studentAttendanceComments");
+                                  JSONArray studentAttendanceComments=obj.optJSONArray("studentAttendanceComments");
                                     if (studentAttendanceComments.length()>0){
                                         JSONObject commentOBJ=studentAttendanceComments.optJSONObject(0);
                                         comment=commentOBJ.optString("comment");

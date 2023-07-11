@@ -117,7 +117,7 @@ public class ClassStudentFragment extends Fragment {
                                     String middleName= Util.getFreshValue(studentMasterOBJ.optString("middleName"));
                                     String name=firstGivenName+" "+middleName+" "+lastFamilyName;
                                     String studentInternalId=studentMasterOBJ.optString("studentInternalId");
-                                    String studentPhoto=Util.getFreshValue(studentMasterOBJ.optString("studentPhoto"),"-");
+                                    String studentPhoto=Util.getFreshValue(studentMasterOBJ.optString("studentPhoto"),"");
                                     String personalEmail=Util.getFreshValue(studentMasterOBJ.optString("personalEmail"),"");
                                     String mobilePhone=Util.getFreshValue(studentMasterOBJ.optString("mobilePhone"),"");
                                     String alternateId=Util.getFreshValue(studentMasterOBJ.optString("alternateId"),"");

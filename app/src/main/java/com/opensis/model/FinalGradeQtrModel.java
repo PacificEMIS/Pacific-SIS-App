@@ -3,6 +3,7 @@ package com.opensis.model;
 public class FinalGradeQtrModel {
     String gradeName,gradeTotalMarks,gradeMarks;
     int markingPeriodId,qtrUpdateID;
+    boolean doesGrades,doesExam;
 
     public String getGradeName() {
         return gradeName;
@@ -42,5 +43,21 @@ public class FinalGradeQtrModel {
 
     public void setQtrUpdateID(int qtrUpdateID) {
         this.qtrUpdateID = qtrUpdateID;
+    }
+
+    public boolean isDoesGrades() {
+        return doesGrades;
+    }
+
+    public void setDoesGrades(boolean doesGrades) {
+        this.doesGrades = doesGrades;
+    }
+
+    public boolean isDoesExam() {
+        return doesExam;
+    }
+
+    public void setDoesExam(boolean doesExam) {
+        this.doesExam = doesExam;
     }
 }

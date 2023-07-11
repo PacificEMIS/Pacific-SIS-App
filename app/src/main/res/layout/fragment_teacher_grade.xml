@@ -4,50 +4,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".ui.teacher.fragment.TeacherGradeFragment">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:visibility="visible"
-        android:id="@+id/rvItem"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
-
     <LinearLayout
-        android:visibility="gone"
-        android:id="@+id/lnNoData"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <com.opensis.others.customtext.Custom_Text_View_SemiBold
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="No Data"
-            android:textColor="@color/black"
-            android:textSize="16sp"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
-    </LinearLayout>
-    <LinearLayout
-        android:visibility="gone"
-        android:id="@+id/lnAccess"
-        android:orientation="vertical"
-        android:background="@color/totalpercentage"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:gravity="center">
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/stop">
-        </ImageView>
         <com.opensis.others.customtext.Custom_Text_View_SemiBold
-            android:textAlignment="center"
+            android:id="@+id/tvGradeBook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/missing_attendance"
-            android:text="You cannot access Grades because the grade scale for the course section is not set"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/llwhitecurvedesign"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text"
+            android:text="Gradebook Grades"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+            android:layout_marginLeft="20dp"
+            android:id="@+id/tvInputGrades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/llwhitecurvedesign"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/medium_text"
+            android:text="Input Final Grades"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lnChildFragment"
+        android:orientation="vertical">
+    </LinearLayout>
+
+
 
 </LinearLayout>

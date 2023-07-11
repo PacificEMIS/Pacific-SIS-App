@@ -26,6 +26,7 @@ import com.opensis.R;
 import com.opensis.others.parser.PostJsonDataParser;
 import com.opensis.others.utility.Api;
 import com.opensis.others.utility.Pref;
+import com.opensis.others.utility.Util;
 import com.opensis.ui.teacher.activity.TeacherDashboardActivity;
 
 import org.json.JSONException;
@@ -126,6 +127,9 @@ public class SpalshActivity extends AppCompatActivity {
                             pref.saveMemberShip(membershipName);
                             String _token=response.optString("_token");
                             pref.saveToken(_token);
+                            String userPhoto= Util.getFreshValue(response.optString("userPhoto"),"");
+                            pref.saveUserPhoto(userPhoto);
+
                             Intent intent=new Intent(SpalshActivity.this, TeacherDashboardActivity.class);
                             intent.putExtra("token",_token);
                             startActivity(intent);

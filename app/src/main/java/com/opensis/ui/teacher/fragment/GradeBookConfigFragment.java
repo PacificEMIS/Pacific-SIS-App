@@ -82,6 +82,8 @@ public class GradeBookConfigFragment extends Fragment implements View.OnClickLis
     boolean editFlag;
     LinearLayout lnAccess,lnGradeBook;
     String gradescaletype;
+    LinearLayout lnFullYearExam;
+    boolean qtrExam,semExam,fyExam;
 
 
     @Override
@@ -95,6 +97,7 @@ public class GradeBookConfigFragment extends Fragment implements View.OnClickLis
 
     private void initView() {
         pref = new Pref(getContext());
+        lnFullYearExam=(LinearLayout)view.findViewById(R.id.lnFullYearExam);
         etDays = (EditText) view.findViewById(R.id.etDays);
         etPercent = (EditText) view.findViewById(R.id.etPercent);
         lnSem = (LinearLayout) view.findViewById(R.id.lnSem);
@@ -303,6 +306,7 @@ public class GradeBookConfigFragment extends Fragment implements View.OnClickLis
                                     qtrModel.setGradeTotalMarks(gradingPercentage);
                                     qtrModel.setGradeName("Quarter "+markingPeriodId);
                                     qtrModel.setMarkingPeriodId(markingPeriodId);
+
                                     qtrList.add(qtrModel);
                                 }
 
@@ -317,7 +321,6 @@ public class GradeBookConfigFragment extends Fragment implements View.OnClickLis
 
                                 JSONObject semOBJ = semesters.optJSONObject(0);
                                 semmarkingPeriodId = semOBJ.optInt("smstrMarkingPeriodId");
-
                                 semTitle = "Semester "+semmarkingPeriodId;
                                 tvSemExam.setText(semTitle + " Exam");
                                 int id=semOBJ.optInt("id");
@@ -340,7 +343,7 @@ public class GradeBookConfigFragment extends Fragment implements View.OnClickLis
 
                                 FinalGradeSemAdapter semAdapter = new FinalGradeSemAdapter(semList, getContext());
                                 rvFinalSemGrade.setAdapter(semAdapter);
-                                lnSem.setVisibility(View.VISIBLE);
+
 
 
                             } else {
@@ -385,9 +388,15 @@ public class GradeBookConfigFragment extends Fragment implements View.OnClickLis
                                     JSONObject quaterOBJ = quarters.optJSONObject(i);
                                     String title = quaterOBJ.optString("title");
                                     int markingPeriodId = quaterOBJ.optInt("markingPeriodId");
+                                    boolean doesExam=quaterOBJ.optBoolean("doesExam");
+                                    qtrExam=doesExam;
+                                    boolean doesGrades=quaterOBJ.optBoolean("doesGrades");
+
                                     FinalGradeQtrModel qtrModel = new FinalGradeQtrModel();
                                     qtrModel.setGradeMarks("0");
                                     qtrModel.setGradeTotalMarks("0");
+                                    qtrModel.setDoesGrades(doesGrades);
+                                    qtrModel.setDoesExam(doesExam);
                                     qtrModel.setGradeName(title);
                                     qtrModel.setMarkingPeriodId(markingPeriodId);
                                     qtrList.add(qtrModel);
@@ -404,6 +413,8 @@ public class GradeBookConfigFragment extends Fragment implements View.OnClickLis
 
                                 JSONObject semOBJ = semesters.optJSONObject(0);
                                 String title = semOBJ.optString("title");
+                                boolean doesExam=semOBJ.optBoolean("doesExam");
+                                semExam=doesExam;
                                 tvSemExam.setText(title + " Exam");
                                 semTitle = title;
                                 semmarkingPeriodId = semOBJ.optInt("markingPeriodId");
@@ -424,7 +435,12 @@ public class GradeBookConfigFragment extends Fragment implements View.OnClickLis
 
                                 FinalGradeSemAdapter semAdapter = new FinalGradeSemAdapter(semList, getContext());
                                 rvFinalSemGrade.setAdapter(semAdapter);
-                                lnSem.setVisibility(View.VISIBLE);
+                                if (doesExam){
+                                    lnSem.setVisibility(View.VISIBLE);
+                                }else {
+                                    lnSem.setVisibility(View.GONE);
+                                }
+
 
 
                             } else {
@@ -437,6 +453,8 @@ public class GradeBookConfigFragment extends Fragment implements View.OnClickLis
                                 String title = schoolYears.optString("title").trim();
                                 fYTitle = title;
                                 fyid = schoolYears.optInt("markingPeriodId");
+                                boolean doesExam=schoolYears.optBoolean("doesExam");
+                                fyExam=doesExam;
                                 tvFullYR.setText(title);
                                 tvFYExam.setText(title);
 
@@ -451,6 +469,12 @@ public class GradeBookConfigFragment extends Fragment implements View.OnClickLis
                                 fyModel.setSemName(semtitle);
                                 fyModel.setSemMarks("0");
                                 fySemList.add(fyModel);
+
+                                if (doesExam){
+                                    lnFullYearExam.setVisibility(View.VISIBLE);
+                                }else {
+                                    lnFullYearExam.setVisibility(View.GONE);
+                                }
 
 
                                 FYSemAdapter fysemAdapter = new FYSemAdapter(fySemList, getContext());
@@ -655,15 +679,19 @@ public class GradeBookConfigFragment extends Fragment implements View.OnClickLis
             e.printStackTrace();
         }
 
-        for (int i = 0; i < fySemList.size(); i++) {
-            View view = rvFullYR.getChildAt(i);
-            EditText etGrade = (EditText) view.findViewById(R.id.etGrade);
-            String qtrmarks = etGrade.getText().toString();
-            ;
-            fySemList.get(i).setSemMarks(qtrmarks);
+
+        if (fyExam){
+            for (int i = 0; i < fySemList.size(); i++) {
+                View view = rvFullYR.getChildAt(i);
+                EditText etGrade = (EditText) view.findViewById(R.id.etGrade);
+                String qtrmarks = etGrade.getText().toString();
+                ;
+                fySemList.get(i).setSemMarks(qtrmarks);
 
 
+            }
         }
+
 
         for (int j = 0; j < fySemList.size(); j++) {
             JSONObject yrsemOBJ = new JSONObject();

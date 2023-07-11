@@ -2,7 +2,10 @@ package com.opensis.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,7 +43,13 @@ public class ClassStudentAdapter extends RecyclerView.Adapter<ClassStudentAdapte
         myViewHolder.tvGrade.setText(itemList.get(i).getGrade());
         myViewHolder.tvSection.setText(itemList.get(i).getSection());
 
-        Picasso.with(context).load(itemList.get(i).getStudentPhoto()).skipMemoryCache().placeholder(R.drawable.student_user).error(R.drawable.student_user).into(myViewHolder.imgUser);
+        if (!itemList.get(i).getStudentPhoto().equals("")) {
+            byte[] decodedString = Base64.decode(itemList.get(i).getStudentPhoto(), Base64.DEFAULT);
+            Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+            myViewHolder.imgUser.setImageBitmap(decodedByte);
+        }else {
+            myViewHolder.imgUser.setImageDrawable(context.getResources().getDrawable(R.drawable.student_user));
+        }
 
        myViewHolder.imgMail.setOnClickListener(new View.OnClickListener() {
            @Override

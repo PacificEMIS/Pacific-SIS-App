@@ -330,6 +330,7 @@ public class ClassDetailsActivity extends AppCompatActivity implements View.OnCl
         Bundle bundle = new Bundle();
         bundle.putString("courseSectionID", String.valueOf(courseSectionID));
         bundle.putString("gradescaletype",gradescaletype);
+        bundle.putInt("courseID", courseID);
         // bundle.putString("currentDate", currentDate);
         fragment.setArguments(bundle);
         transaction = getSupportFragmentManager().beginTransaction();

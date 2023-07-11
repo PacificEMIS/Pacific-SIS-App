@@ -31,6 +31,7 @@ import com.opensis.others.utility.AppData;
 import com.opensis.others.utility.Pref;
 import com.opensis.others.utility.Util;
 import com.opensis.ui.common.activity.LoginActivity;
+import com.opensis.ui.teacher.activity.MissingAttendanceActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -45,7 +46,7 @@ import java.util.Date;
 import java.util.Locale;
 
 
-public class TeacheHomeFragment extends Fragment {
+public class TeacheHomeFragment extends Fragment implements View.OnClickListener {
     View view;
     RecyclerView rvClasses,rvNotification,rvNotice,rvCalendar;
     ArrayList<TeacherClassesModel>monclassList=new ArrayList<>();
@@ -153,6 +154,8 @@ public class TeacheHomeFragment extends Fragment {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+        lnMissingAttendance.setOnClickListener(this);
 
     }
 
@@ -324,10 +327,10 @@ public class TeacheHomeFragment extends Fragment {
                                         }
 
                                     }else if (currentDate.equalsIgnoreCase("saturday")){
-                                        if (satclassList.size()>0) {
+                                        if (friclassList.size()>0) {
                                             rvClasses.setVisibility(View.VISIBLE);
                                             lnNoData.setVisibility(View.GONE);
-                                            classAdapter = new TeacherDashboardClassAdapter(satclassList, getContext());
+                                            classAdapter = new TeacherDashboardClassAdapter(friclassList, getContext());
                                         }else {
                                             rvClasses.setVisibility(View.GONE);
                                             lnNoData.setVisibility(View.VISIBLE);
@@ -502,5 +505,13 @@ public class TeacheHomeFragment extends Fragment {
         }
 
         return dateflag;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v==lnMissingAttendance){
+            Intent intent=new Intent(getContext(), MissingAttendanceActivity.class);
+            startActivity(intent);
+        }
     }
 }

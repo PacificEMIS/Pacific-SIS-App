@@ -4,24 +4,43 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Opensis"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ui.teacher.activity.MarkingPeriodDetailsActivity"
-            android:screenOrientation="userPortrait"
+            android:name=".ui.teacher.activity.MissingClassAttendanceActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".ui.common.activity.SpalshActivity"
+        <activity
+            android:name=".ui.teacher.activity.MissingAttendanceActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.teacher.activity.MarkingPeriodDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.common.activity.SpalshActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,7 +59,7 @@
             android:screenOrientation="userPortrait" />
         <activity
             android:name=".ui.common.activity.LoginActivity"
-            android:screenOrientation="userPortrait"></activity>
+            android:screenOrientation="userPortrait" />
     </application>
 
 </manifest>
