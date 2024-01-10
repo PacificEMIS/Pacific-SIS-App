@@ -33,14 +33,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-                        <com.opensis.others.customtext.Custom_Text_View_Bold
+                        <com.opensissas.others.customtext.Custom_Text_View_Bold
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                            android:text="Assignment Type"></com.opensis.others.customtext.Custom_Text_View_Bold>
-                        <com.opensis.others.customtext.Custom_Text_View_Bold
+                            android:text="Assignment Type"></com.opensissas.others.customtext.Custom_Text_View_Bold>
+                        <com.opensissas.others.customtext.Custom_Text_View_Bold
                             android:visibility="gone"
                             android:gravity="right"
                             android:id="@+id/tvTotalAssignment"
@@ -49,7 +49,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                            android:text="Total : 80% / 100%"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                            android:text="Total : 80% / 100%"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                     </LinearLayout>
                     <View
                         android:layout_width="match_parent"
@@ -70,16 +70,16 @@
                     android:id="@+id/lnNoData"
                     android:orientation="horizontal"
                     android:gravity="center">
-                    <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                    <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/medium_text"
                         android:textColor="@color/text_color"
-                        android:text="No Record Found"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                        android:text="No Record Found"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                 </LinearLayout>
             </FrameLayout>
 
-            <com.opensis.others.customtext.Custom_Text_View_Bold
+            <com.opensissas.others.customtext.Custom_Text_View_Bold
                 android:id="@+id/tvAssignmentType"
                 android:gravity="center"
                 android:text="Create Assignment Type"
@@ -89,7 +89,7 @@
                 android:layout_height="50dp"
                 android:background="@drawable/llwhitestrokedesign"
                 android:backgroundTint="@color/text_color"
-                android:layout_marginTop="20dp"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                android:layout_marginTop="20dp"></com.opensissas.others.customtext.Custom_Text_View_Bold>
 
         </LinearLayout>
         <LinearLayout
@@ -111,13 +111,13 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <com.opensis.others.customtext.Custom_Text_View_Bold
+                    <com.opensissas.others.customtext.Custom_Text_View_Bold
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/big_text"
                         android:textColor="@color/black"
-                        android:text="Add New Assignment Type"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                        android:text="Add New Assignment Type"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                     <LinearLayout
                         android:id="@+id/lnCLose"
                         android:gravity="end"
@@ -149,7 +149,7 @@
                                 style = "@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                                 >
                                 <EditText
-
+                                    android:importantForAutofill="noExcludeDescendants"
                                     android:layout_width = "match_parent"
                                     android:layout_height = "match_parent"
                                     android:id = "@+id/etTitle"
@@ -197,24 +197,24 @@
                             android:layout_marginTop="20dp"
                             android:paddingLeft="20dp"
                             android:paddingRight="20dp">
-                            <com.opensis.others.customtext.Custom_Text_View
+                            <com.opensissas.others.customtext.Custom_Text_View
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/text_color"
                                 android:layout_gravity="center"
-                                android:text="Percent Total"></com.opensis.others.customtext.Custom_Text_View>
-                            <com.opensis.others.customtext.Custom_Text_View
+                                android:text="Percent Total"></com.opensissas.others.customtext.Custom_Text_View>
+                            <com.opensissas.others.customtext.Custom_Text_View
                                 android:gravity="right"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/text_color"
                                 android:layout_gravity="center"
-                                android:text="100%"></com.opensis.others.customtext.Custom_Text_View>
+                                android:text="100%"></com.opensissas.others.customtext.Custom_Text_View>
 
                         </LinearLayout>
-                        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                        <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                             android:layout_marginTop="20dp"
                             android:background="@drawable/llwhitestrokedesign"
                             android:backgroundTint="@color/text_color"
@@ -224,8 +224,8 @@
                             android:textSize="10sp"
                             android:id="@+id/tvSubmit"
                             android:layout_width="match_parent"
-                            android:layout_height="50dp"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
-                        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                            android:layout_height="50dp"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
+                        <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                             android:layout_marginTop="20dp"
                             android:background="@drawable/llwhitestrokedesign"
                             android:backgroundTint="@color/black"
@@ -235,7 +235,7 @@
                             android:textSize="10sp"
                             android:id="@+id/tvCancel"
                             android:layout_width="match_parent"
-                            android:layout_height="50dp"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                            android:layout_height="50dp"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                     </LinearLayout>
                 </androidx.core.widget.NestedScrollView>
 
@@ -261,13 +261,13 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <com.opensis.others.customtext.Custom_Text_View_Bold
+                    <com.opensissas.others.customtext.Custom_Text_View_Bold
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/big_text"
                         android:textColor="@color/black"
-                        android:text="Update Assignment Type"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                        android:text="Update Assignment Type"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                     <LinearLayout
                         android:id="@+id/lnUpdateCLose"
                         android:gravity="end"
@@ -299,7 +299,7 @@
                                 style = "@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                                 >
                                 <EditText
-
+                                    android:importantForAutofill="noExcludeDescendants"
                                     android:layout_width = "match_parent"
                                     android:layout_height = "match_parent"
                                     android:id = "@+id/etUpdateTitle"
@@ -326,6 +326,7 @@
                                 android:layout_height = "match_parent"
                                 style = "@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
                                 <EditText
+                                    android:importantForAutofill="noExcludeDescendants"
                                     android:singleLine="true"
                                     android:layout_width = "match_parent"
                                     android:layout_height = "match_parent"
@@ -347,24 +348,24 @@
                             android:layout_marginTop="20dp"
                             android:paddingLeft="20dp"
                             android:paddingRight="20dp">
-                            <com.opensis.others.customtext.Custom_Text_View
+                            <com.opensissas.others.customtext.Custom_Text_View
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/text_color"
                                 android:layout_gravity="center"
-                                android:text="Percent Total"></com.opensis.others.customtext.Custom_Text_View>
-                            <com.opensis.others.customtext.Custom_Text_View
+                                android:text="Percent Total"></com.opensissas.others.customtext.Custom_Text_View>
+                            <com.opensissas.others.customtext.Custom_Text_View
                                 android:gravity="right"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/text_color"
                                 android:layout_gravity="center"
-                                android:text="100%"></com.opensis.others.customtext.Custom_Text_View>
+                                android:text="100%"></com.opensissas.others.customtext.Custom_Text_View>
 
                         </LinearLayout>
-                        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                        <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                             android:layout_marginTop="20dp"
                             android:background="@drawable/llwhitestrokedesign"
                             android:backgroundTint="@color/text_color"
@@ -374,8 +375,8 @@
                             android:textSize="10sp"
                             android:id="@+id/tvUpdateSubmit"
                             android:layout_width="match_parent"
-                            android:layout_height="50dp"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
-                        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                            android:layout_height="50dp"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
+                        <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                             android:layout_marginTop="20dp"
                             android:background="@drawable/llwhitestrokedesign"
                             android:backgroundTint="@color/black"
@@ -385,7 +386,7 @@
                             android:textSize="10sp"
                             android:id="@+id/tvUpdateCancel"
                             android:layout_width="match_parent"
-                            android:layout_height="50dp"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                            android:layout_height="50dp"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                     </LinearLayout>
                 </androidx.core.widget.NestedScrollView>
 
@@ -405,14 +406,14 @@
                 android:layout_height="100dp"
                 android:src="@drawable/stop">
             </ImageView>
-            <com.opensis.others.customtext.Custom_Text_View_SemiBold
+            <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                 android:textAlignment="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/missing_attendance"
-                android:text="You cannot access Assignments because the grade scale for the course section is not set"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                android:text="You cannot access Assignments because the grade scale for the course section is not set"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
         </LinearLayout>
     </FrameLayout>
 

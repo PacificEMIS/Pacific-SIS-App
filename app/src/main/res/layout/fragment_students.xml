@@ -36,7 +36,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <com.opensis.others.customtext.Custom_Text_View_Bold
+                            <com.opensissas.others.customtext.Custom_Text_View_Bold
                                 android:id="@+id/tvCourseName"
                                 android:layout_gravity="center"
                                 android:layout_width="0dp"
@@ -44,7 +44,7 @@
                                 android:text="Students"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/big_text"
-                                android:layout_weight="1"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                                android:layout_weight="1"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                             <LinearLayout
                                 android:visibility="visible"
                                 android:gravity="right"
@@ -117,12 +117,12 @@
                         android:id="@+id/lnNoData"
                         android:orientation="horizontal"
                         android:gravity="center">
-                        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                        <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/text_color"
-                            android:text="No Record Found"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                            android:text="No Record Found"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                     </LinearLayout>
                     <LinearLayout
                         android:visibility="gone"
@@ -144,13 +144,13 @@
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
                                     android:padding="20dp">
-                                    <com.opensis.others.customtext.Custom_Text_View_Bold
+                                    <com.opensissas.others.customtext.Custom_Text_View_Bold
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/big_text"
                                         android:textColor="@color/missing_attendance"
-                                        android:text="Indentical Information"></com.opensis.others.customtext.Custom_Text_View_Bold>
-                                    <com.opensis.others.customtext.Custom_EditText
+                                        android:text="Indentical Information"></com.opensissas.others.customtext.Custom_Text_View_Bold>
+                                    <com.opensissas.others.customtext.Custom_EditText
                                         android:id="@+id/etFirstName"
                                         android:textSize="@dimen/large_text"
                                         android:paddingLeft="10dp"
@@ -160,8 +160,8 @@
                                         android:layout_marginTop="20dp"
                                         android:hint="First Given Name"
                                         android:textColor="@color/text_color"
-                                        android:textColorHint="@color/grey"></com.opensis.others.customtext.Custom_EditText>
-                                    <com.opensis.others.customtext.Custom_EditText
+                                        android:textColorHint="@color/grey"></com.opensissas.others.customtext.Custom_EditText>
+                                    <com.opensissas.others.customtext.Custom_EditText
                                         android:id="@+id/etMiddlleName"
                                         android:textSize="@dimen/large_text"
                                         android:paddingLeft="10dp"
@@ -171,8 +171,8 @@
                                         android:layout_marginTop="20dp"
                                         android:hint="Middlle Name"
                                         android:textColor="@color/text_color"
-                                        android:textColorHint="@color/grey"></com.opensis.others.customtext.Custom_EditText>
-                                    <com.opensis.others.customtext.Custom_EditText
+                                        android:textColorHint="@color/grey"></com.opensissas.others.customtext.Custom_EditText>
+                                    <com.opensissas.others.customtext.Custom_EditText
                                         android:id="@+id/etLastName"
                                         android:textSize="@dimen/large_text"
                                         android:paddingLeft="10dp"
@@ -182,8 +182,8 @@
                                         android:layout_marginTop="20dp"
                                         android:hint="Last/Family Name"
                                         android:textColor="@color/text_color"
-                                        android:textColorHint="@color/grey"></com.opensis.others.customtext.Custom_EditText>
-                                    <com.opensis.others.customtext.Custom_EditText
+                                        android:textColorHint="@color/grey"></com.opensissas.others.customtext.Custom_EditText>
+                                    <com.opensissas.others.customtext.Custom_EditText
                                         android:id="@+id/etStudentID"
                                         android:textSize="@dimen/large_text"
                                         android:paddingLeft="10dp"
@@ -193,8 +193,8 @@
                                         android:layout_marginTop="20dp"
                                         android:hint="Student ID"
                                         android:textColor="@color/text_color"
-                                        android:textColorHint="@color/grey"></com.opensis.others.customtext.Custom_EditText>
-                                    <com.opensis.others.customtext.Custom_EditText
+                                        android:textColorHint="@color/grey"></com.opensissas.others.customtext.Custom_EditText>
+                                    <com.opensissas.others.customtext.Custom_EditText
                                         android:id="@+id/etStudentAltID"
                                         android:textSize="@dimen/large_text"
                                         android:paddingLeft="10dp"
@@ -204,8 +204,8 @@
                                         android:layout_marginTop="20dp"
                                         android:hint="Alternate ID"
                                         android:textColor="@color/text_color"
-                                        android:textColorHint="@color/grey"></com.opensis.others.customtext.Custom_EditText>
-                                    <com.opensis.others.customtext.Custom_EditText
+                                        android:textColorHint="@color/grey"></com.opensissas.others.customtext.Custom_EditText>
+                                    <com.opensissas.others.customtext.Custom_EditText
                                         android:id="@+id/etAdmissionNumber"
                                         android:textSize="@dimen/large_text"
                                         android:paddingLeft="10dp"
@@ -215,8 +215,8 @@
                                         android:layout_marginTop="20dp"
                                         android:hint="Admission Number"
                                         android:textColor="@color/text_color"
-                                        android:textColorHint="@color/grey"></com.opensis.others.customtext.Custom_EditText>
-                                    <com.opensis.others.customtext.Custom_EditText
+                                        android:textColorHint="@color/grey"></com.opensissas.others.customtext.Custom_EditText>
+                                    <com.opensissas.others.customtext.Custom_EditText
                                         android:id="@+id/etRollNumber"
                                         android:textSize="@dimen/large_text"
                                         android:paddingLeft="10dp"
@@ -226,7 +226,7 @@
                                         android:layout_marginTop="20dp"
                                         android:hint="Roll Number"
                                         android:textColor="@color/text_color"
-                                        android:textColorHint="@color/grey"></com.opensis.others.customtext.Custom_EditText>
+                                        android:textColorHint="@color/grey"></com.opensissas.others.customtext.Custom_EditText>
                                 </LinearLayout>
                                 <LinearLayout
                                     android:layout_marginTop="20dp"
@@ -236,18 +236,18 @@
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
                                     android:padding="20dp">
-                                    <com.opensis.others.customtext.Custom_Text_View_Bold
+                                    <com.opensissas.others.customtext.Custom_Text_View_Bold
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/big_text"
                                         android:textColor="@color/missing_attendance"
-                                        android:text="Search Birthdays Between Date Range"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                                        android:text="Search Birthdays Between Date Range"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="50dp"
                                         android:layout_marginTop="20dp"
                                         android:background="@drawable/llgreystrokedesign">
-                                        <com.opensis.others.customtext.Custom_Text_View
+                                        <com.opensissas.others.customtext.Custom_Text_View
                                             android:layout_weight="1"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
@@ -256,7 +256,7 @@
                                             android:layout_gravity="center"
                                             android:layout_marginLeft="10dp"
                                             android:text="From Date"
-                                            android:id="@+id/tvFormDate"></com.opensis.others.customtext.Custom_Text_View>
+                                            android:id="@+id/tvFormDate"></com.opensissas.others.customtext.Custom_Text_View>
                                         <LinearLayout
                                             android:id="@+id/llFromDate"
                                             android:gravity="center"
@@ -274,7 +274,7 @@
                                         android:layout_height="50dp"
                                         android:layout_marginTop="20dp"
                                         android:background="@drawable/llgreystrokedesign">
-                                        <com.opensis.others.customtext.Custom_Text_View
+                                        <com.opensissas.others.customtext.Custom_Text_View
                                             android:layout_weight="1"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
@@ -283,7 +283,7 @@
                                             android:layout_gravity="center"
                                             android:layout_marginLeft="10dp"
                                             android:text="To Date"
-                                            android:id="@+id/tvToDate"></com.opensis.others.customtext.Custom_Text_View>
+                                            android:id="@+id/tvToDate"></com.opensissas.others.customtext.Custom_Text_View>
                                         <LinearLayout
                                             android:id="@+id/llToDate"
                                             android:gravity="center"
@@ -307,18 +307,18 @@
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
                                     android:padding="20dp">
-                                    <com.opensis.others.customtext.Custom_Text_View_Bold
+                                    <com.opensissas.others.customtext.Custom_Text_View_Bold
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/big_text"
                                         android:textColor="@color/missing_attendance"
-                                        android:text="Demographic Information"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                                        android:text="Demographic Information"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="50dp"
                                         android:layout_marginTop="20dp"
                                         android:background="@drawable/llgreystrokedesign">
-                                        <com.opensis.others.customtext.Custom_Text_View
+                                        <com.opensissas.others.customtext.Custom_Text_View
                                             android:layout_weight="1"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
@@ -327,7 +327,7 @@
                                             android:layout_gravity="center"
                                             android:layout_marginLeft="10dp"
                                             android:text="Date of Birth"
-                                            android:id="@+id/tvDOB"></com.opensis.others.customtext.Custom_Text_View>
+                                            android:id="@+id/tvDOB"></com.opensissas.others.customtext.Custom_Text_View>
                                         <LinearLayout
                                             android:id="@+id/lnDOB"
                                             android:gravity="center"
@@ -496,7 +496,7 @@
                                     </LinearLayout>
 
                                 </LinearLayout>
-                                <com.opensis.others.customtext.Custom_Text_View
+                                <com.opensissas.others.customtext.Custom_Text_View
                                     android:id="@+id/tvSearch"
                                     android:gravity="center"
                                     android:textColor="@color/white"
@@ -506,7 +506,7 @@
                                     android:layout_height="50dp"
                                     android:background="@drawable/llwhitestrokedesign"
                                     android:backgroundTint="@color/text_color"
-                                    android:layout_marginTop="20dp"></com.opensis.others.customtext.Custom_Text_View>
+                                    android:layout_marginTop="20dp"></com.opensissas.others.customtext.Custom_Text_View>
                             </LinearLayout>
 
 

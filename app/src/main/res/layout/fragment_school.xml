@@ -31,14 +31,14 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <com.opensis.others.customtext.Custom_Text_View_Bold
+                        <com.opensissas.others.customtext.Custom_Text_View_Bold
                             android:id="@+id/tvCourseName"
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Schools"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/big_text"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                            android:textSize="@dimen/big_text"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                     </LinearLayout>
 
 
@@ -63,12 +63,12 @@
                         android:id="@+id/lnNoData"
                         android:orientation="horizontal"
                         android:gravity="center">
-                        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                        <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/text_color"
-                            android:text="No Record Found"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                            android:text="No Record Found"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                     </LinearLayout>
 
 

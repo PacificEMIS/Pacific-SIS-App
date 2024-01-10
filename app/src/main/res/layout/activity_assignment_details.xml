@@ -36,7 +36,7 @@
                             android:layout_width="34dp"
                             android:layout_height="34dp"
                             android:src="@drawable/arrow_back_white_48dp"></ImageView>
-                        <com.opensis.others.customtext.Custom_Text_View_Bold
+                        <com.opensissas.others.customtext.Custom_Text_View_Bold
                             android:id="@+id/tvAssignmentName"
                             android:layout_marginLeft="20dp"
                             android:layout_gravity="center"
@@ -44,14 +44,14 @@
                             android:layout_height="wrap_content"
                             android:text="Homework"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/big_text"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                            android:textSize="@dimen/big_text"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                     </LinearLayout>
                     <LinearLayout
                         android:visibility="gone"
                         android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                        <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                             android:id="@+id/tvWeightPercent"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
                             android:paddingBottom="10dp"
                             android:textSize="10sp"
                             android:textColor="@color/white"
-                            android:text="Weight Percent : 40 %"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                            android:text="Weight Percent : 40 %"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                         <LinearLayout
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
@@ -69,7 +69,7 @@
                             android:layout_height="5dp"
                             android:layout_gravity="center"
                             android:background="@drawable/rounddesign"></LinearLayout>
-                        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                        <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                             android:id="@+id/tvTotalPercent"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
                             android:paddingBottom="10dp"
                             android:textSize="10sp"
                             android:textColor="@color/white"
-                            android:text="Percent Total : 100 %"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                            android:text="Percent Total : 100 %"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
 
 
                     </LinearLayout>
@@ -114,7 +114,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:id="@+id/rvItem"></androidx.recyclerview.widget.RecyclerView>
-                                    <com.opensis.others.customtext.Custom_Text_View
+                                    <com.opensissas.others.customtext.Custom_Text_View
                                         android:visibility="gone"
                                        android:id="@+id/tvNoRecord"
                                         android:layout_gravity="center"
@@ -123,10 +123,10 @@
                                         android:layout_marginTop="60dp"
                                         android:textColor="@color/black"
                                         android:textSize="@dimen/large_text"
-                                        android:text="No Records Found"></com.opensis.others.customtext.Custom_Text_View>
+                                        android:text="No Records Found"></com.opensissas.others.customtext.Custom_Text_View>
                                 </FrameLayout>
 
-                                <com.opensis.others.customtext.Custom_Text_View_Bold
+                                <com.opensissas.others.customtext.Custom_Text_View_Bold
                                     android:id="@+id/tvCreateAssignment"
                                     android:layout_width="match_parent"
                                     android:layout_height="50dp"
@@ -136,7 +136,7 @@
                                     android:textColor="@color/white"
                                     android:gravity="center"
                                     android:text="Create Assignment"
-                                    android:textSize="@dimen/big_text"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                                    android:textSize="@dimen/big_text"></com.opensissas.others.customtext.Custom_Text_View_Bold>
 
 
                             </LinearLayout>
@@ -163,13 +163,13 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
-                                <com.opensis.others.customtext.Custom_Text_View_Bold
+                                <com.opensissas.others.customtext.Custom_Text_View_Bold
                                     android:layout_width="0dp"
                                     android:layout_weight="1"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/big_text"
                                     android:textColor="@color/black"
-                                    android:text="Add New Assignment"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                                    android:text="Add New Assignment"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                                 <LinearLayout
                                     android:id="@+id/lnCLose"
                                     android:gravity="end"
@@ -201,6 +201,7 @@
                                             style = "@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                                             >
                                             <EditText
+                                                android:importantForAutofill="noExcludeDescendants"
                                                 android:layout_width = "match_parent"
                                                 android:layout_height = "match_parent"
                                                 android:id = "@+id/etTitle"
@@ -226,7 +227,7 @@
                                             android:layout_height = "match_parent"
                                             style = "@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
                                             <EditText
-
+                                                android:importantForAutofill="noExcludeDescendants"
                                                 android:singleLine="true"
                                                 android:layout_width = "match_parent"
                                                 android:layout_height = "match_parent"
@@ -256,18 +257,18 @@
                                             android:layout_height="match_parent"
                                             android:orientation="vertical"
                                             android:layout_weight="1">
-                                            <com.opensis.others.customtext.Custom_Text_View
+                                            <com.opensissas.others.customtext.Custom_Text_View
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:textSize="@dimen/medium_text"
                                                 android:textColor="@color/purple_700"
-                                                android:text="Assigned Date *"></com.opensis.others.customtext.Custom_Text_View>
-                                            <com.opensis.others.customtext.Custom_Text_View
+                                                android:text="Assigned Date *"></com.opensissas.others.customtext.Custom_Text_View>
+                                            <com.opensissas.others.customtext.Custom_Text_View
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:id="@+id/tvAssignedDate"
                                                 android:textColor="@color/text_color"
-                                                android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View>
+                                                android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View>
                                         </LinearLayout>
                                         <LinearLayout
                                             android:id="@+id/lnAssignedDate"
@@ -300,18 +301,18 @@
                                             android:layout_height="match_parent"
                                             android:orientation="vertical"
                                             android:layout_weight="1">
-                                            <com.opensis.others.customtext.Custom_Text_View
+                                            <com.opensissas.others.customtext.Custom_Text_View
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:textSize="@dimen/medium_text"
                                                 android:textColor="@color/purple_700"
-                                                android:text="Due Date *"></com.opensis.others.customtext.Custom_Text_View>
-                                            <com.opensis.others.customtext.Custom_Text_View
+                                                android:text="Due Date *"></com.opensissas.others.customtext.Custom_Text_View>
+                                            <com.opensissas.others.customtext.Custom_Text_View
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:id="@+id/tvDueDate"
                                                 android:textColor="@color/text_color"
-                                                android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View>
+                                                android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View>
                                         </LinearLayout>
                                         <LinearLayout
                                             android:id="@+id/lnDueDate"
@@ -327,7 +328,7 @@
 
 
                                     </LinearLayout>
-                                    <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                                    <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                                         android:layout_marginTop="20dp"
                                         android:background="@drawable/llwhitestrokedesign"
                                         android:backgroundTint="@color/text_color"
@@ -337,8 +338,8 @@
                                         android:textSize="10sp"
                                         android:id="@+id/tvSubmit"
                                         android:layout_width="match_parent"
-                                        android:layout_height="50dp"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
-                                    <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                                        android:layout_height="50dp"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
+                                    <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                                         android:layout_marginTop="20dp"
                                         android:background="@drawable/llwhitestrokedesign"
                                         android:backgroundTint="@color/black"
@@ -348,7 +349,218 @@
                                         android:textSize="10sp"
                                         android:id="@+id/tvCancel"
                                         android:layout_width="match_parent"
-                                        android:layout_height="50dp"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                                        android:layout_height="50dp"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
+                                </LinearLayout>
+                            </androidx.core.widget.NestedScrollView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lnEditAssignment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/trasparent1"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        android:gravity="bottom">
+                        <LinearLayout
+                            android:padding="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@drawable/llgreystrokedesign"
+                            android:backgroundTint="@color/white">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <com.opensissas.others.customtext.Custom_Text_View_Bold
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/big_text"
+                                    android:textColor="@color/black"
+                                    android:text="Edit Assignment"></com.opensissas.others.customtext.Custom_Text_View_Bold>
+                                <LinearLayout
+                                    android:id="@+id/lnEditCLose"
+                                    android:gravity="end"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2">
+                                    <ImageView
+                                        android:src="@drawable/close_black_48dp"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"></ImageView>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <androidx.core.widget.NestedScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+                                    <LinearLayout
+                                        android:layout_marginTop="20dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:orientation="vertical">
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            android:layout_width = "match_parent"
+                                            android:background="@drawable/llgreystrokedesign"
+                                            android:layout_height = "match_parent"
+                                            style = "@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                                            >
+                                            <EditText
+                                                android:importantForAutofill="noExcludeDescendants"
+                                                android:layout_width = "match_parent"
+                                                android:layout_height = "match_parent"
+                                                android:id = "@+id/etEditTitle"
+                                                android:hint = "Assignment Title *"
+                                                android:textSize="@dimen/large_text"
+                                                android:textColor="@color/text_color"
+                                                android:background="@null"
+                                                android:imeOptions="actionNext"
+                                                android:singleLine="true"
+                                                android:backgroundTint="@color/totalpercentage"
+                                                />
+                                        </com.google.android.material.textfield.TextInputLayout>
+                                    </LinearLayout>
+                                    <LinearLayout
+
+                                        android:layout_marginTop="20dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:orientation="vertical">
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            android:layout_width = "match_parent"
+                                            android:background="@drawable/llgreystrokedesign"
+                                            android:layout_height = "match_parent"
+                                            style = "@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+                                            <EditText
+                                                android:importantForAutofill="noExcludeDescendants"
+                                                android:singleLine="true"
+                                                android:layout_width = "match_parent"
+                                                android:layout_height = "match_parent"
+                                                android:id = "@+id/etEditPoint"
+                                                android:hint = "Points *"
+                                                android:textSize="@dimen/large_text"
+                                                android:textColor="@color/text_color"
+                                                android:imeOptions="actionDone"
+                                                android:background="@null"
+                                                android:backgroundTint="@color/totalpercentage"
+                                                />
+                                        </com.google.android.material.textfield.TextInputLayout>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:backgroundTint="@color/totalpercentage"
+                                        android:background="@drawable/llwhitestrokedesign"
+                                        android:layout_marginTop="20dp"
+                                        android:paddingLeft="20dp"
+                                        android:paddingRight="20dp"
+                                        android:orientation="horizontal"
+                                        android:paddingTop="5dp">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical"
+                                            android:layout_weight="1">
+                                            <com.opensissas.others.customtext.Custom_Text_View
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textSize="@dimen/medium_text"
+                                                android:textColor="@color/purple_700"
+                                                android:text="Assigned Date *"></com.opensissas.others.customtext.Custom_Text_View>
+                                            <com.opensissas.others.customtext.Custom_Text_View
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/tvEditAssignedDate"
+                                                android:textColor="@color/text_color"
+                                                android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View>
+                                        </LinearLayout>
+                                        <LinearLayout
+                                            android:id="@+id/lnEditAssignedDate"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.2"
+                                            android:gravity="center">
+                                            <ImageView
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:src="@drawable/calendar_grey"></ImageView>
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+                                    <LinearLayout
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:backgroundTint="@color/totalpercentage"
+                                        android:background="@drawable/llwhitestrokedesign"
+                                        android:layout_marginTop="20dp"
+                                        android:paddingLeft="20dp"
+                                        android:paddingRight="20dp"
+                                        android:orientation="horizontal"
+                                        android:paddingTop="5dp">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical"
+                                            android:layout_weight="1">
+                                            <com.opensissas.others.customtext.Custom_Text_View
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textSize="@dimen/medium_text"
+                                                android:textColor="@color/purple_700"
+                                                android:text="Due Date *"></com.opensissas.others.customtext.Custom_Text_View>
+                                            <com.opensissas.others.customtext.Custom_Text_View
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/tvEditDueDate"
+                                                android:textColor="@color/text_color"
+                                                android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View>
+                                        </LinearLayout>
+                                        <LinearLayout
+                                            android:id="@+id/lnEditDueDate"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.2"
+                                            android:gravity="center">
+                                            <ImageView
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:src="@drawable/calendar_grey"></ImageView>
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+                                    <com.opensissas.others.customtext.Custom_Text_View_SemiBold
+                                        android:layout_marginTop="20dp"
+                                        android:background="@drawable/llwhitestrokedesign"
+                                        android:backgroundTint="@color/text_color"
+                                        android:gravity="center"
+                                        android:textColor="@color/white"
+                                        android:text="Submit"
+                                        android:textSize="10sp"
+                                        android:id="@+id/tvEditSubmit"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
+                                    <com.opensissas.others.customtext.Custom_Text_View_SemiBold
+                                        android:layout_marginTop="20dp"
+                                        android:background="@drawable/llwhitestrokedesign"
+                                        android:backgroundTint="@color/black"
+                                        android:gravity="center"
+                                        android:textColor="@color/white"
+                                        android:text="Cancel"
+                                        android:textSize="10sp"
+                                        android:id="@+id/tvEditCancel"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                                 </LinearLayout>
                             </androidx.core.widget.NestedScrollView>
 

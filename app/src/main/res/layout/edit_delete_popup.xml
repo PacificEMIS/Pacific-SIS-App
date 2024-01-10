@@ -23,7 +23,7 @@
                 android:tint="@color/text_color"
                 android:layout_gravity="center"></ImageView>
 
-            <com.opensis.others.customtext.Custom_Text_View
+            <com.opensissas.others.customtext.Custom_Text_View
                 android:layout_marginLeft="5dp"
                 android:id="@+id/tvEdit"
                 android:layout_gravity="center"
@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
                 android:textColor="@color/text_color"
-                ></com.opensis.others.customtext.Custom_Text_View>>
+                ></com.opensissas.others.customtext.Custom_Text_View>>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/lnDelete"
@@ -46,7 +46,7 @@
                 android:tint="@color/text_color"
                 android:layout_gravity="center"></ImageView>
 
-            <com.opensis.others.customtext.Custom_Text_View
+            <com.opensissas.others.customtext.Custom_Text_View
                 android:layout_marginLeft="5dp"
                 android:id="@+id/tvDelte"
                 android:layout_gravity="center"
@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
                 android:textColor="@color/text_color"
-                ></com.opensis.others.customtext.Custom_Text_View>>
+                ></com.opensissas.others.customtext.Custom_Text_View>>
         </LinearLayout>
 
 

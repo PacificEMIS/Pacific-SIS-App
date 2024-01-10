@@ -24,12 +24,12 @@
                android:layout_height="wrap_content"
                android:padding="20dp"
                android:orientation="vertical">
-               <com.opensis.others.customtext.Custom_Text_View_Bold
+               <com.opensissas.others.customtext.Custom_Text_View_Bold
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:textSize="@dimen/big_text"
                    android:textColor="@color/missing_attendance"
-                   android:text="General"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                   android:text="General"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                <LinearLayout
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
@@ -67,12 +67,12 @@
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:orientation="vertical">
-                       <com.opensis.others.customtext.Custom_Text_View_Bold
+                       <com.opensissas.others.customtext.Custom_Text_View_Bold
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:textSize="@dimen/large_text"
                            android:textColor="@color/black"
-                           android:text="Score Rounding"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                           android:text="Score Rounding"></com.opensissas.others.customtext.Custom_Text_View_Bold>
 
                        <RadioButton
                            android:id="@+id/rbScoreUp"
@@ -116,12 +116,12 @@
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
                        android:orientation="vertical">
-                       <com.opensis.others.customtext.Custom_Text_View_Bold
+                       <com.opensissas.others.customtext.Custom_Text_View_Bold
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:textSize="@dimen/large_text"
                            android:textColor="@color/black"
-                           android:text="Assesment Sorting"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                           android:text="Assesment Sorting"></com.opensissas.others.customtext.Custom_Text_View_Bold>
 
                        <RadioButton
                            android:id="@+id/rbAssesmentNew"
@@ -160,12 +160,12 @@
                    android:layout_height="wrap_content"
                    android:layout_marginTop="20dp"
                    android:orientation="vertical">
-                   <com.opensis.others.customtext.Custom_Text_View_Bold
+                   <com.opensissas.others.customtext.Custom_Text_View_Bold
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:textSize="@dimen/large_text"
                        android:textColor="@color/black"
-                       android:text="Allowed maximum percent (%) in Anomalous grades"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                       android:text="Allowed maximum percent (%) in Anomalous grades"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                    <LinearLayout
                        android:layout_width="match_parent"
                        android:layout_height="60dp"
@@ -176,20 +176,20 @@
                        android:paddingLeft="20dp"
                        android:paddingRight="20dp"
                        android:paddingBottom="5dp">
-                       <com.opensis.others.customtext.Custom_Text_View
+                       <com.opensissas.others.customtext.Custom_Text_View
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:textSize="@dimen/small_text"
                            android:textColor="@color/bar"
-                           android:text="Percent"></com.opensis.others.customtext.Custom_Text_View>
-                       <com.opensis.others.customtext.Custom_EditText
+                           android:text="Percent"></com.opensissas.others.customtext.Custom_Text_View>
+                       <com.opensissas.others.customtext.Custom_EditText
                            android:background="@null"
                            android:textColor="@color/black"
                            android:textSize="@dimen/medium_text"
                            android:inputType="number"
                            android:id="@+id/etPercent"
                            android:layout_width="match_parent"
-                           android:layout_height="match_parent"></com.opensis.others.customtext.Custom_EditText>
+                           android:layout_height="match_parent"></com.opensissas.others.customtext.Custom_EditText>
                    </LinearLayout>
                </LinearLayout>
                <LinearLayout
@@ -197,12 +197,12 @@
                    android:layout_height="wrap_content"
                    android:layout_marginTop="20dp"
                    android:orientation="vertical">
-                   <com.opensis.others.customtext.Custom_Text_View_Bold
+                   <com.opensissas.others.customtext.Custom_Text_View_Bold
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:textSize="@dimen/large_text"
                        android:textColor="@color/black"
-                       android:text="Days until ungraded assignment grade appears in Parent/Student Portal"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                       android:text="Days until ungraded assignment grade appears in Parent/Student Portal"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                    <LinearLayout
                        android:layout_width="match_parent"
                        android:layout_height="60dp"
@@ -213,20 +213,20 @@
                        android:paddingLeft="20dp"
                        android:paddingRight="20dp"
                        android:paddingBottom="5dp">
-                       <com.opensis.others.customtext.Custom_Text_View
+                       <com.opensissas.others.customtext.Custom_Text_View
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:textSize="@dimen/small_text"
                            android:textColor="@color/bar"
-                           android:text="Days"></com.opensis.others.customtext.Custom_Text_View>
-                       <com.opensis.others.customtext.Custom_EditText
+                           android:text="Days"></com.opensissas.others.customtext.Custom_Text_View>
+                       <com.opensissas.others.customtext.Custom_EditText
                            android:background="@null"
                            android:textColor="@color/black"
                            android:textSize="@dimen/medium_text"
                            android:inputType="number"
                            android:id="@+id/etDays"
                            android:layout_width="match_parent"
-                           android:layout_height="match_parent"></com.opensis.others.customtext.Custom_EditText>
+                           android:layout_height="match_parent"></com.opensissas.others.customtext.Custom_EditText>
                    </LinearLayout>
                </LinearLayout>
 
@@ -244,12 +244,12 @@
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:padding="20dp">
-                   <com.opensis.others.customtext.Custom_Text_View_Bold
+                   <com.opensissas.others.customtext.Custom_Text_View_Bold
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:textSize="@dimen/big_text"
                        android:textColor="@color/missing_attendance"
-                       android:text="Teacher Gradescale"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                       android:text="Teacher Gradescale"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                </LinearLayout>
 
                <View
@@ -261,12 +261,12 @@
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:padding="20dp">
-                   <com.opensis.others.customtext.Custom_Text_View_Bold
+                   <com.opensissas.others.customtext.Custom_Text_View_Bold
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:textSize="@dimen/large_text"
                        android:textColor="@color/black"
-                       android:id="@+id/tvClass"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                       android:id="@+id/tvClass"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                </LinearLayout>
 
 
@@ -285,19 +285,19 @@
                    android:layout_height="wrap_content"
                    android:orientation="vertical"
                    android:padding="20dp">
-                   <com.opensis.others.customtext.Custom_Text_View_Bold
+                   <com.opensissas.others.customtext.Custom_Text_View_Bold
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:textSize="@dimen/big_text"
                        android:textColor="@color/missing_attendance"
-                       android:text="Final Grading Percentages"></com.opensis.others.customtext.Custom_Text_View_Bold>
-                   <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                       android:text="Final Grading Percentages"></com.opensissas.others.customtext.Custom_Text_View_Bold>
+                   <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:textSize="@dimen/small_text"
                        android:textColor="@color/black"
                        android:layout_marginTop="5dp"
-                       android:text="Total must be 100% for each marking period"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                       android:text="Total must be 100% for each marking period"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                </LinearLayout>
                <View
                    android:layout_width="match_parent"
@@ -327,12 +327,12 @@
                    android:paddingBottom="5dp"
                    android:paddingRight="20dp"
                    android:orientation="vertical">
-                   <com.opensis.others.customtext.Custom_Text_View
+                   <com.opensissas.others.customtext.Custom_Text_View
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:textColor="@color/bar"
-                       android:id="@+id/tvSemExam"></com.opensis.others.customtext.Custom_Text_View>
-                   <com.opensis.others.customtext.Custom_EditText
+                       android:id="@+id/tvSemExam"></com.opensissas.others.customtext.Custom_Text_View>
+                   <com.opensissas.others.customtext.Custom_EditText
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
                        android:background="@null"
@@ -340,7 +340,7 @@
                        android:inputType="number"
                        android:textSize="@dimen/medium_text"
                        android:id="@+id/etSemExam"
-                       android:text="0"></com.opensis.others.customtext.Custom_EditText>
+                       android:text="0"></com.opensissas.others.customtext.Custom_EditText>
                </LinearLayout>
 
                <LinearLayout
@@ -350,20 +350,20 @@
                    android:layout_height="match_parent"
                    android:orientation="vertical"
                    android:id="@+id/lnFullYear">
-                   <com.opensis.others.customtext.Custom_Text_View_Bold
+                   <com.opensissas.others.customtext.Custom_Text_View_Bold
                        android:id="@+id/tvFullYR"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:textSize="@dimen/big_text"
                        android:textColor="@color/black"
-                       android:text="Full Year"></com.opensis.others.customtext.Custom_Text_View_Bold>
-                   <com.opensis.others.customtext.Custom_Text_View
+                       android:text="Full Year"></com.opensissas.others.customtext.Custom_Text_View_Bold>
+                   <com.opensissas.others.customtext.Custom_Text_View
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:textSize="@dimen/small_text"
                        android:textColor="@color/missing_attendance"
                        android:layout_marginTop="5dp"
-                       android:text="Total must be 100% for each marking period"></com.opensis.others.customtext.Custom_Text_View>
+                       android:text="Total must be 100% for each marking period"></com.opensissas.others.customtext.Custom_Text_View>
                    <LinearLayout
                        android:id="@+id/lnFullYearExam"
                        android:layout_width="match_parent"
@@ -384,12 +384,12 @@
                            android:paddingBottom="5dp"
                            android:paddingRight="20dp"
                            android:orientation="vertical">
-                           <com.opensis.others.customtext.Custom_Text_View
+                           <com.opensissas.others.customtext.Custom_Text_View
                                android:layout_width="wrap_content"
                                android:layout_height="wrap_content"
                                android:textColor="@color/bar"
-                               android:id="@+id/tvFYExam"></com.opensis.others.customtext.Custom_Text_View>
-                           <com.opensis.others.customtext.Custom_EditText
+                               android:id="@+id/tvFYExam"></com.opensissas.others.customtext.Custom_Text_View>
+                           <com.opensissas.others.customtext.Custom_EditText
                                android:layout_width="match_parent"
                                android:layout_height="match_parent"
                                android:background="@null"
@@ -397,7 +397,7 @@
                                android:inputType="number"
                                android:textSize="@dimen/medium_text"
                                android:id="@+id/etFYExam"
-                               android:text="0"></com.opensis.others.customtext.Custom_EditText>
+                               android:text="0"></com.opensissas.others.customtext.Custom_EditText>
                        </LinearLayout>
                    </LinearLayout>
 
@@ -406,7 +406,7 @@
                </LinearLayout>
 
            </LinearLayout>
-           <com.opensis.others.customtext.Custom_Text_View_Bold
+           <com.opensissas.others.customtext.Custom_Text_View_Bold
                android:layout_width="match_parent"
                android:layout_height="50dp"
                android:layout_marginTop="20dp"
@@ -415,7 +415,7 @@
                android:backgroundTint="@color/text_color"
                android:text="Submit"
                android:textColor="@color/white"
-               android:id="@+id/tvSubmit"></com.opensis.others.customtext.Custom_Text_View_Bold>
+               android:id="@+id/tvSubmit"></com.opensissas.others.customtext.Custom_Text_View_Bold>
        </LinearLayout>
        <LinearLayout
            android:visibility="gone"
@@ -431,14 +431,14 @@
                android:layout_height="100dp"
                android:src="@drawable/stop">
            </ImageView>
-           <com.opensis.others.customtext.Custom_Text_View_SemiBold
+           <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                android:textAlignment="center"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:textSize="18sp"
                android:layout_marginTop="10dp"
                android:textColor="@color/missing_attendance"
-               android:text="You cannot access Grade Book Configuration because the grade scale for the course section is not set"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+               android:text="You cannot access Grade Book Configuration because the grade scale for the course section is not set"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
        </LinearLayout>
    </LinearLayout>
 

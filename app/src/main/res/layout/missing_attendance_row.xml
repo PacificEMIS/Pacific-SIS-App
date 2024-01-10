@@ -15,27 +15,27 @@
             android:gravity="right"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <com.opensis.others.customtext.Custom_Text_View_Bold
+            <com.opensissas.others.customtext.Custom_Text_View_Bold
                 android:id="@+id/tvDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/text_color"
                 android:textSize="@dimen/small_text"
                 android:text="CHEM002"
-                ></com.opensis.others.customtext.Custom_Text_View_Bold>
+                ></com.opensissas.others.customtext.Custom_Text_View_Bold>
 
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <com.opensis.others.customtext.Custom_Text_View_Bold
+            <com.opensissas.others.customtext.Custom_Text_View_Bold
                 android:id="@+id/tvCourseName"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:textColor="@color/class_color"
                 android:textSize="@dimen/big_text"
-                android:text="CHEM002"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                android:text="CHEM002"></com.opensissas.others.customtext.Custom_Text_View_Bold>
 
         </LinearLayout>
         <View
@@ -54,13 +54,13 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 >
-                <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                     android:id="@+id/tvCourseSection"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="@dimen/large_text"
-                    android:text="Chemistry"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                    android:text="Chemistry"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                 <LinearLayout
                     android:visibility="gone"
                     android:layout_marginLeft="20dp"
@@ -81,7 +81,7 @@
             android:layout_height="wrap_content"
            >
 
-            <com.opensis.others.customtext.Custom_Text_View
+            <com.opensissas.others.customtext.Custom_Text_View
                 android:layout_gravity="center"
                 android:id="@+id/tvGrade"
                 android:layout_marginLeft="10dp"
@@ -89,8 +89,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/medium_text"
                 android:textColor="@color/black"
-                android:text="Period 2"></com.opensis.others.customtext.Custom_Text_View>
-            <com.opensis.others.customtext.Custom_Text_View
+                android:text="Period 2"></com.opensissas.others.customtext.Custom_Text_View>
+            <com.opensissas.others.customtext.Custom_Text_View
                 android:layout_gravity="center"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
@@ -98,8 +98,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/large_text"
                 android:textColor="@color/black"
-                android:text="-"></com.opensis.others.customtext.Custom_Text_View>
-            <com.opensis.others.customtext.Custom_Text_View
+                android:text="-"></com.opensissas.others.customtext.Custom_Text_View>
+            <com.opensissas.others.customtext.Custom_Text_View
                 android:layout_gravity="center"
                 android:id="@+id/tvPeriod"
                 android:layout_marginLeft="10dp"
@@ -107,8 +107,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/large_text"
                 android:textColor="@color/black"
-                android:text="10:00 AM"></com.opensis.others.customtext.Custom_Text_View>
-            <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                android:text="10:00 AM"></com.opensissas.others.customtext.Custom_Text_View>
+            <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                 android:layout_marginLeft="10dp"
                 android:layout_width="110dp"
                 android:layout_height="44dp"
@@ -118,7 +118,7 @@
                 android:textSize="@dimen/medium_text"
                 android:textColor="@color/white"
                 android:text="Take \nAttendance"
-                android:id="@+id/tvTakeAttendance"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                android:id="@+id/tvTakeAttendance"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
 
         </LinearLayout>
 

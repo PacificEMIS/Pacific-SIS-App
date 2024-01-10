@@ -36,14 +36,14 @@
                             android:layout_width="34dp"
                             android:layout_height="34dp"
                             android:src="@drawable/arrow_back_white_48dp"></ImageView>
-                        <com.opensis.others.customtext.Custom_Text_View_Bold
+                        <com.opensissas.others.customtext.Custom_Text_View_Bold
                             android:id="@+id/tvSchoolName"
                             android:layout_marginLeft="20dp"
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/big_text"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                            android:textSize="@dimen/big_text"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_marginTop="20dp"
@@ -57,7 +57,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
-                                <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                                <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                                     android:id="@+id/tvGeneralInfo"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -68,8 +68,8 @@
                                     android:background="@drawable/llwhitecurvedesign"
                                     android:textColor="@color/text_color"
                                     android:textSize="@dimen/medium_text"
-                                    android:text="General Info"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
-                                <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                                    android:text="General Info"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
+                                <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                                     android:layout_marginLeft="20dp"
                                     android:id="@+id/tvWashInfo"
                                     android:layout_width="wrap_content"
@@ -82,7 +82,7 @@
                                     android:backgroundTint="@color/text_color"
                                     android:textColor="@color/white"
                                     android:textSize="@dimen/medium_text"
-                                    android:text="Wash Info"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                                    android:text="Wash Info"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
 
                             </LinearLayout>
                         </HorizontalScrollView>

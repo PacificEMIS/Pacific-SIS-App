@@ -12,13 +12,13 @@
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <com.opensis.others.customtext.Custom_Text_View_Bold
+        <com.opensissas.others.customtext.Custom_Text_View_Bold
             android:layout_weight="1"
             android:text="Select Attendance Status"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="@dimen/big_text"
-            android:textColor="@color/black"></com.opensis.others.customtext.Custom_Text_View_Bold>
+            android:textColor="@color/black"></com.opensissas.others.customtext.Custom_Text_View_Bold>
         <LinearLayout
             android:id="@+id/lnCLose"
             android:layout_width="30dp"

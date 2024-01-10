@@ -33,7 +33,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <com.opensis.others.customtext.Custom_Text_View_Bold
+                        <com.opensissas.others.customtext.Custom_Text_View_Bold
                             android:id="@+id/tvCourseName"
                             android:layout_gravity="center"
                             android:layout_width="0dp"
@@ -41,7 +41,7 @@
                             android:text="Calendar"
                             android:textColor="@color/white"
                             android:textSize="@dimen/big_text"
-                            android:layout_weight="1"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                            android:layout_weight="1"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                         <LinearLayout
                             android:visibility="gone"
                             android:gravity="right"
@@ -86,14 +86,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:background="@color/white">
-                            <com.opensis.others.customtext.Custom_Text_View
+                            <com.opensissas.others.customtext.Custom_Text_View
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:layout_gravity="center"
                                 android:layout_marginLeft="10dp"
                                 android:textColor="@color/text_color"
-                                android:id="@+id/tvMonth"></com.opensis.others.customtext.Custom_Text_View>
+                                android:id="@+id/tvMonth"></com.opensissas.others.customtext.Custom_Text_View>
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -135,12 +135,12 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:layout_marginTop="20dp">
-                            <com.opensis.others.customtext.Custom_Text_View_Bold
+                            <com.opensissas.others.customtext.Custom_Text_View_Bold
                                 android:textAlignment="center"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/large_text"
-                                android:id="@+id/tvDateText"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                                android:id="@+id/tvDateText"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                         </LinearLayout>
                         <androidx.recyclerview.widget.RecyclerView
                             android:layout_marginTop="20dp"

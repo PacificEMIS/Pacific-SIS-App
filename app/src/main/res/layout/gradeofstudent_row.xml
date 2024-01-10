@@ -21,27 +21,27 @@
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@mipmap/dummyman"></de.hdodenhof.circleimageview.CircleImageView>
+                    android:src="@drawable/student_user"></de.hdodenhof.circleimageview.CircleImageView>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:orientation="vertical">
-                    <com.opensis.others.customtext.Custom_Text_View_Bold
+                    <com.opensissas.others.customtext.Custom_Text_View_Bold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/medium_text"
                         android:textColor="@color/black"
                         android:text="Emily Jones"
-                        android:id="@+id/tvStudentName"></com.opensis.others.customtext.Custom_Text_View_Bold>
-                    <com.opensis.others.customtext.Custom_Text_View
+                        android:id="@+id/tvStudentName"></com.opensissas.others.customtext.Custom_Text_View_Bold>
+                    <com.opensissas.others.customtext.Custom_Text_View
                         android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/small_text"
                         android:textColor="@color/black"
                         android:text="ID:11"
-                        android:id="@+id/tvStudentID"></com.opensis.others.customtext.Custom_Text_View>
+                        android:id="@+id/tvStudentID"></com.opensissas.others.customtext.Custom_Text_View>
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
@@ -53,7 +53,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/llgreystrokedesign"
                     android:padding="10dp">
-                    <com.opensis.others.customtext.Custom_EditText
+                    <com.opensissas.others.customtext.Custom_EditText
 
                         android:text="19"
                         android:layout_width="30dp"
@@ -61,15 +61,15 @@
                         android:background="@null"
                         android:id="@+id/etNumber"
                         android:textSize="@dimen/medium_text"
-                        android:textColor="@color/black"></com.opensis.others.customtext.Custom_EditText>
-                    <com.opensis.others.customtext.Custom_Text_View
+                        android:textColor="@color/black"></com.opensissas.others.customtext.Custom_EditText>
+                    <com.opensissas.others.customtext.Custom_Text_View
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="/"
                         android:textSize="@dimen/large_text"
                         android:layout_gravity="center"
-                        android:textColor="@color/black"></com.opensis.others.customtext.Custom_Text_View>
-                    <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                        android:textColor="@color/black"></com.opensissas.others.customtext.Custom_Text_View>
+                    <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                         android:id="@+id/tvTotal"
                         android:layout_marginLeft="10dp"
                         android:layout_width="wrap_content"
@@ -78,7 +78,7 @@
                         android:textSize="@dimen/large_text"
                         android:layout_gravity="center"
                         android:textColor="@color/black"
-                        android:enabled="false"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                        android:enabled="false"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -87,7 +87,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@color/grey">
-        <com.opensis.others.customtext.Custom_EditText
+        <com.opensissas.others.customtext.Custom_EditText
             android:id="@+id/etComment"
             android:paddingLeft="5dp"
             android:textSize="@dimen/small_text"
@@ -98,7 +98,7 @@
             android:textColorHint="@color/bar"
             android:enabled="false">
 
-        </com.opensis.others.customtext.Custom_EditText>
+        </com.opensissas.others.customtext.Custom_EditText>
     </LinearLayout>
 
 

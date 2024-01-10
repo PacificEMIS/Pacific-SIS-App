@@ -4,201 +4,298 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.common.activity.LoginActivity"
     android:background="@mipmap/login_bg"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ui.common.activity.LoginActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.5"
         android:gravity="bottom|center">
+
         <LinearLayout
+            android:id="@+id/lnLogo"
             android:layout_width="180dp"
             android:layout_height="180dp"
+            android:background="@mipmap/login_logo"
             android:gravity="center"
-            android:background="@mipmap/login_logo">
+            android:visibility="visible">
+
             <ImageView
+                android:src="@mipmap/pacific_sis_logo"
+                android:id="@+id/imgLogo"
                 android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@mipmap/pacific_sis_logo"></ImageView>
+                android:layout_height="60dp"></ImageView>
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="vertical">
+
         <LinearLayout
-            android:visibility="visible"
+
             android:id="@+id/lnWebAddress"
-            android:padding="20dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="40dp"
-            android:orientation="vertical">
-            <com.opensis.others.customtext.Custom_Text_View_SemiBold
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:visibility="visible">
+
+            <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/large_text"
+                android:text="Type your school’s openSIS web address below"
                 android:textColor="@color/white"
-                android:text="Type your school’s Pacific SIS web address below"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
+            <com.opensissas.others.customtext.Custom_Text_View_SemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Example : https://name.opensis.com"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text"
+                android:layout_marginTop="20dp"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
             <LinearLayout
 
-                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:layout_marginTop="5dp"
                 android:orientation="vertical">
+
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width = "match_parent"
-                    android:background="@drawable/llwhitestrokedesign"
-                    android:layout_height = "match_parent"
-                    android:id = "@+id/layoutEmail"
-                    style = "@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+                    android:id="@+id/layoutEmail"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/llwhitestrokedesign">
+
                     <EditText
-                        android:layout_width = "match_parent"
-                        android:layout_height = "wrap_content"
-                        android:id = "@+id/etWebAddress"
-                        android:hint = "Pacific Web Address"
-                        android:textColor="@color/white"
+                        android:id="@+id/etWebAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:background="@null"
                         android:backgroundTint="@color/trasparent"
-                       />
+                        android:hint="openSIS Web Address"
+                        android:textColor="@color/white" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
-            <com.opensis.others.customtext.Custom_Text_View_Bold
+
+            <com.opensissas.others.customtext.Custom_Text_View_Bold
+                android:id="@+id/tvSubmit"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:gravity="center"
-                android:text="Submit"
-                android:textSize="@dimen/large_text"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/llwhitestrokedesign"
                 android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:text="Submit"
                 android:textColor="@color/black"
-                android:layout_marginTop="20dp"
-                android:id="@+id/tvSubmit"></com.opensis.others.customtext.Custom_Text_View_Bold>
-            <com.opensis.others.customtext.Custom_Text_View
+                android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View_Bold>
+
+            <com.opensissas.others.customtext.Custom_Text_View
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/small_text"
-                android:textColor="@color/white"
                 android:layout_marginTop="20dp"
-                android:text="Note:  Mobile access to Pacific SIS must be turned on by school administrator and you must have a valid account to access Pacific SIS via a mobile device.Please contact school administrator if you are unable to login"></com.opensis.others.customtext.Custom_Text_View>
+                android:text="Note: This openSIS app is for Teacher
+portal functionalities and works with an
+active openSIS SaaS subscription."
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text"></com.opensissas.others.customtext.Custom_Text_View>
         </LinearLayout>
+
         <LinearLayout
-            android:visibility="gone"
             android:id="@+id/lnLogin"
-            android:padding="20dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="20dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:visibility="gone">
+
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:background="@drawable/llwhitestrokedesign"
                         android:padding="10dp">
-                        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+
+                        <com.opensissas.others.customtext.Custom_Text_View_SemiBold
+                            android:id="@+id/tvUrl"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/white"
                             android:layout_weight="1"
-                            android:id="@+id/tvUrl"
-                            android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
+
                         <LinearLayout
                             android:id="@+id/lnEdit"
-                            android:gravity="end"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="0.2">
+                            android:layout_weight="0.2"
+                            android:gravity="end">
+
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:src="@drawable/edit_white"></ImageView>
                         </LinearLayout>
                     </LinearLayout>
+
                     <LinearLayout
-                        android:layout_marginTop="20dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:orientation="vertical">
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:layout_width = "match_parent"
-                            android:background="@drawable/llwhitestrokedesign"
-                            android:layout_height = "match_parent"
-                            style = "@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
-                            <EditText
-                                android:layout_width = "match_parent"
-                                android:layout_height = "match_parent"
-                                android:id = "@+id/etEmail"
-                                android:hint = "Email Address"
-                                android:textSize="@dimen/large_text"
-                                android:textColor="@color/white"
-                                android:background="@null"
-                                android:backgroundTint="@color/trasparent"
-                                android:inputType = "textEmailAddress"/>
-                        </com.google.android.material.textfield.TextInputLayout>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_marginTop="20dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:orientation="horizontal">
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:layout_width = "0dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/llwhitestrokedesign"
-                            android:layout_height = "match_parent"
-                            style = "@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
-                            <EditText
-                                android:layout_width = "match_parent"
-                                android:layout_height = "match_parent"
-                                android:id = "@+id/etPassword"
-                                android:hint = "Password"
-                                android:textSize="@dimen/large_text"
-                                android:textColor="@color/white"
-                                android:background="@null"
-                                android:backgroundTint="@color/trasparent"
-                                android:inputType = "textPassword"/>
-                        </com.google.android.material.textfield.TextInputLayout>
-                    </LinearLayout>
-                    <com.opensis.others.customtext.Custom_Text_View_Bold
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/llwhitedesign"
+                        android:backgroundTint="@color/orangecolor"
                         android:gravity="center"
-                        android:text="Login"
-                        android:textSize="@dimen/large_text"
+                        android:orientation="vertical">
+
+                        <com.opensissas.others.customtext.Custom_Text_View_SemiBold
+                            android:id="@+id/tvSchool"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/large_text" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/llwhitestrokedesign">
+
+                            <EditText
+                                android:id="@+id/etEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:backgroundTint="@color/trasparent"
+                                android:hint="Email Address"
+                                android:inputType="textEmailAddress"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/large_text" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/llwhitestrokedesign">
+
+                            <EditText
+                                android:id="@+id/etPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:backgroundTint="@color/trasparent"
+                                android:hint="Password"
+                                android:inputType="textPassword"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/large_text" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <com.opensissas.others.customtext.Custom_Text_View_Bold
+                        android:id="@+id/tvLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
                         android:background="@drawable/llwhitestrokedesign"
                         android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:text="Login"
                         android:textColor="@color/black"
-                        android:layout_marginTop="20dp"
-                        android:id="@+id/tvLogin"></com.opensis.others.customtext.Custom_Text_View_Bold>
-                    <com.opensis.others.customtext.Custom_Text_View_Bold
+                        android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View_Bold>
+
+                    <com.opensissas.others.customtext.Custom_Text_View_Bold
+                        android:id="@+id/tvForgotUser"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
                         android:gravity="center"
                         android:text="Forgot Username/Password"
-                        android:textSize="@dimen/large_text"
                         android:textColor="@color/white"
-                        android:layout_marginTop="20dp"
-                        android:id="@+id/tvForgotUser"></com.opensis.others.customtext.Custom_Text_View_Bold>
-                    <com.opensis.others.customtext.Custom_Text_View
+                        android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View_Bold>
+
+                    <com.opensissas.others.customtext.Custom_Text_View
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/small_text"
-                        android:textColor="@color/white"
                         android:layout_marginTop="10dp"
-                        android:text="Note:  Mobile access to Pacific SIS must be turned on by school administrator and you must have a valid account to access Pacific SIS via a mobile device.Please contact school administrator if you are unable to login"></com.opensis.others.customtext.Custom_Text_View>
+                        android:text="Note: This openSIS app is for Teacher
+portal functionalities and works with an
+active openSIS SaaS subscription."
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/small_text"></com.opensissas.others.customtext.Custom_Text_View>
                 </LinearLayout>
             </ScrollView>
 
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/llError"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/apple"></ImageView>
+            <com.opensissas.others.customtext.Custom_Text_View_SemiBold
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/large_text"
+                android:textColor="@color/white"
+                android:text="We can’t find the school that you are looking for"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
+
+            <com.opensissas.others.customtext.Custom_Text_View_SemiBold
+                android:id="@+id/tvTryAgain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/llwhitedesign"
+                android:backgroundTint="@color/green"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Try Again"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
         </LinearLayout>
     </LinearLayout>
 

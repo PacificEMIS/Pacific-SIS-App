@@ -36,14 +36,14 @@
                             android:layout_width="34dp"
                             android:layout_height="34dp"
                             android:src="@drawable/arrow_back_white_48dp"></ImageView>
-                        <com.opensis.others.customtext.Custom_Text_View_Bold
+                        <com.opensissas.others.customtext.Custom_Text_View_Bold
                             android:id="@+id/tvPeriodName"
                             android:layout_marginLeft="20dp"
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/big_text"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                            android:textSize="@dimen/big_text"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                     </LinearLayout>
                    >
 
@@ -66,21 +66,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensis.others.customtext.Custom_Text_View
+                        <com.opensissas.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Title"></com.opensis.others.customtext.Custom_Text_View>
+                            android:text="Title"></com.opensissas.others.customtext.Custom_Text_View>
 
-                        <com.opensis.others.customtext.Custom_Text_View_Bold
+                        <com.opensissas.others.customtext.Custom_Text_View_Bold
                             android:id="@+id/tvTitle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:text="Title"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                            android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -101,14 +101,14 @@
                                 android:layout_height="20dp"
                                 android:src="@drawable/check_black_48dp"
                                 app:tint="@color/white"></ImageView>
-                            <com.opensis.others.customtext.Custom_Text_View
+                            <com.opensissas.others.customtext.Custom_Text_View
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/small_text"
                                 android:textColor="@color/white"
                                 android:layout_gravity="center"
                                 android:text="Graded"
-                                android:layout_marginLeft="5dp"></com.opensis.others.customtext.Custom_Text_View>
+                                android:layout_marginLeft="5dp"></com.opensissas.others.customtext.Custom_Text_View>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_marginLeft="5dp"
@@ -126,14 +126,14 @@
                                 android:layout_height="20dp"
                                 android:src="@drawable/check_black_48dp"
                                 app:tint="@color/white"></ImageView>
-                            <com.opensis.others.customtext.Custom_Text_View
+                            <com.opensissas.others.customtext.Custom_Text_View
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/small_text"
                                 android:textColor="@color/white"
                                 android:layout_gravity="center"
                                 android:text="Exam"
-                                android:layout_marginLeft="5dp"></com.opensis.others.customtext.Custom_Text_View>
+                                android:layout_marginLeft="5dp"></com.opensissas.others.customtext.Custom_Text_View>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_marginLeft="5dp"
@@ -151,14 +151,14 @@
                                 android:layout_height="20dp"
                                 android:src="@drawable/check_black_48dp"
                                 app:tint="@color/white"></ImageView>
-                            <com.opensis.others.customtext.Custom_Text_View
+                            <com.opensissas.others.customtext.Custom_Text_View
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/small_text"
                                 android:textColor="@color/white"
                                 android:layout_gravity="center"
                                 android:text="Comment"
-                                android:layout_marginLeft="5dp"></com.opensis.others.customtext.Custom_Text_View>
+                                android:layout_marginLeft="5dp"></com.opensissas.others.customtext.Custom_Text_View>
                         </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
@@ -171,20 +171,20 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
-                            <com.opensis.others.customtext.Custom_Text_View
+                            <com.opensissas.others.customtext.Custom_Text_View
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/medium_text"
                                 android:textColor="@color/bar"
-                                android:text="Short Name"></com.opensis.others.customtext.Custom_Text_View>
-                            <com.opensis.others.customtext.Custom_Text_View_Bold
+                                android:text="Short Name"></com.opensissas.others.customtext.Custom_Text_View>
+                            <com.opensissas.others.customtext.Custom_Text_View_Bold
                                 android:layout_marginTop="5dp"
                                 android:id="@+id/tvShortName"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/large_text"
                                 android:textColor="@color/black"
-                                android:text="Title"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                                android:text="Title"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -198,40 +198,40 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
-                            <com.opensis.others.customtext.Custom_Text_View
+                            <com.opensissas.others.customtext.Custom_Text_View
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/medium_text"
                                 android:textColor="@color/bar"
-                                android:text="Begins"></com.opensis.others.customtext.Custom_Text_View>
-                            <com.opensis.others.customtext.Custom_Text_View_Bold
+                                android:text="Begins"></com.opensissas.others.customtext.Custom_Text_View>
+                            <com.opensissas.others.customtext.Custom_Text_View_Bold
                                 android:layout_marginTop="5dp"
                                 android:id="@+id/tvBegin"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/large_text"
                                 android:textColor="@color/black"
-                                android:text="Title"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                                android:text="Title"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_weight="1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
-                            <com.opensis.others.customtext.Custom_Text_View
+                            <com.opensissas.others.customtext.Custom_Text_View
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/medium_text"
                                 android:textColor="@color/bar"
-                                android:text="Ends"></com.opensis.others.customtext.Custom_Text_View>
-                            <com.opensis.others.customtext.Custom_Text_View_Bold
+                                android:text="Ends"></com.opensissas.others.customtext.Custom_Text_View>
+                            <com.opensissas.others.customtext.Custom_Text_View_Bold
                                 android:layout_marginTop="5dp"
                                 android:id="@+id/tvEnd"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/large_text"
                                 android:textColor="@color/black"
-                                android:text="Title"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                                android:text="Title"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                         </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
@@ -244,40 +244,40 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
-                            <com.opensis.others.customtext.Custom_Text_View
+                            <com.opensissas.others.customtext.Custom_Text_View
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/medium_text"
                                 android:textColor="@color/bar"
-                                android:text="Grade Posting Begins"></com.opensis.others.customtext.Custom_Text_View>
-                            <com.opensis.others.customtext.Custom_Text_View_Bold
+                                android:text="Grade Posting Begins"></com.opensissas.others.customtext.Custom_Text_View>
+                            <com.opensissas.others.customtext.Custom_Text_View_Bold
                                 android:layout_marginTop="5dp"
                                 android:id="@+id/tvPostingBegin"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/large_text"
                                 android:textColor="@color/black"
-                                android:text="Title"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                                android:text="Title"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_weight="1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
-                            <com.opensis.others.customtext.Custom_Text_View
+                            <com.opensissas.others.customtext.Custom_Text_View
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/medium_text"
                                 android:textColor="@color/bar"
-                                android:text="Grade Posting Ends"></com.opensis.others.customtext.Custom_Text_View>
-                            <com.opensis.others.customtext.Custom_Text_View_Bold
+                                android:text="Grade Posting Ends"></com.opensissas.others.customtext.Custom_Text_View>
+                            <com.opensissas.others.customtext.Custom_Text_View_Bold
                                 android:layout_marginTop="5dp"
                                 android:id="@+id/tvPostingEnd"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/large_text"
                                 android:textColor="@color/black"
-                                android:text="Title"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                                android:text="Title"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                         </LinearLayout>
                     </LinearLayout>
 

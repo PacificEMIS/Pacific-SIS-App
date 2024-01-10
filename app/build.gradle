@@ -7,11 +7,11 @@ android {
 
 
     defaultConfig {
-        applicationId "com.opensis"
+        applicationId "com.opensissas"
         minSdkVersion 24
         targetSdkVersion 33
-        versionCode 6
-        versionName "1.2"
+        versionCode 10
+        versionName "1.3"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -58,11 +58,12 @@ dependencies {
     implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
     implementation 'com.amitshekhar.android:jackson-android-networking:1.0.2'
     compile 'com.scottyab:aescrypt:0.0.1'
-
+    implementation 'com.amitshekhar.android:jackson-android-networking:1.0.2'
     compile 'com.github.tozny:java-aes-crypto:1.1.0'
     compile 'com.prolificinteractive:material-calendarview:1.4.3'
     compile 'com.github.sundeepk:compact-calendar-view:3.0.0'
     implementation 'com.android.support:multidex:2.0.1'
     implementation 'com.google.android.play:core:1.10.0'
+    implementation 'com.scottyab:aescrypt:0.0.1'
 
 }

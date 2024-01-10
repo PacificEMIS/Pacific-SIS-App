@@ -19,21 +19,21 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginLeft="20dp">
-            <com.opensis.others.customtext.Custom_Text_View_Bold
+            <com.opensissas.others.customtext.Custom_Text_View_Bold
                 android:id="@+id/tvStudentName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/big_text"
                 android:textColor="@color/black"
-               ></com.opensis.others.customtext.Custom_Text_View_Bold>
-            <com.opensis.others.customtext.Custom_Text_View
+               ></com.opensissas.others.customtext.Custom_Text_View_Bold>
+            <com.opensissas.others.customtext.Custom_Text_View
                 android:layout_marginTop="5dp"
                 android:id="@+id/tvID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/medium_text"
                 android:textColor="@color/black"
-               ></com.opensis.others.customtext.Custom_Text_View>
+               ></com.opensissas.others.customtext.Custom_Text_View>
         </LinearLayout>
     </LinearLayout>
 

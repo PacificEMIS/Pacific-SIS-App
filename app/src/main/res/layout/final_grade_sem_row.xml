@@ -4,19 +4,19 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_marginBottom="20dp">
-    <com.opensis.others.customtext.Custom_Text_View_SemiBold
+    <com.opensissas.others.customtext.Custom_Text_View_SemiBold
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/medium_text"
         android:textColor="@color/black"
-        android:id="@+id/tvGradeName"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
-    <com.opensis.others.customtext.Custom_Text_View
+        android:id="@+id/tvGradeName"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
+    <com.opensissas.others.customtext.Custom_Text_View
         android:layout_marginTop="2dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/small_text"
         android:textColor="@color/missing_attendance"
-       android:text="Total not 100%"></com.opensis.others.customtext.Custom_Text_View>
+       android:text="Total not 100%"></com.opensissas.others.customtext.Custom_Text_View>
 
     <LinearLayout
         android:layout_marginTop="10dp"
@@ -28,19 +28,19 @@
         android:paddingBottom="5dp"
         android:paddingRight="20dp"
         android:orientation="vertical">
-        <com.opensis.others.customtext.Custom_Text_View
+        <com.opensissas.others.customtext.Custom_Text_View
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/bar"
-            android:id="@+id/tvGradeQ1"></com.opensis.others.customtext.Custom_Text_View>
-        <com.opensis.others.customtext.Custom_EditText
+            android:id="@+id/tvGradeQ1"></com.opensissas.others.customtext.Custom_Text_View>
+        <com.opensissas.others.customtext.Custom_EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@null"
             android:textColor="@color/black"
             android:inputType="number"
             android:textSize="@dimen/medium_text"
-            android:id="@+id/etGradeQ1"></com.opensis.others.customtext.Custom_EditText>
+            android:id="@+id/etGradeQ1"></com.opensissas.others.customtext.Custom_EditText>
     </LinearLayout>
     <LinearLayout
         android:visibility="gone"
@@ -54,19 +54,19 @@
         android:paddingBottom="5dp"
         android:paddingRight="20dp"
         android:orientation="vertical">
-        <com.opensis.others.customtext.Custom_Text_View
+        <com.opensissas.others.customtext.Custom_Text_View
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/bar"
-            android:id="@+id/tvGradeQ2"></com.opensis.others.customtext.Custom_Text_View>
-        <com.opensis.others.customtext.Custom_EditText
+            android:id="@+id/tvGradeQ2"></com.opensissas.others.customtext.Custom_Text_View>
+        <com.opensissas.others.customtext.Custom_EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@null"
             android:textColor="@color/black"
             android:inputType="number"
             android:textSize="@dimen/medium_text"
-            android:id="@+id/etGradeQ2"></com.opensis.others.customtext.Custom_EditText>
+            android:id="@+id/etGradeQ2"></com.opensissas.others.customtext.Custom_EditText>
     </LinearLayout>
     <LinearLayout
         android:visibility="gone"
@@ -79,19 +79,19 @@
         android:paddingBottom="5dp"
         android:paddingRight="20dp"
         android:orientation="vertical">
-        <com.opensis.others.customtext.Custom_Text_View
+        <com.opensissas.others.customtext.Custom_Text_View
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/bar"
-            android:id="@+id/tvGradeTotal"></com.opensis.others.customtext.Custom_Text_View>
-        <com.opensis.others.customtext.Custom_EditText
+            android:id="@+id/tvGradeTotal"></com.opensissas.others.customtext.Custom_Text_View>
+        <com.opensissas.others.customtext.Custom_EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@null"
             android:textColor="@color/black"
             android:inputType="number"
             android:textSize="@dimen/medium_text"
-            android:id="@+id/etGradeTotal"></com.opensis.others.customtext.Custom_EditText>
+            android:id="@+id/etGradeTotal"></com.opensissas.others.customtext.Custom_EditText>
     </LinearLayout>
 
 </LinearLayout>

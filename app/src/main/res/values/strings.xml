@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Pacific-SIS</string>
+    <string name="app_name">openSIS SAAS teach Connect</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="internectconnectionerror">No internet connection.</string>

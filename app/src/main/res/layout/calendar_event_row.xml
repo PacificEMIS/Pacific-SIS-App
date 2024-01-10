@@ -10,13 +10,13 @@
         android:layout_height="50dp"
         android:background="@drawable/llgreystrokedesign"
         android:backgroundTint="@color/white">
-        <com.opensis.others.customtext.Custom_Text_View
+        <com.opensissas.others.customtext.Custom_Text_View
             android:textSize="@dimen/medium_text"
             android:id="@+id/tvEvent"
             android:layout_gravity="center"
             android:textColor="@color/text_color"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></com.opensis.others.customtext.Custom_Text_View>
+            android:layout_height="wrap_content"></com.opensissas.others.customtext.Custom_Text_View>
     </LinearLayout>
 
 </LinearLayout>

@@ -22,14 +22,14 @@
                 android:src="@drawable/photocamera"
                 app:tint="@color/text_color"
                 ></ImageView>
-            <com.opensis.others.customtext.Custom_Text_View
+            <com.opensissas.others.customtext.Custom_Text_View
                 android:layout_gravity="center"
                 android:text="Take a Picture"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
                 android:textColor="@color/text_color"
-                android:layout_marginLeft="10dp"></com.opensis.others.customtext.Custom_Text_View>
+                android:layout_marginLeft="10dp"></com.opensissas.others.customtext.Custom_Text_View>
         </LinearLayout>
         <View
             android:layout_marginTop="6dp"
@@ -47,14 +47,14 @@
                 android:layout_height="20dp"
                 android:src="@drawable/gallery"
                 app:tint="@color/text_color"></ImageView>
-            <com.opensis.others.customtext.Custom_Text_View
+            <com.opensissas.others.customtext.Custom_Text_View
                 android:layout_gravity="center"
                 android:text="Select photo from storage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
                 android:textColor="@color/text_color"
-                android:layout_marginLeft="10dp"></com.opensis.others.customtext.Custom_Text_View>
+                android:layout_marginLeft="10dp"></com.opensissas.others.customtext.Custom_Text_View>
         </LinearLayout>
 
     </LinearLayout>

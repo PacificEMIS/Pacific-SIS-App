@@ -15,19 +15,19 @@
         android:paddingBottom="5dp"
         android:paddingRight="20dp"
         android:orientation="vertical">
-        <com.opensis.others.customtext.Custom_Text_View
+        <com.opensissas.others.customtext.Custom_Text_View
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/bar"
-            android:id="@+id/tvGradeName"></com.opensis.others.customtext.Custom_Text_View>
-        <com.opensis.others.customtext.Custom_EditText
+            android:id="@+id/tvGradeName"></com.opensissas.others.customtext.Custom_Text_View>
+        <com.opensissas.others.customtext.Custom_EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@null"
             android:textColor="@color/black"
             android:inputType="number"
             android:textSize="@dimen/medium_text"
-            android:id="@+id/etGrade"></com.opensis.others.customtext.Custom_EditText>
+            android:id="@+id/etGrade"></com.opensissas.others.customtext.Custom_EditText>
     </LinearLayout>
 
 </LinearLayout>

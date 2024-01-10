@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center">
-        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+        <com.opensissas.others.customtext.Custom_Text_View_SemiBold
             android:id="@+id/tvGradeBook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,8 +24,8 @@
             android:backgroundTint="@color/green"
             android:textColor="@color/white"
             android:textSize="@dimen/medium_text"
-            android:text="Gradebook Grades"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
-        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+            android:text="Gradebook Grades"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
+        <com.opensissas.others.customtext.Custom_Text_View_SemiBold
             android:layout_marginLeft="20dp"
             android:id="@+id/tvInputGrades"
             android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
             android:background="@drawable/llwhitecurvedesign"
             android:textColor="@color/text_color"
             android:textSize="@dimen/medium_text"
-            android:text="Input Final Grades"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+            android:text="Input Final Grades"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
 
     </LinearLayout>
     <LinearLayout

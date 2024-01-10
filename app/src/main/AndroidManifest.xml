@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.opensis">
+    package="com.opensissas">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -13,26 +13,26 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.Opensis"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ui.teacher.activity.MissingClassAttendanceActivity"
+            android:name="com.opensissas.ui.teacher.activity.MissingClassAttendanceActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.teacher.activity.MissingAttendanceActivity"
+            android:name="com.opensissas.ui.teacher.activity.MissingAttendanceActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.teacher.activity.MarkingPeriodDetailsActivity"
+            android:name="com.opensissas.ui.teacher.activity.MarkingPeriodDetailsActivity"
             android:exported="false"
             android:screenOrientation="userPortrait">
             <meta-data
@@ -40,7 +40,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.common.activity.SpalshActivity"
+            android:name="com.opensissas.ui.common.activity.SpalshActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,17 +48,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.teacher.activity.StudentOfGradeActivity" />
-        <activity android:name=".ui.teacher.activity.AssignmentDetailsActivity" />
-        <activity android:name=".ui.teacher.activity.SchoolDetailsActivity" />
+        <activity android:name="com.opensissas.ui.teacher.activity.StudentOfGradeActivity" />
+        <activity android:name="com.opensissas.ui.teacher.activity.AssignmentDetailsActivity" />
+        <activity android:name="com.opensissas.ui.teacher.activity.SchoolDetailsActivity" />
         <activity
-            android:name=".ui.teacher.activity.ClassDetailsActivity"
+            android:name="com.opensissas.ui.teacher.activity.ClassDetailsActivity"
             android:screenOrientation="userPortrait" />
         <activity
-            android:name=".ui.teacher.activity.TeacherDashboardActivity"
+            android:name="com.opensissas.ui.teacher.activity.TeacherDashboardActivity"
             android:screenOrientation="userPortrait" />
         <activity
-            android:name=".ui.common.activity.LoginActivity"
+            android:name="com.opensissas.ui.common.activity.LoginActivity"
             android:screenOrientation="userPortrait" />
     </application>
 

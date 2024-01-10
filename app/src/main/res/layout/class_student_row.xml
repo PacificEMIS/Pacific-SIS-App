@@ -20,24 +20,24 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginLeft="14dp">
-        <com.opensis.others.customtext.Custom_Text_View_Bold
+        <com.opensissas.others.customtext.Custom_Text_View_Bold
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/large_text"
             android:text="Arpan Saha"
             android:textColor="@color/black"
-            android:id="@+id/tvStudentName"></com.opensis.others.customtext.Custom_Text_View_Bold>
+            android:id="@+id/tvStudentName"></com.opensissas.others.customtext.Custom_Text_View_Bold>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
-            <com.opensis.others.customtext.Custom_Text_View
+            <com.opensissas.others.customtext.Custom_Text_View
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/medium_text"
                 android:textColor="@color/black"
                 android:text=" ID : 1120"
-                android:id="@+id/tvID"></com.opensis.others.customtext.Custom_Text_View>
+                android:id="@+id/tvID"></com.opensissas.others.customtext.Custom_Text_View>
             <LinearLayout
                 android:layout_gravity="center"
                 android:layout_width="8dp"
@@ -46,25 +46,25 @@
                 android:layout_marginRight="10dp"
                 android:background="@drawable/rounddesign"
                 android:backgroundTint="@color/text_color"></LinearLayout>
-            <com.opensis.others.customtext.Custom_Text_View
+            <com.opensissas.others.customtext.Custom_Text_View
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/medium_text"
                 android:textColor="@color/black"
                 android:text="Alt ID : 1120"
-                android:id="@+id/tvAltID"></com.opensis.others.customtext.Custom_Text_View>
+                android:id="@+id/tvAltID"></com.opensissas.others.customtext.Custom_Text_View>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
-            <com.opensis.others.customtext.Custom_Text_View
+            <com.opensissas.others.customtext.Custom_Text_View
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/medium_text"
                 android:textColor="@color/black"
                 android:text="Grade 10"
-                android:id="@+id/tvGrade"></com.opensis.others.customtext.Custom_Text_View>
+                android:id="@+id/tvGrade"></com.opensissas.others.customtext.Custom_Text_View>
             <LinearLayout
                 android:layout_gravity="center"
                 android:layout_width="8dp"
@@ -73,13 +73,13 @@
                 android:layout_marginRight="10dp"
                 android:background="@drawable/rounddesign"
                 android:backgroundTint="@color/text_color"></LinearLayout>
-            <com.opensis.others.customtext.Custom_Text_View
+            <com.opensissas.others.customtext.Custom_Text_View
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/medium_text"
                 android:textColor="@color/black"
                 android:text="Section A"
-                android:id="@+id/tvSection"></com.opensis.others.customtext.Custom_Text_View>
+                android:id="@+id/tvSection"></com.opensissas.others.customtext.Custom_Text_View>
         </LinearLayout>
     </LinearLayout>
     <View

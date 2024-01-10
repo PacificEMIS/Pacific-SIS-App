@@ -24,26 +24,26 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginLeft="10dp">
-                <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/large_text"
                     android:textColor="@color/black"
                     android:id="@+id/tvStudentName"
-                    android:text="Arthaur"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                    android:text="Arthaur"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp">
-                    <com.opensis.others.customtext.Custom_Text_View
+                    <com.opensissas.others.customtext.Custom_Text_View
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/medium_text"
                         android:textColor="@color/bar"
                         android:id="@+id/tvID"
                         android:text="ID : ALT-09">
-                    </com.opensis.others.customtext.Custom_Text_View>
-                    <com.opensis.others.customtext.Custom_Text_View
+                    </com.opensissas.others.customtext.Custom_Text_View>
+                    <com.opensissas.others.customtext.Custom_Text_View
                         android:layout_marginLeft="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -51,21 +51,21 @@
                         android:textColor="@color/bar"
                         android:id="@+id/tvAltID"
                         android:text="Alt ID : ALT-09">
-                    </com.opensis.others.customtext.Custom_Text_View>
+                    </com.opensissas.others.customtext.Custom_Text_View>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp">
-                    <com.opensis.others.customtext.Custom_Text_View
+                    <com.opensissas.others.customtext.Custom_Text_View
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/medium_text"
                         android:textColor="@color/bar"
                         android:id="@+id/tvGrade"
                         >
-                    </com.opensis.others.customtext.Custom_Text_View>
-                    <com.opensis.others.customtext.Custom_Text_View
+                    </com.opensissas.others.customtext.Custom_Text_View>
+                    <com.opensissas.others.customtext.Custom_Text_View
                         android:layout_marginLeft="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
                         android:id="@+id/tvSection"
                         android:text="Section 10"
                         android:visibility="gone">
-                    </com.opensis.others.customtext.Custom_Text_View>
+                    </com.opensissas.others.customtext.Custom_Text_View>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -92,12 +92,12 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center">
-                <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/large_text"
                     android:textColor="@color/white"
-                   android:id="@+id/tvAttenDance"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                   android:id="@+id/tvAttenDance"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"

@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <com.opensis.others.customtext.Custom_Text_View_Bold
+        <com.opensissas.others.customtext.Custom_Text_View_Bold
             android:layout_gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -19,7 +19,7 @@
             android:textSize="@dimen/large_text"
             android:textColor="@color/black"
             android:id="@+id/tvAssignmentdetailsName"
-            android:text="Analysyis Chemical Compostion"></com.opensis.others.customtext.Custom_Text_View_Bold>
+            android:text="Analysyis Chemical Compostion"></com.opensissas.others.customtext.Custom_Text_View_Bold>
         <LinearLayout
             android:id="@+id/lnMore"
             android:layout_width="0dp"
@@ -31,14 +31,14 @@
                 android:src="@drawable/more_vert_black_24dp"></ImageView>
         </LinearLayout>
     </LinearLayout>
-    <com.opensis.others.customtext.Custom_Text_View
+    <com.opensissas.others.customtext.Custom_Text_View
         android:id="@+id/tvPoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/medium_text"
         android:layout_marginTop="10dp"
         android:textColor="@color/black"
-        android:text="Pints : 30"></com.opensis.others.customtext.Custom_Text_View>
+        android:text="Pints : 30"></com.opensissas.others.customtext.Custom_Text_View>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,40 +49,40 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
-            <com.opensis.others.customtext.Custom_Text_View_Bold
+            <com.opensissas.others.customtext.Custom_Text_View_Bold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/medium_text"
                 android:textColor="@color/black"
-                android:text="Assigned Date"></com.opensis.others.customtext.Custom_Text_View_Bold>
-            <com.opensis.others.customtext.Custom_Text_View
+                android:text="Assigned Date"></com.opensissas.others.customtext.Custom_Text_View_Bold>
+            <com.opensissas.others.customtext.Custom_Text_View
                 android:id="@+id/tvAssignedDate"
                 android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/small_text"
                 android:textColor="@color/black"
-                android:text="Assigned Date"></com.opensis.others.customtext.Custom_Text_View>
+                android:text="Assigned Date"></com.opensissas.others.customtext.Custom_Text_View>
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1">
-            <com.opensis.others.customtext.Custom_Text_View_Bold
+            <com.opensissas.others.customtext.Custom_Text_View_Bold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/medium_text"
                 android:textColor="@color/black"
-                android:text="Due Date"></com.opensis.others.customtext.Custom_Text_View_Bold>
-            <com.opensis.others.customtext.Custom_Text_View
+                android:text="Due Date"></com.opensissas.others.customtext.Custom_Text_View_Bold>
+            <com.opensissas.others.customtext.Custom_Text_View
                 android:id="@+id/tvDueDate"
                 android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/small_text"
                 android:textColor="@color/black"
-                android:text="Assigned Date"></com.opensis.others.customtext.Custom_Text_View>
+                android:text="Assigned Date"></com.opensissas.others.customtext.Custom_Text_View>
         </LinearLayout>
     </LinearLayout>
 

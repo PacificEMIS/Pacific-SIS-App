@@ -27,12 +27,12 @@
                     android:background="@drawable/curveheader"
                     android:padding="24dp">
 
-                    <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                    <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Today's Classes"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                        android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
 
                 </LinearLayout>
 
@@ -55,14 +55,14 @@
                         android:layout_height="50dp"
                         android:background="@drawable/llgreystrokedesign"
                         android:backgroundTint="@color/white">
-                        <com.opensis.others.customtext.Custom_Text_View
+                        <com.opensissas.others.customtext.Custom_Text_View
                             android:layout_marginLeft="10dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/missing_attendance"
                             android:text="No Classes Found today"
-                            android:layout_gravity="center"></com.opensis.others.customtext.Custom_Text_View>
+                            android:layout_gravity="center"></com.opensissas.others.customtext.Custom_Text_View>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -96,14 +96,14 @@
                         android:layout_gravity="center"
                         android:src="@drawable/missing_attendance"></ImageView>
 
-                    <com.opensis.others.customtext.Custom_Text_View_Bold
+                    <com.opensissas.others.customtext.Custom_Text_View_Bold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="16dp"
                        android:id="@+id/tvMissingAttendance"
                         android:textColor="@color/missing_attendance"
-                        android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                        android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                 </LinearLayout>
 
                 <LinearLayout
@@ -131,14 +131,14 @@
                                 android:layout_height="30dp"
                                 android:src="@drawable/notifications_blue_24dp"></ImageView>
 
-                            <com.opensis.others.customtext.Custom_Text_View_Bold
+                            <com.opensissas.others.customtext.Custom_Text_View_Bold
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:layout_marginLeft="16dp"
                                 android:text="Notification"
                                 android:textColor="@color/text_color"
-                                android:textSize="@dimen/big_text"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                                android:textSize="@dimen/big_text"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                         </LinearLayout>
 
                         <View
@@ -161,12 +161,12 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <com.opensis.others.customtext.Custom_Text_View
+                        <com.opensissas.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Show All"
                             android:textColor="@color/text_color"
-                            android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View>
+                            android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View>
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
@@ -194,14 +194,14 @@
                                 android:layout_height="30dp"
                                 android:src="@drawable/notice_blue_48dp"></ImageView>
 
-                            <com.opensis.others.customtext.Custom_Text_View_Bold
+                            <com.opensissas.others.customtext.Custom_Text_View_Bold
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:layout_marginLeft="16dp"
                                 android:text="Notice"
                                 android:textColor="@color/text_color"
-                                android:textSize="@dimen/big_text"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                                android:textSize="@dimen/big_text"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                         </LinearLayout>
 
                         <View
@@ -224,12 +224,12 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <com.opensis.others.customtext.Custom_Text_View
+                        <com.opensissas.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Show All"
                             android:textColor="@color/text_color"
-                            android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View>
+                            android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View>
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
@@ -258,15 +258,15 @@
                                 android:layout_height="30dp"
                                 android:src="@drawable/list_bulleted_blue_48dp"></ImageView>
 
-                            <com.opensis.others.customtext.Custom_Text_View_Bold
+                            <com.opensissas.others.customtext.Custom_Text_View_Bold
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:layout_marginLeft="16dp"
-                                android:text="Upcoming Calendar Events"
-                                android:textColor="@color/text_color"
-                                android:textSize="@dimen/big_text"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                                android:text="Calendar Events &amp; Holidays "
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/big_text"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -282,8 +282,57 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/bar"></View>
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.12"
+                                android:gravity="center">
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:id="@+id/lnColor"
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                   ></LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
 
+                                <com.opensissas.others.customtext.Custom_Text_View
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/medium_text"
+                                    android:text="Title"
+                                    android:layout_weight="1"></com.opensissas.others.customtext.Custom_Text_View>
+                                <com.opensissas.others.customtext.Custom_Text_View
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/medium_text"
+                                    android:text="Start Date"
+                                    android:layout_weight="0.5"></com.opensissas.others.customtext.Custom_Text_View>
+                                <com.opensissas.others.customtext.Custom_Text_View
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/medium_text"
+                                    android:text="End Date"
+                                    android:layout_weight="0.5"></com.opensissas.others.customtext.Custom_Text_View>
+                            </LinearLayout>
+
+                        </LinearLayout>
                         <androidx.recyclerview.widget.RecyclerView
+                            android:layout_marginTop="5dp"
                             android:id="@+id/rvCalendar"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"

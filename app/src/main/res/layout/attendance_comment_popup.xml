@@ -12,13 +12,13 @@
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <com.opensis.others.customtext.Custom_Text_View_Bold
+        <com.opensissas.others.customtext.Custom_Text_View_Bold
             android:id="@+id/tvStudentName"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="@dimen/big_text"
-            android:textColor="@color/black"></com.opensis.others.customtext.Custom_Text_View_Bold>
+            android:textColor="@color/black"></com.opensissas.others.customtext.Custom_Text_View_Bold>
         <LinearLayout
             android:id="@+id/lnCLose"
             android:layout_width="30dp"
@@ -33,7 +33,7 @@
 
 
     </LinearLayout>
-    <com.opensis.others.customtext.Custom_EditText
+    <com.opensissas.others.customtext.Custom_EditText
         android:id="@+id/etComment"
         android:textSize="@dimen/medium_text"
         android:textColor="@color/text_color"
@@ -43,8 +43,8 @@
         android:background="@drawable/llgreystrokedesign"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="200dp"></com.opensis.others.customtext.Custom_EditText>
-    <com.opensis.others.customtext.Custom_Text_View_SemiBold
+        android:layout_height="200dp"></com.opensissas.others.customtext.Custom_EditText>
+    <com.opensissas.others.customtext.Custom_Text_View_SemiBold
         android:id="@+id/tvSubmit"
         android:layout_marginTop="10dp"
         android:background="@drawable/llgreystrokedesign"
@@ -54,5 +54,5 @@
         android:textSize="@dimen/large_text"
         android:text="Submit"
         android:layout_width="match_parent"
-        android:layout_height="40dp"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+        android:layout_height="40dp"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
 </LinearLayout>

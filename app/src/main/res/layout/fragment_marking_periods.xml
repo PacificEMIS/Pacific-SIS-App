@@ -32,14 +32,14 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <com.opensis.others.customtext.Custom_Text_View_Bold
+                        <com.opensissas.others.customtext.Custom_Text_View_Bold
                             android:id="@+id/tvCourseName"
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Marking Periods"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/big_text"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                            android:textSize="@dimen/big_text"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                     </LinearLayout>
 
 
@@ -68,14 +68,14 @@
                             android:background="@drawable/llwhiteonesidecurvedesign"
                             android:backgroundTint="@color/orangecolor"></LinearLayout>
 
-                        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                        <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                             android:id="@+id/tvFY"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginLeft="20dp"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                            android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                     </LinearLayout>
                     <LinearLayout
                         android:orientation="horizontal"
@@ -122,14 +122,14 @@
                                             android:background="@drawable/llwhiteonesidecurvedesign"
                                             android:backgroundTint="@color/greencolor"></LinearLayout>
 
-                                        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                                        <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center"
                                             android:layout_marginLeft="20dp"
                                             android:id="@+id/tvSem1"
                                             android:textColor="@color/black"
-                                            android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                                            android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                                     </LinearLayout>
                                     <LinearLayout
                                         android:layout_width="match_parent"
@@ -171,14 +171,14 @@
                                                         android:background="@drawable/llwhiteonesidecurvedesign"
                                                         android:backgroundTint="@color/divider"></LinearLayout>
 
-                                                    <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                                                    <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="wrap_content"
                                                         android:layout_gravity="center"
                                                         android:layout_marginLeft="20dp"
                                                         android:id="@+id/tvQtr1"
                                                         android:textColor="@color/black"
-                                                        android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                                                        android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                                                 </LinearLayout>
                                             </LinearLayout>
                                             <LinearLayout
@@ -203,14 +203,14 @@
                                                         android:background="@drawable/llwhiteonesidecurvedesign"
                                                         android:backgroundTint="@color/divider"></LinearLayout>
 
-                                                    <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                                                    <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="wrap_content"
                                                         android:layout_gravity="center"
                                                         android:layout_marginLeft="20dp"
                                                         android:id="@+id/tvQtr2"
                                                         android:textColor="@color/black"
-                                                        android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                                                        android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                                                 </LinearLayout>
                                             </LinearLayout>
 
@@ -247,14 +247,14 @@
                                             android:background="@drawable/llwhiteonesidecurvedesign"
                                             android:backgroundTint="@color/greencolor"></LinearLayout>
 
-                                        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                                        <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                                             android:id="@+id/tvSem2"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center"
                                             android:layout_marginLeft="20dp"
                                             android:textColor="@color/black"
-                                            android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                                            android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                                     </LinearLayout>
                                     <LinearLayout
                                         android:layout_width="match_parent"
@@ -296,14 +296,14 @@
                                                         android:background="@drawable/llwhiteonesidecurvedesign"
                                                         android:backgroundTint="@color/divider"></LinearLayout>
 
-                                                    <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                                                    <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="wrap_content"
                                                         android:layout_gravity="center"
                                                         android:layout_marginLeft="20dp"
                                                         android:id="@+id/tvQtr3"
                                                         android:textColor="@color/black"
-                                                        android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                                                        android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                                                 </LinearLayout>
                                             </LinearLayout>
                                             <LinearLayout
@@ -328,14 +328,14 @@
                                                         android:background="@drawable/llwhiteonesidecurvedesign"
                                                         android:backgroundTint="@color/divider"></LinearLayout>
 
-                                                    <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                                                    <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="wrap_content"
                                                         android:layout_gravity="center"
                                                         android:layout_marginLeft="20dp"
                                                         android:id="@+id/tvQtr4"
                                                         android:textColor="@color/black"
-                                                        android:textSize="@dimen/large_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                                                        android:textSize="@dimen/large_text"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                                                 </LinearLayout>
                                             </LinearLayout>
 

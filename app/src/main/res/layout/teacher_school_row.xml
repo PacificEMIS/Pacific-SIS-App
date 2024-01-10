@@ -26,21 +26,21 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:orientation="vertical">
-            <com.opensis.others.customtext.Custom_Text_View_Bold
+            <com.opensissas.others.customtext.Custom_Text_View_Bold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/big_text"
                 android:textColor="@color/black"
                 android:text="Sodepur High School"
-                android:id="@+id/tvSchoolName"></com.opensis.others.customtext.Custom_Text_View_Bold>
-            <com.opensis.others.customtext.Custom_Text_View
+                android:id="@+id/tvSchoolName"></com.opensissas.others.customtext.Custom_Text_View_Bold>
+            <com.opensissas.others.customtext.Custom_Text_View
                 android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/medium_text"
                 android:textColor="@color/black"
                 android:text="Sodepur Deshbandhu Nagar,Rail Gate No:1,Sodepur.Sodepur Deshbandhu Nagar,Rail Gate No:1,Sodepur"
-                android:id="@+id/tvSchoolAddress"></com.opensis.others.customtext.Custom_Text_View>
+                android:id="@+id/tvSchoolAddress"></com.opensissas.others.customtext.Custom_Text_View>
         </LinearLayout>
     </LinearLayout>
 

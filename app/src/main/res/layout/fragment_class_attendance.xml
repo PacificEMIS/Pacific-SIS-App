@@ -28,14 +28,14 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/calendar_grey"></ImageView>
-                <com.opensis.others.customtext.Custom_Text_View
+                <com.opensissas.others.customtext.Custom_Text_View
                     android:layout_gravity="center"
                     android:layout_marginLeft="5dp"
                     android:textColor="@color/black"
                     android:id="@+id/tvAttendanceDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/small_text"></com.opensis.others.customtext.Custom_Text_View>
+                    android:textSize="@dimen/small_text"></com.opensissas.others.customtext.Custom_Text_View>
             </LinearLayout>
             <View
                 android:layout_width="1dp"
@@ -46,7 +46,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1.2"
                 android:padding="10dp">
-                <com.opensis.others.customtext.Custom_Text_View
+                <com.opensissas.others.customtext.Custom_Text_View
                     android:textSize="@dimen/small_text"
                     android:id="@+id/tvAttendanceTaken"
                     android:layout_width="match_parent"
@@ -54,7 +54,7 @@
                     android:gravity="center"
                     android:textColor="@color/white"
                     android:background="@drawable/llgreystrokedesign"
-                    ></com.opensis.others.customtext.Custom_Text_View>
+                    ></com.opensissas.others.customtext.Custom_Text_View>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -73,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:gravity="right">
-                    <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                    <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                         android:id="@+id/tvUpdate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -85,7 +85,7 @@
                         android:backgroundTint="@color/text_color"
                         android:textColor="@color/white"
                         android:textSize="@dimen/medium_text"
-                        android:text="Update"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                        android:text="Update"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                 </LinearLayout>
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
@@ -103,7 +103,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:gravity="right">
-                    <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                    <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                         android:id="@+id/tvSubmit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -115,7 +115,7 @@
                         android:backgroundTint="@color/text_color"
                         android:textColor="@color/white"
                         android:textSize="@dimen/medium_text"
-                        android:text="Submit"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                        android:text="Submit"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                 </LinearLayout>
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
@@ -129,13 +129,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center">
-                <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/large_text"
                     android:textColor="@color/black"
                     android:textAlignment="center"
-                    android:text="Attendance tracking is not enable for the selected date"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                    android:text="Attendance tracking is not enable for the selected date"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
             </LinearLayout>
 
         </LinearLayout>
@@ -150,13 +150,13 @@
         android:gravity="center"
         android:visibility="gone"
         android:layout_marginTop="40dp">
-        <com.opensis.others.customtext.Custom_Text_View_SemiBold
+        <com.opensissas.others.customtext.Custom_Text_View_SemiBold
             android:textAlignment="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:textColor="@color/text_color"
-            android:text="Attendance tracking is not enabled for this course section"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+            android:text="Attendance tracking is not enabled for this course section"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
 
     </LinearLayout>
 

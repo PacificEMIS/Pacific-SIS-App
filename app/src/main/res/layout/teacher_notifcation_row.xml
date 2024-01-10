@@ -11,13 +11,13 @@
         android:paddingRight="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp">
-        <com.opensis.others.customtext.Custom_Text_View
+        <com.opensissas.others.customtext.Custom_Text_View
             android:id="@+id/tvNotice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/large_text"
             android:textColor="@color/black"
-            android:text="C.W 1 Assignment Grades due on January 10, 2023"></com.opensis.others.customtext.Custom_Text_View>
+            android:text="C.W 1 Assignment Grades due on January 10, 2023"></com.opensissas.others.customtext.Custom_Text_View>
     </LinearLayout>
     <View
         android:layout_width="match_parent"

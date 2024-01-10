@@ -36,7 +36,7 @@
                             android:layout_width="34dp"
                             android:layout_height="34dp"
                             android:src="@drawable/arrow_back_white_48dp"></ImageView>
-                        <com.opensis.others.customtext.Custom_Text_View_Bold
+                        <com.opensissas.others.customtext.Custom_Text_View_Bold
                             android:id="@+id/tvCourseName"
                             android:layout_marginLeft="20dp"
                             android:layout_gravity="center"
@@ -44,7 +44,7 @@
                             android:layout_height="wrap_content"
                             android:text="CHEM002"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/big_text"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                            android:textSize="@dimen/big_text"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_marginTop="20dp"
@@ -58,7 +58,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
-                                <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                                <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                                     android:id="@+id/tvOverView"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -69,8 +69,8 @@
                                     android:background="@drawable/llwhitecurvedesign"
                                     android:textColor="@color/text_color"
                                     android:textSize="@dimen/medium_text"
-                                    android:text="Overview"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
-                                <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                                    android:text="Overview"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
+                                <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                                     android:layout_marginLeft="20dp"
                                     android:id="@+id/tvStudents"
                                     android:layout_width="wrap_content"
@@ -83,8 +83,8 @@
                                     android:backgroundTint="@color/text_color"
                                     android:textColor="@color/white"
                                     android:textSize="@dimen/medium_text"
-                                    android:text="Students"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
-                                <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                                    android:text="Students"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
+                                <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                                     android:layout_marginLeft="20dp"
                                     android:id="@+id/tvAttendance"
                                     android:layout_width="wrap_content"
@@ -97,9 +97,9 @@
                                     android:backgroundTint="@color/text_color"
                                     android:textColor="@color/white"
                                     android:textSize="@dimen/medium_text"
-                                    android:text="Attendance"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                                    android:text="Attendance"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
 
-                                <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                                <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                                     android:id="@+id/tvGradeConfig"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -112,8 +112,8 @@
                                     android:paddingBottom="10dp"
                                     android:text="Gradebook Configuration"
                                     android:textColor="@color/white"
-                                    android:textSize="@dimen/medium_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
-                                <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                                    android:textSize="@dimen/medium_text"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
+                                <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                                     android:id="@+id/tvAssignments"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -126,8 +126,8 @@
                                     android:paddingBottom="10dp"
                                     android:text="Assignments"
                                     android:textColor="@color/white"
-                                    android:textSize="@dimen/medium_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
-                                <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                                    android:textSize="@dimen/medium_text"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
+                                <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                                     android:id="@+id/tvGrade"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -140,7 +140,7 @@
                                     android:paddingBottom="10dp"
                                     android:text="Grades"
                                     android:textColor="@color/white"
-                                    android:textSize="@dimen/medium_text"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                                    android:textSize="@dimen/medium_text"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
 
 
                             </LinearLayout>

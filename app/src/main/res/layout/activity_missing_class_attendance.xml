@@ -36,7 +36,7 @@
                             android:layout_width="34dp"
                             android:layout_height="34dp"
                             android:src="@drawable/arrow_back_white_48dp"></ImageView>
-                        <com.opensis.others.customtext.Custom_Text_View_Bold
+                        <com.opensissas.others.customtext.Custom_Text_View_Bold
                             android:id="@+id/tvCourseName"
                             android:layout_marginLeft="20dp"
                             android:layout_gravity="center"
@@ -44,7 +44,7 @@
                             android:layout_height="wrap_content"
                             android:text="Missing Attendance"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/big_text"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                            android:textSize="@dimen/big_text"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                     </LinearLayout>
 
 
@@ -74,18 +74,18 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
-                                <com.opensis.others.customtext.Custom_Text_View
+                                <com.opensissas.others.customtext.Custom_Text_View
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/medium_text"
                                     android:text="Attendance Taken For"
-                                    android:textColor="@color/white"></com.opensis.others.customtext.Custom_Text_View>
-                                <com.opensis.others.customtext.Custom_Text_View_Bold
+                                    android:textColor="@color/white"></com.opensissas.others.customtext.Custom_Text_View>
+                                <com.opensissas.others.customtext.Custom_Text_View_Bold
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/large_text"
                                     android:id="@+id/tvAttendanceDate"
-                                    android:textColor="@color/white"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                                    android:textColor="@color/white"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                             </LinearLayout>
 
                         </LinearLayout>
@@ -109,13 +109,13 @@
                                 android:layout_weight="1"
                                 android:orientation="vertical">
 
-                                <com.opensis.others.customtext.Custom_Text_View_Bold
+                                <com.opensissas.others.customtext.Custom_Text_View_Bold
                                     android:textAlignment="center"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/large_text"
                                     android:text="Attendance has not been taken for this period."
-                                    android:textColor="@color/white"></com.opensis.others.customtext.Custom_Text_View_Bold>
+                                    android:textColor="@color/white"></com.opensissas.others.customtext.Custom_Text_View_Bold>
                             </LinearLayout>
 
                         </LinearLayout>
@@ -139,7 +139,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
                                 android:gravity="right">
-                                <com.opensis.others.customtext.Custom_Text_View_SemiBold
+                                <com.opensissas.others.customtext.Custom_Text_View_SemiBold
                                     android:id="@+id/tvSubmit"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -151,7 +151,7 @@
                                     android:backgroundTint="@color/text_color"
                                     android:textColor="@color/white"
                                     android:textSize="@dimen/medium_text"
-                                    android:text="Submit"></com.opensis.others.customtext.Custom_Text_View_SemiBold>
+                                    android:text="Submit"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
                             </LinearLayout>
                             <androidx.recyclerview.widget.RecyclerView
                                 android:layout_width="match_parent"
