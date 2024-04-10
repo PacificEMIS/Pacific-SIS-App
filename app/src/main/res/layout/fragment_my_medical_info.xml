@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+   >
+    <LinearLayout
+        android:background="@color/background_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/color5">
+            <com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/medium_text"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text="Activities"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:id="@+id/tvActivities"></com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold>
+            <com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/medium_text"
+                android:textColor="@color/text_color"
+                android:gravity="center"
+                android:text="Provider Infrmation"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:id="@+id/tvProviderInformation"></com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="10dp"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/llActivities">
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    >
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/llwhitedesign"
+                        android:backgroundTint="@color/white"
+                        android:orientation="vertical">
+                        <com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/big_text"
+                            android:textColor="@color/color1"
+                            android:text="Alert Information"></com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:id="@+id/rvAlert"
+                            android:nestedScrollingEnabled="false"></androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/llwhitedesign"
+                        android:backgroundTint="@color/white"
+                        android:orientation="vertical">
+                        <com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/big_text"
+                            android:textColor="@color/color1"
+                            android:text="Medical Notes"></com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:id="@+id/rvMedicalNotes"
+                            android:nestedScrollingEnabled="false"></androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/llwhitedesign"
+                        android:backgroundTint="@color/white"
+                        android:orientation="vertical">
+                        <com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/big_text"
+                            android:textColor="@color/color1"
+                            android:text="Immunization/Physical Record"></com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:id="@+id/rvPhysicalRecord"
+                            android:nestedScrollingEnabled="false"></androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/llwhitedesign"
+                        android:backgroundTint="@color/white"
+                        android:orientation="vertical">
+                        <com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/big_text"
+                            android:textColor="@color/color1"
+                            android:text="Nurse Visit Record"></com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:id="@+id/rvNurseRecord"
+                            android:nestedScrollingEnabled="false"></androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/llProvideInformation"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/llwhitedesign"
+                android:backgroundTint="@color/white">
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/bar"
+                                    android:textSize="@dimen/small_text"
+                                    android:text="Primary Care Physician"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/medium_text"
+                                    android:text="Critical Alert"
+                                    android:layout_marginTop="10dp"
+                                    android:id="@+id/tvPrimaryPhysician"></com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/bar"
+                                    android:textSize="@dimen/small_text"
+                                    android:text="Primary Care Physician's Phone"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/medium_text"
+                                    android:text="Critical Alert"
+                                    android:layout_marginTop="10dp"
+                                    android:id="@+id/tvPrimaryPhysicianPhone"></com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/bar"
+                            android:layout_marginTop="20dp"></View>
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/bar"
+                                    android:textSize="@dimen/small_text"
+                                    android:text="Preferred Medical Facility"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/medium_text"
+                                    android:text="Critical Alert"
+                                    android:layout_marginTop="10dp"
+                                    android:id="@+id/tvMedicalFacility"></com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/bar"
+                                    android:textSize="@dimen/small_text"
+                                    android:text="Preferred Medical Facility's Phone"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/medium_text"
+                                    android:text="Critical Alert"
+                                    android:layout_marginTop="10dp"
+                                    android:id="@+id/tvMedicalFacilityPhn"></com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/bar"
+                            android:layout_marginTop="20dp"></View>
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/bar"
+                                    android:textSize="@dimen/small_text"
+                                    android:text="Insurance Company"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/medium_text"
+                                    android:text="Critical Alert"
+                                    android:layout_marginTop="10dp"
+                                    android:id="@+id/tvInsuranceCompany"></com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/bar"
+                                    android:textSize="@dimen/small_text"
+                                    android:text="Insurance Company's Phone"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/medium_text"
+                                    android:text="Critical Alert"
+                                    android:layout_marginTop="10dp"
+                                    android:id="@+id/tvInsuranceCompanyPhn"></com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/bar"
+                            android:layout_marginTop="20dp"></View>
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/bar"
+                                    android:textSize="@dimen/small_text"
+                                    android:text="Policy Number"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/medium_text"
+                                    android:text="Critical Alert"
+                                    android:layout_marginTop="10dp"
+                                    android:id="@+id/tvPolicyNumber"></com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/bar"
+                                    android:textSize="@dimen/small_text"
+                                    android:text="Policy Holder's Name"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/medium_text"
+                                    android:text="Critical Alert"
+                                    android:layout_marginTop="10dp"
+                                    android:id="@+id/tvPolicyHolderName"></com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/bar"
+                            android:layout_marginTop="20dp"></View>
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/bar"
+                                    android:textSize="@dimen/small_text"
+                                    android:text="Dentist"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/medium_text"
+                                    android:text="Critical Alert"
+                                    android:layout_marginTop="10dp"
+                                    android:id="@+id/tvDentist"></com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/bar"
+                                    android:textSize="@dimen/small_text"
+                                    android:text="Dentist's Phone"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/medium_text"
+                                    android:text="Critical Alert"
+                                    android:layout_marginTop="10dp"
+                                    android:id="@+id/tvDentistPhn"></com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/bar"
+                            android:layout_marginTop="20dp"></View>
+                        <LinearLayout
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="20dp"
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/bar"
+                                    android:textSize="@dimen/small_text"
+                                    android:text="Vision"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/medium_text"
+                                    android:text="Critical Alert"
+                                    android:layout_marginTop="10dp"
+                                    android:id="@+id/tvVision"></com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/bar"
+                                    android:textSize="@dimen/small_text"
+                                    android:text="Vision Provider's Phone"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+                                <com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/medium_text"
+                                    android:text="Critical Alert"
+                                    android:layout_marginTop="10dp"
+                                    android:id="@+id/tvVisionPhn"></com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</layout>

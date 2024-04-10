@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/calendar_grey"
+            app:tint="@color/black"></ImageView>
+        <com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/medium_text"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tvMedicalNoteDate"
+            android:textColor="@color/black"></com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp">
+        <com.pacificstudentteacher.others.customtext.Custom_Text_View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/medium_text"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tvMedicalNoteDesc"
+            android:textColor="@color/black"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+    </LinearLayout>
+
+</LinearLayout>

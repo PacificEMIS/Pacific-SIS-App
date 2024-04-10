@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <com.pacificstudentteacher.others.customtext.Custom_Text_View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_text"
+            android:id="@+id/tvDay"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+        <com.pacificstudentteacher.others.customtext.Custom_Text_View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_text"
+            android:id="@+id/tvPeriod"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+        <com.pacificstudentteacher.others.customtext.Custom_Text_View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_text"
+            android:id="@+id/tvTime"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+        <com.pacificstudentteacher.others.customtext.Custom_Text_View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_text"
+            android:id="@+id/tvRoom"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bar"></View>
+
+</LinearLayout>

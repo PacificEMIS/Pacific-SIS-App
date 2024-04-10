@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:background="@drawable/twosidecurveheader"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="0.5"
+                                android:text="Progress Reports"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/big_text"></com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal">
+
+                            <com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold
+                                android:id="@+id/tvAssignment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/llwhitecurvedesign"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="With Assignment Details"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/medium_text"></com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold>
+
+                            <com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold
+                                android:id="@+id/tvTotal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:background="@drawable/llwhitecurvedesign"
+                                android:backgroundTint="@color/text_color"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="10dp"
+                                android:text="Total Only"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/medium_text"></com.pacificstudentteacher.others.customtext.Custom_Text_View_SemiBold>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="110dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="20dp"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/llwhitedesign"
+                                android:backgroundTint="@color/white"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:id="@+id/imgStudent"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:src="@drawable/student_user"></de.hdodenhof.circleimageview.CircleImageView>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold
+                                            android:id="@+id/tvStudentName"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/text_color"
+                                            android:textSize="@dimen/large_text"></com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp">
+
+                                            <com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Student ID:"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/small_text"></com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold>
+
+                                            <com.pacificstudentteacher.others.customtext.Custom_Text_View
+                                                android:id="@+id/tvStudentID"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="5dp"
+                                                android:textColor="@color/grey"
+                                                android:textSize="@dimen/small_text"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+
+                                            <com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="5dp"
+                                                android:text="Grade:"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/small_text"></com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold>
+
+                                            <com.pacificstudentteacher.others.customtext.Custom_Text_View
+                                                android:id="@+id/tvGrade"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="5dp"
+                                                android:textColor="@color/grey"
+                                                android:textSize="@dimen/small_text"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llAssignment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="visible">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvAssignment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"></androidx.recyclerview.widget.RecyclerView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:visibility="gone"
+                                android:id="@+id/llTotal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/llwhitedesign"
+                                android:backgroundTint="@color/white"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp">
+
+                                    <com.pacificstudentteacher.others.customtext.Custom_Text_View
+                                        android:layout_width="0dp"
+                                        android:textSize="@dimen/small_text"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_weight="0.7"
+                                        android:text="Course"
+                                        android:textColor="@color/text_color"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+
+                                    <com.pacificstudentteacher.others.customtext.Custom_Text_View
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="0.7"
+                                        android:text="Course Section"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/small_text"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+                                    <com.pacificstudentteacher.others.customtext.Custom_Text_View
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="0.5"
+                                        android:text="Teacher"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/small_text"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+                                    <com.pacificstudentteacher.others.customtext.Custom_Text_View
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="0.3"
+                                        android:text="Total"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/small_text"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+                                    <com.pacificstudentteacher.others.customtext.Custom_Text_View
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="0.5"
+                                        android:text="Total Weight \nGrade"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/small_text"
+                                        android:layout_marginRight="5dp"></com.pacificstudentteacher.others.customtext.Custom_Text_View>
+                                </LinearLayout>
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/rvTotalItem"></androidx.recyclerview.widget.RecyclerView>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+
+                </FrameLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

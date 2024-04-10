@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+        <com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Due Date"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_text"
+            android:id="@+id/tvDueDate"></com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold>
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/bar"
+            android:layout_marginLeft="10dp"></androidx.viewpager.widget.ViewPager>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
+            <com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold
+                android:id="@+id/tvAssigmentTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assignment Details"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_text"></com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold>
+            <com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assignment Details"
+                android:textColor="@color/bar"
+                android:textSize="@dimen/medium_text"
+                android:id="@+id/tvAssismentDetails"></com.pacificstudentteacher.others.customtext.Custom_Text_View_Bold>
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bar"></View>
+
+</LinearLayout>
