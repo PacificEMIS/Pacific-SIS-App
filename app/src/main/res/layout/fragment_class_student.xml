@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.teacher.fragment.ClassStudentFragment"
+    tools:context=".ui.student.fragment.ClassStudentFragment"
     android:orientation="vertical"
     android:background="@color/background_color">
 
@@ -18,12 +18,12 @@
        android:id="@+id/lnNoData"
        android:orientation="horizontal"
        android:gravity="center">
-      <com.opensissas.others.customtext.Custom_Text_View_SemiBold
+      <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:textSize="@dimen/medium_text"
           android:textColor="@color/text_color"
-          android:text="No Record Found"></com.opensissas.others.customtext.Custom_Text_View_SemiBold>
+          android:text="No Record Found"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
    </LinearLayout>
 
 

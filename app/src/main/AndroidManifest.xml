@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.opensissas">
+    package="com.opensissasstudent">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -18,21 +18,66 @@
         android:theme="@style/Theme.Opensis"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.opensissas.ui.teacher.activity.MissingClassAttendanceActivity"
+            android:name=".ui.common.activity.ChangePasswordActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.opensissas.ui.teacher.activity.MissingAttendanceActivity"
+            android:name=".ui.student.activity.AbsentSummaryDetailsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.opensissas.ui.teacher.activity.MarkingPeriodDetailsActivity"
+            android:name=".ui.student.activity.TranscriptActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.student.activity.TranscriptReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.student.activity.ReportCardDetailsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.student.activity.MyGardeBookGradeDetailsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.student.activity.ScheduleDetailsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.student.activity.CourseCatalogDetailsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.student.activity.MissingAttendanceActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.student.activity.MarkingPeriodDetailsActivity"
             android:exported="false"
             android:screenOrientation="userPortrait">
             <meta-data
@@ -40,7 +85,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.opensissas.ui.common.activity.SpalshActivity"
+            android:name=".ui.common.activity.SpalshActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,17 +93,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.opensissas.ui.teacher.activity.StudentOfGradeActivity" />
-        <activity android:name="com.opensissas.ui.teacher.activity.AssignmentDetailsActivity" />
-        <activity android:name="com.opensissas.ui.teacher.activity.SchoolDetailsActivity" />
+        <activity android:name=".ui.student.activity.AssignmentDetailsActivity" />
+        <activity android:name=".ui.student.activity.SchoolDetailsActivity" />
         <activity
-            android:name="com.opensissas.ui.teacher.activity.ClassDetailsActivity"
+            android:name=".ui.student.activity.ClassDetailsActivity"
             android:screenOrientation="userPortrait" />
         <activity
-            android:name="com.opensissas.ui.teacher.activity.TeacherDashboardActivity"
+            android:name=".ui.student.activity.StudentDashboardActivity"
             android:screenOrientation="userPortrait" />
         <activity
-            android:name="com.opensissas.ui.common.activity.LoginActivity"
+            android:name=".ui.common.activity.LoginActivity"
             android:screenOrientation="userPortrait" />
     </application>
 

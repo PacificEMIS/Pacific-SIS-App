@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+>
+    <LinearLayout
+        android:background="@color/background_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+       >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:background="@drawable/twosidecurveheader"
+                        android:padding="24dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                                android:id="@+id/tvTitle"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Notices"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/big_text"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                        </LinearLayout>
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="100dp"
+                        android:padding="20dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@color/color5">
+                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/medium_text"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:text="Current"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:id="@+id/tvCurrent"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/medium_text"
+                                android:textColor="@color/text_color"
+                                android:gravity="center"
+                                android:text="Past"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:id="@+id/tvPast"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginTop="20dp">
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <LinearLayout
+                                    android:visibility="gone"
+                                    android:id="@+id/llCurrent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/llwhitedesign"
+                                    android:backgroundTint="@color/white"
+                                    android:padding="10dp">
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:id="@+id/rvCurrent"></androidx.recyclerview.widget.RecyclerView>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/llPast"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="10dp">
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:id="@+id/rvPast"></androidx.recyclerview.widget.RecyclerView>
+                                </LinearLayout>
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+</layout>

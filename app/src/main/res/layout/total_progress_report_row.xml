@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <com.opensissasstudent.others.customtext.Custom_Text_View
+            android:layout_width="0dp"
+            android:textSize="@dimen/small_text"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.7"
+            android:id="@+id/tvCourse"
+            android:textColor="@color/black"></com.opensissasstudent.others.customtext.Custom_Text_View>
+
+        <com.opensissasstudent.others.customtext.Custom_Text_View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.7"
+            android:id="@+id/tvCourseSection"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_text"></com.opensissasstudent.others.customtext.Custom_Text_View>
+        <com.opensissasstudent.others.customtext.Custom_Text_View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:id="@+id/tvTeacher"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_text"></com.opensissasstudent.others.customtext.Custom_Text_View>
+        <com.opensissasstudent.others.customtext.Custom_Text_View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.3"
+            android:id="@+id/tvTotalGrade"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_text"></com.opensissasstudent.others.customtext.Custom_Text_View>
+        <com.opensissasstudent.others.customtext.Custom_Text_View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:id="@+id/tvTotalWeightGrade"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_text"
+            android:layout_marginRight="5dp"></com.opensissasstudent.others.customtext.Custom_Text_View>
+    </LinearLayout>
+
+</LinearLayout>

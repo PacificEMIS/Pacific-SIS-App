@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:background="@drawable/twosidecurveheader"
+                        android:padding="24dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                                android:text="Transcript"
+                                android:layout_marginLeft="20dp"
+                                android:layout_gravity="center"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/big_text"
+                                android:layout_weight="0.5"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+
+
+
+                        </LinearLayout>
+
+
+
+
+
+
+                    </LinearLayout>
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_marginTop="110dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:visibility="visible"
+                            android:id="@+id/llList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="20dp"
+                            android:orientation="vertical">
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:nestedScrollingEnabled="false"
+                                android:padding="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:id="@+id/rvListItem"
+                                android:background="@drawable/llwhitedesign"
+                                android:backgroundTint="@color/white"></androidx.recyclerview.widget.RecyclerView>
+                            <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:textSize="@dimen/large_text"
+                                android:gravity="center"
+                                android:layout_marginTop="20dp"
+                               android:textColor="@color/white"
+                                android:background="@drawable/llwhitedesign"
+                                android:backgroundTint="@color/text_color"
+                                android:text="Show Transcript"
+                                android:id="@+id/tvShow"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+
+
+
+                        </LinearLayout>
+
+                    </androidx.core.widget.NestedScrollView>
+
+
+
+
+                </FrameLayout>
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

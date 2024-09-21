@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.teacher.fragment.ScheduleFragment"
+    tools:context=".ui.student.fragment.ScheduleFragment"
     android:orientation="vertical"
     android:background="@color/background_color">
 
@@ -33,14 +33,14 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <com.opensissas.others.customtext.Custom_Text_View_Bold
+                        <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
                             android:id="@+id/tvCourseName"
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="My Schedule"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/big_text"></com.opensissas.others.customtext.Custom_Text_View_Bold>
+                            android:textSize="@dimen/big_text"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
                     </LinearLayout>
 
 
@@ -81,20 +81,20 @@
                             android:layout_weight="1"
                             android:orientation="vertical"
                             android:gravity="center">
-                            <com.opensissas.others.customtext.Custom_Text_View_Bold
+                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
                                 android:text="Today"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/medium_text"
                                 android:textColor="@color/black"
-                                android:id="@+id/tvDay"></com.opensissas.others.customtext.Custom_Text_View_Bold>
-                            <com.opensissas.others.customtext.Custom_Text_View
+                                android:id="@+id/tvDay"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                            <com.opensissasstudent.others.customtext.Custom_Text_View
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/small_text"
                                 android:textColor="@color/text_color"
                                 android:id="@+id/tvDate"
-                                android:layout_marginTop="5dp"></com.opensissas.others.customtext.Custom_Text_View>
+                                android:layout_marginTop="5dp"></com.opensissasstudent.others.customtext.Custom_Text_View>
                         </LinearLayout>
                         <LinearLayout
                             android:id="@+id/lnForward"
@@ -126,12 +126,12 @@
                             android:id="@+id/lnNoData"
                             android:gravity="center"
                             android:orientation="vertical">
-                            <com.opensissas.others.customtext.Custom_Text_View
+                            <com.opensissasstudent.others.customtext.Custom_Text_View
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/large_text"
                                 android:textColor="@color/text_color"
-                                android:text="No Data"></com.opensissas.others.customtext.Custom_Text_View>
+                                android:text="No Data"></com.opensissasstudent.others.customtext.Custom_Text_View>
                         </LinearLayout>
                     </LinearLayout>
 

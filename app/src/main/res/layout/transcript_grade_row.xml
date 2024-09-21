@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+    <LinearLayout
+        android:id="@+id/llTick"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/llgreystrokedesign"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/imgTick"
+            android:visibility="gone"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/check_black_48dp"
+            app:tint="@color/white"></ImageView>
+    </LinearLayout>
+    <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/medium_text"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/tvGrade"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+
+</LinearLayout>

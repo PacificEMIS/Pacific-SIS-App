@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="horizontal"
+    android:layout_marginRight="10dp"
+    android:gravity="center">
+    <com.opensissasstudent.others.customtext.Custom_Text_View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/medium_text"
+        android:id="@+id/tvPeriod"
+        android:text="P1"
+       ></com.opensissasstudent.others.customtext.Custom_Text_View>
+
+</LinearLayout>

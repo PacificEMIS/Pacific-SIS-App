@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp">
+    <LinearLayout
+        android:id="@+id/llStatus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/oval"
+        android:gravity="center">
+        <com.opensissasstudent.others.customtext.Custom_Text_View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/small_text"
+            android:textColor="@color/white"
+            android:id="@+id/tvStatus"></com.opensissasstudent.others.customtext.Custom_Text_View>
+    </LinearLayout>
+
+
+</LinearLayout>

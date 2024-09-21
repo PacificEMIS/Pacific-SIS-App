@@ -30,28 +30,28 @@
            android:layout_weight="1"
            android:orientation="horizontal">
 
-           <com.opensissas.others.customtext.Custom_Text_View
+           <com.opensissasstudent.others.customtext.Custom_Text_View
                android:layout_width="0dp"
                android:layout_height="wrap_content"
                android:textColor="@color/black"
                android:textSize="@dimen/medium_text"
                android:id="@+id/tvEventName"
                android:layout_weight="1"
-               android:layout_gravity="center"></com.opensissas.others.customtext.Custom_Text_View>
-           <com.opensissas.others.customtext.Custom_Text_View
+               android:layout_gravity="center"></com.opensissasstudent.others.customtext.Custom_Text_View>
+           <com.opensissasstudent.others.customtext.Custom_Text_View
                android:layout_width="0dp"
                android:layout_height="wrap_content"
                android:textColor="@color/black"
                android:textSize="@dimen/medium_text"
                android:id="@+id/tvEventDate"
-               android:layout_weight="0.5"></com.opensissas.others.customtext.Custom_Text_View>
-           <com.opensissas.others.customtext.Custom_Text_View
+               android:layout_weight="0.5"></com.opensissasstudent.others.customtext.Custom_Text_View>
+           <com.opensissasstudent.others.customtext.Custom_Text_View
                android:layout_width="0dp"
                android:layout_height="wrap_content"
                android:textColor="@color/black"
                android:textSize="@dimen/medium_text"
                android:id="@+id/tvEndDate"
-               android:layout_weight="0.5"></com.opensissas.others.customtext.Custom_Text_View>
+               android:layout_weight="0.5"></com.opensissasstudent.others.customtext.Custom_Text_View>
        </LinearLayout>
 
    </LinearLayout>

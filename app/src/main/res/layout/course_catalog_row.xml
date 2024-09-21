@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="74dp"
+    android:layout_marginBottom="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:background="@drawable/llwhitedesign"
+        android:backgroundTint="@color/white"
+        android:padding="5dp"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/bookwithbookmark"></ImageView>
+                <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:id="@+id/tvCourseTitle"
+                    android:textSize="@dimen/big_text"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.opensissasstudent.others.customtext.Custom_Text_View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="40dp"
+                    android:textColor="@color/color7"
+                    android:id="@+id/tvCourseShortName"
+                    android:layout_marginTop="5dp"
+                    android:textSize="@dimen/medium_text"></com.opensissasstudent.others.customtext.Custom_Text_View>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:src="@drawable/forward"
+            android:layout_weight="0.1"
+            android:layout_gravity="center"></ImageView>
+
+    </LinearLayout>
+
+</LinearLayout>

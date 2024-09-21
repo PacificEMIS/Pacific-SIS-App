@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.teacher.activity.StudentOfGradeActivity"
+    tools:context=".ui.student.activity.StudentOfGradeActivity"
     android:backgroundTint="@color/background_color">
     <LinearLayout
         android:layout_width="match_parent"
@@ -86,14 +86,14 @@
                             android:textColor="@color/text_color"
                             android:hint="Search Student"></EditText>
                     </LinearLayout>
-                    <com.opensissas.others.customtext.Custom_Text_View
+                    <com.opensissasstudent.others.customtext.Custom_Text_View
                         android:id="@+id/tvGradeName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:textSize="@dimen/large_text"
                         android:textColor="@color/white"
-                        android:text="Analysis Chemical Composition"></com.opensissas.others.customtext.Custom_Text_View>
+                        android:text="Analysis Chemical Composition"></com.opensissasstudent.others.customtext.Custom_Text_View>
 
 
 
@@ -124,7 +124,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="@null"></EditText>
-                            <com.opensissas.others.customtext.Custom_Text_View_Bold
+                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
                                 android:visibility="gone"
                                 android:layout_marginTop="20dp"
                                 android:layout_width="match_parent"
@@ -135,7 +135,7 @@
                                 android:backgroundTint="@color/text_color"
                                 android:textColor="@color/white"
                                 android:text="Save Grades"
-                                android:id="@+id/tvSaveGrade"></com.opensissas.others.customtext.Custom_Text_View_Bold>
+                                android:id="@+id/tvSaveGrade"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
                         </LinearLayout>
                     </androidx.core.widget.NestedScrollView>
 
