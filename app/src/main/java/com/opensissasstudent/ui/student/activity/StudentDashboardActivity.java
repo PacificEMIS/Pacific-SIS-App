@@ -163,7 +163,7 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
         }
         byte[] decodedString = Base64.decode(pref.getLogo(), Base64.DEFAULT);
         Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-        imgTenantLogo.setImageBitmap(decodedByte);
+        //imgTenantLogo.setImageBitmap(decodedByte);
 
         tvSubmit=(TextView)findViewById(R.id.tvSubmit);
         imgTune=(ImageView)findViewById(R.id.imgTune);

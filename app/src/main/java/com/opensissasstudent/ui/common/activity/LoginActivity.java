@@ -365,7 +365,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                 if (!TenantLogo.equals("")) {
                                     byte[] decodedString = Base64.decode(TenantLogo, Base64.DEFAULT);
                                     Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-                                    imgLogo.setImageBitmap(decodedByte);
+                                   // imgLogo.setImageBitmap(decodedByte);
                                 }
 
                                 String SchoolName=tenant.optString("SchoolName");
