@@ -156,13 +156,12 @@ public class FamilyInfoFragment extends Fragment {
                                     String relationship = parentOBJ.optString("relationship");
                                     boolean isCustodian = parentOBJ.optBoolean("isCustodian");
                                     JSONObject parentAddress = parentOBJ.optJSONObject("parentAddress");
-                                    JSONObject parentInfo = parentAddress.optJSONObject("parentInfo");
-                                    String parentPhoto = Util.getFreshValue(parentInfo.optString("parentPhoto"), "");
+
                                     FamilyInfoModel familyInfoModel = new FamilyInfoModel();
                                     familyInfoModel.setName(firstname + " " + lastname);
                                     familyInfoModel.setContactType(contactType);
                                     familyInfoModel.setRelationship(relationship);
-                                    familyInfoModel.setParentPhoto(parentPhoto);
+                                    familyInfoModel.setParentPhoto("");
                                     familyInfoModel.setCustodian(isCustodian);
                                     familyList.add(familyInfoModel);
 

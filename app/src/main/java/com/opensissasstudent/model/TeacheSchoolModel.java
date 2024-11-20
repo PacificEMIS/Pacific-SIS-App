@@ -1,7 +1,7 @@
 package com.opensissasstudent.model;
 
 public class TeacheSchoolModel {
-    String schoolName,schoolAddress;
+    String schoolName,schoolAddress,schoolLog;
     int schoolID;
 
     public String getSchoolName() {
@@ -26,5 +26,13 @@ public class TeacheSchoolModel {
 
     public void setSchoolID(int schoolID) {
         this.schoolID = schoolID;
+    }
+
+    public String getSchoolLog() {
+        return schoolLog;
+    }
+
+    public void setSchoolLog(String schoolLog) {
+        this.schoolLog = schoolLog;
     }
 }

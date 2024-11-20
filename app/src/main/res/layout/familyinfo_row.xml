@@ -36,7 +36,7 @@
                     android:textColor="@color/bar"
                     android:textSize="@dimen/small_text"
                     android:id="@+id/tvRealation"
-                    android:layout_weight="0.5"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                    android:layout_weight="1"></com.opensissasstudent.others.customtext.Custom_Text_View>
                 <com.opensissasstudent.others.customtext.Custom_Text_View
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -46,17 +46,18 @@
                     android:text="Custody"
                     android:layout_weight="0.5"
                     android:visibility="gone"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                <com.opensissasstudent.others.customtext.Custom_Text_View
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:textSize="@dimen/small_text"
-                    android:background="@drawable/llwhitecurvedesign"
-                    android:padding="3dp"
-                    android:textColor="@color/white"
-                    android:gravity="center"
-                    android:id="@+id/tvContactType"></com.opensissasstudent.others.customtext.Custom_Text_View>
+
             </LinearLayout>
+            <com.opensissasstudent.others.customtext.Custom_Text_View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/small_text"
+                android:background="@drawable/llwhitecurvedesign"
+                android:padding="3dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:id="@+id/tvContactType"
+                android:layout_marginTop="5dp"></com.opensissasstudent.others.customtext.Custom_Text_View>
         </LinearLayout>
     </LinearLayout>
     <View

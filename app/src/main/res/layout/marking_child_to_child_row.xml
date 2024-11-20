@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+    <View
+        android:layout_gravity="center"
+        android:layout_width="20dp"
+        android:layout_height="1dp"
+       android:background="@color/black"></View>
+    <LinearLayout
+        android:id="@+id/lnSem2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/llgreystrokedesign"
+        android:backgroundTint="@color/white">
+        <LinearLayout
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/llwhiteonesidecurvedesign"
+            android:backgroundTint="@color/greencolor"></LinearLayout>
+
+        <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+    </LinearLayout>
+
+</LinearLayout>

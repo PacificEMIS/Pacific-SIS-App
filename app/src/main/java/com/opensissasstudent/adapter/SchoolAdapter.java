@@ -2,9 +2,13 @@ package com.opensissasstudent.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -43,6 +47,12 @@ public class SchoolAdapter extends RecyclerView.Adapter<SchoolAdapter.MyViewHold
             }
         });
 
+        if (!itemList.get(i).getSchoolLog().equals("")){
+            byte[] decodedString = Base64.decode(itemList.get(i).getSchoolLog(), Base64.DEFAULT);
+            Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+            myViewHolder.imgLogo.setImageBitmap(decodedByte);
+        }
+
 
     }
 
@@ -53,12 +63,13 @@ public class SchoolAdapter extends RecyclerView.Adapter<SchoolAdapter.MyViewHold
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView tvSchoolName,tvSchoolAddress;
+        ImageView imgLogo;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             tvSchoolAddress=(TextView)itemView.findViewById(R.id.tvSchoolAddress);
             tvSchoolName=(TextView)itemView.findViewById(R.id.tvSchoolName);
-
+            imgLogo=(ImageView) itemView.findViewById(R.id.imgLogo);
 
         }
     }

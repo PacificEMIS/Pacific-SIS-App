@@ -10,8 +10,8 @@ android {
         applicationId "com.opensissasstudent"
         minSdkVersion 24
         targetSdkVersion 33
-        versionCode 6
-        versionName "1.1"
+        versionCode 9
+        versionName "1.2"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

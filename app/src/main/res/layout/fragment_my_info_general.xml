@@ -39,7 +39,7 @@
                             android:layout_height="wrap_content"
                             android:textColor="@color/color1"
                             android:textSize="@dimen/big_text"
-                            android:text="Identical Information"
+                            android:text="Identification Information"
                             android:layout_marginTop="20dp"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
                         <LinearLayout
                             android:layout_marginTop="20dp"
@@ -91,7 +91,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/medium_text"
                                 android:textColor="@color/bar"
-                                android:text="Preferred/Middle Name"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                android:text="Previous/Maiden Name"></com.opensissasstudent.others.customtext.Custom_Text_View>
                             <com.opensissasstudent.others.customtext.Custom_Text_View
                                 android:layout_marginTop="2dp"
                                 android:id="@+id/tvMiddleName"

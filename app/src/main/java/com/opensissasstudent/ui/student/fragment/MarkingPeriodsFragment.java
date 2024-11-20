@@ -2,9 +2,6 @@ package com.opensissasstudent.ui.student.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,8 +9,17 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.android.volley.Request;
+
 import com.opensissasstudent.R;
+import com.opensissasstudent.adapter.MarkingPeriodParentAdapter;
+import com.opensissasstudent.model.MarkingPeriodChildModel;
+import com.opensissasstudent.model.MarkingPeriodChildToChildModel;
+import com.opensissasstudent.model.MarkingPeriodParentModel;
 import com.opensissasstudent.others.parser.PostJsonDataParser;
 import com.opensissasstudent.others.utility.Pref;
 import com.opensissasstudent.ui.common.activity.LoginActivity;
@@ -22,6 +28,8 @@ import com.opensissasstudent.ui.student.activity.MarkingPeriodDetailsActivity;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 
 public class MarkingPeriodsFragment extends Fragment implements View.OnClickListener {
@@ -51,6 +59,10 @@ public class MarkingPeriodsFragment extends Fragment implements View.OnClickList
 
     String frthqtrtitle,frthqtrshortName,frthqtrstartDate,frthqtrendDate,frthqtrpostStartDate,frthqtrpostEndDate;
     boolean frthqtrdoesGrades,frthqtrdoesExam,frthqtrdoesComments;
+    RecyclerView rvParent;
+    ArrayList<MarkingPeriodParentModel>parentList=new ArrayList<>();
+    ArrayList<MarkingPeriodChildModel>childList=new ArrayList<>();
+    ArrayList<MarkingPeriodChildToChildModel>childtochildList=new ArrayList<>();
 
 
 
@@ -72,6 +84,9 @@ public class MarkingPeriodsFragment extends Fragment implements View.OnClickList
         lnSem2=(LinearLayout) view.findViewById(R.id.lnSem2);
         lnQtr3=(LinearLayout) view.findViewById(R.id.lnQtr3);
         lnQtr4=(LinearLayout) view.findViewById(R.id.lnQtr4);
+
+        rvParent=(RecyclerView)view.findViewById(R.id.rvParent);
+        rvParent.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
 
         lnFY.setOnClickListener(this);
         lnSem1.setOnClickListener(this);
@@ -177,8 +192,99 @@ public class MarkingPeriodsFragment extends Fragment implements View.OnClickList
 
                         }else {
                             JSONArray schoolYearsView=response.optJSONArray("schoolYearsView");
-                            JSONObject fyOBJ=schoolYearsView.optJSONObject(0);
-                             fytitle=fyOBJ.optString("title");
+
+                            for (int i=0;i<schoolYearsView.length();i++){
+                                childList=new ArrayList<>();
+                                childtochildList=new ArrayList<>();
+                                JSONObject fyOBJ=schoolYearsView.optJSONObject(i);
+                                JSONArray semChildern=fyOBJ.optJSONArray("children");
+                                if (semChildern.length()>0){
+                                    childList=new ArrayList<>();
+                                    for (int j=0;j<semChildern.length();j++){
+                                        JSONObject semiobj=semChildern.optJSONObject(j);
+                                        JSONArray semiqtrChildern=semiobj.optJSONArray("children");
+                                        if (semiqtrChildern.length()>0){
+                                            childtochildList=new ArrayList<>();
+                                            for (int z=0;z<semiqtrChildern.length();z++){
+                                                JSONObject QtrOBJ=semiqtrChildern.optJSONObject(z);
+                                                String frstqtrtitle=QtrOBJ.optString("title");
+                                                String frstqtrstartDate=QtrOBJ.optString("startDate").replace("T00:00:00","");
+                                                String frstqtrendDate=QtrOBJ.optString("endDate").replace("T00:00:00","");;
+                                                String frstqtrshortName=QtrOBJ.optString("shortName");
+                                                String frstqtrpostEndDate=QtrOBJ.optString("postEndDate").replace("T00:00:00","");;
+                                                String frstqtrpostStartDate=QtrOBJ.optString("postStartDate").replace("T00:00:00","");;
+                                                Boolean frstqtrdoesComments=QtrOBJ.optBoolean("doesComments");
+                                                Boolean frstqtrdoesExam=QtrOBJ.optBoolean("doesExam");
+                                                Boolean frstqtrdoesGrades=QtrOBJ.optBoolean("doesGrades");
+                                                MarkingPeriodChildToChildModel childtochildmodel=new MarkingPeriodChildToChildModel();
+                                                childtochildmodel.setTitle(frstqtrtitle);
+                                                childtochildmodel.setStartDate(frstqtrstartDate);
+                                                childtochildmodel.setEndDate(frstqtrendDate);
+                                                childtochildmodel.setShortName(frstqtrshortName);
+                                                childtochildmodel.setPostEndDate(frstqtrpostEndDate);
+                                                childtochildmodel.setPostStartDate(frstqtrpostStartDate);
+                                                childtochildmodel.setDoesComments(frstqtrdoesComments);
+                                                childtochildmodel.setDoesExam(frstqtrdoesExam);
+                                                childtochildmodel.setDoesGrades(frstqtrdoesGrades);
+                                                childtochildList.add(childtochildmodel);
+                                            }
+                                        }else {
+                                            childList.clear();
+                                        }
+
+                                        String frstqtrtitle=semiobj.optString("title");
+                                        String frstqtrstartDate=semiobj.optString("startDate").replace("T00:00:00","");
+                                        String frstqtrendDate=semiobj.optString("endDate").replace("T00:00:00","");;
+                                        String frstqtrshortName=semiobj.optString("shortName");
+                                        String frstqtrpostEndDate=semiobj.optString("postEndDate").replace("T00:00:00","");;
+                                        String frstqtrpostStartDate=semiobj.optString("postStartDate").replace("T00:00:00","");;
+                                        Boolean frstqtrdoesComments=semiobj.optBoolean("doesComments");
+                                        Boolean frstqtrdoesExam=semiobj.optBoolean("doesExam");
+                                        Boolean frstqtrdoesGrades=semiobj.optBoolean("doesGrades");
+                                        MarkingPeriodChildModel childmodel=new MarkingPeriodChildModel();
+                                        childmodel.setTitle(frstqtrtitle);
+                                        childmodel.setStartDate(frstqtrstartDate);
+                                        childmodel.setEndDate(frstqtrendDate);
+                                        childmodel.setShortName(frstqtrshortName);
+                                        childmodel.setPostEndDate(frstqtrpostEndDate);
+                                        childmodel.setPostStartDate(frstqtrpostStartDate);
+                                        childmodel.setDoesComments(frstqtrdoesComments);
+                                        childmodel.setDoesExam(frstqtrdoesExam);
+                                        childmodel.setDoesGrades(frstqtrdoesGrades);
+                                        childmodel.setItemlist(childtochildList);
+                                        childList.add(childmodel);
+                                    }
+                                }
+                                String frstqtrtitle=fyOBJ.optString("title");
+                                String frstqtrstartDate=fyOBJ.optString("startDate").replace("T00:00:00","");
+                                String frstqtrendDate=fyOBJ.optString("endDate").replace("T00:00:00","");;
+                                String frstqtrshortName=fyOBJ.optString("shortName");
+                                String frstqtrpostEndDate=fyOBJ.optString("postEndDate").replace("T00:00:00","");;
+                                String frstqtrpostStartDate=fyOBJ.optString("postStartDate").replace("T00:00:00","");;
+                                Boolean frstqtrdoesComments=fyOBJ.optBoolean("doesComments");
+                                Boolean frstqtrdoesExam=fyOBJ.optBoolean("doesExam");
+                                Boolean frstqtrdoesGrades=fyOBJ.optBoolean("doesGrades");
+                                MarkingPeriodParentModel parentModel=new MarkingPeriodParentModel();
+                                parentModel.setTitle(frstqtrtitle);
+                                parentModel.setStartDate(frstqtrstartDate);
+                                parentModel.setEndDate(frstqtrendDate);
+                                parentModel.setShortName(frstqtrshortName);
+                                parentModel.setPostEndDate(frstqtrpostEndDate);
+                                parentModel.setPostStartDate(frstqtrpostStartDate);
+                                parentModel.setDoesComments(frstqtrdoesComments);
+                                parentModel.setDoesExam(frstqtrdoesExam);
+                                parentModel.setDoesGrades(frstqtrdoesGrades);
+                                parentModel.setItemlist(childList);
+                                parentList.add(parentModel);
+
+
+
+                            }
+
+                            MarkingPeriodParentAdapter periodParentAdapter=new MarkingPeriodParentAdapter(parentList,getContext());
+                            rvParent.setAdapter(periodParentAdapter);
+
+                            /* fytitle=fyOBJ.optString("title");
                             tvFY.setText(fytitle);
                             fystartDate=fyOBJ.optString("startDate").replace("T00:00:00","");
                             fyendDate=fyOBJ.optString("endDate").replace("T00:00:00","");;
@@ -189,8 +295,8 @@ public class MarkingPeriodsFragment extends Fragment implements View.OnClickList
                             fydoesExam=fyOBJ.optBoolean("doesExam");
                             fydoesGrades=fyOBJ.optBoolean("doesGrades");
 
-                            JSONArray semChildern=fyOBJ.optJSONArray("children");
-                            JSONObject semiobj=semChildern.optJSONObject(0);
+
+
 
                             semititle=semiobj.optString("title");
                             tvSem1.setText(semititle);
@@ -202,22 +308,13 @@ public class MarkingPeriodsFragment extends Fragment implements View.OnClickList
                             semidoesComments=semiobj.optBoolean("doesComments");
                             semidoesExam=semiobj.optBoolean("doesExam");
                             semidoesGrades=semiobj.optBoolean("doesGrades");
+*/
 
-                            JSONArray semiqtrChildern=semiobj.optJSONArray("children");
-                            JSONObject frstQtrOBJ=semiqtrChildern.optJSONObject(0);
 
-                            frstqtrtitle=frstQtrOBJ.optString("title");
-                            tvQtr1.setText(frstqtrtitle);
-                            frstqtrstartDate=frstQtrOBJ.optString("startDate").replace("T00:00:00","");
-                            frstqtrendDate=frstQtrOBJ.optString("endDate").replace("T00:00:00","");;
-                            frstqtrshortName=frstQtrOBJ.optString("shortName");
-                            frstqtrpostEndDate=frstQtrOBJ.optString("postEndDate").replace("T00:00:00","");;
-                            frstqtrpostStartDate=frstQtrOBJ.optString("postStartDate").replace("T00:00:00","");;
-                            frstqtrdoesComments=frstQtrOBJ.optBoolean("doesComments");
-                            frstqtrdoesExam=frstQtrOBJ.optBoolean("doesExam");
-                            frstqtrdoesGrades=frstQtrOBJ.optBoolean("doesGrades");
 
-                            if (semiqtrChildern.length()>1){
+
+
+                          /*  if (semiqtrChildern.length()>1){
                                 lnQtr2.setVisibility(View.VISIBLE);
 
                                 JSONObject scndQtrOBJ=semiqtrChildern.optJSONObject(semiqtrChildern.length()-1);
@@ -294,7 +391,7 @@ public class MarkingPeriodsFragment extends Fragment implements View.OnClickList
                                 lnSem2.setVisibility(View.GONE);
 
 
-                            }
+                            }*/
 
 
 

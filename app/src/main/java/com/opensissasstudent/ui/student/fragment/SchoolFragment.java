@@ -38,7 +38,7 @@ public class SchoolFragment extends Fragment {
     JSONObject jsonObject=new JSONObject();
     LinearLayout lnNoData;
     String address;
-
+    String schoolLogo="";
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -109,13 +109,20 @@ public class SchoolFragment extends Fragment {
                                     String county= Util.getFreshValue(schoolMasterOBJ.optString("county"),"");
                                     String zip= Util.getFreshValue(schoolMasterOBJ.optString("zip"),"");
                                     String country= Util.getFreshValue(schoolMasterOBJ.optString("country"),"");
-
+                                    JSONArray schoolDetail=schoolMasterOBJ.optJSONArray("schoolDetail");
+                                    if (schoolDetail.length()>0){
+                                        JSONObject masterOBJ=schoolDetail.optJSONObject(0);
+                                        schoolLogo=masterOBJ.optString("schoolLogo");
+                                    }else {
+                                        schoolLogo="";
+                                    }
                                     address=streetAddress1+" "+streetAddress2+" "+city+" "+state+" "+county+" "+zip+" "+country;
                                     int schoolId=schoolMasterOBJ.optInt("schoolId");
                                     TeacheSchoolModel schoolModel=new TeacheSchoolModel();
                                     schoolModel.setSchoolAddress(address);
                                     schoolModel.setSchoolID(schoolId);
                                     schoolModel.setSchoolName(schoolName);
+                                    schoolModel.setSchoolLog(schoolLogo);
                                     itmList.add(schoolModel);
 
 

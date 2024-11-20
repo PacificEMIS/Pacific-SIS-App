@@ -28,8 +28,8 @@
                 android:id="@+id/tvNoticeTitle"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.1"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
                 android:gravity="center">
                 <FrameLayout
                     android:layout_width="wrap_content"

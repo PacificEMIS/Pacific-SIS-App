@@ -33,6 +33,7 @@
                         android:orientation="horizontal">
 
                         <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+
                             android:id="@+id/tvCourseName"
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
@@ -56,6 +57,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
+                        android:visibility="gone"
                         android:id="@+id/lnFY"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
@@ -78,6 +80,7 @@
                             android:textSize="@dimen/large_text"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
                     </LinearLayout>
                     <LinearLayout
+                        android:visibility="gone"
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -351,6 +354,10 @@
 
                         </LinearLayout>
                     </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rvParent"></androidx.recyclerview.widget.RecyclerView>
 
 
 
