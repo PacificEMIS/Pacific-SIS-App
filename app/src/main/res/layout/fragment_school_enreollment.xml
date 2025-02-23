@@ -52,6 +52,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/large_text"
+                                android:text="Default Calendar"
                                 android:textColor="@color/black"
                                 ></com.opensissasstudent.others.customtext.Custom_Text_View>
                         </LinearLayout>

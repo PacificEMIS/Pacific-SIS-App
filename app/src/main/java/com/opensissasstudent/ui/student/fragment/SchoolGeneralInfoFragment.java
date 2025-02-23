@@ -119,7 +119,7 @@ public class SchoolGeneralInfoFragment extends Fragment implements View.OnClickL
         tvHighGradeLvl.setText(highestGradeLevel);
 
         TextView tvSchoolFrstDate=(TextView)view.findViewById(R.id.tvSchoolFrstDate);
-        tvSchoolFrstDate.setText(Util.changeAnyDateFormat(dateSchoolOpened,"yyyy-MM-dd","dd MMM,yyyy"));
+        tvSchoolFrstDate.setText(Util.changeAnyDateFormat(dateSchoolOpened,"yyyy-MM-dd","dd MMM, yyyy"));
 
         TextView tvLocalCode=(TextView)view.findViewById(R.id.tvLocalCode);
         tvLocalCode.setText(locale);

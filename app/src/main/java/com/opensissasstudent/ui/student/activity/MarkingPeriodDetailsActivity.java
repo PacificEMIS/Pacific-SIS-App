@@ -31,10 +31,10 @@ public class MarkingPeriodDetailsActivity extends AppCompatActivity implements V
         imgBack.setOnClickListener(this);
         title=getIntent().getStringExtra("title");
         shortname=getIntent().getStringExtra("shortname");
-        begindate= Util.changeAnyDateFormat(getIntent().getStringExtra("begindate"),"yyyy-MM-dd","dd MMM,yyyy");
-        enddate=Util.changeAnyDateFormat(getIntent().getStringExtra("enddate"),"yyyy-MM-dd","dd MMM,yyyy");
-        postingbegindate=Util.changeAnyDateFormat(getIntent().getStringExtra("postingbegindate"),"yyyy-MM-dd","dd MMM,yyyy");
-        postingenddate=Util.changeAnyDateFormat(getIntent().getStringExtra("postingenddate"),"yyyy-MM-dd","dd MMM,yyyy");
+        begindate= Util.changeAnyDateFormat(getIntent().getStringExtra("begindate"),"yyyy-MM-dd","dd MMM, yyyy");
+        enddate=Util.changeAnyDateFormat(getIntent().getStringExtra("enddate"),"yyyy-MM-dd","dd MMM, yyyy");
+        postingbegindate=Util.changeAnyDateFormat(getIntent().getStringExtra("postingbegindate"),"yyyy-MM-dd","dd MMM, yyyy");
+        postingenddate=Util.changeAnyDateFormat(getIntent().getStringExtra("postingenddate"),"yyyy-MM-dd","dd MMM, yyyy");
         exam=getIntent().getBooleanExtra("exam",true);
         graded=getIntent().getBooleanExtra("graded",true);
         comment=getIntent().getBooleanExtra("comment",true);

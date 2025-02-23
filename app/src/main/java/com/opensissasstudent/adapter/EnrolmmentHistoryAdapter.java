@@ -42,9 +42,9 @@ public class EnrolmmentHistoryAdapter extends RecyclerView.Adapter<EnrolmmentHis
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, final int i) {
         myViewHolder.tvSchoolYear.setText(itemList.get(i).getStartYear()+"-"+itemList.get(i).getEndYear());
         myViewHolder.tvEnroolMentCode.setText(itemList.get(i).getEnrollmentCode());
-        myViewHolder.tvEnroolMentDate.setText(Util.changeAnyDateFormat(itemList.get(i).getEnrollmentDate(),"yyyy-MM-dd","dd MMM,yyyy"));
+        myViewHolder.tvEnroolMentDate.setText(Util.changeAnyDateFormat(itemList.get(i).getEnrollmentDate(),"yyyy-MM-dd","dd MMM, yyyy"));
         myViewHolder.tvExitCode.setText(itemList.get(i).getExitCode());
-        myViewHolder.tvExitDate.setText(Util.changeAnyDateFormat(itemList.get(i).getExitDate(),"yyyy-MM-dd","dd MMM,yyyy"));
+        myViewHolder.tvExitDate.setText(Util.changeAnyDateFormat(itemList.get(i).getExitDate(),"yyyy-MM-dd","dd MMM, yyyy"));
         myViewHolder.tvGrade.setText(itemList.get(i).getGradeLevelTitle());
         myViewHolder.tvSchool.setText(itemList.get(i).getSchoolName());
         if (itemList.get(i).getEnrollmentType().equalsIgnoreCase("Add")){

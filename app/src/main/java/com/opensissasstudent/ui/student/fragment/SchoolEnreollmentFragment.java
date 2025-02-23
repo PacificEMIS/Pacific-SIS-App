@@ -53,7 +53,7 @@ public class SchoolEnreollmentFragment extends Fragment {
         binding.tvSection.setText(sectionId);
         binding.rvEnrollmentHistory.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         estimatedGradDate=getArguments().getString("estimatedGradDate");
-        binding.tvGraduationDate.setText(Util.changeAnyDateFormat(estimatedGradDate.replaceAll("T00:00:00",""),"yyyy-MM-dd","dd MMM,yyyy"));
+        binding.tvGraduationDate.setText(Util.changeAnyDateFormat(estimatedGradDate.replaceAll("T00:00:00",""),"yyyy-MM-dd","dd MMM, yyyy"));
 
         eligibility504=getArguments().getString("eligibility504");
         if (eligibility504.equalsIgnoreCase("Yes")){
@@ -116,7 +116,7 @@ public class SchoolEnreollmentFragment extends Fragment {
         binding.tvGradeLevel.setText(gradeLevelTitle);
 
         enrollmentDate=getArguments().getString("enrollmentDate");
-        binding.tvDate.setText(Util.changeAnyDateFormat(enrollmentDate.replaceAll("T00:00:00",""),"yyyy-MM-dd","dd MMM,yyyy"));
+        binding.tvDate.setText(Util.changeAnyDateFormat(enrollmentDate.replaceAll("T00:00:00",""),"yyyy-MM-dd","dd MMM, yyyy"));
 
         enrollmentCode=getArguments().getString("enrollmentCode");
         binding.tvEnrollmentCode.setText(enrollmentCode);

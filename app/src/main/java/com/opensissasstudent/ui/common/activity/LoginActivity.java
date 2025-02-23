@@ -128,6 +128,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     String tenantName = spliturl[0];
                     pref.saveTenatName(tenantName);
                     String api="https://"+withoutHttp+"/assets/config.json";
+                    pref.saveTentantURLAPI(withoutHttp);
                     configJSON(api);
                 }else {
                     Toast.makeText(LoginActivity.this,"Please Enter Valid Web URL",Toast.LENGTH_SHORT).show();

@@ -252,6 +252,14 @@ public class Pref {
         return _pref.getString("UserGUIID","");
     }
 
+    public void saveTentantURLAPI(String TentantURLAPI){
+        _editorPref.putString("TentantURLAPI", TentantURLAPI);
+        _editorPref.commit();
+    }
+
+    public String getTentantURLAPI(){
+        return _pref.getString("TentantURLAPI","");
+    }
 
 }
 

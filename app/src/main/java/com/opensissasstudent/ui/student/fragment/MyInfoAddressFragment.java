@@ -7,20 +7,29 @@ import android.os.Bundle;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.volley.Request;
 import com.opensissasstudent.R;
 import com.opensissasstudent.databinding.FragmentMyInfoAddressBinding;
 import com.opensissasstudent.databinding.FragmentMyInfoGeneralBinding;
+import com.opensissasstudent.others.parser.PostJsonDataParser;
+import com.opensissasstudent.others.utility.Pref;
+import com.opensissasstudent.ui.common.activity.LoginActivity;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 
 public class MyInfoAddressFragment extends Fragment implements View.OnClickListener {
     FragmentMyInfoAddressBinding binding;
     private View view;
     String homePhone,mobilePhone,personalEmail,schoolEmail,twitter,facebook,instagram,youtube,linkedin,homeAddressLineOne,homeAddressLineTwo,homeAddressCity,homeAddressState,homeAddressCountry,homeAddressZip,busNo,mailingAddressLineOne,mailingAddressLineTwo,mailingAddressCity,mailingAddressState,mailingAddressCountry,mailingAddressZip,schoolBusPickUp,schoolBusDropOff;
-
+    Pref pref;
 
 
     @Override
@@ -34,6 +43,7 @@ public class MyInfoAddressFragment extends Fragment implements View.OnClickListe
     }
 
     private void initView(){
+        pref=new Pref(getContext());
         homePhone=getArguments().getString("homePhone");
         binding.tvHomePhone.setText(homePhone);
 
@@ -146,7 +156,7 @@ public class MyInfoAddressFragment extends Fragment implements View.OnClickListe
         binding.imgInstagram.setOnClickListener(this);
         binding.imgLinkdin.setOnClickListener(this);
 
-
+        getcountry();
 
     }
 
@@ -168,6 +178,53 @@ public class MyInfoAddressFragment extends Fragment implements View.OnClickListe
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(linkedin));
             startActivity(browserIntent);
         }
+
+    }
+
+    public void getcountry() {
+        String api="https://"+pref.getTentantURLAPI()+"/assets/allCountries.json";
+
+
+        new PostJsonDataParser(getContext(), Request.Method.GET, api, null, true, true, new PostJsonDataParser.OnGetResponseListner() {
+            @Override
+            public void onGetResponse(JSONObject response) {
+                if (response != null) {
+                    Log.d("dashboardresponse", response.toString());
+
+                    try {
+                        boolean _failure = response.optBoolean("_failure");
+                        String _message = response.optString("_message");
+                        if (_failure) {
+
+                            Intent intent = new Intent(getContext(), LoginActivity.class);
+                            startActivity(intent);
+
+                        } else {
+
+                            JSONArray tableCountry=response.optJSONArray("tableCountry");
+                            for (int i=0;i<tableCountry.length();i++){
+                                JSONObject obj=tableCountry.optJSONObject(i);
+                                int id=obj.optInt("id");
+                                String name=obj.optString("name");
+                                if (id==Integer.parseInt(homeAddressCountry)){
+                                    binding.tvCountry.setText(name);
+                                }
+
+                                if (id==Integer.parseInt(mailingAddressCountry)){
+                                    binding.tvMailingCountry.setText(name);
+                                }
+                            }
+
+                        }
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
 
     }
 }

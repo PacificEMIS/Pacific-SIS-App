@@ -258,7 +258,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Female Toilet Accessbility"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                            android:text="Female Toilet Accessibility"></com.opensissasstudent.others.customtext.Custom_Text_View>
                         <com.opensissasstudent.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvFemaleToiletAccessbility"
@@ -373,7 +373,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Male Toilet Accessbility"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                            android:text="Male Toilet Accessibility"></com.opensissasstudent.others.customtext.Custom_Text_View>
                         <com.opensissasstudent.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvMaleToiletAccessbility"
@@ -488,7 +488,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Common Toilet Accessbility"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                            android:text="Common Toilet Accessibility"></com.opensissasstudent.others.customtext.Custom_Text_View>
                         <com.opensissasstudent.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvCommonToiletAccessbility"
