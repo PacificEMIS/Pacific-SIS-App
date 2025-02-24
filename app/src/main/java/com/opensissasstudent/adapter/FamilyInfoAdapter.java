@@ -64,7 +64,7 @@ public class FamilyInfoAdapter extends RecyclerView.Adapter<FamilyInfoAdapter.My
 
         myViewHolder.setIsRecyclable(false);
         if (itemList.get(i).isCustodian()){
-            myViewHolder.tvCustody.setVisibility(View.VISIBLE);
+            myViewHolder.tvCustody.setVisibility(View.GONE);
         }else {
             myViewHolder.tvCustody.setVisibility(View.GONE);
         }
