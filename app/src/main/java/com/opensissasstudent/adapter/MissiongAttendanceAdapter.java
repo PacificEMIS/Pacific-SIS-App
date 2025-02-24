@@ -33,7 +33,7 @@ public class MissiongAttendanceAdapter extends RecyclerView.Adapter<MissiongAtte
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, final int i) {
         myViewHolder.tvCourseName.setText(itemList.get(i).getCourseSectionName());
         myViewHolder.tvCourseSection.setText(itemList.get(i).getCourseSection());
-        myViewHolder.tvDate.setText(Util.changeAnyDateFormat(itemList.get(i).getDate(),"yyyy-MM-dd","dd MMM,yyyy"));
+        myViewHolder.tvDate.setText(Util.changeAnyDateFormat(itemList.get(i).getDate(),"yyyy-MM-dd","dd MMM, yyyy"));
         myViewHolder.tvGrade.setText(itemList.get(i).getGrade());
         myViewHolder.tvPeriod.setText(itemList.get(i).getPeriod());
         myViewHolder.itemView.setOnClickListener(new View.OnClickListener() {

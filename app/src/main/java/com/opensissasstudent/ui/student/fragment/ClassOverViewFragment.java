@@ -76,8 +76,8 @@ public class ClassOverViewFragment extends Fragment implements View.OnClickListe
         onlineClassroomPassword=getArguments().getString("onlineClassroomPassword");
 
         gradescale=getArguments().getString("gradescale");
-        durationStartDate= Util.changeAnyDateFormat(getArguments().getString("durationStartDate"),"yyyy-MM-dd","MMM dd,yyyy");
-        durationEndDate=Util.changeAnyDateFormat(getArguments().getString("durationEndDate"),"yyyy-MM-dd","MMM dd,yyyy");
+        durationStartDate= Util.changeAnyDateFormat(getArguments().getString("durationStartDate"),"yyyy-MM-dd","MMM dd, yyyy");
+        durationEndDate=Util.changeAnyDateFormat(getArguments().getString("durationEndDate"),"yyyy-MM-dd","MMM dd, yyyy");
         scheduleType=getArguments().getString("scheduleType");
         meetingDays=getArguments().getString("meetingDays");
         attendanceTaken=getArguments().getString("attendanceTaken");

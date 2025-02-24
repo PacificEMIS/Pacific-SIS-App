@@ -126,7 +126,7 @@ public class TranscriptActivity extends AppCompatActivity implements View.OnClic
                             binding.tvStudentAddress.setText(homeAddressLineOne+"\n"+homeAddressState+","+homeAddressZip);
 
                             String dob=Util.getFreshValue(transcriptOBJ.optString("dob").replaceAll("T00:00:00",""),"");
-                            binding.tvStudentDOB.setText("DOB: "+Util.changeAnyDateFormat(dob,"yyyy-MM-dd","dd MMM,yyyy"));
+                            binding.tvStudentDOB.setText("DOB: "+Util.changeAnyDateFormat(dob,"yyyy-MM-dd","dd MMM, yyyy"));
                             String studentInternalId=Util.getFreshValue(transcriptOBJ.optString("studentInternalId"),"");
                             binding.tvStudentID.setText("ID: "+studentInternalId);
 

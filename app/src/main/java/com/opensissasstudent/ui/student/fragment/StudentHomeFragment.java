@@ -400,7 +400,7 @@ public class StudentHomeFragment extends Fragment implements View.OnClickListene
                                         JSONObject obj=assignmentList.optJSONObject(z);
                                         String assignmentTitle=obj.optString("assignmentTitle");
                                         String courseSectionTitle=obj.optString("courseSectionTitle");
-                                        String dueDate= Util.changeAnyDateFormat(obj.optString("dueDate").replaceAll("T00:00:00",""),"yyyy-MM-dd","MMM dd,yyyy");
+                                        String dueDate= Util.changeAnyDateFormat(obj.optString("dueDate").replaceAll("T00:00:00",""),"yyyy-MM-dd","MMM dd, yyyy");
                                         String assignmentTypeTitle=obj.optString("assignmentTypeTitle");
                                         DashboardAssignmentModel assignmentModel=new DashboardAssignmentModel();
                                         assignmentModel.setAssignmentTitle(assignmentTitle);

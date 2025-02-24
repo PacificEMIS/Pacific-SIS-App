@@ -397,7 +397,7 @@ public class MyInfoFragment extends Fragment implements View.OnClickListener {
 
                             }
 
-                            dateofbirth = Util.changeAnyDateFormat(dob, "yyyy-MM-dd", "dd MMM,yyyy")+" Age: "+age+" Years" ;
+                            dateofbirth = Util.changeAnyDateFormat(dob, "yyyy-MM-dd", "dd MMM, yyyy")+" Age: "+age+" Years" ;
 
 
                             gender = Util.getFreshValue(studentMaster.optString("gender", "-"));

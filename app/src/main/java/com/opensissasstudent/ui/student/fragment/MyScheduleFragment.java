@@ -67,7 +67,7 @@ public class MyScheduleFragment extends Fragment implements View.OnClickListener
 
     private static final String TAG = "MainActivity";
     private Calendar currentCalender = Calendar.getInstance(Locale.getDefault());
-    private SimpleDateFormat dateFormatForDisplaying = new SimpleDateFormat("MMM dd,yyyy", Locale.getDefault());
+    private SimpleDateFormat dateFormatForDisplaying = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault());
     private SimpleDateFormat dateFormatForMonth = new SimpleDateFormat("MMM - yyyy", Locale.getDefault());
     private boolean shouldShow = false;
     JSONArray calendarArray;
@@ -333,7 +333,7 @@ public class MyScheduleFragment extends Fragment implements View.OnClickListener
 
 
                  events = new ArrayList<>();
-                events.add( new Event(Color.parseColor("#094990"), timeInMillis, title+"-"+courseSectionName));
+                events.add( new Event(Color.parseColor("#F44336"), timeInMillis, title+" - "+courseSectionName));
 
                 compactCalendarView.addEvents(events);
             }

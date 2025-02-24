@@ -31,10 +31,10 @@ public class NurseVisitAdapter extends RecyclerView.Adapter<NurseVisitAdapter.My
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, final int i) {
         if (itemList.get(i).getTimeOut().equals("")){
-            myViewHolder.tvVisitDate.setText(Util.changeAnyDateFormat(itemList.get(i).getNurseVisitDate(),"yyyy-MM-dd","MMM dd,yyyy") +" In "+Util.changeAnyDateFormat(itemList.get(i).getTimeIn(),"yyyy-MM-ddhh:mm:ss","hh:mm"));
+            myViewHolder.tvVisitDate.setText(Util.changeAnyDateFormat(itemList.get(i).getNurseVisitDate(),"yyyy-MM-dd","MMM dd, yyyy") +" In "+Util.changeAnyDateFormat(itemList.get(i).getTimeIn(),"yyyy-MM-ddhh:mm:ss","hh:mm"));
 
         }else {
-            myViewHolder.tvVisitDate.setText(Util.changeAnyDateFormat(itemList.get(i).getNurseVisitDate(),"yyyy-MM-dd","MMM dd,yyyy") +" In "+Util.changeAnyDateFormat(itemList.get(i).getTimeIn(),"yyyy-MM-ddhh:mm:ss","hh:mm")+" Out "+Util.changeAnyDateFormat(itemList.get(i).getTimeOut(),"yyyy-MM-ddhh:mm:ss","hh:mm"));
+            myViewHolder.tvVisitDate.setText(Util.changeAnyDateFormat(itemList.get(i).getNurseVisitDate(),"yyyy-MM-dd","MMM dd, yyyy") +" In "+Util.changeAnyDateFormat(itemList.get(i).getTimeIn(),"yyyy-MM-ddhh:mm:ss","hh:mm")+" Out "+Util.changeAnyDateFormat(itemList.get(i).getTimeOut(),"yyyy-MM-ddhh:mm:ss","hh:mm"));
 
         }
 

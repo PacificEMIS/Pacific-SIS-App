@@ -34,7 +34,7 @@ public class TeacherDashboardEventAdapter extends RecyclerView.Adapter<TeacherDa
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, final int i) {
         myViewHolder.tvEventName.setText(itemList.get(i).getEventName());
-        myViewHolder.tvEventDate.setText(Util.changeAnyDateFormat(itemList.get(i).getEventDate(),"yyyy-MM-dd","MMM dd,yyyy"));
+        myViewHolder.tvEventDate.setText(Util.changeAnyDateFormat(itemList.get(i).getEventDate(),"yyyy-MM-dd","MMM dd, yyyy"));
         if (itemList.get(i).getEventColor().equalsIgnoreCase("#d23240")) {
             myViewHolder.lnColor.setBackgroundTintList((ContextCompat.getColorStateList(context, R.color.color1)));
         }else if (itemList.get(i).getEventColor().equalsIgnoreCase("#FF9800")) {
@@ -52,7 +52,7 @@ public class TeacherDashboardEventAdapter extends RecyclerView.Adapter<TeacherDa
             myViewHolder.lnColor.setBackgroundTintList((ContextCompat.getColorStateList(context, R.color.color7)));
         }
 
-        myViewHolder.tvEndDate.setText(Util.changeAnyDateFormat(itemList.get(i).getEndDate(),"yyyy-MM-dd","MMM dd,yyyy"));
+        myViewHolder.tvEndDate.setText(Util.changeAnyDateFormat(itemList.get(i).getEndDate(),"yyyy-MM-dd","MMM dd, yyyy"));
 
 
 

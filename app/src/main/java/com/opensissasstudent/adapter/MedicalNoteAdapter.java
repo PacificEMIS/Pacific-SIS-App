@@ -32,7 +32,7 @@ public class MedicalNoteAdapter extends RecyclerView.Adapter<MedicalNoteAdapter.
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, final int i) {
 
 
-        myViewHolder.tvMedicalNoteDate.setText(Util.changeAnyDateFormat(itemList.get(i).getNoteDate(),"yyyy-MM-dd","MMM dd,yyyy"));
+        myViewHolder.tvMedicalNoteDate.setText(Util.changeAnyDateFormat(itemList.get(i).getNoteDate(),"yyyy-MM-dd","MMM dd, yyyy"));
         myViewHolder.tvMedicalNoteDesc.setText(itemList.get(i).getMedicalNote());
 
 

@@ -32,7 +32,7 @@ public class PhyiscalRecordAdapter extends RecyclerView.Adapter<PhyiscalRecordAd
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, final int i) {
 
 
-        myViewHolder.tvRecordDate.setText(Util.changeAnyDateFormat(itemList.get(i).getImmunizationDate(),"yyyy-MM-dd","MMM dd,yyyy"));
+        myViewHolder.tvRecordDate.setText(Util.changeAnyDateFormat(itemList.get(i).getImmunizationDate(),"yyyy-MM-dd","MMM dd, yyyy"));
         myViewHolder.tvReordType.setText(itemList.get(i).getImmunizationType());
         myViewHolder.tvRecordDesc.setText(itemList.get(i).getComment());
 

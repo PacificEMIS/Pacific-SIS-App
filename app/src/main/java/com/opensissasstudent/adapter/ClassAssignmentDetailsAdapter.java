@@ -33,8 +33,8 @@ public class ClassAssignmentDetailsAdapter extends RecyclerView.Adapter<ClassAss
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, final int i) {
         myViewHolder.tvAssignmentdetailsName.setText(itemList.get(i).getAssignmentdetailsName());
         myViewHolder.tvPoints.setText("Points :"+itemList.get(i).getPoints());
-        myViewHolder.tvAssignedDate.setText(Util.changeAnyDateFormat(itemList.get(i).getAssignedDate(),"yyyy-MM-dd","MMM dd,yyyy"));
-        myViewHolder.tvDueDate.setText(Util.changeAnyDateFormat(itemList.get(i).getDueDate(),"yyyy-MM-dd","MMM dd,yyyy"));
+        myViewHolder.tvAssignedDate.setText(Util.changeAnyDateFormat(itemList.get(i).getAssignedDate(),"yyyy-MM-dd","MMM dd, yyyy"));
+        myViewHolder.tvDueDate.setText(Util.changeAnyDateFormat(itemList.get(i).getDueDate(),"yyyy-MM-dd","MMM dd, yyyy"));
         myViewHolder.lnMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

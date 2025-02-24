@@ -81,7 +81,7 @@ public class MissingClassAttendanceActivity extends AppCompatActivity implements
         attendate=getIntent().getStringExtra("date");
         blockID=getIntent().getIntExtra("blockID",0);
         coursesection=getIntent().getStringExtra("coursesection");
-        date=Util.changeAnyDateFormat(attendate,"yyyy-MM-dd","dd MMM,yyyy");
+        date=Util.changeAnyDateFormat(attendate,"yyyy-MM-dd","dd MMM, yyyy");
         tvSubmit = (TextView) findViewById(R.id.tvSubmit);
         courseSectionID = getIntent().getIntExtra("courseSectionID", 0);
         attendanceCatID = getIntent().getIntExtra("attendanceCatID", 0);

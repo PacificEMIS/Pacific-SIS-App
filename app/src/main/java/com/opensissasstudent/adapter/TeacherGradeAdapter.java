@@ -35,8 +35,8 @@ public class TeacherGradeAdapter extends RecyclerView.Adapter<TeacherGradeAdapte
 
         myViewHolder.tvGradeName.setText(itemList.get(i).getGradeName());
         myViewHolder.tvGradeType.setText(itemList.get(i).getGradeType());
-        myViewHolder.tvAssignedDate.setText(Util.changeAnyDateFormat(itemList.get(i).getAssignedDate(),"yyyy-MM-dd","MMM dd,yyyy"));
-        myViewHolder.tvDueDate.setText(Util.changeAnyDateFormat(itemList.get(i).getDueDate(),"yyyy-MM-dd","MMM dd,yyyy"));
+        myViewHolder.tvAssignedDate.setText(Util.changeAnyDateFormat(itemList.get(i).getAssignedDate(),"yyyy-MM-dd","MMM dd, yyyy"));
+        myViewHolder.tvDueDate.setText(Util.changeAnyDateFormat(itemList.get(i).getDueDate(),"yyyy-MM-dd","MMM dd, yyyy"));
         myViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

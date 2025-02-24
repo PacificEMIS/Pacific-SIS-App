@@ -268,7 +268,7 @@ public class AbsentSummaryFragment extends Fragment implements View.OnClickListe
 
                 String date = y + "-" + month + "-" + d;
                 fromDate = date+"T00:00:00";
-                binding.tvFromDate.setText(Util.changeAnyDateFormat(date, "yyyy-MM-dd", "dd MMM,yyyy"));
+                binding.tvFromDate.setText(Util.changeAnyDateFormat(date, "yyyy-MM-dd", "dd MMM, yyyy"));
 
 
 
@@ -330,7 +330,7 @@ public class AbsentSummaryFragment extends Fragment implements View.OnClickListe
 
                 String date = y + "-" + month + "-" + d;
                 toDate = date+"T00:00:00";
-                binding.tvToDate.setText(Util.changeAnyDateFormat(date, "yyyy-MM-dd", "dd MMM,yyyy"));
+                binding.tvToDate.setText(Util.changeAnyDateFormat(date, "yyyy-MM-dd", "dd MMM, yyyy"));
 
 
 

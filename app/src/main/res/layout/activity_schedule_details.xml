@@ -498,7 +498,8 @@
                                         android:layout_weight="0.5"
                                         android:textColor="@color/bar"
                                         android:textSize="@dimen/small_text"
-                                        android:text="Period"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                        android:text="Period"
+                                        android:gravity="center"></com.opensissasstudent.others.customtext.Custom_Text_View>
                                     <com.opensissasstudent.others.customtext.Custom_Text_View
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"

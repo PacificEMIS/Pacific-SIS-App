@@ -78,7 +78,7 @@ public class AbsentAdapter extends RecyclerView.Adapter<AbsentAdapter.MyViewHold
 
             myViewHolder.tvAttendanceShortCode.setText(itemList.get(i).getAttendanceshortCode());
         myViewHolder.tvAttendanceCode.setText(itemList.get(i).getAttendance());
-        myViewHolder.tvDate.setText(Util.changeAnyDateFormat(itemList.get(i).getAbsenceDate(),"yyyy-MM-dd","dd MMM,yyyy"));
+        myViewHolder.tvDate.setText(Util.changeAnyDateFormat(itemList.get(i).getAbsenceDate(),"yyyy-MM-dd","dd MMM, yyyy"));
         myViewHolder.tvAdminComment.setText(itemList.get(i).getAdminComment());
         myViewHolder.tvTeacherComment.setText(itemList.get(i).getTeacherComment());
 

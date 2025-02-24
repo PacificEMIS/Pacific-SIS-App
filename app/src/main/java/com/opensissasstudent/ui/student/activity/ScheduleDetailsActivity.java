@@ -52,8 +52,8 @@ public class ScheduleDetailsActivity extends AppCompatActivity {
         binding.tvCourseTitle.setText(courseTitle);
         binding.tvCourseSection.setText(courseSection);
         binding.tvTeacher.setText(courseTeacher);
-        binding.tvEnrollDate.setText(Util.changeAnyDateFormat(enrollDate,"yyyy-MM-dd","dd MMM,yyyy"));
-        binding.tvDropDate.setText(Util.changeAnyDateFormat(dropdate,"yyyy-MM-dd","dd MMM,yyyy"));
+        binding.tvEnrollDate.setText(Util.changeAnyDateFormat(enrollDate,"yyyy-MM-dd","dd MMM, yyyy"));
+        binding.tvDropDate.setText(Util.changeAnyDateFormat(dropdate,"yyyy-MM-dd","dd MMM, yyyy"));
         binding.tvScheduleType.setText("Schedule Type: "+scheduletype);
         binding.tvPeriod.setText(period);
         binding.tvRoom.setText(room);

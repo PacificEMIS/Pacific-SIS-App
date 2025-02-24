@@ -41,6 +41,8 @@ public class VariableScheduleAdapter extends RecyclerView.Adapter<VariableSchedu
         myViewHolder.tvRoom.setText(itemList.get(i).getRoom());
         if (itemList.get(i).isAttendanceTaken()){
             myViewHolder.tvTakeAttendance.setText("Yes");
+        }else {
+            myViewHolder.tvTakeAttendance.setText("No");
         }
 
     }

@@ -180,8 +180,8 @@ public class MyGardeBookGradeDetailsActivity extends AppCompatActivity implement
                                 GradeBookAssignmentDetailsModel gradeModel=new GradeBookAssignmentDetailsModel();
                                 gradeModel.setLetter(letter);
                                 gradeModel.setGradeRange(highestGrade+"-"+lowestGrade);
-                                gradeModel.setAssignedDate(Util.changeAnyDateFormat(assignmentDate,"yyyy-MM-dd","dd MMM,yyyy"));
-                                gradeModel.setDueDate(Util.changeAnyDateFormat(dueDate,"yyyy-MM-dd","dd MMM,yyyy"));
+                                gradeModel.setAssignedDate(Util.changeAnyDateFormat(assignmentDate,"yyyy-MM-dd","dd MMM, yyyy"));
+                                gradeModel.setDueDate(Util.changeAnyDateFormat(dueDate,"yyyy-MM-dd","dd MMM, yyyy"));
                                 gradeModel.setAssignemtnName(assignmentTitle);
                                 gradeModel.setAssignmentType(assignmentType);
                                 gradeModel.setDescription(assignmentDescription);

@@ -75,7 +75,7 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
 
          df = new SimpleDateFormat("dd-MM-yyyy");
         currentDate = df.format(c.getTime());
-        tvDate.setText(Util.changeAnyDateFormat(currentDate,"dd-MM-yyyy","MMM dd,yyyy"));
+        tvDate.setText(Util.changeAnyDateFormat(currentDate,"dd-MM-yyyy","MMM dd, yyyy"));
         lnForward=(LinearLayout) view.findViewById(R.id.lnForward);
         lnBackWard=(LinearLayout)view.findViewById(R.id.lnBackWard);
         lnBackWard.setOnClickListener(this);
@@ -106,7 +106,7 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
         if (v==lnForward){
             c.add(Calendar.DATE, 1);
             changeDate = df.format(c.getTime());
-            tvDate.setText(Util.changeAnyDateFormat(changeDate,"dd-MM-yyyy","MMM dd,yyyy"));
+            tvDate.setText(Util.changeAnyDateFormat(changeDate,"dd-MM-yyyy","MMM dd, yyyy"));
             JSONObject jsonObject=new JSONObject();
             try {
                 jsonObject.put("staffId",pref.getUserID());
@@ -148,7 +148,7 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            tvDate.setText(Util.changeAnyDateFormat(changeDate,"dd-MM-yyyy","MMM dd,yyyy"));
+            tvDate.setText(Util.changeAnyDateFormat(changeDate,"dd-MM-yyyy","MMM dd, yyyy"));
             if (changeDate.equals(currentDate)){
                 tvDay.setText("Today");
 

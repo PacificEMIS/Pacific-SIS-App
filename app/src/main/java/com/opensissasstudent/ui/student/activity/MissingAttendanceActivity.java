@@ -55,7 +55,7 @@ public class MissingAttendanceActivity extends AppCompatActivity implements View
         Date c = Calendar.getInstance().getTime();
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         String currentDate = df.format(c);
-        tvTo.setText(Util.changeAnyDateFormat(currentDate,"yyyy-MM-dd","dd MMM,yyyy"));
+        tvTo.setText(Util.changeAnyDateFormat(currentDate,"yyyy-MM-dd","dd MMM, yyyy"));
         imgBack=(ImageView)findViewById(R.id.imgBack);
         imgBack.setOnClickListener(this);
     }
@@ -115,7 +115,7 @@ public class MissingAttendanceActivity extends AppCompatActivity implements View
 
                                 }
                                 JSONObject obj = courseSectionViewList.optJSONObject(0);
-                                String attendanceDate = Util.changeAnyDateFormat(obj.optString("attendanceDate").replace("T00:00:00",""),"yyyy-MM-dd","dd MMM,yyyy");
+                                String attendanceDate = Util.changeAnyDateFormat(obj.optString("attendanceDate").replace("T00:00:00",""),"yyyy-MM-dd","dd MMM, yyyy");
                                 tvFrom.setText(attendanceDate);
 
                                 setAdapter();
