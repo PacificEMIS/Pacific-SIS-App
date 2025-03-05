@@ -13,9 +13,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import com.opensissasstudent.R;
 import com.opensissasstudent.model.TeacherClassesModel;
-import com.opensissasstudent.ui.student.activity.ClassDetailsActivity;
 
 import java.util.ArrayList;
 
@@ -99,8 +99,9 @@ public class TeacherClassAdapter extends RecyclerView.Adapter<TeacherClassAdapte
         myViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(context, ClassDetailsActivity.class);
-                /*intent.putExtra("courseID",itemList.get(i).getCourseId());
+                //TODO CLASS
+               /* Intent intent=new Intent(context, ClassDetailsActivity.class);
+                intent.putExtra("courseID",itemList.get(i).getCourseId());
                 intent.putExtra("courseName",itemList.get(i).getClassName());
                 intent.putExtra("roomNo",itemList.get(i).getRoomNo());
                 intent.putExtra("attendanceCatID",itemList.get(i).getAttendanceCategoryId());

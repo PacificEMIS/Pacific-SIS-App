@@ -17,6 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Opensis"
         android:usesCleartextTraffic="true">
+        <activity android:name=".ui.common.activity.ForgotPasswordActivity"
+            android:screenOrientation="userPortrait"></activity>
         <activity android:name=".ui.teacher.activity.MissingClassAttendanceActivity"
             android:screenOrientation="userPortrait"></activity>
         <activity android:name=".ui.teacher.activity.MissingAttendanceActivity"

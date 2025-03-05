@@ -47,6 +47,9 @@ import com.opensissasstudent.ui.common.activity.ChangePasswordActivity;
 import com.opensissasstudent.ui.common.activity.LoginActivity;
 import com.opensissasstudent.ui.student.fragment.MarkingPeriodsFragment;
 import com.opensissasstudent.ui.student.fragment.SchoolFragment;
+import com.opensissasstudent.ui.student.fragment.TeacherCalenderFragment;
+import com.opensissasstudent.ui.teacher.fragment.ClassFragment;
+import com.opensissasstudent.ui.teacher.fragment.ScheduleFragment;
 import com.opensissasstudent.ui.teacher.fragment.StudentsFragment;
 import com.opensissasstudent.ui.teacher.fragment.TeacheHomeFragment;
 
@@ -353,7 +356,7 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
 
     private void viewClassesFragment(){
 //TODO CLASS
-      /*  ClassFragment fragment = new ClassFragment();
+        ClassFragment fragment = new ClassFragment();
         Bundle bundle = new Bundle();
         // bundle.putString("currentDate", currentDate);
         fragment.setArguments(bundle);
@@ -373,7 +376,7 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
         imgScheduleNormal.setVisibility(View.VISIBLE);
         imgReportNormal.setVisibility(View.VISIBLE);
 
-        lnHeader.setVisibility(View.GONE);*/
+        lnHeader.setVisibility(View.GONE);
 
     }
 
@@ -404,8 +407,8 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
     }
 
     private void viewCalendarFragment(){
-//TODO CLASS
-       /* TeacherCalenderFragment fragment = new TeacherCalenderFragment();
+
+        TeacherCalenderFragment fragment = new TeacherCalenderFragment();
         Bundle bundle = new Bundle();
         // bundle.putString("currentDate", currentDate);
         fragment.setArguments(bundle);
@@ -425,13 +428,13 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
         imgScheduleNormal.setVisibility(View.VISIBLE);
         imgReportNormal.setVisibility(View.VISIBLE);
 
-        lnHeader.setVisibility(View.GONE);*/
+        lnHeader.setVisibility(View.GONE);
 
     }
 
     private void viewScheduleFragment(){
-//TODO CLASS
-       /* ScheduleFragment fragment = new ScheduleFragment();
+
+        ScheduleFragment fragment = new ScheduleFragment();
         Bundle bundle = new Bundle();
         // bundle.putString("currentDate", currentDate);
         fragment.setArguments(bundle);
@@ -451,7 +454,7 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
         imgScheduleNormal.setVisibility(View.GONE);
         imgReportNormal.setVisibility(View.VISIBLE);
 
-        lnHeader.setVisibility(View.GONE);*/
+        lnHeader.setVisibility(View.GONE);
 
     }
 

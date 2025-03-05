@@ -97,7 +97,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         tvSubmit.setOnClickListener(this);
         tvLogin.setOnClickListener(this);
         tvTryAgain.setOnClickListener(this);
-
+        tvForgotUser.setOnClickListener(this);
         PD=new ProgressDialog(LoginActivity.this);
         PD.setMessage("Loading");
 
@@ -194,6 +194,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             llError.setVisibility(View.GONE);
             etWebAddress.setText("");
 
+        }else if (view==tvForgotUser){
+            Intent intent=new Intent(LoginActivity.this,ForgotPasswordActivity.class);
+            intent.putExtra("schoolname",school);
+            intent.putExtra("email",etEmail.getText().toString());
+            intent.putExtra("url",etWebAddress.getText().toString());
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         }
     }
 

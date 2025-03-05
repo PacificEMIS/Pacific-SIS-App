@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.student.fragment.ClassFragment"
+    tools:context=".ui.teacher.fragment.ClassFragment"
     android:orientation="vertical"
     android:background="@color/background_color">
     <LinearLayout
