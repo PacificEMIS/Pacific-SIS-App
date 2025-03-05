@@ -11,9 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import com.opensissasstudent.R;
 import com.opensissasstudent.model.AttendanceCodeModel;
-import com.opensissasstudent.ui.student.activity.MissingClassAttendanceActivity;
+import com.opensissasstudent.ui.teacher.activity.MissingClassAttendanceActivity;
 
 import java.util.ArrayList;
 
@@ -89,7 +90,7 @@ public class MissingAttendanceCodeAdapter extends RecyclerView.Adapter<MissingAt
         }
     }
 
-    public MissingAttendanceCodeAdapter(ArrayList<AttendanceCodeModel> itemList, Context context,  int pos) {
+    public MissingAttendanceCodeAdapter(ArrayList<AttendanceCodeModel> itemList, Context context, int pos) {
         this.itemList = itemList;
         this.context = context;
         this.pos=pos;

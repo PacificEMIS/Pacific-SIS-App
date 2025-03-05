@@ -92,6 +92,7 @@ public class TeacherDashboardClassAdapter extends RecyclerView.Adapter<TeacherDa
         myViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //TODO CLASS
               /*  Intent intent=new Intent(context, ClassDetailsActivity.class);
                 intent.putExtra("courseID",itemList.get(i).getCourseId());
                 intent.putExtra("courseName",itemList.get(i).getClassName());

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.student.activity.MissingAttendanceActivity">
+    tools:context=".ui.teacher.activity.MissingAttendanceActivity">
     <LinearLayout
         android:background="@color/background_color"
         android:layout_width="match_parent"
@@ -64,6 +64,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <LinearLayout
+                            android:id="@+id/llFromDate"
                             android:backgroundTint="@color/white"
                             android:background="@drawable/llwhitestrokedesign"
                             android:layout_width="0dp"
@@ -91,6 +92,7 @@
 
                         </LinearLayout>
                         <LinearLayout
+                            android:id="@+id/llToDate"
                             android:layout_marginLeft="10dp"
                             android:backgroundTint="@color/white"
                             android:background="@drawable/llwhitestrokedesign"
@@ -98,6 +100,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1">
                             <LinearLayout
+
                                 android:padding="10dp"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"

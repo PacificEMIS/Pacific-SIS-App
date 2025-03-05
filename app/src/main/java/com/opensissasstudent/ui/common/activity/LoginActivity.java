@@ -31,6 +31,7 @@ import com.opensissasstudent.others.utility.AppData;
 import com.opensissasstudent.others.utility.Pref;
 import com.opensissasstudent.others.utility.Util;
 import com.opensissasstudent.ui.student.activity.StudentDashboardActivity;
+import com.opensissasstudent.ui.teacher.activity.TeacherDashboardActivity;
 import com.tozny.crypto.android.AesCbcWithIntegrity;
 
 import org.json.JSONException;
@@ -238,11 +239,22 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             pref.saveMemberShip(membershipName);
                             String userPhoto= Util.getFreshValue(response.optString("userPhoto"),"");
                             pref.saveUserPhoto(userPhoto);
-                            Intent intent=new Intent(LoginActivity.this, StudentDashboardActivity.class);
-                            intent.putExtra("token",_token);
-                            intent.putExtra("school",school);
-                            startActivity(intent);
-                            finish();
+
+                            if (membershipName.equalsIgnoreCase("Parent") || membershipName.equalsIgnoreCase("Student")){
+                                Intent intent=new Intent(LoginActivity.this, StudentDashboardActivity.class);
+                                intent.putExtra("token",_token);
+                                intent.putExtra("school",school);
+                                startActivity(intent);
+                                finish();
+                            }else {
+                                Intent intent=new Intent(LoginActivity.this, TeacherDashboardActivity.class);
+                                intent.putExtra("token",_token);
+                                intent.putExtra("school",school);
+                                startActivity(intent);
+                                finish();
+                            }
+
+
                             pref.savePassword(etPassword.getText().toString());
                             pref.saveEmail(etEmail.getText().toString());
 

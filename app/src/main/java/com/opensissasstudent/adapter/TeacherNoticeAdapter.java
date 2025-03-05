@@ -7,11 +7,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.core.text.HtmlCompat;
 import androidx.recyclerview.widget.RecyclerView;
+
 
 import com.opensissasstudent.R;
 import com.opensissasstudent.model.TeacherNoticeModel;
+import com.opensissasstudent.others.utility.Util;
 
 import java.util.ArrayList;
 
@@ -30,7 +31,7 @@ public class TeacherNoticeAdapter extends RecyclerView.Adapter<TeacherNoticeAdap
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, final int i) {
         myViewHolder.tvNotice.setText(itemList.get(i).getNotice());
-        myViewHolder.tvNoticeDetails.setText(HtmlCompat.fromHtml(itemList.get(i).getDetails(), 0));
+        myViewHolder.tvNoticeDetails.setText(itemList.get(i).getNotice()+" "+ Util.changeAnyDateFormat(itemList.get(i).getDetails(),"yyyy-MM-dd","MMM dd, yyyy"));
 
 
 
@@ -38,7 +39,7 @@ public class TeacherNoticeAdapter extends RecyclerView.Adapter<TeacherNoticeAdap
 
     @Override
     public int getItemCount() {
-        return 1;
+        return itemList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

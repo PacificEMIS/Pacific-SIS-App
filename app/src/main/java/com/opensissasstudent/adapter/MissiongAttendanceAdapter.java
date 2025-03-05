@@ -10,10 +10,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import com.opensissasstudent.R;
 import com.opensissasstudent.model.MissingAttendanceModel;
 import com.opensissasstudent.others.utility.Util;
-import com.opensissasstudent.ui.student.activity.MissingClassAttendanceActivity;
+import com.opensissasstudent.ui.teacher.activity.MissingClassAttendanceActivity;
+
 
 import java.util.ArrayList;
 
@@ -39,6 +41,7 @@ public class MissiongAttendanceAdapter extends RecyclerView.Adapter<MissiongAtte
         myViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent=new Intent(context, MissingClassAttendanceActivity.class);
                 intent.putExtra("courseSectionID",itemList.get(i).getCourseSectionID());
                 intent.putExtra("courseID",itemList.get(i).getCourseID());

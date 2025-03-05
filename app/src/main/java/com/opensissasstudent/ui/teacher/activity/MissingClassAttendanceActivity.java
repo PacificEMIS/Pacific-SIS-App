@@ -1,8 +1,4 @@
-package com.opensissasstudent.ui.student.activity;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+package com.opensissasstudent.ui.teacher.activity;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -20,6 +16,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.android.volley.Request;
 import com.opensissasstudent.R;
 import com.opensissasstudent.adapter.MissingAttendanceCodeAdapter;
@@ -30,6 +30,7 @@ import com.opensissasstudent.others.parser.PostJsonDataParser;
 import com.opensissasstudent.others.utility.Pref;
 import com.opensissasstudent.others.utility.Util;
 import com.opensissasstudent.ui.common.activity.LoginActivity;
+
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -81,7 +82,7 @@ public class MissingClassAttendanceActivity extends AppCompatActivity implements
         attendate=getIntent().getStringExtra("date");
         blockID=getIntent().getIntExtra("blockID",0);
         coursesection=getIntent().getStringExtra("coursesection");
-        date=Util.changeAnyDateFormat(attendate,"yyyy-MM-dd","dd MMM, yyyy");
+        date= Util.changeAnyDateFormat(attendate,"yyyy-MM-dd","dd MMM, yyyy");
         tvSubmit = (TextView) findViewById(R.id.tvSubmit);
         courseSectionID = getIntent().getIntExtra("courseSectionID", 0);
         attendanceCatID = getIntent().getIntExtra("attendanceCatID", 0);
