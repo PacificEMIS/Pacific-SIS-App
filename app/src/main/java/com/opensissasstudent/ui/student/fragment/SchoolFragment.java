@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -39,6 +40,7 @@ public class SchoolFragment extends Fragment {
     LinearLayout lnNoData;
     String address;
     String schoolLogo="";
+    TextView tvCourseName;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -50,6 +52,7 @@ public class SchoolFragment extends Fragment {
 
     private void initView(){
         pref=new Pref(getContext());
+        tvCourseName=(TextView)view.findViewById(R.id.tvCourseName);
         lnNoData=(LinearLayout)view.findViewById(R.id.lnNoData);
         rvSchool=(RecyclerView)view.findViewById(R.id.rvSchool);
         rvSchool.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
@@ -127,6 +130,13 @@ public class SchoolFragment extends Fragment {
 
 
 
+                                }
+
+
+                                if (itmList.size()>1){
+                                    tvCourseName.setText("Schools");
+                                }else {
+                                    tvCourseName.setText("School");
                                 }
 
 

@@ -34,7 +34,7 @@ public class MissingAttendanceCodeAdapter extends RecyclerView.Adapter<MissingAt
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, final int i) {
-        myViewHolder.tvAttendanceName.setText(itemList.get(i).getAttendanceName()+"( "+itemList.get(i).getAttendanceShortName()+" )");
+        myViewHolder.tvAttendanceName.setText(itemList.get(i).getAttendanceName()+" ( "+itemList.get(i).getAttendanceShortName()+" )");
         if (itemList.get(i).getAttendanceName().equalsIgnoreCase("Present")){
             myViewHolder.lnAttendance.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.green));
 

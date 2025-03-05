@@ -36,7 +36,7 @@
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Schools"
+
                             android:textColor="@color/white"
                             android:textSize="@dimen/big_text"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
                     </LinearLayout>

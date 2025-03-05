@@ -31,7 +31,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.MyViewHo
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, final int i) {
 
-    myViewHolder.tvID.setText("ID :"+itemList.get(i).getStudentsID());
+    myViewHolder.tvID.setText("ID: "+itemList.get(i).getStudentsID());
     myViewHolder.tvStudentName.setText(itemList.get(i).getStudentName());
     Picasso.with(context).load(itemList.get(i).getStudentImage()).skipMemoryCache().placeholder(R.drawable.student_user).error(R.drawable.student_user).into(myViewHolder.imgUser);
 
