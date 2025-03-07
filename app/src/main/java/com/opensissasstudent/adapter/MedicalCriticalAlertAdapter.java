@@ -1,21 +1,15 @@
 package com.opensissasstudent.adapter;
 
-import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.opensissasstudent.R;
-import com.opensissasstudent.model.ClassAssignmentModel;
 import com.opensissasstudent.model.MedicalAlertModel;
-import com.opensissasstudent.ui.student.activity.AssignmentDetailsActivity;
-import com.opensissasstudent.ui.student.fragment.AssignmentsFragment;
 
 import java.util.ArrayList;
 

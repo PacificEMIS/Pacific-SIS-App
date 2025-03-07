@@ -1,14 +1,9 @@
-package com.opensissasstudent.ui.student.fragment;
+package com.opensissasstudent.ui.teacher.fragment;
 
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -21,6 +16,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.android.volley.Request;
 import com.opensissasstudent.R;
 import com.opensissasstudent.adapter.ClassAssignmentAdapter;
@@ -29,6 +28,7 @@ import com.opensissasstudent.others.parser.PostJsonDataParser;
 import com.opensissasstudent.others.utility.Pref;
 import com.opensissasstudent.others.utility.Util;
 import com.opensissasstudent.ui.common.activity.LoginActivity;
+
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -105,10 +105,18 @@ public class AssignmentsFragment extends Fragment implements View.OnClickListene
         }
 
         final Calendar calendar = Calendar.getInstance();
-        calendar.setTime(calculateDate);
+        if (calculateDate != null) {
+            calendar.setTime(calculateDate);
+        } else {
+            // Handle the case where date is null, e.g.,
+            Log.w("AssignmentsFragment", "Date is null. Skipping setting the time on Calendar.");
+            // Or initialize the Calendar with a default date:
+             calendar.setTimeInMillis(System.currentTimeMillis());
+        }
+
         calendar.add(Calendar.MONTH,2);
         //Log.d("twomonthsDate",calendar.getTime().toString());
-        String twomonthsdate=Util.changeAnyDateFormat(calendar.getTime().toString(),"EEE MMM dd HH:mm:ss zzzz yyyy","yyyy-MM-dd");
+        String twomonthsdate= Util.changeAnyDateFormat(calendar.getTime().toString(),"EEE MMM dd HH:mm:ss zzzz yyyy","yyyy-MM-dd");
         twomonthsDate=twomonthsdate+"T00:00:00";
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date convertedDate = null;

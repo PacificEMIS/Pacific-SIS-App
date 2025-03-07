@@ -20,7 +20,9 @@ import com.opensissasstudent.others.parser.PostJsonDataParser;
 import com.opensissasstudent.others.utility.Pref;
 import com.opensissasstudent.others.utility.Util;
 import com.opensissasstudent.ui.common.activity.LoginActivity;
+import com.opensissasstudent.ui.teacher.fragment.AssignmentsFragment;
 import com.opensissasstudent.ui.teacher.fragment.ClassOverViewFragment;
+import com.opensissasstudent.ui.teacher.fragment.ClassStudentFragment;
 
 
 import org.json.JSONArray;
@@ -165,7 +167,7 @@ public class ClassDetailsActivity extends AppCompatActivity implements View.OnCl
 
     private void viewClassStudentsFragment(){
 
-       /* ClassStudentFragment fragment = new ClassStudentFragment();
+        ClassStudentFragment fragment = new ClassStudentFragment();
         Bundle bundle = new Bundle();
          bundle.putString("courseID", String.valueOf(courseSectionID));
         fragment.setArguments(bundle);
@@ -187,7 +189,6 @@ public class ClassDetailsActivity extends AppCompatActivity implements View.OnCl
         tvGrade.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.text_color));
         tvAttendance.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.text_color));
 
-*/
 
 
 
@@ -195,7 +196,7 @@ public class ClassDetailsActivity extends AppCompatActivity implements View.OnCl
 
     private void viewClassAssignmentFragment(){
 
-       /* AssignmentsFragment fragment = new AssignmentsFragment();
+        AssignmentsFragment fragment = new AssignmentsFragment();
         Bundle bundle = new Bundle();
          bundle.putString("courseSectionID", String.valueOf(courseSectionID));
         bundle.putString("courseID", String.valueOf(courseID));
@@ -221,7 +222,6 @@ public class ClassDetailsActivity extends AppCompatActivity implements View.OnCl
         tvAttendance.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.text_color));
 
 
-*/
 
 
     }

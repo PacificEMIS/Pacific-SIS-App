@@ -114,6 +114,8 @@
         <activity
             android:name=".ui.common.activity.LoginActivity"
             android:screenOrientation="userPortrait" />
+        <activity android:name=".ui.teacher.activity.AssignmentDetailsActivity"
+            android:screenOrientation="userPortrait"></activity>
     </application>
 
 </manifest>

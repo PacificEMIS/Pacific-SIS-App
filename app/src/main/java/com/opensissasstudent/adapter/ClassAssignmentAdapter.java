@@ -11,10 +11,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import com.opensissasstudent.R;
 import com.opensissasstudent.model.ClassAssignmentModel;
-import com.opensissasstudent.ui.student.activity.AssignmentDetailsActivity;
-import com.opensissasstudent.ui.student.fragment.AssignmentsFragment;
+import com.opensissasstudent.ui.teacher.activity.AssignmentDetailsActivity;
+import com.opensissasstudent.ui.teacher.fragment.AssignmentsFragment;
 
 import java.util.ArrayList;
 
@@ -77,7 +78,7 @@ public class ClassAssignmentAdapter extends RecyclerView.Adapter<ClassAssignment
         }
     }
 
-    public ClassAssignmentAdapter(ArrayList<ClassAssignmentModel> itemList, Context context,AssignmentsFragment assignmentsFragment) {
+    public ClassAssignmentAdapter(ArrayList<ClassAssignmentModel> itemList, Context context, AssignmentsFragment assignmentsFragment) {
         this.itemList = itemList;
         this.context = context;
         this.assignmentsFragment=assignmentsFragment;

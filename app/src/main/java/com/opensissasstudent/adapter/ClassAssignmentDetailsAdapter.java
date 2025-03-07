@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.opensissasstudent.R;
 import com.opensissasstudent.model.AssignmentDetailsModel;
 import com.opensissasstudent.others.utility.Util;
-import com.opensissasstudent.ui.student.activity.AssignmentDetailsActivity;
+import com.opensissasstudent.ui.teacher.activity.AssignmentDetailsActivity;
 
 import java.util.ArrayList;
 
@@ -32,7 +32,7 @@ public class ClassAssignmentDetailsAdapter extends RecyclerView.Adapter<ClassAss
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, final int i) {
         myViewHolder.tvAssignmentdetailsName.setText(itemList.get(i).getAssignmentdetailsName());
-        myViewHolder.tvPoints.setText("Points :"+itemList.get(i).getPoints());
+        myViewHolder.tvPoints.setText("Points : "+itemList.get(i).getPoints());
         myViewHolder.tvAssignedDate.setText(Util.changeAnyDateFormat(itemList.get(i).getAssignedDate(),"yyyy-MM-dd","MMM dd, yyyy"));
         myViewHolder.tvDueDate.setText(Util.changeAnyDateFormat(itemList.get(i).getDueDate(),"yyyy-MM-dd","MMM dd, yyyy"));
         myViewHolder.lnMore.setOnClickListener(new View.OnClickListener() {

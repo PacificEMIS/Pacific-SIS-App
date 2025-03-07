@@ -15,6 +15,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import com.opensissasstudent.R;
 import com.opensissasstudent.model.ClassStudentModel;
 
@@ -35,8 +36,8 @@ public class ClassStudentAdapter extends RecyclerView.Adapter<ClassStudentAdapte
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, final int i) {
         myViewHolder.tvStudentName.setText(itemList.get(i).getStudentName());
-        myViewHolder.tvID.setText("ID :"+itemList.get(i).getStudentID());
-        myViewHolder.tvAltID.setText("Alt ID :"+itemList.get(i).getStudentAltID());
+        myViewHolder.tvID.setText("ID : "+itemList.get(i).getStudentID());
+        myViewHolder.tvAltID.setText("Alt ID : "+itemList.get(i).getStudentAltID());
         myViewHolder.tvGrade.setText(itemList.get(i).getGrade());
         myViewHolder.tvSection.setText(itemList.get(i).getSection());
 

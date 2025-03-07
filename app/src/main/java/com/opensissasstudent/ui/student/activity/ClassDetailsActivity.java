@@ -20,7 +20,6 @@ import com.opensissasstudent.others.parser.PostJsonDataParser;
 import com.opensissasstudent.others.utility.Pref;
 import com.opensissasstudent.others.utility.Util;
 import com.opensissasstudent.ui.common.activity.LoginActivity;
-import com.opensissasstudent.ui.student.fragment.AssignmentsFragment;
 import com.opensissasstudent.ui.student.fragment.ClassAttendanceFragment;
 import com.opensissasstudent.ui.student.fragment.ClassOverViewFragment;
 import com.opensissasstudent.ui.student.fragment.ClassStudentFragment;
@@ -197,32 +196,6 @@ public class ClassDetailsActivity extends AppCompatActivity implements View.OnCl
     }
 
     private void viewClassAssignmentFragment(){
-
-        AssignmentsFragment fragment = new AssignmentsFragment();
-        Bundle bundle = new Bundle();
-         bundle.putString("courseSectionID", String.valueOf(courseSectionID));
-        bundle.putString("courseID", String.valueOf(courseID));
-        bundle.putString("gradescaletype",gradescaletype);
-        bundle.putInt("periodID", periodID);
-        fragment.setArguments(bundle);
-        transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.lnFragment, fragment, "assignment");
-        transaction.commit();
-
-        tvOverView.setTextColor(Color.parseColor("#FFFFFFFF"));
-        tvStudents.setTextColor(Color.parseColor("#FFFFFFFF"));
-        tvAssignments.setTextColor(Color.parseColor("#094990"));
-        tvGradeConfig.setTextColor(Color.parseColor("#FFFFFFFF"));
-        tvGrade.setTextColor(Color.parseColor("#FFFFFFFF"));
-        tvAttendance.setTextColor(Color.parseColor("#FFFFFFFF"));
-
-        tvOverView.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.text_color));
-        tvStudents.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.text_color));
-        tvGradeConfig.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.text_color));
-        tvAssignments.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.white));
-        tvGrade.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.text_color));
-        tvAttendance.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.text_color));
-
 
 
 
