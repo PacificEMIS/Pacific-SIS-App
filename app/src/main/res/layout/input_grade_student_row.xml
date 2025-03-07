@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp"
-    android:background="@drawable/llwhitestrokedesign"
+    android:background="@drawable/llgreystrokedesign"
     android:backgroundTint="@color/white"
     android:orientation="vertical"
     android:layout_marginBottom="20dp">
@@ -43,49 +44,135 @@
             </LinearLayout>
         </LinearLayout>
 
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
         <LinearLayout
             android:id="@+id/lnPercent"
-            android:background="@drawable/llgreystrokedesign"
             android:layout_marginLeft="2dp"
-            android:layout_weight="0.2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_weight="1">
+            <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/text_color"
+                android:text="Percent"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
 
-            <com.opensissasstudent.others.customtext.Custom_Text_View
+            <EditText
+                android:inputType="number"
+                android:layout_marginLeft="5dp"
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:textSize="@dimen/medium_text"
                 android:id="@+id/etPercent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/llgreystrokedesign"></EditText>
 
         </LinearLayout>
-
         <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/text_color"
+                android:text="Letter Grade"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+
+            <com.opensissasstudent.others.customtext.Custom_EditText
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_text"
+                android:id="@+id/etLetterGrade"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/llgreystrokedesign"
+                android:visibility="gone"></com.opensissasstudent.others.customtext.Custom_EditText>
+            <LinearLayout
+                android:id="@+id/llLetterGrade"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/llgreystrokedesign">
+                <Spinner
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/spLetter"></Spinner>
+                <com.opensissasstudent.others.customtext.Custom_Text_View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/medium_text"
+                    android:id="@+id/tvLetterGrade"></com.opensissasstudent.others.customtext.Custom_Text_View>
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
             android:visibility="visible"
             android:id="@+id/lnLetterGrade"
-            android:layout_marginLeft="2dp"
-            android:layout_weight="0.3"
+            android:layout_marginLeft="5dp"
             android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center"
-            android:background="@drawable/llgreystrokedesign">
-            <com.opensissasstudent.others.customtext.Custom_EditText
+            >
+            <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/text_color"
+                android:text="Credit Earned"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+
+            <EditText
+                android:inputType="number"
+                android:layout_marginLeft="2dp"
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:textSize="@dimen/medium_text"
                 android:id="@+id/etCredit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"></com.opensissasstudent.others.customtext.Custom_EditText>
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/llgreystrokedesign"></EditText>
 
 
         </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
 
+        <LinearLayout
+            android:visibility="visible"
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+
+        </LinearLayout>
     </LinearLayout>
     <LinearLayout
         android:gravity="right"
@@ -95,6 +182,7 @@
         android:layout_marginTop="4dp">
 
         <LinearLayout
+            android:visibility="gone"
             android:id="@+id/lnComment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -102,10 +190,10 @@
             <ImageView
                 android:visibility="visible"
                 android:id="@+id/imgComment"
-                android:tint="@color/grey"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/speech_bubble_48"></ImageView>
+                android:src="@drawable/speech_bubble_48"
+                app:tint="@color/grey"></ImageView>
         </LinearLayout>
     </LinearLayout>
 

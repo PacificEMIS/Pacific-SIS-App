@@ -1,12 +1,7 @@
-package com.opensissasstudent.ui.student.fragment;
+package com.opensissasstudent.ui.teacher.fragment;
 
 import android.graphics.Color;
 import android.os.Bundle;
-
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +9,12 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.opensissasstudent.R;
+
 
 
 public class TeacherGradeFragment extends Fragment implements View.OnClickListener {
@@ -26,6 +26,8 @@ public class TeacherGradeFragment extends Fragment implements View.OnClickListen
     String gradescaletype;
     private FragmentTransaction transaction;
     int courseID;
+    int periodID;
+    String courseName;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -39,7 +41,9 @@ public class TeacherGradeFragment extends Fragment implements View.OnClickListen
     private void initView(){
         courseSectionID= Integer.parseInt(getArguments().getString("courseSectionID"));
         gradescaletype=getArguments().getString("gradescaletype");
+        courseName=getArguments().getString("courseName");
         courseID=getArguments().getInt("courseID");
+        periodID=getArguments().getInt("periodID");
         lnChildFragment=(LinearLayout) view.findViewById(R.id.lnChildFragment);
         tvInputGrades=(TextView) view.findViewById(R.id.tvInputGrades);
         tvGradeBook=(TextView) view.findViewById(R.id.tvGradeBook);
@@ -83,6 +87,8 @@ public class TeacherGradeFragment extends Fragment implements View.OnClickListen
         bundle.putInt("courseSectionID", courseSectionID);
         bundle.putString("gradescaletype", gradescaletype);
         bundle.putInt("courseID",courseID);
+        bundle.putInt("periodID", periodID);
+        bundle.putString("courseName", courseName);
         fragment.setArguments(bundle);
 
         transaction = getChildFragmentManager().beginTransaction();
@@ -94,7 +100,6 @@ public class TeacherGradeFragment extends Fragment implements View.OnClickListen
 
         tvGradeBook.setBackgroundTintList(ContextCompat.getColorStateList(getContext(), R.color.white));
         tvInputGrades.setBackgroundTintList(ContextCompat.getColorStateList(getContext(), R.color.green));
-
 
 
 

@@ -106,15 +106,14 @@
         <activity android:name=".ui.student.activity.AssignmentDetailsActivity" />
         <activity android:name=".ui.student.activity.SchoolDetailsActivity" />
         <activity
-            android:name=".ui.student.activity.ClassDetailsActivity"
-            android:screenOrientation="userPortrait" />
-        <activity
             android:name=".ui.student.activity.StudentDashboardActivity"
             android:screenOrientation="userPortrait" />
         <activity
             android:name=".ui.common.activity.LoginActivity"
             android:screenOrientation="userPortrait" />
         <activity android:name=".ui.teacher.activity.AssignmentDetailsActivity"
+            android:screenOrientation="userPortrait"></activity>
+        <activity android:name=".ui.teacher.activity.StudentOfGradeActivity"
             android:screenOrientation="userPortrait"></activity>
     </application>
 

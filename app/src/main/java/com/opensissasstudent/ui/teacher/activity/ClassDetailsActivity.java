@@ -21,8 +21,11 @@ import com.opensissasstudent.others.utility.Pref;
 import com.opensissasstudent.others.utility.Util;
 import com.opensissasstudent.ui.common.activity.LoginActivity;
 import com.opensissasstudent.ui.teacher.fragment.AssignmentsFragment;
+import com.opensissasstudent.ui.teacher.fragment.ClassAttendanceFragment;
 import com.opensissasstudent.ui.teacher.fragment.ClassOverViewFragment;
 import com.opensissasstudent.ui.teacher.fragment.ClassStudentFragment;
+import com.opensissasstudent.ui.teacher.fragment.GradeBookConfigFragment;
+import com.opensissasstudent.ui.teacher.fragment.TeacherGradeFragment;
 
 
 import org.json.JSONArray;
@@ -228,7 +231,7 @@ public class ClassDetailsActivity extends AppCompatActivity implements View.OnCl
 
     private void viewClassAttendanceAssignmentFragment(){
 
-       /* ClassAttendanceFragment fragment = new ClassAttendanceFragment();
+        ClassAttendanceFragment fragment = new ClassAttendanceFragment();
         Bundle bundle = new Bundle();
         bundle.putString("courseSectionID", String.valueOf(courseSectionID));
         bundle.putString("courseID", String.valueOf(courseID));
@@ -257,14 +260,13 @@ public class ClassDetailsActivity extends AppCompatActivity implements View.OnCl
         tvAttendance.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.white));
 
 
-*/
 
 
     }
 
     private void viewGradeBookConfigFragment(){
 
-       /* GradeBookConfigFragment fragment = new GradeBookConfigFragment();
+        GradeBookConfigFragment fragment = new GradeBookConfigFragment();
         Bundle bundle = new Bundle();
         bundle.putString("courseSectionID", String.valueOf(courseSectionID));
         bundle.putString("courseID", String.valueOf(courseID));
@@ -293,13 +295,12 @@ public class ClassDetailsActivity extends AppCompatActivity implements View.OnCl
         tvAttendance.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.text_color));
 
 
-*/
 
 
     }
     private void viewGradeFragment(){
 
-      /*  TeacherGradeFragment fragment = new TeacherGradeFragment();
+        TeacherGradeFragment fragment = new TeacherGradeFragment();
         Bundle bundle = new Bundle();
         bundle.putString("courseSectionID", String.valueOf(courseSectionID));
         bundle.putString("gradescaletype",gradescaletype);
@@ -328,7 +329,6 @@ public class ClassDetailsActivity extends AppCompatActivity implements View.OnCl
 
 
 
-*/
 
     }
 

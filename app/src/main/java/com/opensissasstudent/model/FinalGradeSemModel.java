@@ -1,9 +1,11 @@
 package com.opensissasstudent.model;
 
+import java.util.ArrayList;
+
 public class FinalGradeSemModel {
     String semName,qtrName,semMarks,qtrMarks;
     int semID,qtrID,semoUpdateID;
-
+    ArrayList<GradeBokConfigSemQtrModel> qtrList=new ArrayList<>();
     public String getSemName() {
         return semName;
     }
@@ -58,5 +60,13 @@ public class FinalGradeSemModel {
 
     public void setSemoUpdateID(int semoUpdateID) {
         this.semoUpdateID = semoUpdateID;
+    }
+
+    public ArrayList<GradeBokConfigSemQtrModel> getQtrList() {
+        return qtrList;
+    }
+
+    public void setQtrList(ArrayList<GradeBokConfigSemQtrModel> qtrList) {
+        this.qtrList = qtrList;
     }
 }

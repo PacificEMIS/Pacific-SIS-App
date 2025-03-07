@@ -19,7 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.opensissasstudent.R;
 import com.opensissasstudent.model.AttendanceCodeModel;
 import com.opensissasstudent.model.AttendanceStudentModel;
-import com.opensissasstudent.ui.student.fragment.ClassAttendanceFragment;
+import com.opensissasstudent.ui.teacher.fragment.ClassAttendanceFragment;
 
 import java.util.ArrayList;
 

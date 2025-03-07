@@ -1,6 +1,5 @@
 package com.opensissasstudent.adapter;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -8,8 +7,6 @@ import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,10 +14,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.opensissasstudent.R;
-import com.opensissasstudent.model.AttendanceCodeModel;
-import com.opensissasstudent.model.AttendanceStudentModel;
 import com.opensissasstudent.model.FamilyInfoModel;
-import com.opensissasstudent.ui.student.fragment.ClassAttendanceFragment;
 
 import java.util.ArrayList;
 

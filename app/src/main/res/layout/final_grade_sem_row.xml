@@ -17,8 +17,13 @@
         android:textSize="@dimen/small_text"
         android:textColor="@color/missing_attendance"
        android:text="Total not 100%"></com.opensissasstudent.others.customtext.Custom_Text_View>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvQtr"></androidx.recyclerview.widget.RecyclerView>
 
     <LinearLayout
+        android:visibility="gone"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="64dp"

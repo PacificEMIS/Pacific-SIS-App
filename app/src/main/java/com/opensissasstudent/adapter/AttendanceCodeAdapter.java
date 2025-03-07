@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.opensissasstudent.R;
 import com.opensissasstudent.model.AttendanceCodeModel;
-import com.opensissasstudent.ui.student.fragment.ClassAttendanceFragment;
+import com.opensissasstudent.ui.teacher.fragment.ClassAttendanceFragment;
 
 import java.util.ArrayList;
 
@@ -90,7 +90,7 @@ public class AttendanceCodeAdapter extends RecyclerView.Adapter<AttendanceCodeAd
         }
     }
 
-    public AttendanceCodeAdapter(ArrayList<AttendanceCodeModel> itemList, Context context,ClassAttendanceFragment fragment,int pos) {
+    public AttendanceCodeAdapter(ArrayList<AttendanceCodeModel> itemList, Context context, ClassAttendanceFragment fragment, int pos) {
         this.itemList = itemList;
         this.context = context;
         this.fragment=fragment;

@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.opensissasstudent.R;
 import com.opensissasstudent.model.TeacherGradeModel;
 import com.opensissasstudent.others.utility.Util;
-import com.opensissasstudent.ui.student.activity.StudentOfGradeActivity;
+import com.opensissasstudent.ui.teacher.activity.StudentOfGradeActivity;
 
 import java.util.ArrayList;
 
@@ -81,7 +81,7 @@ public class TeacherGradeAdapter extends RecyclerView.Adapter<TeacherGradeAdapte
         }
     }
 
-    public TeacherGradeAdapter(ArrayList<TeacherGradeModel> itemList, Context context,int courseSectionID) {
+    public TeacherGradeAdapter(ArrayList<TeacherGradeModel> itemList, Context context, int courseSectionID) {
         this.itemList = itemList;
         this.context = context;
         this.courseSectionID=courseSectionID;

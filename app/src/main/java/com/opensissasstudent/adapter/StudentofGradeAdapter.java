@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.opensissasstudent.R;
 import com.opensissasstudent.model.StudentofGradeModel;
-import com.opensissasstudent.ui.student.activity.StudentOfGradeActivity;
+import com.opensissasstudent.ui.teacher.activity.StudentOfGradeActivity;
 
 import java.util.ArrayList;
 
@@ -39,7 +39,7 @@ public class StudentofGradeAdapter extends RecyclerView.Adapter<StudentofGradeAd
         myViewHolder.etComment.setText(itemList.get(i).getComment());
         myViewHolder.tvTotal.setText(itemList.get(i).getTotalMarks());
         myViewHolder.tvStudentName.setText(itemList.get(i).getStudentName());
-        myViewHolder.tvStudentID.setText("ID :" + itemList.get(i).getStudentID());
+        myViewHolder.tvStudentID.setText("ID : " + itemList.get(i).getStudentID());
         if (flag == 0) {
             myViewHolder.etNumber.setEnabled(false);
             myViewHolder.etComment.setEnabled(false);

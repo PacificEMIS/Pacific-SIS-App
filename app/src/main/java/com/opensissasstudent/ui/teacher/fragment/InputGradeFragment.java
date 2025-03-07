@@ -1,13 +1,8 @@
-package com.opensissasstudent.ui.student.fragment;
+package com.opensissasstudent.ui.teacher.fragment;
 
 import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -23,11 +18,16 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.android.volley.Request;
 import com.opensissasstudent.R;
-import com.opensissasstudent.adapter.InputGradeStudentAdapter;
+import com.opensissasstudent.adapter.InputGradeStudentAdapter;//
 import com.opensissasstudent.model.InputGradeStudentModel;
 import com.opensissasstudent.model.SpinnerModel;
+import com.opensissasstudent.model.SpinnerModelForInput;
 import com.opensissasstudent.others.parser.PostJsonDataParser;
 import com.opensissasstudent.others.utility.AppData;
 import com.opensissasstudent.others.utility.Pref;
@@ -51,7 +51,7 @@ public class InputGradeFragment extends Fragment implements View.OnClickListener
     ArrayList<String>markingperiodlist=new ArrayList<>();
 
     int academicYear;
-    String gradescaletype;
+    String gradescaletype,courseName;
     int courseSectionID;
 
     RecyclerView rvItem;
@@ -59,16 +59,23 @@ public class InputGradeFragment extends Fragment implements View.OnClickListener
     ArrayList<InputGradeStudentModel>itemList=new ArrayList<>();
     InputGradeStudentAdapter studentAdapter;
     ArrayList<String>gradelist=new ArrayList<>();
-    ArrayList<SpinnerModel>gradeModellist=new ArrayList<>();
+    ArrayList<SpinnerModelForInput>gradeModellist=new ArrayList<>();
     TextView tvSubmit;
     String markingPeriodID;
     int courseID;
     ArrayList<String>obtanGradeList=new ArrayList<>();
     ArrayList<Integer>percentLidt=new ArrayList<>();
+    ArrayList<Integer>percentList=new ArrayList<>();
     ArrayList<Integer>creditList=new ArrayList<>();
     ArrayList<String>commentList=new ArrayList<>();
+    ArrayList<Integer>studentidList=new ArrayList<>();
+    ArrayList<Integer>studentFinalGradeSrlnoList=new ArrayList<>();
     AlertDialog commentPopUp,markpopup;
-
+    TextView btnGetGradeBook;
+    String teacherComment="";
+    int periodID,calendarId,qtrMarkingPeriodId,creditAttempted;
+    EditText etComments;
+    LinearLayout lnComments;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -82,14 +89,19 @@ public class InputGradeFragment extends Fragment implements View.OnClickListener
         pref=new Pref(getContext());
         tvSubmit=(TextView)view.findViewById(R.id.tvSubmit);
         tvSubmit.setOnClickListener(this);
+        periodID=getArguments().getInt("periodID");
         spMarkingPeriod=(Spinner)view.findViewById(R.id.spMarkingPeriod);
         courseSectionID= getArguments().getInt("courseSectionID");
         gradescaletype=getArguments().getString("gradescaletype");
+        courseName=getArguments().getString("courseName");
         courseID=getArguments().getInt("courseID");
+        etComments=(EditText)view.findViewById(R.id.etComments);
         rvItem=(RecyclerView)view.findViewById(R.id.rvItem);
         rvItem.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
 
+        lnComments=(LinearLayout)view.findViewById(R.id.lnComments);
 
+        btnGetGradeBook=(TextView)view.findViewById(R.id.btnGetGradeBook);
         spMarkingPeriod.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -117,9 +129,34 @@ public class InputGradeFragment extends Fragment implements View.OnClickListener
 
             }
         });
+        btnGetGradeBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                JSONObject object=new JSONObject();
+
+                try {
+                    object.put("courseSectionId",courseSectionID);
+                    object.put("markingPeriodId",markingPeriodID);
+                    object.put("_tenantName",pref.getTenatName());
+                    object.put("_userName",pref.getName());
+                    object.put("_token",pref.getToken());
+                    object.put("_academicYear",pref.getAcademicYear());
+                    object.put("tenantId",pref.getTenatID());
+                    object.put("schoolId",pref.getSchoolID());
+                    object.put("academicYear",pref.getAcademicYear());
+                    getGardeBookGrades(object);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
 
-        com.suke.widget.SwitchButton switchButton = (com.suke.widget.SwitchButton)
+            }
+        });
+
+
+
+
+        SwitchButton switchButton = (SwitchButton)
                 view.findViewById(R.id.switch_button);
 
 
@@ -140,6 +177,10 @@ public class InputGradeFragment extends Fragment implements View.OnClickListener
 
             }
         });
+
+        btnGetGradeBook.setEnabled(false);
+        tvSubmit.setEnabled(false);
+
     }
 
 
@@ -288,7 +329,7 @@ public class InputGradeFragment extends Fragment implements View.OnClickListener
 
 
 
-    public void getStudentList(JSONObject jsonObject,ArrayList<String>gradeList,ArrayList<SpinnerModel>gradeModelList) {
+    public void getStudentList(JSONObject jsonObject,ArrayList<String>gradeList,ArrayList<SpinnerModelForInput>gradeModelList) {
         String url=pref.getAPI()+"StudentSchedule/getStudentListByCourseSection";
 
         new PostJsonDataParser(getContext(), Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
@@ -315,47 +356,71 @@ public class InputGradeFragment extends Fragment implements View.OnClickListener
                                     String studentPhoto=Util.getFreshValue(studentOBJ.optString("studentPhoto"),"");
                                     int studentId=studentOBJ.optInt("studentId");
                                     int gradeId=studentOBJ.optInt("gradeId");
+                                    int gradeScaleId=studentOBJ.optInt("gradeScaleId");
 
                                     InputGradeStudentModel studentModel=new InputGradeStudentModel();
                                     studentModel.setStudentName(firstGivenName+" "+lastFamilyName);
                                     studentModel.setStudenID(studentId);
                                     studentModel.setStudentAltID(alternateId);
-                                    studentModel.setGrade(gradeLevel);
+                                    studentModel.setGradeLevel(gradeLevel);
+                                    studentModel.setGradeScaleID(gradeScaleId);
 
 
                                    studentModel.setStudentPhoto(studentPhoto);
                                    studentModel.setGradeId(gradeId);
 
-
-                                   if (obtanGradeList.size()>0){
-                                       studentModel.setObtainedGrade(obtanGradeList.get(i));
+                                   if (studentidList.size()>0){
+                                       int pos=studentidList.indexOf(studentId);
+                                       studentModel.setObtainedGrade(obtanGradeList.get(pos));
+                                       studentModel.setPercent(percentLidt.get(pos));
+                                       studentModel.setCredit(creditList.get(pos));
+                                       studentModel.setFinalegradeserNo(studentFinalGradeSrlnoList.get(pos));
+                                       studentModel.setTeacherComment(teacherComment);
                                    }else {
-                                       studentModel.setObtainedGrade("0");
+                                       if (obtanGradeList.size()>0){
+                                           studentModel.setObtainedGrade(obtanGradeList.get(i));
+                                       }else {
+                                           studentModel.setObtainedGrade("0");
+                                       }
+
+                                       if (percentLidt.size()>0){
+                                           Log.d("arpan","1");
+                                           studentModel.setPercent(percentLidt.get(i));
+                                       }else {
+                                           Log.d("arpan","2");
+
+                                       }
+
+                                       if (creditList.size()>0){
+                                           Log.d("arpan","1");
+                                           studentModel.setCredit(creditList.get(i));
+                                       }else {
+                                           Log.d("arpan","2");
+                                           studentModel.setCredit(0);
+                                       }
+
+
+                                       studentModel.setTeacherComment(teacherComment);
+
+
+
+
+                                       if (studentFinalGradeSrlnoList.size()>0){
+                                           studentModel.setFinalegradeserNo(studentFinalGradeSrlnoList.get(i));
+                                       }else {
+                                           studentModel.setFinalegradeserNo(0);
+                                       }
                                    }
 
-                                    if (percentLidt.size()>0){
-                                        Log.d("arpan","1");
-                                        studentModel.setPercent(percentLidt.get(i));
-                                    }else {
-                                        Log.d("arpan","2");
-                                        studentModel.setPercent(0);
-                                    }
 
-                                    if (creditList.size()>0){
-                                        Log.d("arpan","1");
-                                        studentModel.setCredit(creditList.get(i));
-                                    }else {
-                                        Log.d("arpan","2");
-                                        studentModel.setCredit(0);
-                                    }
 
-                                    if (commentList.size()>0){
-                                        studentModel.setTeacherComment(commentList.get(i));
-                                    }else {
-                                        studentModel.setTeacherComment("");
-                                    }
                                     itemList.add(studentModel);
 
+                                }
+                                if (itemList.size()>0){
+                                    btnGetGradeBook.setEnabled(true);
+                                    tvSubmit.setEnabled(true);
+                                    lnComments.setVisibility(View.VISIBLE);
                                 }
 
                                 studentAdapter=new InputGradeStudentAdapter(itemList,getContext(),gradeList,gradeModelList,InputGradeFragment.this,1);
@@ -387,7 +452,108 @@ public class InputGradeFragment extends Fragment implements View.OnClickListener
 
 
     }
+    public void getStudentListForGradeBook(JSONObject jsonObject,ArrayList<String>gradeList,ArrayList<SpinnerModelForInput>gradeModelList) {
+        String url=pref.getAPI()+"StudentSchedule/getStudentListByCourseSection";
 
+        new PostJsonDataParser(getContext(), Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
+            @Override
+            public void onGetResponse(JSONObject response) {
+                if (response != null) {
+                    Log.d("studentgradebook",response.toString());
+                    Log.d("obtanGradeList",obtanGradeList.toString());
+                    try {
+
+                        boolean _failure = response.optBoolean("_failure");
+                        String _message=response.optString("_message");
+                        if (_failure){
+
+
+                        }else {
+                            JSONArray scheduleStudentForView = response.optJSONArray("scheduleStudentForView");
+                            if (scheduleStudentForView.length() > 0) {
+                                for (int i=0;i<scheduleStudentForView.length();i++){
+                                    JSONObject studentOBJ=scheduleStudentForView.optJSONObject(i);
+                                    String firstGivenName=studentOBJ.optString("firstGivenName");
+                                    String lastFamilyName=studentOBJ.optString("lastFamilyName");
+                                    String alternateId=Util.getFreshValue(studentOBJ.optString("alternateId"),"-");
+                                    String gradeLevel=studentOBJ.optString("gradeLevel");
+                                    String studentPhoto=Util.getFreshValue(studentOBJ.optString("studentPhoto"),"");
+                                    int studentId=studentOBJ.optInt("studentId");
+                                    int gradeId=studentOBJ.optInt("gradeId");
+
+                                    InputGradeStudentModel studentModel=new InputGradeStudentModel();
+                                    studentModel.setStudentName(firstGivenName+" "+lastFamilyName);
+                                    studentModel.setStudenID(studentId);
+                                    studentModel.setStudentAltID(alternateId);
+                                    studentModel.setGradeLevel(gradeLevel);
+
+
+                                    studentModel.setStudentPhoto(studentPhoto);
+                                    studentModel.setGradeId(gradeId);
+
+
+                                        if (obtanGradeList.size()>0){
+                                            studentModel.setObtainedGrade(obtanGradeList.get(i));
+                                        }else {
+                                            studentModel.setObtainedGrade("0");
+                                        }
+
+                                        if (percentList.size()>0){
+                                            Log.d("arpan","1");
+                                            studentModel.setPercent(percentList.get(i));
+                                        }else {
+                                            Log.d("arpan","2");
+
+                                        }
+
+
+
+
+                                        studentModel.setTeacherComment("");
+
+
+
+
+
+                                    itemList.add(studentModel);
+
+                                }
+                                if (itemList.size()>0){
+                                    btnGetGradeBook.setEnabled(true);
+                                    tvSubmit.setEnabled(true);
+                                    lnComments.setVisibility(View.VISIBLE);
+                                }
+
+                                studentAdapter=new InputGradeStudentAdapter(itemList,getContext(),gradeList,gradeModelList,InputGradeFragment.this,1);
+                                rvItem.setAdapter(studentAdapter);
+                                studentAdapter.notifyDataSetChanged();
+
+
+
+
+
+
+
+
+                            }else {
+
+                            }
+                        }
+
+
+
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
+
+    }
 
     public void getGradeList(JSONObject jsonObject) {
         String url=pref.getAPI()+"Grade/getAllGradeScaleList";
@@ -407,8 +573,8 @@ public class InputGradeFragment extends Fragment implements View.OnClickListener
                         }else {
                             gradelist=new ArrayList<>();
                             gradeModellist=new ArrayList<>();
-                            gradelist.add("Select");
-                            gradeModellist.add(new SpinnerModel("0","0"));
+                            gradelist.add("Please Select");
+                            gradeModellist.add(new SpinnerModelForInput("Please Select",0));
                             JSONArray gradeScaleList = response.optJSONArray("gradeScaleList");
                             if (gradeScaleList.length() > 0) {
                                 for (int i=0;i<gradeScaleList.length();i++){
@@ -421,7 +587,8 @@ public class InputGradeFragment extends Fragment implements View.OnClickListener
                                             String title=gradeOBJ.optString("title");
                                             String breakoff= String.valueOf(gradeOBJ.optInt("breakoff"));
                                             gradelist.add(title);
-                                            SpinnerModel gradeModel=new SpinnerModel(title,breakoff);
+                                            SpinnerModelForInput gradeModel=new SpinnerModelForInput(title,Integer.parseInt(breakoff));
+                                            gradeModel.setBreakoff(Integer.parseInt(breakoff));
                                             gradeModellist.add(gradeModel);
                                         }
                                     }
@@ -503,19 +670,30 @@ public class InputGradeFragment extends Fragment implements View.OnClickListener
 
             JSONObject gradeOBJ = new JSONObject();
             try {
-                gradeOBJ.put("studentFinalGradeStandard",studentFinalGradeStandard);
-                gradeOBJ.put("isDropped", false);
+                gradeOBJ.put("tenantId",AppData.tenatID);
+                gradeOBJ.put("schoolId",pref.getSchoolID());
                 gradeOBJ.put("studentId", itemList.get(j).getStudenID());
-                gradeOBJ.put("gradeId", itemList.get(j).getGradeId());
-                gradeOBJ.put("gradeScaleId", null);
-                gradeOBJ.put("percentMarks", itemList.get(j).getPercent());
                 gradeOBJ.put("basedOnStandardGrade", true);
-                gradeOBJ.put("studentFinalGradeSrlno", 0);
+                gradeOBJ.put("courseId", courseID);
+                gradeOBJ.put("courseSectionId", courseSectionID);
+                gradeOBJ.put("gradeId", itemList.get(j).getGradeId());
+                gradeOBJ.put("gradeScaleId", itemList.get(j).getGradeScaleID());
+                gradeOBJ.put("academicYear", pref.getAcademicYear());
+                gradeOBJ.put("academicYear", pref.getAcademicYear());
+                gradeOBJ.put("calendarId",calendarId);
+                gradeOBJ.put("qtrMarkingPeriodId",qtrMarkingPeriodId);
+                gradeOBJ.put("percentMarks", itemList.get(j).getPercent());
                 gradeOBJ.put("gradeObtained", itemList.get(j).getObtainedGrade());
-                gradeOBJ.put("teacherComment", itemList.get(j).getTeacherComment());
+                gradeOBJ.put("teacherComment", etComments.getText().toString());
+                gradeOBJ.put("creditAttempted",creditAttempted);
+                gradeOBJ.put("creditEarned",String.valueOf(itemList.get(j).getCredit()));
+                gradeOBJ.put("updatedBy","83b111d2-2221-430e-b4ad-9d1ab9650c40");
+                gradeOBJ.put("updatedOn","2024-11-20T06:15:11");
+                gradeOBJ.put("courseSectionName",courseName);
+                gradeOBJ.put("studentFinalGradeSrlno", itemList.get(j).getFinalegradeserNo());
                 gradeOBJ.put("studentFinalGradeComments",studentFinalGradeComments);
-                gradeOBJ.put("creditAttempted",3);
-                gradeOBJ.put("creditEarned",itemList.get(j).getCredit());
+                gradeOBJ.put("studentFinalGradeStandard",studentFinalGradeStandard);
+
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -567,7 +745,7 @@ public class InputGradeFragment extends Fragment implements View.OnClickListener
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
-
+                            Toast.makeText(getContext(),_message,Toast.LENGTH_LONG).show();
 
                         }else {
 
@@ -612,6 +790,7 @@ public class InputGradeFragment extends Fragment implements View.OnClickListener
             public void onGetResponse(JSONObject response) {
                 if (response != null) {
                     Log.d("schoolresponse",response.toString());
+
                     try {
 
                         boolean _failure = response.optBoolean("_failure");
@@ -620,41 +799,58 @@ public class InputGradeFragment extends Fragment implements View.OnClickListener
                             commentList=new ArrayList<>();
                             obtanGradeList=new ArrayList<>();
                             percentLidt=new ArrayList<>();
+                        studentidList=new ArrayList<>();
+                        creditList.clear();
                             JSONArray studentFinalGradeList=response.optJSONArray("studentFinalGradeList");
-                            if (studentFinalGradeList.length()>0){
-                                for (int i=0;i<studentFinalGradeList.length();i++){
-                                    JSONObject obj=studentFinalGradeList.optJSONObject(i);
-                                    String gradeObtained=Util.getFreshValue(obj.optString("gradeObtained"),"0");
+                            if (studentFinalGradeList.length()>0) {
+                                for (int i = 0; i < studentFinalGradeList.length(); i++) {
+                                    JSONObject obj = studentFinalGradeList.optJSONObject(i);
+                                    String gradeObtained = Util.getFreshValue(obj.optString("gradeObtained"), "0");
                                     obtanGradeList.add(gradeObtained);
-                                    int percentMarks=obj.optInt("percentMarks");
+                                    int percentMarks = obj.optInt("percentMarks");
                                     percentLidt.add(percentMarks);
-                                    int creditEarned=obj.optInt("creditEarned");
+                                    int creditEarned = obj.optInt("creditEarned");
                                     creditList.add(creditEarned);
-                                    String teacherComment=Util.getFreshValue(obj.optString("teacherComment"),"");
-                                    commentList.add(teacherComment);
+                                    int studentId = obj.optInt("studentId");
+                                    studentidList.add(studentId);
+                                    int studentFinalGradeSrlno = obj.optInt("studentFinalGradeSrlno");
+                                    studentFinalGradeSrlnoList.add(studentFinalGradeSrlno);
+                                    teacherComment = Util.getFreshValue(obj.optString("teacherComment"), "");
+                                    etComments.setText(teacherComment);
+                                    calendarId=obj.optInt("calendarId");
+                                    qtrMarkingPeriodId=obj.optInt("qtrMarkingPeriodId");
+                                    creditAttempted=obj.optInt("creditAttempted");
                                 }
-                            }
 
-                            try {
-                                JSONArray filterArray=new JSONArray();
-                                JSONArray sectionArray=new JSONArray();
-                                sectionArray.put(courseSectionID);
-                                JSONObject obj=new JSONObject();
-                                obj.put("pageNumber",1);
-                                obj.put("_pageSize",10);
-                                obj.put("sortingModel",null);
-                                obj.put("filterParams",filterArray);
-                                obj.put("courseSectionIds",sectionArray);
-                                obj.put("profilePhoto",true);
-                                obj.put("_tenantName",pref.getTenatName());
-                                obj.put("_userName",pref.getName());
-                                obj.put("_token",pref.getToken());
-                                obj.put("tenantId",pref.getTenatID());
-                                obj.put("schoolId",pref.getSchoolID());
-                                getStudentList(obj,gradelist,gradeModellist);
-                            } catch (Exception e) {
-                                e.printStackTrace();
                             }
+                                try {
+                                    JSONArray filterArray=new JSONArray();
+                                    JSONArray sectionArray=new JSONArray();
+                                    sectionArray.put(courseSectionID);
+                                    JSONObject obj=new JSONObject();
+                                    obj.put("pageNumber",0);
+                                    obj.put("_pageSize",100);
+                                    obj.put("sortingModel",null);
+                                    obj.put("filterParams",filterArray);
+                                    obj.put("courseSectionIds",sectionArray);
+                                    obj.put("profilePhoto",true);
+                                    obj.put("isFinalGrade",true);
+                                    obj.put("_pageSize",0);
+                                    obj.put("_pageSize",0);
+                                    obj.put("_tenantName",pref.getTenatName());
+                                    obj.put("_userName",pref.getName());
+                                    obj.put("_token",pref.getToken());
+                                    obj.put("_academicYear",pref.getAcademicYear());
+                                    obj.put("tenantId",pref.getTenatID());
+                                    obj.put("schoolId",pref.getSchoolID());
+                                    obj.put("academicYear",pref.getAcademicYear());
+                                    getStudentList(obj,gradelist,gradeModellist);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+
+
+
 
 
 
@@ -794,7 +990,7 @@ public class InputGradeFragment extends Fragment implements View.OnClickListener
         tvSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                itemList.get(pos).setCredit(Integer.parseInt(etComment.getText().toString()));
+
 
 
                 studentAdapter.notifyDataSetChanged();
@@ -820,5 +1016,98 @@ public class InputGradeFragment extends Fragment implements View.OnClickListener
         window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
         window.setGravity(Gravity.CENTER);
         markpopup.show();
+    }
+
+    private void getGardeBookGrades(JSONObject jsonObject){
+        String url=pref.getAPI()+"InputFinalGrade/getGradebookGradeinFinalGrade";
+
+        new PostJsonDataParser(getContext(), Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
+            @Override
+            public void onGetResponse(JSONObject response) {
+                if (response != null) {
+                    Log.d("gradebookresponse",response.toString());
+                    try {
+                        itemList.clear();
+                        obtanGradeList.clear();
+
+                        boolean _failure = response.optBoolean("_failure");
+                        String _message=response.optString("_message");
+                        if (_failure){
+
+
+                        }else {
+
+
+
+                            JSONArray studentWithGradeBookViewModelList = response.optJSONArray("studentWithGradeBookViewModelList");
+                            if (studentWithGradeBookViewModelList.length() > 0) {
+                                for (int i=0;i<studentWithGradeBookViewModelList.length();i++){
+                                    JSONObject studentOBJ=studentWithGradeBookViewModelList.optJSONObject(i);
+                                    String firstGivenName=studentOBJ.optString("firstGivenName");
+                                    String lastFamilyName=studentOBJ.optString("lastFamilyName");
+                                    String grade=studentOBJ.optString("grade");
+                                    obtanGradeList.add(grade);
+                                    double percentage= studentOBJ.optDouble("percentage");
+                                    int roundVal= (int) Math.round(percentage);
+                                    percentList.add(Integer.valueOf(roundVal));
+
+
+
+
+
+                                }
+
+                                try {
+                                    JSONArray filterArray=new JSONArray();
+                                    JSONArray sectionArray=new JSONArray();
+                                    sectionArray.put(courseSectionID);
+                                    JSONObject obj=new JSONObject();
+                                    obj.put("pageNumber",0);
+                                    obj.put("_pageSize",100);
+                                    obj.put("sortingModel",null);
+                                    obj.put("filterParams",filterArray);
+                                    obj.put("courseSectionIds",sectionArray);
+                                    obj.put("profilePhoto",true);
+                                    obj.put("isFinalGrade",true);
+                                    obj.put("_pageSize",0);
+                                    obj.put("_pageSize",0);
+                                    obj.put("_tenantName",pref.getTenatName());
+                                    obj.put("_userName",pref.getName());
+                                    obj.put("_token",pref.getToken());
+                                    obj.put("_academicYear",pref.getAcademicYear());
+                                    obj.put("tenantId",pref.getTenatID());
+                                    obj.put("schoolId",pref.getSchoolID());
+                                    obj.put("academicYear",pref.getAcademicYear());
+                                    getStudentListForGradeBook(obj,gradelist,gradeModellist);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+
+
+
+
+
+
+
+
+
+
+
+                            }else {
+
+                            }
+                        }
+
+
+
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
     }
 }

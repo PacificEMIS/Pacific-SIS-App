@@ -1,8 +1,9 @@
 package com.opensissasstudent.model;
 
 public class InputGradeStudentModel {
-    String studentName,studentAltID,StudentPhoto,grade,obtainedGrade,teacherComment;
-    int studenID,pos1,gradeId,gradeScaleId,percent,credit;
+    String studentName,studentAltID,StudentPhoto, gradeLevel,obtainedGrade,teacherComment,grade,text;
+    int studenID,pos1,gradeId,gradeScaleId,credit,gradeScaleID,finalegradeserNo;
+    int percent;
 
 
 
@@ -38,12 +39,12 @@ public class InputGradeStudentModel {
         this.studenID = studenID;
     }
 
-    public String getGrade() {
-        return grade;
+    public String getGradeLevel() {
+        return gradeLevel;
     }
 
-    public void setGrade(String grade) {
-        this.grade = grade;
+    public void setGradeLevel(String gradeLevel) {
+        this.gradeLevel = gradeLevel;
     }
 
     public int getPercent() {
@@ -100,5 +101,37 @@ public class InputGradeStudentModel {
 
     public void setCredit(int credit) {
         this.credit = credit;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public int getGradeScaleID() {
+        return gradeScaleID;
+    }
+
+    public void setGradeScaleID(int gradeScaleID) {
+        this.gradeScaleID = gradeScaleID;
+    }
+
+    public int getFinalegradeserNo() {
+        return finalegradeserNo;
+    }
+
+    public void setFinalegradeserNo(int finalegradeserNo) {
+        this.finalegradeserNo = finalegradeserNo;
     }
 }

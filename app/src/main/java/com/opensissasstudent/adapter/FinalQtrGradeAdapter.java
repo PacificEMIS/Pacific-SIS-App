@@ -1,6 +1,8 @@
 package com.opensissasstudent.adapter;
 
 import android.content.Context;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +27,7 @@ public class FinalQtrGradeAdapter extends RecyclerView.Adapter<FinalQtrGradeAdap
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.final_grade_qtr_row, viewGroup, false);
-        return new FinalQtrGradeAdapter.MyViewHolder(view);
+        return new MyViewHolder(view);
     }
 
     @Override
@@ -39,21 +41,62 @@ public class FinalQtrGradeAdapter extends RecyclerView.Adapter<FinalQtrGradeAdap
         myViewHolder.etGradeTotal.setText(itemList.get(i).getGradeTotalMarks());
         myViewHolder.etGradeExam.setText(itemList.get(i).getGradeMarks());
 
-        if (itemList.get(i).isDoesExam()){
-            myViewHolder.lnQtrExam.setVisibility(View.VISIBLE);
-        }else {
-            myViewHolder.lnQtrExam.setVisibility(View.GONE);
-        }
-
-
-        if (itemList.get(i).isDoesGrades()){
-            myViewHolder.lnQtrGrade.setVisibility(View.VISIBLE);
-        }else {
-            myViewHolder.lnQtrGrade.setVisibility(View.GONE);
-        }
 
 
 
+        myViewHolder.etGradeTotal.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                try {
+                    if (!myViewHolder.etGradeTotal.getText().toString().isEmpty()){
+                        itemList.get(i).setGradeTotalMarks(myViewHolder.etGradeTotal.getText().toString().trim());
+                        itemList.get(i).setGradeMarks(myViewHolder.etGradeTotal.getText().toString().trim());
+                    }
+
+
+                } catch (IndexOutOfBoundsException e){
+
+                }
+
+            }
+        });
+
+
+        myViewHolder.etGradeTotal.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                try {
+                    if (!myViewHolder.etGradeTotal.getText().toString().isEmpty()){
+                        itemList.get(i).setGradeTotalMarks(myViewHolder.etGradeTotal.getText().toString().trim());
+                    }
+
+
+                } catch (IndexOutOfBoundsException e){
+
+                }
+
+            }
+        });
 
 
     }
