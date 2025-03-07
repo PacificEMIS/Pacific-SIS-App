@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.student.fragment.ClassOverViewFragment"
+    tools:context=".ui.teacher.fragment.ClassOverViewFragment"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
@@ -539,6 +539,20 @@
                     android:textColor="@color/black"
                     ></com.opensissasstudent.others.customtext.Custom_Text_View>
             </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:id="@+id/lnSchedule"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.opensissasstudent.others.customtext.Custom_Text_View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/large_text"
+                    android:textColor="@color/black"
+                    android:id="@+id/tvScheduleType"></com.opensissasstudent.others.customtext.Custom_Text_View>
+            </LinearLayout>
 
            <LinearLayout
                android:layout_width="match_parent"
@@ -736,19 +750,7 @@
                                 android:text="S"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
                         </LinearLayout>
                     </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/lnSchedule"
-                        android:visibility="gone"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/large_text"
-                            android:textColor="@color/black"
-                            android:id="@+id/tvScheduleType"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                    </LinearLayout>
+
 
                 </LinearLayout>
             </LinearLayout>
