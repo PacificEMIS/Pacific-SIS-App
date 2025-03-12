@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.opensissasstudent.R;
 import com.opensissasstudent.model.TeacherClassesModel;
+import com.opensissasstudent.others.utility.Pref;
 import com.opensissasstudent.ui.teacher.activity.ClassDetailsActivity;
 
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ public class TeacherDashboardClassAdapter extends RecyclerView.Adapter<TeacherDa
     ArrayList<TeacherClassesModel> itemList = new ArrayList<>();
     Context context;
     int blockID;
+    Pref pref;
 
     @NonNull
     @Override
@@ -34,7 +36,7 @@ public class TeacherDashboardClassAdapter extends RecyclerView.Adapter<TeacherDa
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, final int i) {
-
+        pref=new Pref(context);
         myViewHolder.tvClassName.setText(itemList.get(i).getClassName());
         myViewHolder.tvSubject.setText(itemList.get(i).getSubject());
         myViewHolder.tvClassTime.setText(itemList.get(i).getTime());
@@ -93,19 +95,23 @@ public class TeacherDashboardClassAdapter extends RecyclerView.Adapter<TeacherDa
             @Override
             public void onClick(View view) {
                 //TODO CLASS
-                Intent intent=new Intent(context, ClassDetailsActivity.class);
-                intent.putExtra("courseID",itemList.get(i).getCourseId());
-                intent.putExtra("courseName",itemList.get(i).getClassName());
-                intent.putExtra("roomNo",itemList.get(i).getRoomNo());
-                intent.putExtra("attendanceCatID",itemList.get(i).getAttendanceCategoryId());
-                intent.putExtra("period",itemList.get(i).getPeriod());
-                intent.putExtra("courseSectionID",itemList.get(i).getCourseSectionId());
-                intent.putExtra("periodID",itemList.get(i).getPeriodID());
-                intent.putExtra("attendanceTaken",itemList.get(i).isAttendanceTaken());
-                intent.putExtra("gradescaletype",itemList.get(i).getGradeScaleType());
-                intent.putExtra("blockID",itemList.get(i).getBlockID());
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intent);
+                if (pref.getMemberShip().equalsIgnoreCase("Parent") || pref.getMemberShip().equalsIgnoreCase("Student")) {
+
+                }else {
+                    Intent intent = new Intent(context, ClassDetailsActivity.class);
+                    intent.putExtra("courseID", itemList.get(i).getCourseId());
+                    intent.putExtra("courseName", itemList.get(i).getClassName());
+                    intent.putExtra("roomNo", itemList.get(i).getRoomNo());
+                    intent.putExtra("attendanceCatID", itemList.get(i).getAttendanceCategoryId());
+                    intent.putExtra("period", itemList.get(i).getPeriod());
+                    intent.putExtra("courseSectionID", itemList.get(i).getCourseSectionId());
+                    intent.putExtra("periodID", itemList.get(i).getPeriodID());
+                    intent.putExtra("attendanceTaken", itemList.get(i).isAttendanceTaken());
+                    intent.putExtra("gradescaletype", itemList.get(i).getGradeScaleType());
+                    intent.putExtra("blockID", itemList.get(i).getBlockID());
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+                }
             }
         });
 
