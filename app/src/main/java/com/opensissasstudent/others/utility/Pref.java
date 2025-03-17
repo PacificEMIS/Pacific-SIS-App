@@ -261,5 +261,25 @@ public class Pref {
         return _pref.getString("TentantURLAPI","");
     }
 
+
+    public void savePasswordBase64(String Base64){
+        _editorPref.putString("Base64", Base64);
+        _editorPref.commit();
+    }
+
+    public String getPasswordBase64(){
+        return _pref.getString("Base64","");
+    }
+
+
+    public void saveLoginEmail(String LoginEmail){
+        _editorPref.putString("LoginEmail", LoginEmail);
+        _editorPref.commit();
+    }
+
+    public String getLoginEmail(){
+        return _pref.getString("LoginEmail","");
+    }
+
 }
 

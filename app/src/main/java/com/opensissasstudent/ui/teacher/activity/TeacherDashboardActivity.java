@@ -3,6 +3,7 @@ package com.opensissasstudent.ui.teacher.activity;
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -42,9 +43,12 @@ import com.opensissasstudent.model.MArkinPeriodSpinnerModel;
 import com.opensissasstudent.model.SpinnerMixedModel;
 import com.opensissasstudent.model.SpinnerModel;
 import com.opensissasstudent.others.parser.PostJsonDataParser;
+import com.opensissasstudent.others.utility.AppData;
 import com.opensissasstudent.others.utility.Pref;
+import com.opensissasstudent.others.utility.Util;
 import com.opensissasstudent.ui.common.activity.ChangePasswordActivity;
 import com.opensissasstudent.ui.common.activity.LoginActivity;
+import com.opensissasstudent.ui.student.activity.StudentDashboardActivity;
 import com.opensissasstudent.ui.student.fragment.MarkingPeriodsFragment;
 import com.opensissasstudent.ui.student.fragment.SchoolFragment;
 import com.opensissasstudent.ui.student.fragment.TeacherCalenderFragment;
@@ -252,15 +256,21 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
         currentDate = df.format(c.getTime());
 
 
-        JSONObject schoolOBJ=new JSONObject();
+
+
+
+        JSONObject obj=new JSONObject();
+        JSONObject accessobj=new JSONObject();
         try {
-            schoolOBJ.put("emailAddress",pref.getEmail());
-            schoolOBJ.put("_tenantName",pref.getTenatName());
-            schoolOBJ.put("_userName",pref.getName());
-            schoolOBJ.put("_token",pref.getToken());
-            schoolOBJ.put("tenantId",pref.getTenatID());
-            schoolOBJ.put("schoolId",pref.getSchoolID());
-            getSchool(schoolOBJ);
+            obj.put("tenantId",pref.getTenatID());
+            obj.put("userId",0);
+            obj.put("userAccessLog",accessobj);
+            obj.put("_tenantName", pref.getTenatName());
+            obj.put("_userName", pref.getName());
+            obj.put("_token", token);
+            obj.put("schoolId", pref.getSchoolID());
+            obj.put("email", pref.getEmail());
+            getRefreshToken(obj);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -653,20 +663,37 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
-                            Intent intent=new Intent(TeacherDashboardActivity.this, LoginActivity.class);
-                            startActivity(intent);
-                            finish();
+                            JSONObject jobj=new JSONObject();
+                            try {
+                                jobj.put("tenantId",pref.getTenatID());
+                                jobj.put("userId",0);
+                                jobj.put("_tenantName",pref.getTenatName());
+                                jobj.put("password",pref.getPasswordBase64());
+                                jobj.put("email",pref.getLoginEmail());
+                                jobj.put("schoolId",null);
+                                jobj.put("_userName","");
+                                jobj.put("_token",null);
+                                jobj.put("isMobileLogin",true);
+                                login(jobj);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
 
                         }else {
                            String _token=response.optString("_token");
                            pref.saveToken(_token);
                             JSONObject schoolOBJ=new JSONObject();
-                            schoolOBJ.put("_tenantName",pref.getTenatName());
-                            schoolOBJ.put("_userName",pref.getName());
-                            schoolOBJ.put("_token",_token);
-                            schoolOBJ.put("tenantId",pref.getTenatID());
-                            schoolOBJ.put("schoolId",pref.getSchoolID());
-                            getAcademyYearList(schoolOBJ);
+                            try {
+                                schoolOBJ.put("emailAddress",pref.getEmail());
+                                schoolOBJ.put("_tenantName",pref.getTenatName());
+                                schoolOBJ.put("_userName",pref.getName());
+                                schoolOBJ.put("_token",pref.getToken());
+                                schoolOBJ.put("tenantId",pref.getTenatID());
+                                schoolOBJ.put("schoolId",pref.getSchoolID());
+                                getSchool(schoolOBJ);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
                         }
 
 
@@ -698,9 +725,27 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
-                            Intent intent=new Intent(TeacherDashboardActivity.this, LoginActivity.class);
-                            startActivity(intent);
-                            finish();
+                            if (_message.contains("Token")){
+                                JSONObject obj=new JSONObject();
+                                JSONObject accessobj=new JSONObject();
+                                try {
+                                    obj.put("tenantId",pref.getTenatID());
+                                    obj.put("userId",0);
+                                    obj.put("userAccessLog",accessobj);
+                                    obj.put("_tenantName", pref.getTenatName());
+                                    obj.put("_userName", pref.getName());
+                                    obj.put("_token", token);
+                                    obj.put("schoolId", pref.getSchoolID());
+                                    obj.put("email", pref.getEmail());
+                                    getRefreshToken(obj);
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }else {
+                                Intent intent=new Intent(TeacherDashboardActivity.this,LoginActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
 
                         }else {
                            JSONArray getSchoolForView=response.optJSONArray("getSchoolForView");
@@ -792,27 +837,7 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
-                            if (_message.contains("Valid")){
-                                JSONObject obj=new JSONObject();
-                                JSONObject accessobj=new JSONObject();
-                                try {
-                                    obj.put("tenantId",pref.getTenatID());
-                                    obj.put("userId",0);
-                                    obj.put("userAccessLog",accessobj);
-                                    obj.put("_tenantName", pref.getTenatName());
-                                    obj.put("_userName", pref.getName());
-                                    obj.put("_token", token);
-                                    obj.put("schoolId", pref.getSchoolID());
-                                    obj.put("email", pref.getEmail());
-                                    getRefreshToken(obj);
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
-                            }else {
-                               Intent intent=new Intent(TeacherDashboardActivity.this,LoginActivity.class);
-                               startActivity(intent);
-                               finish();
-                            }
+
 
 
                         }else {
@@ -1302,4 +1327,68 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
 
         return dateflag;
     }
+
+
+    public void login(JSONObject jsonObject) {
+        ProgressDialog PD=new ProgressDialog(TeacherDashboardActivity.this);
+        PD.setMessage("Loading");
+        PD.setCancelable(false);
+        PD.show();
+        String url=pref.getAPI()+"User/ValidateLogin";
+
+        new PostJsonDataParser(TeacherDashboardActivity.this, Request.Method.POST, url,jsonObject, false,true, new PostJsonDataParser.OnGetResponseListner() {
+            @Override
+            public void onGetResponse(JSONObject response) {
+                if (response != null) {
+                    Log.d("loginresponse",response.toString());
+                    try {
+                        boolean _failure = response.optBoolean("_failure");
+                        if (_failure){
+                            PD.dismiss();
+
+                            Toast.makeText(TeacherDashboardActivity.this,"Invalid Login Credentials",Toast.LENGTH_LONG).show();
+
+                        }else {
+                            PD.dismiss();
+
+                            String _token=response.optString("_token");
+                            pref.saveToken(_token);
+                            JSONObject obj=new JSONObject();
+                            JSONObject accessobj=new JSONObject();
+                            try {
+                                obj.put("tenantId",pref.getTenatID());
+                                obj.put("userId",0);
+                                obj.put("userAccessLog",accessobj);
+                                obj.put("_tenantName", pref.getTenatName());
+                                obj.put("_userName", pref.getName());
+                                obj.put("_token", _token);
+                                obj.put("schoolId", pref.getSchoolID());
+                                obj.put("email", pref.getEmail());
+                                getRefreshToken(obj);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+
+
+
+                        }
+
+
+
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
+
+    }
+
+
+
 }

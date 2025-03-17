@@ -61,6 +61,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     LinearLayout llError;
     TextView tvTryAgain;
     String school;
+    String passwordBase64;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -154,6 +155,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         e.printStackTrace();
                     }
                     String base64 = Base64.encodeToString(data, Base64.DEFAULT).trim();
+                    passwordBase64=base64;
                     try {
                         jsonObject.put("tenantId",pref.getTenatID());
                         jsonObject.put("userId",0);
@@ -246,6 +248,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             pref.saveMemberShip(membershipName);
                             String userPhoto= Util.getFreshValue(response.optString("userPhoto"),"");
                             pref.saveUserPhoto(userPhoto);
+                            pref.savePasswordBase64(passwordBase64);
+                            pref.saveLoginEmail(etEmail.getText().toString());
 
                             if (membershipName.equalsIgnoreCase("Parent") || membershipName.equalsIgnoreCase("Student")){
                                 Intent intent=new Intent(LoginActivity.this, StudentDashboardActivity.class);
