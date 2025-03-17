@@ -1,5 +1,6 @@
 package com.opensissasstudent.ui.teacher.fragment;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -20,6 +22,7 @@ import com.opensissasstudent.others.parser.PostJsonDataParser;
 import com.opensissasstudent.others.utility.AppData;
 import com.opensissasstudent.others.utility.Pref;
 import com.opensissasstudent.ui.common.activity.LoginActivity;
+import com.opensissasstudent.ui.teacher.activity.TeacherDashboardActivity;
 
 
 import org.json.JSONArray;
@@ -97,8 +100,28 @@ public class ClassFragment extends Fragment {
                         String _message=response.optString("_message");
                         if (_failure){
 
-                            rvClasses.setVisibility(View.GONE);
-                            lnNoData.setVisibility(View.VISIBLE);
+                            if (_message.contains("token")){
+                                JSONObject jobj=new JSONObject();
+                                try {
+                                    jobj.put("tenantId",pref.getTenatID());
+                                    jobj.put("userId",0);
+                                    jobj.put("_tenantName",pref.getTenatName());
+                                    jobj.put("password",pref.getPasswordBase64());
+                                    jobj.put("email",pref.getLoginEmail());
+                                    jobj.put("schoolId",null);
+                                    jobj.put("_userName","");
+                                    jobj.put("_token",null);
+                                    jobj.put("isMobileLogin",true);
+                                    login(jobj);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }else {
+                                rvClasses.setVisibility(View.GONE);
+                                lnNoData.setVisibility(View.VISIBLE);
+                            }
+
+
 
                         }else {
                             JSONArray courseSectionViewList = response.optJSONArray("courseSectionViewList");
@@ -249,9 +272,21 @@ public class ClassFragment extends Fragment {
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
-                            Intent intent=new Intent(getContext(), LoginActivity.class);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
+                            JSONObject jobj=new JSONObject();
+                            try {
+                                jobj.put("tenantId",pref.getTenatID());
+                                jobj.put("userId",0);
+                                jobj.put("_tenantName",pref.getTenatName());
+                                jobj.put("password",pref.getPasswordBase64());
+                                jobj.put("email",pref.getLoginEmail());
+                                jobj.put("schoolId",null);
+                                jobj.put("_userName","");
+                                jobj.put("_token",null);
+                                jobj.put("isMobileLogin",true);
+                                login(jobj);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
 
                         }else {
                             String _token=response.optString("_token");
@@ -272,6 +307,69 @@ public class ClassFragment extends Fragment {
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
+                        }
+
+
+
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
+
+    }
+
+
+
+    public void login(JSONObject jsonObject) {
+        ProgressDialog PD=new ProgressDialog(getContext());
+        PD.setMessage("Loading");
+        PD.setCancelable(false);
+        PD.show();
+        String url=pref.getAPI()+"User/ValidateLogin";
+
+        new PostJsonDataParser(getContext(), Request.Method.POST, url,jsonObject, false,true, new PostJsonDataParser.OnGetResponseListner() {
+            @Override
+            public void onGetResponse(JSONObject response) {
+                if (response != null) {
+                    Log.d("loginresponse",response.toString());
+                    try {
+                        boolean _failure = response.optBoolean("_failure");
+                        if (_failure){
+                            PD.dismiss();
+
+                            Toast.makeText(getContext(),"Invalid Login Credentials",Toast.LENGTH_LONG).show();
+
+                        }else {
+                            PD.dismiss();
+
+                            String _token=response.optString("_token");
+                            pref.saveToken(_token);
+                            try {
+                                jsonObject.put("staffId",pref.getUserID());
+                                jsonObject.put("membershipId",pref.getMemberShipID());
+                                jsonObject.put("allCourse",true);
+                                jsonObject.put("_tenantName", pref.getTenatName());
+                                jsonObject.put("_userName",pref.getName());
+                                jsonObject.put("_token",pref.getToken());
+                                jsonObject.put("tenantId",pref.getTenatID());
+                                jsonObject.put("schoolId",pref.getSchoolID());
+                                jsonObject.put("markingPeriodStartDate",pref.getPeriodStartYear());
+                                jsonObject.put("markingPeriodEndDate",pref.getPeriodEndYear());
+                                jsonObject.put("_academicYear",pref.getAcademicYear());
+                                getDashboardItem(jsonObject);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+
+
+
                         }
 
 

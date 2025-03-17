@@ -256,24 +256,21 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
         currentDate = df.format(c.getTime());
 
 
-
-
-
-        JSONObject obj=new JSONObject();
-        JSONObject accessobj=new JSONObject();
+        JSONObject schoolOBJ=new JSONObject();
         try {
-            obj.put("tenantId",pref.getTenatID());
-            obj.put("userId",0);
-            obj.put("userAccessLog",accessobj);
-            obj.put("_tenantName", pref.getTenatName());
-            obj.put("_userName", pref.getName());
-            obj.put("_token", token);
-            obj.put("schoolId", pref.getSchoolID());
-            obj.put("email", pref.getEmail());
-            getRefreshToken(obj);
+            schoolOBJ.put("emailAddress",pref.getEmail());
+            schoolOBJ.put("_tenantName",pref.getTenatName());
+            schoolOBJ.put("_userName",pref.getName());
+            schoolOBJ.put("_token",pref.getToken());
+            schoolOBJ.put("tenantId",pref.getTenatID());
+            schoolOBJ.put("schoolId",pref.getSchoolID());
+            getSchool(schoolOBJ);
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+
+
 
 
 
@@ -682,18 +679,7 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
                         }else {
                            String _token=response.optString("_token");
                            pref.saveToken(_token);
-                            JSONObject schoolOBJ=new JSONObject();
-                            try {
-                                schoolOBJ.put("emailAddress",pref.getEmail());
-                                schoolOBJ.put("_tenantName",pref.getTenatName());
-                                schoolOBJ.put("_userName",pref.getName());
-                                schoolOBJ.put("_token",pref.getToken());
-                                schoolOBJ.put("tenantId",pref.getTenatID());
-                                schoolOBJ.put("schoolId",pref.getSchoolID());
-                                getSchool(schoolOBJ);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
+
                         }
 
 
