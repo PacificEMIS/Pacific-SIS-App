@@ -359,6 +359,7 @@ public class ClassFragment extends Fragment {
                                 jsonObject.put("markingPeriodStartDate",pref.getPeriodStartYear());
                                 jsonObject.put("markingPeriodEndDate",pref.getPeriodEndYear());
                                 jsonObject.put("_academicYear",pref.getAcademicYear());
+                                //NEED TO BE CHANGED
                                 getDashboardItem(jsonObject);
                             } catch (JSONException e) {
                                 e.printStackTrace();

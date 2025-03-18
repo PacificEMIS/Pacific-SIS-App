@@ -364,7 +364,27 @@ public class ClassDetailsActivity extends AppCompatActivity implements View.OnCl
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
-                            Toast.makeText(ClassDetailsActivity.this,_message,Toast.LENGTH_LONG).show();
+
+                            if (_message.contains("token")||_message.contains("Token") ){
+                                JSONObject jobj=new JSONObject();
+                                try {
+                                    jobj.put("tenantId",pref.getTenatID());
+                                    jobj.put("userId",0);
+                                    jobj.put("_tenantName",pref.getTenatName());
+                                    jobj.put("password",pref.getPasswordBase64());
+                                    jobj.put("email",pref.getLoginEmail());
+                                    jobj.put("schoolId",null);
+                                    jobj.put("_userName","");
+                                    jobj.put("_token",null);
+                                    jobj.put("isMobileLogin",true);
+                                    login(jobj);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }else {
+                                Toast.makeText(ClassDetailsActivity.this,_message,Toast.LENGTH_LONG).show();
+                            }
+
 
 
 
@@ -510,9 +530,21 @@ public class ClassDetailsActivity extends AppCompatActivity implements View.OnCl
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
-                            Intent intent=new Intent(ClassDetailsActivity.this, LoginActivity.class);
-                            startActivity(intent);
-                            finish();
+                            JSONObject jobj=new JSONObject();
+                            try {
+                                jobj.put("tenantId",pref.getTenatID());
+                                jobj.put("userId",0);
+                                jobj.put("_tenantName",pref.getTenatName());
+                                jobj.put("password",pref.getPasswordBase64());
+                                jobj.put("email",pref.getLoginEmail());
+                                jobj.put("schoolId",null);
+                                jobj.put("_userName","");
+                                jobj.put("_token",null);
+                                jobj.put("isMobileLogin",true);
+                                login(jobj);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
 
                         }else {
                             String _token=response.optString("_token");
@@ -532,6 +564,64 @@ public class ClassDetailsActivity extends AppCompatActivity implements View.OnCl
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
+
+                        }
+
+
+
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
+
+    }
+
+
+    public void login(JSONObject jsonObject) {
+
+        String url=pref.getAPI()+"User/ValidateLogin";
+
+        new PostJsonDataParser(ClassDetailsActivity.this, Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
+            @Override
+            public void onGetResponse(JSONObject response) {
+                if (response != null) {
+                    Log.d("loginresponse",response.toString());
+                    try {
+                        boolean _failure = response.optBoolean("_failure");
+                        if (_failure){
+
+
+                            Toast.makeText(ClassDetailsActivity.this,"Invalid Login Credentials",Toast.LENGTH_LONG).show();
+
+                        }else {
+
+
+                            String _token=response.optString("_token");
+                            pref.saveToken(_token);
+                            JSONObject jsonObject=new JSONObject();
+                            try {
+                                jsonObject.put("courseId",courseID);
+                                jsonObject.put("academicYear",pref.getAcademicYear());
+                                jsonObject.put("_tenantName", pref.getTenatName());
+                                jsonObject.put("_userName",pref.getName());
+                                jsonObject.put("_token",pref.getToken());
+                                jsonObject.put("_academicYear",pref.getAcademicYear());
+                                jsonObject.put("tenantId",pref.getTenatID());
+                                jsonObject.put("schoolId",pref.getSchoolID());
+
+                                getClassInformation(jsonObject);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+
+
 
                         }
 
