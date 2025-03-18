@@ -176,9 +176,21 @@ public class ClassAttendanceFragment extends Fragment implements View.OnClickLis
                         boolean _failure = response.optBoolean("_failure");
                         String _message = response.optString("_message");
                         if (_failure) {
-                            Intent intent = new Intent(getContext(), LoginActivity.class);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
+                            JSONObject jobj=new JSONObject();
+                            try {
+                                jobj.put("tenantId",pref.getTenatID());
+                                jobj.put("userId",0);
+                                jobj.put("_tenantName",pref.getTenatName());
+                                jobj.put("password",pref.getPasswordBase64());
+                                jobj.put("email",pref.getLoginEmail());
+                                jobj.put("schoolId",null);
+                                jobj.put("_userName","");
+                                jobj.put("_token",null);
+                                jobj.put("isMobileLogin",true);
+                                login(jobj);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
 
                         } else {
                             String _token = response.optString("_token");
@@ -221,52 +233,77 @@ public class ClassAttendanceFragment extends Fragment implements View.OnClickLis
                     try {
                         boolean _failure = response.optBoolean("_failure");
                         String _message = response.optString("_message");
-                        codeList.clear();
 
-                        JSONArray attendanceCodeList = response.optJSONArray("attendanceCodeList");
-                        for (int i = 0; i < attendanceCodeList.length(); i++) {
-                            JSONObject codeOBJ = attendanceCodeList.optJSONObject(i);
-                            String title = codeOBJ.optString("title");
-                            String shortName = codeOBJ.optString("shortName");
-                            boolean defaultCode = codeOBJ.optBoolean("defaultCode");
-                            int attendanceCategoryId = codeOBJ.optInt("attendanceCategoryId");
-                            int attendanceCode1 = codeOBJ.optInt("attendanceCode1");
-                            AttendanceCodeModel codeModel = new AttendanceCodeModel();
-                            codeModel.setAttendanceName(title);
-                            codeModel.setAttendanceShortName(shortName);
-                            codeModel.setAttendanceCatCode(attendanceCategoryId);
-                            codeModel.setAttendanceCode(attendanceCode1);
-                            if (defaultCode) {
-                                attendanceShortName = shortName;
-                                attendanceCode = attendanceCode1;
-                                attendanceCatCode = attendanceCategoryId;
+                        if (_failure){
+                            if (_message.contains("token")||_message.contains("Token") ){
+                                JSONObject jobj=new JSONObject();
+                                try {
+                                    jobj.put("tenantId",pref.getTenatID());
+                                    jobj.put("userId",0);
+                                    jobj.put("_tenantName",pref.getTenatName());
+                                    jobj.put("password",pref.getPasswordBase64());
+                                    jobj.put("email",pref.getLoginEmail());
+                                    jobj.put("schoolId",null);
+                                    jobj.put("_userName","");
+                                    jobj.put("_token",null);
+                                    jobj.put("isMobileLogin",true);
+                                    login(jobj);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }else {
+                                Toast.makeText(getContext(),_message,Toast.LENGTH_LONG).show();
                             }
-                            codeList.add(codeModel);
-                            codeidlist.add(attendanceCode1);
+
+                        }else {
+                            codeList.clear();
+
+                            JSONArray attendanceCodeList = response.optJSONArray("attendanceCodeList");
+                            for (int i = 0; i < attendanceCodeList.length(); i++) {
+                                JSONObject codeOBJ = attendanceCodeList.optJSONObject(i);
+                                String title = codeOBJ.optString("title");
+                                String shortName = codeOBJ.optString("shortName");
+                                boolean defaultCode = codeOBJ.optBoolean("defaultCode");
+                                int attendanceCategoryId = codeOBJ.optInt("attendanceCategoryId");
+                                int attendanceCode1 = codeOBJ.optInt("attendanceCode1");
+                                AttendanceCodeModel codeModel = new AttendanceCodeModel();
+                                codeModel.setAttendanceName(title);
+                                codeModel.setAttendanceShortName(shortName);
+                                codeModel.setAttendanceCatCode(attendanceCategoryId);
+                                codeModel.setAttendanceCode(attendanceCode1);
+                                if (defaultCode) {
+                                    attendanceShortName = shortName;
+                                    attendanceCode = attendanceCode1;
+                                    attendanceCatCode = attendanceCategoryId;
+                                }
+                                codeList.add(codeModel);
+                                codeidlist.add(attendanceCode1);
+                            }
+
+
+                            JSONArray filterArray = new JSONArray();
+                            JSONArray sectionArray = new JSONArray();
+                            sectionArray.put(courseSectionID);
+                            JSONObject obj1 = new JSONObject();
+                            obj1.put("pageNumber", 0);
+                            obj1.put("_pageSize", 0);
+                            obj1.put("sortingModel", null);
+                            obj1.put("filterParams", filterArray);
+                            obj1.put("courseSectionIds", sectionArray);
+                            obj1.put("pageSize", 0);
+                            obj1.put("profilePhoto", true);
+                            obj1.put("_tenantName", pref.getTenatName());
+                            obj1.put("_userName", pref.getName());
+                            obj1.put("_token", pref.getToken());
+                            obj1.put("attendanceDate", currentDate);
+                            obj1.put("_academicYear", pref.getAcademicYear());
+                            obj1.put("academicYear", pref.getAcademicYear());
+                            obj1.put("tenantId", pref.getTenatID());
+                            obj1.put("schoolId", pref.getSchoolID());
+
+                            getStudentListCount(obj1);
                         }
 
-
-                        JSONArray filterArray = new JSONArray();
-                        JSONArray sectionArray = new JSONArray();
-                        sectionArray.put(courseSectionID);
-                        JSONObject obj1 = new JSONObject();
-                        obj1.put("pageNumber", 0);
-                        obj1.put("_pageSize", 0);
-                        obj1.put("sortingModel", null);
-                        obj1.put("filterParams", filterArray);
-                        obj1.put("courseSectionIds", sectionArray);
-                        obj1.put("pageSize", 0);
-                        obj1.put("profilePhoto", true);
-                        obj1.put("_tenantName", pref.getTenatName());
-                        obj1.put("_userName", pref.getName());
-                        obj1.put("_token", pref.getToken());
-                        obj1.put("attendanceDate", currentDate);
-                        obj1.put("_academicYear", pref.getAcademicYear());
-                        obj1.put("academicYear", pref.getAcademicYear());
-                        obj1.put("tenantId", pref.getTenatID());
-                        obj1.put("schoolId", pref.getSchoolID());
-
-                        getStudentListCount(obj1);
 
 
                     } catch (Exception e) {
@@ -787,6 +824,61 @@ public class ClassAttendanceFragment extends Fragment implements View.OnClickLis
         window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
         window.setGravity(Gravity.CENTER);
         commentPopUp.show();
+    }
+
+
+    public void login(JSONObject jsonObject) {
+
+        String url=pref.getAPI()+"User/ValidateLogin";
+
+        new PostJsonDataParser(getContext(), Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
+            @Override
+            public void onGetResponse(JSONObject response) {
+                if (response != null) {
+                    Log.d("loginresponse",response.toString());
+                    try {
+                        boolean _failure = response.optBoolean("_failure");
+                        if (_failure){
+
+
+                            Toast.makeText(getContext(),"Invalid Login Credentials",Toast.LENGTH_LONG).show();
+
+                        }else {
+
+
+                            String _token=response.optString("_token");
+                            pref.saveToken(_token);
+                            JSONObject obj = new JSONObject();
+                            JSONArray codeArray = new JSONArray();
+                            obj.put("attendanceCodeList", codeArray);
+                            obj.put("attendanceCategoryId", attendanceCatID);
+                            obj.put("_tenantName", pref.getTenatName());
+                            obj.put("_userName", pref.getName());
+                            obj.put("_token", pref.getToken());
+                            obj.put("tenantId", pref.getTenatID());
+                            obj.put("schoolId", pref.getSchoolID());
+                            obj.put("academicYear", pref.getAcademicYear());
+                            obj.put("_academicYear", pref.getAcademicYear());
+                            getAttendaceCode(obj);
+
+
+
+
+                        }
+
+
+
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
+
     }
 
 

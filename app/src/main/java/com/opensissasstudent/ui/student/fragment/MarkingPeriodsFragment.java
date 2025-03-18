@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -135,9 +136,21 @@ public class MarkingPeriodsFragment extends Fragment implements View.OnClickList
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
-                            Intent intent=new Intent(getContext(), LoginActivity.class);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
+                            JSONObject jobj=new JSONObject();
+                            try {
+                                jobj.put("tenantId",pref.getTenatID());
+                                jobj.put("userId",0);
+                                jobj.put("_tenantName",pref.getTenatName());
+                                jobj.put("password",pref.getPasswordBase64());
+                                jobj.put("email",pref.getLoginEmail());
+                                jobj.put("schoolId",null);
+                                jobj.put("_userName","");
+                                jobj.put("_token",null);
+                                jobj.put("isMobileLogin",true);
+                                login(jobj);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
 
                         }else {
                             String _token=response.optString("_token");
@@ -186,9 +199,23 @@ public class MarkingPeriodsFragment extends Fragment implements View.OnClickList
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
-                            Intent intent=new Intent(getContext(), LoginActivity.class);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
+
+                                JSONObject jobj=new JSONObject();
+                                try {
+                                    jobj.put("tenantId",pref.getTenatID());
+                                    jobj.put("userId",0);
+                                    jobj.put("_tenantName",pref.getTenatName());
+                                    jobj.put("password",pref.getPasswordBase64());
+                                    jobj.put("email",pref.getLoginEmail());
+                                    jobj.put("schoolId",null);
+                                    jobj.put("_userName","");
+                                    jobj.put("_token",null);
+                                    jobj.put("isMobileLogin",true);
+                                    login(jobj);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+
 
                         }else {
                             JSONArray schoolYearsView=response.optJSONArray("schoolYearsView");
@@ -506,6 +533,62 @@ public class MarkingPeriodsFragment extends Fragment implements View.OnClickList
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
         }
+
+    }
+
+
+    public void login(JSONObject jsonObject) {
+
+        String url=pref.getAPI()+"User/ValidateLogin";
+
+        new PostJsonDataParser(getContext(), Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
+            @Override
+            public void onGetResponse(JSONObject response) {
+                if (response != null) {
+                    Log.d("loginresponse",response.toString());
+                    try {
+                        boolean _failure = response.optBoolean("_failure");
+                        if (_failure){
+
+
+                            Toast.makeText(getContext(),"Invalid Login Credentials",Toast.LENGTH_LONG).show();
+
+                        }else {
+
+
+                            String _token=response.optString("_token");
+                            pref.saveToken(_token);
+                            JSONObject jsonObject1=new JSONObject();
+                            JSONObject blankObj=new JSONObject();
+                            JSONArray schoolYearsView=new JSONArray();
+                            schoolYearsView.put(blankObj);
+                            jsonObject1.put("schoolYearsView",schoolYearsView);
+                            jsonObject1.put("academicYear",pref.getAcademicYear());
+                            jsonObject1.put("_academicYear",pref.getAcademicYear());
+                            jsonObject1.put("_tenantName",pref.getTenatName());
+                            jsonObject1.put("_userName",pref.getName());
+                            jsonObject1.put("_token",pref.getToken());
+                            jsonObject1.put("tenantId",pref.getTenatID());
+                            jsonObject1.put("schoolId",pref.getSchoolID());
+                            getMarkingPeriod(jsonObject1);
+
+
+
+
+                        }
+
+
+
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
 
     }
 }

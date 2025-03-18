@@ -94,10 +94,28 @@ public class SchoolFragment extends Fragment {
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
-                            Toast.makeText(getContext(),_message,Toast.LENGTH_LONG).show();
+                            if (_message.contains("token")||_message.contains("Token") ){
+                                JSONObject jobj=new JSONObject();
+                                try {
+                                    jobj.put("tenantId",pref.getTenatID());
+                                    jobj.put("userId",0);
+                                    jobj.put("_tenantName",pref.getTenatName());
+                                    jobj.put("password",pref.getPasswordBase64());
+                                    jobj.put("email",pref.getLoginEmail());
+                                    jobj.put("schoolId",null);
+                                    jobj.put("_userName","");
+                                    jobj.put("_token",null);
+                                    jobj.put("isMobileLogin",true);
+                                    login(jobj);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }else {
+                                Toast.makeText(getContext(), _message, Toast.LENGTH_LONG).show();
 
-                            lnNoData.setVisibility(View.VISIBLE);
-                            rvSchool.setVisibility(View.GONE);
+                                lnNoData.setVisibility(View.VISIBLE);
+                                rvSchool.setVisibility(View.GONE);
+                            }
 
                         }else {
                             JSONArray schoolMaster = response.optJSONArray("schoolMaster");
@@ -182,9 +200,23 @@ public class SchoolFragment extends Fragment {
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
-                            Intent intent=new Intent(getContext(), LoginActivity.class);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
+
+                                JSONObject jobj=new JSONObject();
+                                try {
+                                    jobj.put("tenantId",pref.getTenatID());
+                                    jobj.put("userId",0);
+                                    jobj.put("_tenantName",pref.getTenatName());
+                                    jobj.put("password",pref.getPasswordBase64());
+                                    jobj.put("email",pref.getLoginEmail());
+                                    jobj.put("schoolId",null);
+                                    jobj.put("_userName","");
+                                    jobj.put("_token",null);
+                                    jobj.put("isMobileLogin",true);
+                                    login(jobj);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+
 
                         }else {
                             String _token=response.optString("_token");
@@ -205,6 +237,66 @@ public class SchoolFragment extends Fragment {
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
+                        }
+
+
+
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
+
+    }
+
+
+    public void login(JSONObject jsonObject) {
+
+        String url=pref.getAPI()+"User/ValidateLogin";
+
+        new PostJsonDataParser(getContext(), Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
+            @Override
+            public void onGetResponse(JSONObject response) {
+                if (response != null) {
+                    Log.d("loginresponse",response.toString());
+                    try {
+                        boolean _failure = response.optBoolean("_failure");
+                        if (_failure){
+
+
+                            Toast.makeText(getContext(),"Invalid Login Credentials",Toast.LENGTH_LONG).show();
+
+                        }else {
+
+
+                            String _token=response.optString("_token");
+                            pref.saveToken(_token);
+                            JSONObject jsonObject=new JSONObject();
+                            try {
+                                jsonObject.put("pageNumber",0);
+                                jsonObject.put("pageSize",0);
+                                jsonObject.put("sortingModel",null);
+                                jsonObject.put("filterParams",null);
+                                jsonObject.put("includeInactive",false);
+                                jsonObject.put("emailAddress",pref.getEmail());
+                                jsonObject.put("_tenantName", pref.getTenatName());
+                                jsonObject.put("tenantId", pref.getTenatID());
+                                jsonObject.put("_userName", pref.getName());
+                                jsonObject.put("_token", pref.getToken());
+                                jsonObject.put("_academicYear", pref.getAcademicYear());
+                                getSchoolList(jsonObject);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+
+
+
                         }
 
 
