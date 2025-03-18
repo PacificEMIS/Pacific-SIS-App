@@ -557,10 +557,30 @@ public class StudentsFragment extends Fragment implements View.OnClickListener {
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
-                            Toast.makeText(getContext(),_message,Toast.LENGTH_LONG).show();
 
-                            lnNoData.setVisibility(View.VISIBLE);
-                            lnStudents.setVisibility(View.GONE);
+
+                            if (_message.contains("token")||_message.contains("Token") ){
+                                JSONObject jobj=new JSONObject();
+                                try {
+                                    jobj.put("tenantId",pref.getTenatID());
+                                    jobj.put("userId",0);
+                                    jobj.put("_tenantName",pref.getTenatName());
+                                    jobj.put("password",pref.getPasswordBase64());
+                                    jobj.put("email",pref.getLoginEmail());
+                                    jobj.put("schoolId",null);
+                                    jobj.put("_userName","");
+                                    jobj.put("_token",null);
+                                    jobj.put("isMobileLogin",true);
+                                    login(jobj);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }else {
+                                Toast.makeText(getContext(), _message, Toast.LENGTH_LONG).show();
+
+                                lnNoData.setVisibility(View.VISIBLE);
+                                lnStudents.setVisibility(View.GONE);
+                            }
 
                         }else {
                             JSONArray scheduleStudentForView = response.optJSONArray("scheduleStudentForView");
@@ -1307,6 +1327,70 @@ public class StudentsFragment extends Fragment implements View.OnClickListener {
         // Popup the dialog.
 
         dialog.show();
+
+    }
+
+
+    public void login(JSONObject jsonObject) {
+
+        String url=pref.getAPI()+"User/ValidateLogin";
+
+        new PostJsonDataParser(getContext(), Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
+            @Override
+            public void onGetResponse(JSONObject response) {
+                if (response != null) {
+                    Log.d("loginresponse",response.toString());
+                    try {
+                        boolean _failure = response.optBoolean("_failure");
+                        if (_failure){
+
+
+                            Toast.makeText(getContext(),"Invalid Login Credentials",Toast.LENGTH_LONG).show();
+
+                        }else {
+
+
+                            String _token=response.optString("_token");
+                            pref.saveToken(_token);
+                            JSONObject jsonObject=new JSONObject();
+                            JSONArray filterParamsArray=new JSONArray();
+                            JSONArray courseSectionIdsArray=new JSONArray();
+                            try {
+                                jsonObject.put("pageNumber",0);
+                                jsonObject.put("_pageSize",0);
+                                jsonObject.put("sortingModel",null);
+                                jsonObject.put("staffId",pref.getUserID());
+                                jsonObject.put("academicYear",pref.getAcademicYear());
+                                jsonObject.put("_tenantName", pref.getTenatName());
+                                jsonObject.put("tenantId", pref.getTenatID());
+                                jsonObject.put("_userName", pref.getName());
+                                jsonObject.put("_token", pref.getToken());
+                                jsonObject.put("schoolId", pref.getSchoolID());
+                                jsonObject.put("filterParams",filterParamsArray);
+                                jsonObject.put("_academicYear",pref.getAcademicYear());
+                                jsonObject.put("courseSectionIds",courseSectionIdsArray);
+                                getStudentList(jsonObject);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+
+
+
+                        }
+
+
+
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
 
     }
 
