@@ -35,7 +35,6 @@ import com.opensissasstudent.others.utility.AppData;
 import com.opensissasstudent.others.utility.Pref;
 import com.opensissasstudent.others.utility.Util;
 import com.opensissasstudent.ui.common.activity.LoginActivity;
-import com.opensissasstudent.ui.student.activity.MissingAttendanceActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -619,9 +618,7 @@ public class StudentHomeFragment extends Fragment implements View.OnClickListene
     @Override
     public void onClick(View v) {
         if (v==lnMissingAttendance){
-            Intent intent=new Intent(getContext(), MissingAttendanceActivity.class);
-            intent.putExtra("pagesize",missingCount);
-            startActivity(intent);
+
         }
     }
 }

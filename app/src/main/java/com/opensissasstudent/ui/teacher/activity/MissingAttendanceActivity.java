@@ -92,8 +92,26 @@ public class MissingAttendanceActivity extends AppCompatActivity implements View
                         boolean _failure = response.optBoolean("_failure");
                         String _message = response.optString("_message");
                         if (_failure) {
-                            Toast.makeText(MissingAttendanceActivity.this, _message, Toast.LENGTH_LONG).show();
-                            rvItem.setVisibility(View.GONE);
+                            if (_message.contains("token")||_message.contains("Token") ){
+                                JSONObject jobj=new JSONObject();
+                                try {
+                                    jobj.put("tenantId",pref.getTenatID());
+                                    jobj.put("userId",0);
+                                    jobj.put("_tenantName",pref.getTenatName());
+                                    jobj.put("password",pref.getPasswordBase64());
+                                    jobj.put("email",pref.getLoginEmail());
+                                    jobj.put("schoolId",null);
+                                    jobj.put("_userName","");
+                                    jobj.put("_token",null);
+                                    jobj.put("isMobileLogin",true);
+                                    login(jobj);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }else {
+                                Toast.makeText(MissingAttendanceActivity.this, _message, Toast.LENGTH_LONG).show();
+                                rvItem.setVisibility(View.GONE);
+                            }
 
 
                         } else {
@@ -169,9 +187,21 @@ public class MissingAttendanceActivity extends AppCompatActivity implements View
                         boolean _failure = response.optBoolean("_failure");
                         String _message = response.optString("_message");
                         if (_failure) {
-                            Intent intent = new Intent(MissingAttendanceActivity.this, LoginActivity.class);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
+                            JSONObject jobj=new JSONObject();
+                            try {
+                                jobj.put("tenantId",pref.getTenatID());
+                                jobj.put("userId",0);
+                                jobj.put("_tenantName",pref.getTenatName());
+                                jobj.put("password",pref.getPasswordBase64());
+                                jobj.put("email",pref.getLoginEmail());
+                                jobj.put("schoolId",null);
+                                jobj.put("_userName","");
+                                jobj.put("_token",null);
+                                jobj.put("isMobileLogin",true);
+                                login(jobj);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
 
                         } else {
                             String _token = response.optString("_token");
@@ -400,6 +430,64 @@ public class MissingAttendanceActivity extends AppCompatActivity implements View
         // Popup the dialog.
 
         dialog.show();
+
+    }
+
+
+    public void login(JSONObject jsonObject) {
+
+        String url=pref.getAPI()+"User/ValidateLogin";
+
+        new PostJsonDataParser(MissingAttendanceActivity.this, Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
+            @Override
+            public void onGetResponse(JSONObject response) {
+                if (response != null) {
+                    Log.d("loginresponse",response.toString());
+                    try {
+                        boolean _failure = response.optBoolean("_failure");
+                        if (_failure){
+
+
+                            Toast.makeText(MissingAttendanceActivity.this,"Invalid Login Credentials",Toast.LENGTH_LONG).show();
+
+                        }else {
+
+
+                            String _token=response.optString("_token");
+                            pref.saveToken(_token);
+                            JSONObject obj=new JSONObject();
+                            obj.put("_failure",false);
+                            obj.put("_message","");
+                            obj.put("staffId",pref.getUserID());
+                            obj.put("pageNumber",1);
+                            obj.put("_pageSize",pagesize);
+                            obj.put("pageSize",pagesize);
+                            obj.put("schoolId",pref.getSchoolID());
+                            obj.put("_tenantName",pref.getTenatName());
+                            obj.put("_userName",pref.getName());
+                            obj.put("_token",pref.getToken());
+                            obj.put("tenantId",pref.getTenatID());
+                            obj.put("_academicYear",pref.getAcademicYear());
+                            obj.put("academicYear",pref.getAcademicYear());
+                            getAttendanceList(obj);
+
+
+
+
+                        }
+
+
+
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
 
     }
 }

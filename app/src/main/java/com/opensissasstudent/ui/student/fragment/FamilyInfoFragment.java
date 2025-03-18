@@ -18,14 +18,12 @@ import com.opensissasstudent.R;
 import com.opensissasstudent.adapter.FamilyInfoAdapter;
 import com.opensissasstudent.adapter.SiblingInfoAdapter;
 import com.opensissasstudent.databinding.FragmentFamilyInfoBinding;
-import com.opensissasstudent.databinding.FragmentMyInfoGeneralBinding;
 import com.opensissasstudent.model.FamilyInfoModel;
 import com.opensissasstudent.model.SiblingModel;
 import com.opensissasstudent.others.parser.PostJsonDataParser;
 import com.opensissasstudent.others.utility.Pref;
 import com.opensissasstudent.others.utility.Util;
 import com.opensissasstudent.ui.common.activity.LoginActivity;
-import com.opensissasstudent.ui.student.activity.MissingAttendanceActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;

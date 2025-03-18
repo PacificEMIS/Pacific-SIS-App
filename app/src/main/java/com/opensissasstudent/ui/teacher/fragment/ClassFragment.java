@@ -100,7 +100,7 @@ public class ClassFragment extends Fragment {
                         String _message=response.optString("_message");
                         if (_failure){
 
-                            if (_message.contains("token")){
+                            if (_message.contains("token")||_message.contains("Token") ){
                                 JSONObject jobj=new JSONObject();
                                 try {
                                     jobj.put("tenantId",pref.getTenatID());
@@ -327,13 +327,10 @@ public class ClassFragment extends Fragment {
 
 
     public void login(JSONObject jsonObject) {
-        ProgressDialog PD=new ProgressDialog(getContext());
-        PD.setMessage("Loading");
-        PD.setCancelable(false);
-        PD.show();
+
         String url=pref.getAPI()+"User/ValidateLogin";
 
-        new PostJsonDataParser(getContext(), Request.Method.POST, url,jsonObject, false,true, new PostJsonDataParser.OnGetResponseListner() {
+        new PostJsonDataParser(getContext(), Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
             @Override
             public void onGetResponse(JSONObject response) {
                 if (response != null) {
@@ -341,12 +338,12 @@ public class ClassFragment extends Fragment {
                     try {
                         boolean _failure = response.optBoolean("_failure");
                         if (_failure){
-                            PD.dismiss();
+
 
                             Toast.makeText(getContext(),"Invalid Login Credentials",Toast.LENGTH_LONG).show();
 
                         }else {
-                            PD.dismiss();
+
 
                             String _token=response.optString("_token");
                             pref.saveToken(_token);
