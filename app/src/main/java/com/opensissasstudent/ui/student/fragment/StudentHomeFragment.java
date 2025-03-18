@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.opensissasstudent.R;
@@ -188,15 +189,45 @@ public class StudentHomeFragment extends Fragment implements View.OnClickListene
             public void onGetResponse(JSONObject response) {
                 if (response != null) {
                     Log.d("dashboardresponse",response.toString());
+                    assignmentlist.clear();
+                    monclassList.clear();
+                    tueclassList.clear();
+                    wedclassList.clear();
+                    thuclassList.clear();
+                    friclassList.clear();
+                    satclassList.clear();
+                    sunclassList.clear();
+                    noticelist.clear();
+                    requestedClassList.clear();
+
                     try {
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
-                            rvClasses.setVisibility(View.GONE);
-                            lnNoData.setVisibility(View.VISIBLE);
+                            if (_message.contains("token")||_message.contains("Token") ){
+                                JSONObject jobj=new JSONObject();
+                                try {
+                                    jobj.put("tenantId",pref.getTenatID());
+                                    jobj.put("userId",0);
+                                    jobj.put("_tenantName",pref.getTenatName());
+                                    jobj.put("password",pref.getPasswordBase64());
+                                    jobj.put("email",pref.getLoginEmail());
+                                    jobj.put("schoolId",null);
+                                    jobj.put("_userName","");
+                                    jobj.put("_token",null);
+                                    jobj.put("isMobileLogin",true);
+                                    login(jobj);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }else {
+                                rvClasses.setVisibility(View.GONE);
+                                lnNoData.setVisibility(View.VISIBLE);
+                            }
 
 
                         }else {
+
                             JSONArray courseSectionViewList=response.optJSONArray("courseSectionViewList");
                             if (courseSectionViewList.length()>0){
                                 for (int i=0;i<courseSectionViewList.length();i++){
@@ -537,10 +568,22 @@ public class StudentHomeFragment extends Fragment implements View.OnClickListene
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
-                            if (_message.contains("Token")){
-                                Intent intent=new Intent(getContext(), LoginActivity.class);
-                                startActivity(intent);
-                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                            if (_message.contains("token")||_message.contains("Token") ){
+                                /*JSONObject jobj=new JSONObject();
+                                try {
+                                    jobj.put("tenantId",pref.getTenatID());
+                                    jobj.put("userId",0);
+                                    jobj.put("_tenantName",pref.getTenatName());
+                                    jobj.put("password",pref.getPasswordBase64());
+                                    jobj.put("email",pref.getLoginEmail());
+                                    jobj.put("schoolId",null);
+                                    jobj.put("_userName","");
+                                    jobj.put("_token",null);
+                                    jobj.put("isMobileLogin",true);
+                                    login(jobj);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }*/
                             }
 
                         }else {
@@ -620,5 +663,63 @@ public class StudentHomeFragment extends Fragment implements View.OnClickListene
         if (v==lnMissingAttendance){
 
         }
+    }
+
+    public void login(JSONObject jsonObject) {
+
+        String url=pref.getAPI()+"User/ValidateLogin";
+
+        new PostJsonDataParser(getContext(), Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
+            @Override
+            public void onGetResponse(JSONObject response) {
+                if (response != null) {
+                    Log.d("loginresponse",response.toString());
+                    try {
+                        boolean _failure = response.optBoolean("_failure");
+                        if (_failure){
+
+
+                            Toast.makeText(getContext(),"Invalid Login Credentials",Toast.LENGTH_LONG).show();
+
+                        }else {
+
+
+                            String _token=response.optString("_token");
+                            pref.saveToken(_token);
+                            try {
+                                jsonObject.put("studentId",pref.getUserID());
+                                jsonObject.put("membershipId",pref.getMemberShipID());
+                                jsonObject.put("allCourse",true);
+                                jsonObject.put("_tenantName", pref.getTenatName());
+                                jsonObject.put("_userName",pref.getName());
+                                jsonObject.put("_token",pref.getToken());
+                                jsonObject.put("_academicYear",pref.getAcademicYear());
+                                jsonObject.put("tenantId",pref.getTenatID());
+                                jsonObject.put("schoolId",pref.getSchoolID());
+                                jsonObject.put("markingPeriodStartDate",pref.getPeriodStartYear());
+                                jsonObject.put("markingPeriodEndDate",pref.getPeriodEndYear());
+                                getDashboardItem(jsonObject);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+
+
+
+                        }
+
+
+
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
+
     }
 }

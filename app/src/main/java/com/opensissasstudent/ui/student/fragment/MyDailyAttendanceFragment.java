@@ -349,8 +349,25 @@ public class MyDailyAttendanceFragment extends Fragment  {
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
-
-                            Toast.makeText(getContext(),_message,Toast.LENGTH_LONG).show();
+                            if (_message.contains("token")||_message.contains("Token") ){
+                                JSONObject jobj=new JSONObject();
+                                try {
+                                    jobj.put("tenantId",pref.getTenatID());
+                                    jobj.put("userId",0);
+                                    jobj.put("_tenantName",pref.getTenatName());
+                                    jobj.put("password",pref.getPasswordBase64());
+                                    jobj.put("email",pref.getLoginEmail());
+                                    jobj.put("schoolId",null);
+                                    jobj.put("_userName","");
+                                    jobj.put("_token",null);
+                                    jobj.put("isMobileLogin",true);
+                                    login(jobj);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }else {
+                                Toast.makeText(getContext(), _message, Toast.LENGTH_LONG).show();
+                            }
 
                         }else {
 
@@ -522,5 +539,67 @@ public class MyDailyAttendanceFragment extends Fragment  {
 
             return currentPosition;
         }
+    }
+
+
+    public void login(JSONObject jsonObject) {
+
+        String url=pref.getAPI()+"User/ValidateLogin";
+
+        new PostJsonDataParser(getContext(), Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
+            @Override
+            public void onGetResponse(JSONObject response) {
+                if (response != null) {
+                    Log.d("loginresponse",response.toString());
+                    try {
+                        boolean _failure = response.optBoolean("_failure");
+                        if (_failure){
+
+
+                            Toast.makeText(getContext(),"Invalid Login Credentials",Toast.LENGTH_LONG).show();
+
+                        }else {
+
+
+                            String _token=response.optString("_token");
+                            pref.saveToken(_token);
+                            JSONObject jsonObject=new JSONObject();
+                            try {
+                                jsonObject.put("pageNumber",1);
+                                jsonObject.put("pageSize",30);
+                                jsonObject.put("periodId","");
+                                jsonObject.put("markingPeriodStartDate",formdate);
+                                jsonObject.put("markingPeriodEndDate",todate);
+                                jsonObject.put("academicYear",pref.getAcademicYear());
+                                jsonObject.put("studentId",pref.getUserID());
+                                jsonObject.put("_tenantName",pref.getTenatName());
+                                jsonObject.put("_userName",pref.getName());
+                                jsonObject.put("_token",pref.getToken());
+                                jsonObject.put("_academicYear",pref.getAcademicYear());
+                                jsonObject.put("tenantId",pref.getTenatID());
+                                jsonObject.put("schoolId",pref.getSchoolID());
+                                getAbsentSummary(jsonObject);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+
+
+
+                        }
+
+
+
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
+
     }
 }
