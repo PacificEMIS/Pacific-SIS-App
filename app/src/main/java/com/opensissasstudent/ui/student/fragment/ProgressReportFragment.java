@@ -170,8 +170,25 @@ public class ProgressReportFragment extends Fragment implements View.OnClickList
                         boolean _failure = response.optBoolean("_failure");
                         String _message = response.optString("_message");
                         if (_failure) {
-
-                            Toast.makeText(getContext(), _message, Toast.LENGTH_LONG).show();
+                            if (_message.contains("token")||_message.contains("Token") ){
+                                JSONObject jobj=new JSONObject();
+                                try {
+                                    jobj.put("tenantId",pref.getTenatID());
+                                    jobj.put("userId",0);
+                                    jobj.put("_tenantName",pref.getTenatName());
+                                    jobj.put("password",pref.getPasswordBase64());
+                                    jobj.put("email",pref.getLoginEmail());
+                                    jobj.put("schoolId",null);
+                                    jobj.put("_userName","");
+                                    jobj.put("_token",null);
+                                    jobj.put("isMobileLogin",true);
+                                    login(jobj);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }else {
+                                Toast.makeText(getContext(), _message, Toast.LENGTH_LONG).show();
+                            }
 
                         } else {
                             itemList.clear();
@@ -181,26 +198,27 @@ public class ProgressReportFragment extends Fragment implements View.OnClickList
 
                                 JSONObject schoolMasterListOBJ = schoolMasterListData.optJSONObject(0);
                                 JSONArray studentMasterListData=schoolMasterListOBJ.optJSONArray("studentMasterListData");
-                                JSONObject studentMasterListOBJ = studentMasterListData.optJSONObject(0);
-                                String studentId=Util.getFreshValue(studentMasterListOBJ.optString("studentId"),"");
-                                binding.tvStudentID.setText(studentId);
-                                String firstGivenName=Util.getFreshValue(studentMasterListOBJ.optString("firstGivenName"),"");
-                                String lastFamilyName=Util.getFreshValue(studentMasterListOBJ.optString("lastFamilyName"),"");
-                                String middleName=Util.getFreshValue(studentMasterListOBJ.optString("middleName"),"");
-                                binding.tvStudentName.setText(firstGivenName+" "+middleName+" "+lastFamilyName);
-                                String gradeLevelTitle=Util.getFreshValue(studentMasterListOBJ.optString("gradeLevelTitle"),"");
-                                binding.tvGrade.setText(gradeLevelTitle);
-                                JSONArray courseSectionListData=studentMasterListOBJ.optJSONArray("courseSectionListData");
-                                for (int i=0;i<courseSectionListData.length();i++){
-                                    childList=new ArrayList<>();
-                                    pointss=new ArrayList<>();
-                                    totalassignpointss=new ArrayList<>();
-                                    totalgrade=new ArrayList<>();
-                                    gradeTitle=new ArrayList<>();
-                                    breakoffList=new ArrayList<>();
-                                    JSONObject courseSectionOBJ=courseSectionListData.optJSONObject(i);
-                                    JSONArray gradeBookGradeListData=courseSectionOBJ.optJSONArray("gradeBookGradeListData");
-                                    String runningAvgGrade=Util.getFreshValue(courseSectionOBJ.optString("runningAvgGrade",""));
+                                if (studentMasterListData.length()>0){
+                                    JSONObject studentMasterListOBJ = studentMasterListData.optJSONObject(0);
+                                    String studentId=Util.getFreshValue(studentMasterListOBJ.optString("studentId"),"");
+                                    binding.tvStudentID.setText(studentId);
+                                    String firstGivenName=Util.getFreshValue(studentMasterListOBJ.optString("firstGivenName"),"");
+                                    String lastFamilyName=Util.getFreshValue(studentMasterListOBJ.optString("lastFamilyName"),"");
+                                    String middleName=Util.getFreshValue(studentMasterListOBJ.optString("middleName"),"");
+                                    binding.tvStudentName.setText(firstGivenName+" "+middleName+" "+lastFamilyName);
+                                    String gradeLevelTitle=Util.getFreshValue(studentMasterListOBJ.optString("gradeLevelTitle"),"");
+                                    binding.tvGrade.setText(gradeLevelTitle);
+                                    JSONArray courseSectionListData=studentMasterListOBJ.optJSONArray("courseSectionListData");
+                                    for (int i=0;i<courseSectionListData.length();i++){
+                                        childList=new ArrayList<>();
+                                        pointss=new ArrayList<>();
+                                        totalassignpointss=new ArrayList<>();
+                                        totalgrade=new ArrayList<>();
+                                        gradeTitle=new ArrayList<>();
+                                        breakoffList=new ArrayList<>();
+                                        JSONObject courseSectionOBJ=courseSectionListData.optJSONObject(i);
+                                        JSONArray gradeBookGradeListData=courseSectionOBJ.optJSONArray("gradeBookGradeListData");
+                                        String runningAvgGrade=Util.getFreshValue(courseSectionOBJ.optString("runningAvgGrade",""));
 
                                         if (gradeBookGradeListData.length()>0) {
                                             for (int j = 0; j < gradeBookGradeListData.length(); j++) {
@@ -277,8 +295,8 @@ public class ProgressReportFragment extends Fragment implements View.OnClickList
 
 
                                         String courseSectionName=Util.getFreshValue(courseSectionOBJ.optString("courseSectionName",""));
-                                    String total=Util.getFreshValue(courseSectionOBJ.optString("total",""));
-                                    String totalWeightedGrade=Util.getFreshValue(courseSectionOBJ.optString("totalWeightedGrade",""));
+                                        String total=Util.getFreshValue(courseSectionOBJ.optString("total",""));
+                                        String totalWeightedGrade=Util.getFreshValue(courseSectionOBJ.optString("totalWeightedGrade",""));
                                         String courseName=Util.getFreshValue(courseSectionOBJ.optString("courseName"));
                                         String teacherName=Util.getFreshValue(courseSectionOBJ.optString("teacherFirstName",""))+" "+Util.getFreshValue(courseSectionOBJ.optString("teacherLastName",""));
                                         ProgressReportModel reportModel=new ProgressReportModel();
@@ -290,8 +308,8 @@ public class ProgressReportFragment extends Fragment implements View.OnClickList
                                         reportModel.setItemList(childList);
                                         reportModel.setTotalassignpoints(totalassignpoints);
                                         reportModel.setSize(gradeBookGradeListData.length());
-                                       reportModel.setTotlWeightgrade(totalWeightedGrade);
-                                       reportModel.setTotalGrade(total);
+                                        reportModel.setTotlWeightgrade(totalWeightedGrade);
+                                        reportModel.setTotalGrade(total);
 
 
 
@@ -300,13 +318,15 @@ public class ProgressReportFragment extends Fragment implements View.OnClickList
                                         itemList.add(reportModel);
 
 
+                                    }
+
+                                    reportAdapter=new ProgressReportAdapter(itemList,getContext(),ProgressReportFragment.this);
+                                    binding.rvAssignment.setAdapter(reportAdapter);
+
+                                    TotalProgressReportAdapter toalAdapter=new TotalProgressReportAdapter(itemList,getContext());
+                                    binding.rvTotalItem.setAdapter(toalAdapter);
+
                                 }
-
-                                reportAdapter=new ProgressReportAdapter(itemList,getContext(),ProgressReportFragment.this);
-                                binding.rvAssignment.setAdapter(reportAdapter);
-
-                                TotalProgressReportAdapter toalAdapter=new TotalProgressReportAdapter(itemList,getContext());
-                                binding.rvTotalItem.setAdapter(toalAdapter);
 
 
 
@@ -411,5 +431,70 @@ public class ProgressReportFragment extends Fragment implements View.OnClickList
             }
 
         }
+    }
+
+
+    public void login(JSONObject jsonObject) {
+
+        String url=pref.getAPI()+"User/ValidateLogin";
+
+        new PostJsonDataParser(getContext(), Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
+            @Override
+            public void onGetResponse(JSONObject response) {
+                if (response != null) {
+                    Log.d("loginresponse",response.toString());
+                    try {
+                        boolean _failure = response.optBoolean("_failure");
+                        if (_failure){
+
+
+                            Toast.makeText(getContext(),"Invalid Login Credentials",Toast.LENGTH_LONG).show();
+
+                        }else {
+
+
+                            String _token=response.optString("_token");
+                            pref.saveToken(_token);
+                            JSONArray guid = new JSONArray();
+                            guid.put(pref.getUserGUIID());
+                            try {
+                                JSONObject jsonObject1 = new JSONObject();
+                                jsonObject1.put("totalsOnly", false);
+                                jsonObject1.put("studentGuids",guid);
+                                jsonObject1.put("_tenantName", pref.getTenatName());
+                                jsonObject1.put("_userName", pref.getName());
+                                jsonObject1.put("_token", pref.getToken());
+                                jsonObject1.put("_academicYear", pref.getAcademicYear());
+                                jsonObject1.put("tenantId", pref.getTenatID());
+                                jsonObject1.put("schoolId", pref.getSchoolID());
+                                jsonObject1.put("academicYear", pref.getAcademicYear());
+                                jsonObject1.put("markingPeriodStartDate", pref.getPeriodStartYear());
+                                jsonObject1.put("markingPeriodEndDate", pref.getPeriodEndYear());
+                                jsonObject1.put("markingPeriodTitle", pref.getPeriod());
+
+                                getSchedule(jsonObject1);
+                                //getSchoolList(jsonObject);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+
+
+
+                        }
+
+
+
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
+
     }
 }

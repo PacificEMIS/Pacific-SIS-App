@@ -110,8 +110,21 @@ public class NoticesFragment extends Fragment implements View.OnClickListener {
                         String _message=response.optString("_message");
                         if (_failure){
 
-                            Intent intent=new Intent(getContext(), LoginActivity.class);
-                            startActivity(intent);
+                            JSONObject jobj=new JSONObject();
+                            try {
+                                jobj.put("tenantId",pref.getTenatID());
+                                jobj.put("userId",0);
+                                jobj.put("_tenantName",pref.getTenatName());
+                                jobj.put("password",pref.getPasswordBase64());
+                                jobj.put("email",pref.getLoginEmail());
+                                jobj.put("schoolId",null);
+                                jobj.put("_userName","");
+                                jobj.put("_token",null);
+                                jobj.put("isMobileLogin",true);
+                                login(jobj);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
 
                         }else {
                             String _token=response.optString("_token");
@@ -184,7 +197,26 @@ public class NoticesFragment extends Fragment implements View.OnClickListener {
                         String _message=response.optString("_message");
                         if (_failure){
 
-                            Toast.makeText(getContext(),_message,Toast.LENGTH_LONG).show();
+                            if (_message.contains("token")||_message.contains("Token") ){
+                                JSONObject jobj=new JSONObject();
+                                try {
+                                    jobj.put("tenantId",pref.getTenatID());
+                                    jobj.put("userId",0);
+                                    jobj.put("_tenantName",pref.getTenatName());
+                                    jobj.put("password",pref.getPasswordBase64());
+                                    jobj.put("email",pref.getLoginEmail());
+                                    jobj.put("schoolId",null);
+                                    jobj.put("_userName","");
+                                    jobj.put("_token",null);
+                                    jobj.put("isMobileLogin",true);
+                                    login(jobj);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }else {
+
+                                Toast.makeText(getContext(), _message, Toast.LENGTH_LONG).show();
+                            }
 
                         }else {
                             currentList.clear();
@@ -252,8 +284,26 @@ public class NoticesFragment extends Fragment implements View.OnClickListener {
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
+                            if (_message.contains("token")||_message.contains("Token") ){
+                                JSONObject jobj=new JSONObject();
+                                try {
+                                    jobj.put("tenantId",pref.getTenatID());
+                                    jobj.put("userId",0);
+                                    jobj.put("_tenantName",pref.getTenatName());
+                                    jobj.put("password",pref.getPasswordBase64());
+                                    jobj.put("email",pref.getLoginEmail());
+                                    jobj.put("schoolId",null);
+                                    jobj.put("_userName","");
+                                    jobj.put("_token",null);
+                                    jobj.put("isMobileLogin",true);
+                                    login(jobj);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }else {
 
-                            Toast.makeText(getContext(),_message,Toast.LENGTH_LONG).show();
+                                Toast.makeText(getContext(), _message, Toast.LENGTH_LONG).show();
+                            }
 
                         }else {
                             currentList.clear();
@@ -368,6 +418,82 @@ public class NoticesFragment extends Fragment implements View.OnClickListener {
             binding.tvCurrent.setTextColor(Color.parseColor("#094990"));
             binding.tvPast.setTextColor(Color.parseColor("#FFFFFF"));
         }
+
+    }
+
+
+    public void login(JSONObject jsonObject) {
+
+        String url=pref.getAPI()+"User/ValidateLogin";
+
+        new PostJsonDataParser(getContext(), Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
+            @Override
+            public void onGetResponse(JSONObject response) {
+                if (response != null) {
+                    Log.d("loginresponse",response.toString());
+                    try {
+                        boolean _failure = response.optBoolean("_failure");
+                        if (_failure){
+
+
+                            Toast.makeText(getContext(),"Invalid Login Credentials",Toast.LENGTH_LONG).show();
+
+                        }else {
+
+
+                            String _token=response.optString("_token");
+                            pref.saveToken(_token);
+                            if (toolbar.equalsIgnoreCase("notices")){
+                                try {
+                                    JSONArray blnkArray=new JSONArray();
+                                    JSONObject object=new JSONObject();
+                                    object.put("noticeList",blnkArray);
+                                    object.put("membershipId",pref.getMemberShipID());
+                                    object.put("_tenantName",pref.getTenatName());
+                                    object.put("_userName",pref.getName());
+                                    object.put("_token",pref.getToken());
+                                    object.put("tenantId",pref.getTenatID());
+                                    object.put("_academicYear", pref.getAcademicYear());
+                                    object.put("schoolId",pref.getSchoolID());
+                                    getNotice(object);
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }else {
+                                try {
+
+                                    JSONObject object=new JSONObject();
+                                    object.put("membershipId",pref.getMemberShipID());
+                                    object.put("_tenantName",pref.getTenatName());
+                                    object.put("_userName",pref.getName());
+                                    object.put("_token",pref.getToken());
+                                    object.put("tenantId",pref.getTenatID());
+                                    object.put("_academicYear", pref.getAcademicYear());
+                                    object.put("schoolId",pref.getSchoolID());
+                                    getMedicalNotice(object);
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+
+
+
+
+
+                        }
+
+
+
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
 
     }
 }
