@@ -93,8 +93,21 @@ public class TranscriptGradeFragment extends Fragment implements View.OnClickLis
                         String _message=response.optString("_message");
                         if (_failure){
 
-                            Intent intent=new Intent(getContext(), LoginActivity.class);
-                            startActivity(intent);
+                            JSONObject jobj=new JSONObject();
+                            try {
+                                jobj.put("tenantId",pref.getTenatID());
+                                jobj.put("userId",0);
+                                jobj.put("_tenantName",pref.getTenatName());
+                                jobj.put("password",pref.getPasswordBase64());
+                                jobj.put("email",pref.getLoginEmail());
+                                jobj.put("schoolId",null);
+                                jobj.put("_userName","");
+                                jobj.put("_token",null);
+                                jobj.put("isMobileLogin",true);
+                                login(jobj);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
 
                         }else {
                             String _token=response.optString("_token");
@@ -143,8 +156,25 @@ public class TranscriptGradeFragment extends Fragment implements View.OnClickLis
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
-
-                            Toast.makeText(getContext(),_message,Toast.LENGTH_LONG).show();
+                            if (_message.contains("token")||_message.contains("Token") ){
+                                JSONObject jobj=new JSONObject();
+                                try {
+                                    jobj.put("tenantId",pref.getTenatID());
+                                    jobj.put("userId",0);
+                                    jobj.put("_tenantName",pref.getTenatName());
+                                    jobj.put("password",pref.getPasswordBase64());
+                                    jobj.put("email",pref.getLoginEmail());
+                                    jobj.put("schoolId",null);
+                                    jobj.put("_userName","");
+                                    jobj.put("_token",null);
+                                    jobj.put("isMobileLogin",true);
+                                    login(jobj);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }else {
+                                Toast.makeText(getContext(), _message, Toast.LENGTH_LONG).show();
+                            }
 
                         }else {
                             itemList.clear();
@@ -210,6 +240,61 @@ public class TranscriptGradeFragment extends Fragment implements View.OnClickLis
                 Toast.makeText(getContext(),"Please Select at least one grade",Toast.LENGTH_LONG).show();
             }
         }
+
+    }
+
+    public void login(JSONObject jsonObject) {
+
+        String url=pref.getAPI()+"User/ValidateLogin";
+
+        new PostJsonDataParser(getContext(), Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
+            @Override
+            public void onGetResponse(JSONObject response) {
+                if (response != null) {
+                    Log.d("loginresponse",response.toString());
+                    try {
+                        boolean _failure = response.optBoolean("_failure");
+                        if (_failure){
+
+
+                            Toast.makeText(getContext(),"Invalid Login Credentials",Toast.LENGTH_LONG).show();
+
+                        }else {
+
+
+                            String _token=response.optString("_token");
+                            pref.saveToken(_token);
+                            JSONObject jsonObject1=new JSONObject();
+
+                            try {
+                                jsonObject1.put("_tenantName", pref.getTenatName());
+                                jsonObject1.put("_userName", pref.getName());
+                                jsonObject1.put("_token", pref.getToken());
+                                jsonObject1.put("_academicYear", pref.getAcademicYear());
+                                jsonObject1.put("schoolId", pref.getSchoolID());
+                                jsonObject1.put("tenantId", pref.getTenatID());
+                                getGrade(jsonObject1);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+
+
+
+                        }
+
+
+
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
 
     }
 }

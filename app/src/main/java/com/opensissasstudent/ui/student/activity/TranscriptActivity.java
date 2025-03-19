@@ -97,8 +97,25 @@ public class TranscriptActivity extends AppCompatActivity implements View.OnClic
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
-
-                            Toast.makeText(TranscriptActivity.this,_message,Toast.LENGTH_LONG).show();
+                            if (_message.contains("token")||_message.contains("Token") ){
+                                JSONObject jobj=new JSONObject();
+                                try {
+                                    jobj.put("tenantId",pref.getTenatID());
+                                    jobj.put("userId",0);
+                                    jobj.put("_tenantName",pref.getTenatName());
+                                    jobj.put("password",pref.getPasswordBase64());
+                                    jobj.put("email",pref.getLoginEmail());
+                                    jobj.put("schoolId",null);
+                                    jobj.put("_userName","");
+                                    jobj.put("_token",null);
+                                    jobj.put("isMobileLogin",true);
+                                    login(jobj);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }else {
+                                Toast.makeText(TranscriptActivity.this, _message, Toast.LENGTH_LONG).show();
+                            }
 
                         }else {
 
@@ -216,6 +233,72 @@ public class TranscriptActivity extends AppCompatActivity implements View.OnClic
         if (v==binding.imgBack){
             onBackPressed();
         }
+
+    }
+
+    public void login(JSONObject jsonObject) {
+
+        String url=pref.getAPI()+"User/ValidateLogin";
+
+        new PostJsonDataParser(TranscriptActivity.this, Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
+            @Override
+            public void onGetResponse(JSONObject response) {
+                if (response != null) {
+                    Log.d("loginresponse",response.toString());
+                    try {
+                        boolean _failure = response.optBoolean("_failure");
+                        if (_failure){
+
+
+                            Toast.makeText(TranscriptActivity.this,"Invalid Login Credentials",Toast.LENGTH_LONG).show();
+
+                        }else {
+
+
+                            String _token=response.optString("_token");
+                            pref.saveToken(_token);
+                            JSONObject jsonObject=new JSONObject();
+                            JSONArray jsonArray=new JSONArray();
+                            JSONObject transcriptOBJ=new JSONObject();
+                            try {
+                                transcriptOBJ.put("studentId",pref.getUserID());
+                                jsonArray.put(transcriptOBJ);
+                                jsonObject.put("schoolLogo",true);
+                                jsonObject.put("studentPhoto",false);
+                                jsonObject.put("gradeLagend",true);
+                                jsonObject.put("signatureLine",false);
+                                jsonObject.put("historicalGradeLavels",true);
+                                jsonObject.put("gradeLavels",gradeID);
+                                jsonObject.put("studentsDetailsForTranscripts",jsonArray);
+                                jsonObject.put("_tenantName",pref.getTenatName());
+                                jsonObject.put("_userName",pref.getName());
+                                jsonObject.put("_token",pref.getToken());
+                                jsonObject.put("_academicYear",pref.getAcademicYear());
+                                jsonObject.put("tenantId",pref.getTenatID());
+                                jsonObject.put("schoolId",pref.getSchoolID());
+                                jsonObject.put("academicYear",pref.getAcademicYear());
+                                getTranscript(jsonObject);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+
+
+
+                        }
+
+
+
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
 
     }
 }

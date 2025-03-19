@@ -104,8 +104,26 @@ public class ReportCardDetailsActivity extends AppCompatActivity implements View
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
+                            if (_message.contains("token")||_message.contains("Token") ) {
+                                JSONObject jobj = new JSONObject();
+                                try {
+                                    jobj.put("tenantId", pref.getTenatID());
+                                    jobj.put("userId", 0);
+                                    jobj.put("_tenantName", pref.getTenatName());
+                                    jobj.put("password", pref.getPasswordBase64());
+                                    jobj.put("email", pref.getLoginEmail());
+                                    jobj.put("schoolId", null);
+                                    jobj.put("_userName", "");
+                                    jobj.put("_token", null);
+                                    jobj.put("isMobileLogin", true);
+                                    login(jobj);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }else {
+                                Toast.makeText(ReportCardDetailsActivity.this,_message,Toast.LENGTH_LONG).show();
 
-                            Toast.makeText(ReportCardDetailsActivity.this,_message,Toast.LENGTH_LONG).show();
+                            }
 
                         }else {
                             itemList.clear();
@@ -198,6 +216,84 @@ public class ReportCardDetailsActivity extends AppCompatActivity implements View
         if (v==binding.imgBack){
             onBackPressed();
         }
+
+    }
+
+
+    public void login(JSONObject jsonObject) {
+
+        String url=pref.getAPI()+"User/ValidateLogin";
+
+        new PostJsonDataParser(ReportCardDetailsActivity.this, Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
+            @Override
+            public void onGetResponse(JSONObject response) {
+                if (response != null) {
+                    Log.d("loginresponse",response.toString());
+                    try {
+                        boolean _failure = response.optBoolean("_failure");
+                        if (_failure){
+
+
+                            Toast.makeText(ReportCardDetailsActivity.this,"Invalid Login Credentials",Toast.LENGTH_LONG).show();
+
+                        }else {
+
+
+                            String _token=response.optString("_token");
+                            pref.saveToken(_token);
+                            try {
+                                JSONObject jsonObject=new JSONObject();
+                                jsonObject.put("studentId",pref.getUserID());
+
+                                JSONArray cardArray=new JSONArray();
+                                cardArray.put(jsonObject);
+
+                                JSONObject reportOBJ=new JSONObject();
+                                reportOBJ.put("studentsReportCardViewModelList",cardArray);
+                                reportOBJ.put("teacherName",true);
+                                reportOBJ.put("teacherComments",true);
+                                reportOBJ.put("commentKeys",true);
+                                reportOBJ.put("signatureLine",true);
+                                reportOBJ.put("parcentage",true);
+                                reportOBJ.put("gpa",true);
+                                reportOBJ.put("yearToDateDailyAbsences",true);
+                                reportOBJ.put("dailyAbsencesThisMarkingPeriod",true);
+                                reportOBJ.put("otherAttendanceCodeYearToDate",true);
+                                reportOBJ.put("templateType","default");
+                                reportOBJ.put("academicYear",academicyear);
+                                reportOBJ.put("markingPeriods",period);
+                                reportOBJ.put("_tenantName",pref.getTenatName());
+                                reportOBJ.put("_userName",pref.getName());
+                                reportOBJ.put("_token",pref.getToken());
+                                reportOBJ.put("_academicYear",academicyear);
+                                reportOBJ.put("tenantId",pref.getTenatID());
+                                reportOBJ.put("schoolId",pref.getSchoolID());
+                                reportOBJ.put("createdBy","7ad0e8bf-2e0d-46c6-b354-95213985acf7");
+
+                                getReportCard(reportOBJ);
+
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+
+
+
+                        }
+
+
+
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
 
     }
 }
