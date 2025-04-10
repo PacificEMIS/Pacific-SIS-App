@@ -26,6 +26,7 @@ public class TeacherGradeFragment extends Fragment implements View.OnClickListen
     String gradescaletype;
     private FragmentTransaction transaction;
     int courseID;
+    String markingPeriod;
     int periodID;
     String courseName;
     @Override
@@ -44,6 +45,7 @@ public class TeacherGradeFragment extends Fragment implements View.OnClickListen
         courseName=getArguments().getString("courseName");
         courseID=getArguments().getInt("courseID");
         periodID=getArguments().getInt("periodID");
+        markingPeriod=getArguments().getString("markingPeriod");
         lnChildFragment=(LinearLayout) view.findViewById(R.id.lnChildFragment);
         tvInputGrades=(TextView) view.findViewById(R.id.tvInputGrades);
         tvGradeBook=(TextView) view.findViewById(R.id.tvGradeBook);
@@ -61,6 +63,7 @@ public class TeacherGradeFragment extends Fragment implements View.OnClickListen
         Bundle bundle = new Bundle();
         bundle.putInt("courseSectionID", courseSectionID);
         bundle.putString("gradescaletype", gradescaletype);
+        bundle.putString("markingPeriod",markingPeriod);
         fragment.setArguments(bundle);
 
         transaction = getChildFragmentManager().beginTransaction();

@@ -534,6 +534,7 @@ public class AssignmentsFragment extends Fragment implements View.OnClickListene
                                 jsonObject.put("academicYear",pref.getAcademicYear());
                                 jsonObject.put("markingPeriodStartDate",pref.getPeriodStartYear());
                                 jsonObject.put("markingPeriodEndDate",pref.getPeriodEndYear());
+                                jsonObject.put("markingPeriodId",markingPeriod);
                                 getAssignemnts(jsonObject);
                             } catch (JSONException e) {
                                 e.printStackTrace();
@@ -587,6 +588,7 @@ public class AssignmentsFragment extends Fragment implements View.OnClickListene
                                 jsonObject.put("academicYear",pref.getAcademicYear());
                                 jsonObject.put("markingPeriodStartDate",pref.getPeriodStartYear());
                                 jsonObject.put("markingPeriodEndDate",pref.getPeriodEndYear());
+                                jsonObject.put("markingPeriodId",markingPeriod);
                                 getAssignemnts(jsonObject);
                             } catch (JSONException e) {
                                 e.printStackTrace();
@@ -654,6 +656,7 @@ public class AssignmentsFragment extends Fragment implements View.OnClickListene
                                 jsonObject.put("academicYear",pref.getAcademicYear());
                                 jsonObject.put("markingPeriodStartDate",pref.getPeriodStartYear());
                                 jsonObject.put("markingPeriodEndDate",pref.getPeriodEndYear());
+                                jsonObject.put("markingPeriodId",markingPeriod);
                                 getAssignemnts(jsonObject);
                             } catch (JSONException e) {
                                 e.printStackTrace();
@@ -755,6 +758,7 @@ public class AssignmentsFragment extends Fragment implements View.OnClickListene
                                 object.put("academicYear",pref.getAcademicYear());
                                 object.put("markingPeriodStartDate",pref.getPeriodStartYear());
                                 object.put("markingPeriodEndDate",pref.getPeriodEndYear());
+                                jsonObject.put("markingPeriodId",markingPeriod);
                                 getAssignemnts(object);
                             } catch (JSONException e) {
                                 e.printStackTrace();

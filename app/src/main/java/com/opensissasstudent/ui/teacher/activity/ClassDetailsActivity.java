@@ -307,6 +307,7 @@ public class ClassDetailsActivity extends AppCompatActivity implements View.OnCl
         bundle.putString("gradescaletype",gradescaletype);
         bundle.putInt("courseID", courseID);
         bundle.putInt("periodID", periodID);
+        bundle.putString("markingPeriod", markingPeriod);
         bundle.putString("courseName", courseName);
         // bundle.putString("currentDate", currentDate);
         fragment.setArguments(bundle);
@@ -394,13 +395,13 @@ public class ClassDetailsActivity extends AppCompatActivity implements View.OnCl
                             if (getCourseSectionForView.length() > 0) {
                                 for (int i=0;i<getCourseSectionForView.length();i++){
                                     JSONObject OBJ=getCourseSectionForView.optJSONObject(i);
-                                     markingPeriod=OBJ.optString("markingPeriod");
+
 
                                     JSONObject courseSectionOBJ=OBJ.optJSONObject("courseSection");
 
                                     String courseSectionName=courseSectionOBJ.optString("courseSectionName");
                                     if (courseSectionName.equalsIgnoreCase(courseName)){
-
+                                        markingPeriod=OBJ.optString("markingPeriod");
                                         standardGradeScaleName=Util.getFreshValue(OBJ.optString("standardGradeScaleName"),"-");
                                         availableSeat= String.valueOf(OBJ.optInt("availableSeat"));
 

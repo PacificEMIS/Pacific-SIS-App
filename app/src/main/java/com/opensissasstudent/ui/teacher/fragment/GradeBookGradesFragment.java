@@ -38,6 +38,7 @@ public class GradeBookGradesFragment extends Fragment {
     int academicYear;
     String gradescaletype;
     LinearLayout lnAccess;
+    String markingPeriod;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -52,6 +53,7 @@ public class GradeBookGradesFragment extends Fragment {
     private void initView(){
         courseSectionID= getArguments().getInt("courseSectionID");
         gradescaletype=getArguments().getString("gradescaletype");
+        markingPeriod=getArguments().getString("markingPeriod");
         lnNoData=(LinearLayout)view.findViewById(R.id.lnNoData);
         lnAccess=(LinearLayout)view.findViewById(R.id.lnAccess);
         pref=new Pref(getContext());
@@ -105,6 +107,9 @@ public class GradeBookGradesFragment extends Fragment {
                                 jsonObject.put("_academicYear",academicYear);
                                 jsonObject.put("markingPeriodStartDate",pref.getPeriodStartYear());
                                 jsonObject.put("markingPeriodEndDate",pref.getPeriodEndYear());
+                                jsonObject.put("markingPeriodEndDate",pref.getPeriodEndYear());
+                                jsonObject.put("markingPeriodId",markingPeriod);
+
                                 getGraderBookItem(jsonObject);
                             } catch (JSONException e) {
                                 e.printStackTrace();
