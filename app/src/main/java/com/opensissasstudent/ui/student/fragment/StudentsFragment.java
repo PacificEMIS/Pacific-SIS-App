@@ -150,7 +150,7 @@ public class StudentsFragment extends Fragment implements View.OnClickListener {
             jsonObject.put("filterParams",filterParamsArray);
             jsonObject.put("_academicYear",pref.getAcademicYear());
             jsonObject.put("courseSectionIds",courseSectionIdsArray);
-            getStudentList(jsonObject);
+            getStudentList(jsonObject,true);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -535,7 +535,7 @@ public class StudentsFragment extends Fragment implements View.OnClickListener {
                 jsonObject.put("schoolId", pref.getSchoolID());
                 jsonObject.put("filterParams",filterParamsArray);
                 jsonObject.put("courseSectionIds",courseSectionIdsArray);
-                getStudentList(jsonObject);
+                getStudentList(jsonObject,true);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -543,12 +543,12 @@ public class StudentsFragment extends Fragment implements View.OnClickListener {
 
     }
 
-    public void getStudentList(JSONObject jsonObject) {
+    public void getStudentList(JSONObject jsonObject,boolean flag) {
         lnNoData.setVisibility(View.GONE);
         lnStudents.setVisibility(View.VISIBLE);
 
         String url=pref.getAPI()+"StudentSchedule/getStudentListByCourseSection";
-        new PostJsonDataParser(getContext(), Request.Method.POST, url,jsonObject, true,true, new PostJsonDataParser.OnGetResponseListner() {
+        new PostJsonDataParser(getContext(), Request.Method.POST, url,jsonObject, true,flag, new PostJsonDataParser.OnGetResponseListner() {
             @Override
             public void onGetResponse(JSONObject response) {
                 if (response != null) {

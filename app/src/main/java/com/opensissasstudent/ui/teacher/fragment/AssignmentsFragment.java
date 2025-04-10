@@ -62,7 +62,7 @@ public class AssignmentsFragment extends Fragment implements View.OnClickListene
     LinearLayout lnData,lnNoData,lnAddWeightPercentage,lnUpdateWeightPercentage,lnAccess;
     int courseID;
     EditText etAddWeightPercentage,etUpdateWeightPercentage;
-    String gradescaletype;
+    String gradescaletype,markingPeriod;
     int periodID;
 
 
@@ -82,6 +82,7 @@ public class AssignmentsFragment extends Fragment implements View.OnClickListene
         courseID = Integer.parseInt(getArguments().getString("courseID"));
         periodID=getArguments().getInt("periodID");
         gradescaletype=getArguments().getString("gradescaletype");
+        markingPeriod=getArguments().getString("markingPeriod");
         lnNoData=(LinearLayout)view.findViewById(R.id.lnNoData);
         lnData=(LinearLayout)view.findViewById(R.id.lnData);
         etTitle=(EditText)view.findViewById(R.id.etTitle);
@@ -198,6 +199,7 @@ public class AssignmentsFragment extends Fragment implements View.OnClickListene
                 }
                 try {
                     jsonObject.put("assignmentType", assignmentTypeOBJ);
+                    jsonObject.put("markingPeriodId", markingPeriod);
                     jsonObject.put("_tenantName", pref.getTenatName());
                     jsonObject.put("_userName", pref.getName());
                     jsonObject.put("_token", pref.getToken());
@@ -380,18 +382,21 @@ public class AssignmentsFragment extends Fragment implements View.OnClickListene
                             Toast.makeText(getContext(),_message,Toast.LENGTH_LONG).show();
                             lnAssignment.setVisibility(View.VISIBLE);
                             lnCreateAssignment.setVisibility(View.GONE);
+                            etTitle.setText("");
+                            etAddWeightPercentage.setText("");
 
+                            JSONObject obj=new JSONObject();
+                            JSONObject accessobj=new JSONObject();
                             try {
-                                jsonObject.put("courseSectionId",courseSectionID);
-                                jsonObject.put("_tenantName", pref.getTenatName());
-                                jsonObject.put("_userName",pref.getName());
-                                jsonObject.put("_token",pref.getToken());
-                                jsonObject.put("tenantId",pref.getTenatID());
-                                jsonObject.put("schoolId",pref.getSchoolID());
-                                jsonObject.put("academicYear",pref.getAcademicYear());
-                                jsonObject.put("markingPeriodStartDate",pref.getPeriodStartYear());
-                                jsonObject.put("markingPeriodEndDate",pref.getPeriodEndYear());
-                                getAssignemnts(jsonObject);
+                                obj.put("tenantId",pref.getTenatID());
+                                obj.put("userId",0);
+                                obj.put("userAccessLog",accessobj);
+                                obj.put("_tenantName", pref.getTenatName());
+                                obj.put("_userName", pref.getName());
+                                obj.put("_token", pref.getToken());
+                                obj.put("schoolId", pref.getSchoolID());
+                                obj.put("email", pref.getEmail());
+                                getRefreshToken(obj);
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }

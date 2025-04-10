@@ -801,7 +801,7 @@ public class GradeBookConfigFragment extends Fragment implements View.OnClickLis
         int scoreselectedId = rgScore.getCheckedRadioButtonId();
         rbscore = (RadioButton) view.findViewById(scoreselectedId);
         if (scoreselectedId == -1) {
-            Toast.makeText(getContext(), "Nothing selected", Toast.LENGTH_SHORT).show();
+          //  Toast.makeText(getContext(), "Nothing selected", Toast.LENGTH_SHORT).show();
         } else {
 
             score = rbscore.getText().toString().toLowerCase();

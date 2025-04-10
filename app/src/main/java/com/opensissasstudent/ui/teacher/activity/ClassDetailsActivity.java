@@ -49,7 +49,7 @@ public class ClassDetailsActivity extends AppCompatActivity implements View.OnCl
     int periodID;
     ImageView imgBack;
     boolean attendancetaken;
-    String gradescaletype;
+    String gradescaletype, markingPeriod;
     int blockID;
 
     @Override
@@ -205,6 +205,7 @@ public class ClassDetailsActivity extends AppCompatActivity implements View.OnCl
         bundle.putString("courseID", String.valueOf(courseID));
         bundle.putString("gradescaletype",gradescaletype);
         bundle.putInt("periodID", periodID);
+        bundle.putString("markingPeriod",markingPeriod);
         fragment.setArguments(bundle);
         transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.lnFragment, fragment, "assignment");
@@ -393,6 +394,7 @@ public class ClassDetailsActivity extends AppCompatActivity implements View.OnCl
                             if (getCourseSectionForView.length() > 0) {
                                 for (int i=0;i<getCourseSectionForView.length();i++){
                                     JSONObject OBJ=getCourseSectionForView.optJSONObject(i);
+                                     markingPeriod=OBJ.optString("markingPeriod");
 
                                     JSONObject courseSectionOBJ=OBJ.optJSONObject("courseSection");
 

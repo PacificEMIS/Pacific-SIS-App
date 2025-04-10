@@ -531,8 +531,8 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
         }else if (view==llsChangePassword){
             dlMain.closeDrawer(Gravity.LEFT);
             Intent intent=new Intent(TeacherDashboardActivity.this, ChangePasswordActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
-            finish();
             pref.saveName("");
         }
         else if (view==llsCalendar){
