@@ -424,20 +424,23 @@ public class AssignmentDetailsActivity extends AppCompatActivity implements View
 
 
                         }else {
+                            JSONObject assignment=response.optJSONObject("assignment");
+                            int assignmentId=assignment.optInt("assignmentId");
 
                             Toast.makeText(AssignmentDetailsActivity.this,_message,Toast.LENGTH_LONG).show();
-                           /* lnAssignment.setVisibility(View.VISIBLE);
+                            lnAssignment.setVisibility(View.VISIBLE);
                             lnCreateAssignment.setVisibility(View.GONE);
                             rvItem.setVisibility(View.VISIBLE);
                             tvNoRecord.setVisibility(View.GONE);
                             AssignmentDetailsModel assignmentDetailsModel=new AssignmentDetailsModel();
                             assignmentDetailsModel.setDueDate(tvDueDate.getText().toString());
+                            assignmentDetailsModel.setAssignmentId(assignmentId);
                             assignmentDetailsModel.setAssignedDate(tvAssignedDate.getText().toString());
                             assignmentDetailsModel.setPoints(etPoint.getText().toString());
                             assignmentDetailsModel.setAssignmentdetailsName(etTitle.getText().toString());
                             itemList.add(assignmentDetailsModel);
-                            setAdapter();*/
-                            onBackPressed();
+                            setAdapter();
+                           // onBackPressed();
 
 
 
