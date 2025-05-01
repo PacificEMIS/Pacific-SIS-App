@@ -26,7 +26,7 @@ import org.json.JSONObject;
 public class MyInfoAddressFragment extends Fragment implements View.OnClickListener {
     FragmentMyInfoAddressBinding binding;
     private View view;
-    String homePhone,mobilePhone,personalEmail,schoolEmail,twitter,facebook,instagram,youtube,linkedin,homeAddressLineOne,homeAddressLineTwo,homeAddressCity,homeAddressState,homeAddressCountry,homeAddressZip,busNo,mailingAddressLineOne,mailingAddressLineTwo,mailingAddressCity,mailingAddressState,mailingAddressCountry,mailingAddressZip,schoolBusPickUp,schoolBusDropOff;
+    String homePhone="",mobilePhone="",personalEmail="",schoolEmail="",twitter="",facebook="",instagram="",youtube="",linkedin="",homeAddressLineOne="",homeAddressLineTwo="",homeAddressCity,homeAddressState,homeAddressCountry,homeAddressZip,busNo,mailingAddressLineOne,mailingAddressLineTwo,mailingAddressCity,mailingAddressState,mailingAddressCountry,mailingAddressZip,schoolBusPickUp,schoolBusDropOff;
     Pref pref;
 
 
@@ -54,21 +54,24 @@ public class MyInfoAddressFragment extends Fragment implements View.OnClickListe
         schoolEmail=getArguments().getString("schoolEmail");
         binding.tvSchoolEmail.setText(schoolEmail);
 
+
+
         twitter=getArguments().getString("twitter");
-        if (twitter.equalsIgnoreCase("")){
+        Log.d("twitter",twitter);
+        if (twitter.trim().isEmpty() || twitter == null){
             binding.imgTwitter.setVisibility(View.GONE);
         }else {
             binding.imgTwitter.setVisibility(View.VISIBLE);
         }
         facebook=getArguments().getString("facebook");
-        if (facebook.equalsIgnoreCase("")){
+        if (facebook.trim().isEmpty() || facebook == null){
             binding.imgFacebook.setVisibility(View.GONE);
         }else {
             binding.imgFacebook.setVisibility(View.VISIBLE);
         }
 
         instagram=getArguments().getString("instagram");
-        if (instagram.equalsIgnoreCase("")){
+        if (instagram.trim().isEmpty() || instagram == null){
             binding.imgInstagram.setVisibility(View.GONE);
         }else {
             binding.imgInstagram.setVisibility(View.VISIBLE);
@@ -76,7 +79,7 @@ public class MyInfoAddressFragment extends Fragment implements View.OnClickListe
 
 
         youtube=getArguments().getString("youtube");
-        if (youtube.equalsIgnoreCase("")){
+        if (youtube.trim().isEmpty() || youtube == null){
             binding.imgYoutube.setVisibility(View.GONE);
         }else {
             binding.imgYoutube.setVisibility(View.VISIBLE);
@@ -84,7 +87,7 @@ public class MyInfoAddressFragment extends Fragment implements View.OnClickListe
 
 
         linkedin=getArguments().getString("linkedin");
-        if (linkedin.equalsIgnoreCase("")){
+        if (linkedin.trim().isEmpty() || linkedin == null){
             binding.imgLinkdin.setVisibility(View.GONE);
         }else {
             binding.imgLinkdin.setVisibility(View.VISIBLE);
@@ -154,7 +157,7 @@ public class MyInfoAddressFragment extends Fragment implements View.OnClickListe
         binding.imgInstagram.setOnClickListener(this);
         binding.imgLinkdin.setOnClickListener(this);
 
-        getcountry();
+     //   getcountry();
 
     }
 

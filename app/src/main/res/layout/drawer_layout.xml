@@ -195,7 +195,7 @@
                         android:id="@+id/tvMentalHealth"
                         android:text="Mental Health Info"
                         android:textColor="@color/black"
-                        ></com.pacific.others.customtext.Custom_Text_View_SemiBold>
+                        android:visibility="gone"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginTop="20dp"

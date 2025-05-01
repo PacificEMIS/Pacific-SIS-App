@@ -33,33 +33,33 @@ public class SchoolEnreollmentFragment extends Fragment {
     View view;
     Pref pref;
 
-    String sectionId,estimatedGradDate,eligibility504,economicDisadvantage,freeLunchEligibility,specialEducationIndicator,lepIndicator,gradeLevelTitle,enrollmentDate,enrollmentCode,rollingOption,schoolName;
-    ArrayList<EnrpllmentHistoryModel>itemList=new ArrayList<>();
+    String sectionId, estimatedGradDate, eligibility504, economicDisadvantage, freeLunchEligibility, specialEducationIndicator, lepIndicator, gradeLevelTitle, enrollmentDate="", enrollmentCode, rollingOption, schoolName;
+    ArrayList<EnrpllmentHistoryModel> itemList = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding= DataBindingUtil.inflate(inflater,R.layout.fragment_school_enreollment,container,false);
-        view=binding.getRoot();
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_school_enreollment, container, false);
+        view = binding.getRoot();
         initView();
         return view;
     }
 
-    private void initView(){
-        pref=new Pref(getContext());
-        sectionId=getArguments().getString("sectionId");
+    private void initView() {
+        pref = new Pref(getContext());
+        sectionId = getArguments().getString("sectionId");
         binding.tvSection.setText(sectionId);
         binding.rvEnrollmentHistory.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
-        estimatedGradDate=getArguments().getString("estimatedGradDate");
-        binding.tvGraduationDate.setText(Util.changeAnyDateFormat(estimatedGradDate.replaceAll("T00:00:00",""),"yyyy-MM-dd","dd MMM, yyyy"));
+        estimatedGradDate = getArguments().getString("estimatedGradDate");
+        binding.tvGraduationDate.setText(Util.changeAnyDateFormat(estimatedGradDate.replaceAll("T00:00:00", ""), "yyyy-MM-dd", "dd MMM, yyyy"));
 
-        eligibility504=getArguments().getString("eligibility504");
-        if (eligibility504.equalsIgnoreCase("Yes")){
+        eligibility504 = getArguments().getString("eligibility504");
+        if (eligibility504.equalsIgnoreCase("Yes")) {
             binding.imgEligibility.setImageResource(R.drawable.check_black_48dp);
             binding.imgEligibility.setImageTintList(ContextCompat.getColorStateList(getContext(), R.color.black));
             binding.tvEligibility.setTextColor(ContextCompat.getColorStateList(getContext(), R.color.black));
-        }else {
+        } else {
             binding.imgEligibility.setImageResource(R.drawable.close_black_48dp);
             binding.imgEligibility.setImageTintList(ContextCompat.getColorStateList(getContext(), R.color.grey));
             binding.tvEligibility.setTextColor(ContextCompat.getColorStateList(getContext(), R.color.grey));
@@ -67,83 +67,84 @@ public class SchoolEnreollmentFragment extends Fragment {
         }
 
 
-        economicDisadvantage=getArguments().getString("economicDisadvantage");
-        if (economicDisadvantage.equalsIgnoreCase("Yes")){
+        economicDisadvantage = getArguments().getString("economicDisadvantage");
+        if (economicDisadvantage.equalsIgnoreCase("Yes")) {
             binding.imgEconomicDisavdantage.setImageResource(R.drawable.check_black_48dp);
             binding.imgEconomicDisavdantage.setImageTintList(ContextCompat.getColorStateList(getContext(), R.color.black));
             binding.tvEconomicDisavdantage.setTextColor(ContextCompat.getColorStateList(getContext(), R.color.black));
-        }else {
+        } else {
             binding.imgEconomicDisavdantage.setImageResource(R.drawable.close_black_48dp);
             binding.imgEconomicDisavdantage.setImageTintList(ContextCompat.getColorStateList(getContext(), R.color.grey));
             binding.tvEconomicDisavdantage.setTextColor(ContextCompat.getColorStateList(getContext(), R.color.grey));
         }
 
-        freeLunchEligibility=getArguments().getString("freeLunchEligibility");
-        if (freeLunchEligibility.equalsIgnoreCase("Yes")){
+        freeLunchEligibility = getArguments().getString("freeLunchEligibility");
+        if (freeLunchEligibility.equalsIgnoreCase("Yes")) {
             binding.imgFreeLunch.setImageResource(R.drawable.check_black_48dp);
             binding.imgFreeLunch.setImageTintList(ContextCompat.getColorStateList(getContext(), R.color.black));
             binding.tvFreeLunch.setTextColor(ContextCompat.getColorStateList(getContext(), R.color.black));
-        }else {
+        } else {
             binding.imgFreeLunch.setImageResource(R.drawable.close_black_48dp);
             binding.imgFreeLunch.setImageTintList(ContextCompat.getColorStateList(getContext(), R.color.grey));
             binding.tvFreeLunch.setTextColor(ContextCompat.getColorStateList(getContext(), R.color.grey));
         }
 
-        specialEducationIndicator=getArguments().getString("specialEducationIndicator");
-        if (specialEducationIndicator.equalsIgnoreCase("Yes")){
+        specialEducationIndicator = getArguments().getString("specialEducationIndicator");
+        if (specialEducationIndicator.equalsIgnoreCase("Yes")) {
             binding.imgEducationIndicator.setImageResource(R.drawable.check_black_48dp);
             binding.imgEducationIndicator.setImageTintList(ContextCompat.getColorStateList(getContext(), R.color.black));
             binding.tvEducationIndicator.setTextColor(ContextCompat.getColorStateList(getContext(), R.color.black));
-        }else {
+        } else {
             binding.imgEducationIndicator.setImageResource(R.drawable.close_black_48dp);
             binding.imgEducationIndicator.setImageTintList(ContextCompat.getColorStateList(getContext(), R.color.grey));
             binding.tvEducationIndicator.setTextColor(ContextCompat.getColorStateList(getContext(), R.color.grey));
         }
 
-        lepIndicator=getArguments().getString("lepIndicator");
-        if (lepIndicator.equalsIgnoreCase("Yes")){
+        lepIndicator = getArguments().getString("lepIndicator");
+        if (lepIndicator.equalsIgnoreCase("Yes")) {
             binding.imgLEPIndicator.setImageResource(R.drawable.check_black_48dp);
             binding.imgLEPIndicator.setImageTintList(ContextCompat.getColorStateList(getContext(), R.color.black));
             binding.tvLEPIndicator.setTextColor(ContextCompat.getColorStateList(getContext(), R.color.black));
-        }else {
+        } else {
             binding.imgLEPIndicator.setImageResource(R.drawable.close_black_48dp);
             binding.imgLEPIndicator.setImageTintList(ContextCompat.getColorStateList(getContext(), R.color.grey));
             binding.tvLEPIndicator.setTextColor(ContextCompat.getColorStateList(getContext(), R.color.grey));
         }
 
-        gradeLevelTitle=getArguments().getString("gradeLevelTitle");
+        gradeLevelTitle = getArguments().getString("gradeLevelTitle");
         binding.tvGradeLevel.setText(gradeLevelTitle);
 
-        enrollmentDate=getArguments().getString("enrollmentDate");
-        binding.tvDate.setText(Util.changeAnyDateFormat(enrollmentDate.replaceAll("T00:00:00",""),"yyyy-MM-dd","dd MMM, yyyy"));
-
-        enrollmentCode=getArguments().getString("enrollmentCode");
+        enrollmentDate = getArguments().getString("enrollmentDate");
+        if (!enrollmentDate.equals("") || !enrollmentDate.equals("null")) {
+            binding.tvDate.setText(Util.changeAnyDateFormat(enrollmentDate.replaceAll("T00:00:00", ""), "yyyy-MM-dd", "dd MMM, yyyy"));
+        }
+        enrollmentCode = getArguments().getString("enrollmentCode");
         binding.tvEnrollmentCode.setText(enrollmentCode);
 
-        rollingOption=getArguments().getString("rollingOption");
+        rollingOption = getArguments().getString("rollingOption");
         binding.tvRolling.setText(rollingOption);
 
 
-        schoolName=getArguments().getString("schoolName");
+        schoolName = getArguments().getString("schoolName");
         binding.tvEnrollMentScholl.setText(schoolName);
-        JSONObject jsonObject=new JSONObject();
-        JSONObject blankobj=new JSONObject();
-        JSONArray studentEnrollmentListForView=new JSONArray();
+        JSONObject jsonObject = new JSONObject();
+        JSONObject blankobj = new JSONObject();
+        JSONArray studentEnrollmentListForView = new JSONArray();
         studentEnrollmentListForView.put(blankobj);
-        JSONArray studentEnrollments=new JSONArray();
+        JSONArray studentEnrollments = new JSONArray();
         studentEnrollments.put(blankobj);
         try {
-            jsonObject.put("studentEnrollments",studentEnrollments);
-            jsonObject.put("studentEnrollmentListForView",studentEnrollmentListForView);
-            jsonObject.put("studentGuid","33116a2a-6613-4c39-ac36-561ad0a929a5");
-            jsonObject.put("studentId",pref.getUserID());
-            jsonObject.put("tenantId",pref.getTenatID());
-            jsonObject.put("schoolId",pref.getSchoolID());
-            jsonObject.put("academicYear",String.valueOf(pref.getAcademicYear()));
-            jsonObject.put("_tenantName",pref.getTenatName());
-            jsonObject.put("_userName",pref.getName());
-            jsonObject.put("_token",pref.getToken());
-            jsonObject.put("_academicYear",pref.getAcademicYear());
+            jsonObject.put("studentEnrollments", studentEnrollments);
+            jsonObject.put("studentEnrollmentListForView", studentEnrollmentListForView);
+            jsonObject.put("studentGuid", "33116a2a-6613-4c39-ac36-561ad0a929a5");
+            jsonObject.put("studentId", pref.getUserID());
+            jsonObject.put("tenantId", pref.getTenatID());
+            jsonObject.put("schoolId", pref.getSchoolID());
+            jsonObject.put("academicYear", String.valueOf(pref.getAcademicYear()));
+            jsonObject.put("_tenantName", pref.getTenatName());
+            jsonObject.put("_userName", pref.getName());
+            jsonObject.put("_token", pref.getToken());
+            jsonObject.put("_academicYear", pref.getAcademicYear());
             getEnrollmentHistory(jsonObject);
         } catch (JSONException e) {
             e.printStackTrace();
@@ -167,25 +168,25 @@ public class SchoolEnreollmentFragment extends Fragment {
                         String _message = response.optString("_message");
                         if (_failure) {
 
-                          //  Toast.makeText(getContext(), _message, Toast.LENGTH_LONG).show();
+                            //  Toast.makeText(getContext(), _message, Toast.LENGTH_LONG).show();
                             binding.llEnrollmentHistory.setVisibility(View.GONE);
 
                         } else {
 
-                            JSONArray studentEnrollmentListForView=response.optJSONArray("studentEnrollmentListForView");
-                            if (studentEnrollmentListForView.length()>0){
-                                for (int i=0;i<studentEnrollmentListForView.length();i++){
-                                    JSONObject job=studentEnrollmentListForView.optJSONObject(0);
-                                    String schoolName=job.optString("schoolName");
-                                    String gradeLevelTitle=Util.getFreshValue(job.optString("gradeLevelTitle"),"");
-                                    String enrollmentDate=Util.getFreshValue(job.optString("enrollmentDate").replaceAll("T00:00:00",""),"");
-                                    String enrollmentCode=Util.getFreshValue(job.optString("enrollmentCode"),"");
-                                    String exitDate=Util.getFreshValue(job.optString("exitDate").replaceAll("T00:00:00",""),"");
-                                    String exitCode=Util.getFreshValue(job.optString("exitCode"),"");
-                                    String enrollmentType=Util.getFreshValue(job.optString("enrollmentType"),"");
-                                    String startYear=Util.getFreshValue(job.optString("startYear"),"");
-                                    String endYear=Util.getFreshValue(job.optString("endYear"),"");
-                                    EnrpllmentHistoryModel historyModel=new EnrpllmentHistoryModel();
+                            JSONArray studentEnrollmentListForView = response.optJSONArray("studentEnrollmentListForView");
+                            if (studentEnrollmentListForView.length() > 0) {
+                                for (int i = 0; i < studentEnrollmentListForView.length(); i++) {
+                                    JSONObject job = studentEnrollmentListForView.optJSONObject(0);
+                                    String schoolName = job.optString("schoolName");
+                                    String gradeLevelTitle = Util.getFreshValue(job.optString("gradeLevelTitle"), "");
+                                    String enrollmentDate = Util.getFreshValue(job.optString("enrollmentDate").replaceAll("T00:00:00", ""), "");
+                                    String enrollmentCode = Util.getFreshValue(job.optString("enrollmentCode"), "");
+                                    String exitDate = Util.getFreshValue(job.optString("exitDate").replaceAll("T00:00:00", ""), "");
+                                    String exitCode = Util.getFreshValue(job.optString("exitCode"), "");
+                                    String enrollmentType = Util.getFreshValue(job.optString("enrollmentType"), "");
+                                    String startYear = Util.getFreshValue(job.optString("startYear"), "");
+                                    String endYear = Util.getFreshValue(job.optString("endYear"), "");
+                                    EnrpllmentHistoryModel historyModel = new EnrpllmentHistoryModel();
                                     historyModel.setSchoolName(schoolName);
                                     historyModel.setGradeLevelTitle(gradeLevelTitle);
                                     historyModel.setEnrollmentDate(enrollmentDate);
@@ -199,7 +200,7 @@ public class SchoolEnreollmentFragment extends Fragment {
 
                                 }
                                 binding.llEnrollmentHistory.setVisibility(View.VISIBLE);
-                                EnrolmmentHistoryAdapter historyAdapter=new EnrolmmentHistoryAdapter(itemList,getContext());
+                                EnrolmmentHistoryAdapter historyAdapter = new EnrolmmentHistoryAdapter(itemList, getContext());
                                 binding.rvEnrollmentHistory.setAdapter(historyAdapter);
                             }
 
@@ -207,11 +208,8 @@ public class SchoolEnreollmentFragment extends Fragment {
                         }
 
 
-
                     } catch (Exception e) {
                         e.printStackTrace();
-
-
 
 
                     }

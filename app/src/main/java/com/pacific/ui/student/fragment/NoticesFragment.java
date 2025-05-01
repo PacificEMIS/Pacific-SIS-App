@@ -231,7 +231,7 @@ public class NoticesFragment extends Fragment implements View.OnClickListener {
                                     NoticeModel noticeModel=new NoticeModel();
                                     noticeModel.setTitle(title);
                                     noticeModel.setBody(body);
-                                    noticeModel.setImage(image);
+                                    noticeModel.setImage("");
                                     pastList.add(noticeModel);
 
 

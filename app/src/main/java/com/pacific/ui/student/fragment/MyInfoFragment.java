@@ -40,8 +40,8 @@ public class MyInfoFragment extends Fragment implements View.OnClickListener {
     Pref pref;
     String studentId, alternateId, districtId, stateId, admissionNumber, rollNumber, firstGivenName, middleName, lastFamilyName, preferredName, previousName, socialSecurityNumber, otherGovtIssuedNumber, studentPhoto, dob, studentPortalId, gender, race, ethnicity;
     String maritalStatus, countryOfBirth, nationality, firstLanguageId, secondLanguageId, thirdLanguageId, loginEmail, country;
-    String portalAccess, sectionId, estimatedGradDate, eligibility504, economicDisadvantage, freeLunchEligibility, specialEducationIndicator, lepIndicator, gradeLevelTitle, enrollmentDate, enrollmentCode, rollingOption, schoolName;
-    String homePhone, mobilePhone, personalEmail, schoolEmail, twitter, facebook, instagram, youtube, linkedin, homeAddressLineOne, homeAddressLineTwo, homeAddressCity, homeAddressState, homeAddressCountry, homeAddressZip, busNo, mailingAddressLineOne, mailingAddressLineTwo, mailingAddressCity, mailingAddressState, mailingAddressCountry, mailingAddressZip, schoolBusPickUp, schoolBusDropOff;
+    String portalAccess, sectionId, estimatedGradDate, eligibility504, economicDisadvantage, freeLunchEligibility, specialEducationIndicator, lepIndicator, gradeLevelTitle, enrollmentDate="", enrollmentCode, rollingOption, schoolName;
+    String homePhone, mobilePhone, personalEmail, schoolEmail, twitter="", facebook="", instagram="", youtube="", linkedin="", homeAddressLineOne, homeAddressLineTwo, homeAddressCity, homeAddressState, homeAddressCountry, homeAddressZip, busNo, mailingAddressLineOne, mailingAddressLineTwo, mailingAddressCity, mailingAddressState, mailingAddressCountry, mailingAddressZip, schoolBusPickUp, schoolBusDropOff;
     ArrayList<String> countryid = new ArrayList<>();
     ArrayList<String> languageid = new ArrayList<>();
     String currentDate, dateofbirth;

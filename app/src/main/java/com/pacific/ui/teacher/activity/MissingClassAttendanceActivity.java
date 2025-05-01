@@ -205,26 +205,29 @@ public class MissingClassAttendanceActivity extends AppCompatActivity implements
                         }
 
 
-                        JSONArray filterArray = new JSONArray();
-                        JSONArray sectionArray = new JSONArray();
-                        sectionArray.put(courseSectionID);
-                        JSONObject obj = new JSONObject();
-                        obj.put("pageNumber", 0);
-                        obj.put("_pageSize", 10);
-                        obj.put("sortingModel", null);
-                        obj.put("filterParams", filterArray);
-                        obj.put("courseSectionIds", sectionArray);
-                        obj.put("pageSize", 0);
-                        obj.put("profilePhoto", true);
-                        obj.put("_tenantName", pref.getTenatName());
-                        obj.put("_userName", pref.getName());
-                        obj.put("_token", pref.getToken());
-                        obj.put("tenantId", pref.getTenatID());
-                        obj.put("schoolId", pref.getSchoolID());
-                        obj.put("academicYear", pref.getAcademicYear());
-                        obj.put("_academicYear", pref.getAcademicYear());
-                        obj.put("attendanceDate", attendate);
-                        getStudentList(obj);
+                        JSONArray paramsArray=new JSONArray();
+                        JSONArray courseSectionArray=new JSONArray();
+                        courseSectionArray.put(courseSectionID);
+                        JSONObject object=new JSONObject();
+                        try {
+                            object.put("pageNumber",0);
+                            object.put("_pageSize",0);
+                            object.put("sortingModel",null);
+                            object.put("filterParams",paramsArray);
+                            object.put("courseSectionIds",courseSectionArray);
+                            object.put("includeInactive",false);
+                            object.put("profilePhoto",true);
+                            object.put("_tenantName", pref.getTenatName());
+                            object.put("_userName", pref.getName());
+                            object.put("_token", pref.getToken());
+                            object.put("_academicYear",pref.getAcademicYear());
+                            object.put("tenantId",pref.getTenatID());
+                            object.put("schoolId", pref.getSchoolID());
+                            object.put("academicYear",pref.getAcademicYear());
+                            getStudentList(object);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
 
 
                     } catch (Exception e) {
@@ -253,7 +256,8 @@ public class MissingClassAttendanceActivity extends AppCompatActivity implements
                         boolean _failure = response.optBoolean("_failure");
                         String _message = response.optString("_message");
                         if (_failure) {
-
+                            tvSubmit.setVisibility(View.GONE);
+                            Toast.makeText(MissingClassAttendanceActivity.this,"No Record Found",Toast.LENGTH_LONG).show();
 
                         } else {
                             JSONArray scheduleStudentForView = response.optJSONArray("scheduleStudentForView");

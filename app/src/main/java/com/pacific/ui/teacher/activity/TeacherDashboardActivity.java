@@ -588,6 +588,9 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
                                     mmarkingperiodlist.add(spModel);
                                     if (checkDate(startDate.replace("T00:00:00",""),currentDate,endDate.replace("T00:00:00",""))){
                                         periodTitle=obj.optString("periodTitle");
+                                    }else {
+                                        JSONObject objj=period.optJSONObject(period.length()-1);
+                                        periodTitle=objj.optString("periodTitle");
                                     }
                                 }
 
@@ -838,6 +841,9 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
                                         strtDate=academicYearsOBJ.optString("startDate");
 
 
+                                    }else {
+                                        JSONObject academicYearssOBJ=academicYears.optJSONObject(academicYears.length()-1);
+                                        strtDate=academicYearssOBJ.optString("startDate");
                                     }
 
                                     SpinnerMixedModel spModel=new SpinnerMixedModel(year,academyYear);
@@ -845,6 +851,7 @@ public class TeacherDashboardActivity extends AppCompatActivity implements View.
                                 }
 
                                 int pos=strtDateList.indexOf(strtDate);
+
 
                                 JSONObject academicYearsOBJ=academicYears.optJSONObject(pos);
                                 int academyYear= academicYearsOBJ.optInt("academyYear");

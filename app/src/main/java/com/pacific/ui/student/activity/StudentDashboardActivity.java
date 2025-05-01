@@ -60,6 +60,7 @@ import com.pacific.ui.student.fragment.SchoolFragment;
 import com.pacific.ui.student.fragment.StudentHomeFragment;
 import com.pacific.ui.student.fragment.TeacherCalenderFragment;
 import com.pacific.ui.student.fragment.TranscriptGradeFragment;
+import com.pacific.ui.teacher.activity.TeacherDashboardActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -161,7 +162,7 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
         }
         byte[] decodedString = Base64.decode(pref.getLogo(), Base64.DEFAULT);
         Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-        //imgTenantLogo.setImageBitmap(decodedByte);
+        imgTenantLogo.setImageBitmap(decodedByte);
 
         tvSubmit=(TextView)findViewById(R.id.tvSubmit);
         imgTune=(ImageView)findViewById(R.id.imgTune);
@@ -909,7 +910,7 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
                                 for (int i=0;i<period.length();i++){
                                     JSONObject obj=period.optJSONObject(i);
                                     int markingPeriodId=obj.optInt("markingPeriodId");
-                                     String periodTitlee=obj.optString("periodTitle");
+                                    String periodTitlee=obj.optString("periodTitle");
                                     String startDate=obj.optString("startDate");
                                     String endDate=obj.optString("endDate");
                                     markingperiodList.add(periodTitlee);
@@ -921,6 +922,9 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
                                     mmarkingperiodlist.add(spModel);
                                     if (checkDate(startDate.replace("T00:00:00",""),currentDate,endDate.replace("T00:00:00",""))){
                                         periodTitle=obj.optString("periodTitle");
+                                    }else {
+                                        JSONObject objj=period.optJSONObject(period.length()-1);
+                                        periodTitle=objj.optString("periodTitle");
                                     }
                                 }
 
@@ -946,14 +950,13 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
 
 
 
-                                    spMarkingPeriod.setAdapter(ad);
-                                    spMarkingPeriod.setSelection(pos);
+                                spMarkingPeriod.setAdapter(ad);
+                                spMarkingPeriod.setSelection(pos);
 
 
-                                    pref.savePeriodID(periodIDlIst.get(pos));
-                                    pref.savePeriod(markingperiodList.get(pos));
-                                    pref.savePeriodStartYear(startDateList.get(pos));
-                                    pref.savePeriodEndYear(endDateList.get(pos));
+                                pref.savePeriodID(periodIDlIst.get(pos));
+                                pref.savePeriodStartYear(startDateList.get(pos));
+                                pref.savePeriodEndYear(endDateList.get(pos));
 
                                 viewHomeFragment();
 
@@ -1125,27 +1128,7 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
                         boolean _failure = response.optBoolean("_failure");
                         String _message=response.optString("_message");
                         if (_failure){
-                            if (_message.contains("Valid")){
-                                JSONObject obj=new JSONObject();
-                                JSONObject accessobj=new JSONObject();
-                                try {
-                                    obj.put("tenantId",pref.getTenatID());
-                                    obj.put("userId",0);
-                                    obj.put("userAccessLog",accessobj);
-                                    obj.put("_tenantName", pref.getTenatName());
-                                    obj.put("_userName", pref.getName());
-                                    obj.put("_token", token);
-                                    obj.put("schoolId", pref.getSchoolID());
-                                    obj.put("email", pref.getEmail());
-                                    getRefreshToken(obj);
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
-                            }else {
-                               Intent intent=new Intent(StudentDashboardActivity.this,LoginActivity.class);
-                               startActivity(intent);
-                               finish();
-                            }
+
 
 
                         }else {
@@ -1163,6 +1146,9 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
                                         strtDate=academicYearsOBJ.optString("startDate");
 
 
+                                    }else {
+                                        JSONObject academicYearssOBJ=academicYears.optJSONObject(academicYears.length()-1);
+                                        strtDate=academicYearssOBJ.optString("startDate");
                                     }
 
                                     SpinnerMixedModel spModel=new SpinnerMixedModel(year,academyYear);
@@ -1170,6 +1156,7 @@ public class StudentDashboardActivity extends AppCompatActivity implements View.
                                 }
 
                                 int pos=strtDateList.indexOf(strtDate);
+
 
                                 JSONObject academicYearsOBJ=academicYears.optJSONObject(pos);
                                 int academyYear= academicYearsOBJ.optInt("academyYear");
