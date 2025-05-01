@@ -32,7 +32,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                            <com.pacific.others.customtext.Custom_Text_View_Bold
                                 android:text="Transcript"
                                 android:layout_marginLeft="20dp"
                                 android:layout_gravity="center"
@@ -40,7 +40,7 @@
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/big_text"
-                                android:layout_weight="0.5"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                                android:layout_weight="0.5"></com.pacific.others.customtext.Custom_Text_View_Bold>
 
 
 
@@ -74,7 +74,7 @@
                                 android:id="@+id/rvListItem"
                                 android:background="@drawable/llwhitedesign"
                                 android:backgroundTint="@color/white"></androidx.recyclerview.widget.RecyclerView>
-                            <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                            <com.pacific.others.customtext.Custom_Text_View_SemiBold
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:textSize="@dimen/large_text"
@@ -84,7 +84,7 @@
                                 android:background="@drawable/llwhitedesign"
                                 android:backgroundTint="@color/text_color"
                                 android:text="Show Transcript"
-                                android:id="@+id/tvShow"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                                android:id="@+id/tvShow"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
 
 
 

@@ -32,7 +32,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                            <com.pacific.others.customtext.Custom_Text_View_Bold
                                 android:text="Gradebook Grades"
                                 android:layout_marginLeft="20dp"
                                 android:layout_gravity="center"
@@ -40,7 +40,7 @@
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/big_text"
-                                android:layout_weight="0.5"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                                android:layout_weight="0.5"></com.pacific.others.customtext.Custom_Text_View_Bold>
 
 
 

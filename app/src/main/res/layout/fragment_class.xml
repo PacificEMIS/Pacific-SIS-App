@@ -31,14 +31,14 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                        <com.pacific.others.customtext.Custom_Text_View_Bold
                             android:id="@+id/tvCourseName"
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Classes"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/big_text"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                            android:textSize="@dimen/big_text"></com.pacific.others.customtext.Custom_Text_View_Bold>
                     </LinearLayout>
 
 
@@ -64,14 +64,14 @@
                         android:layout_height="50dp"
                         android:background="@drawable/llgreystrokedesign"
                         android:backgroundTint="@color/white">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_marginLeft="10dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/missing_attendance"
                             android:text="No Classes Found"
-                            android:layout_gravity="center"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                            android:layout_gravity="center"></com.pacific.others.customtext.Custom_Text_View>
                     </LinearLayout>
 
 

@@ -37,14 +37,14 @@
                                 android:layout_height="30dp"
                                 android:src="@drawable/arrow_back_white_48dp"></ImageView>
 
-                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                            <com.pacific.others.customtext.Custom_Text_View_Bold
                                 android:text="Course Catalog"
                                 android:layout_marginLeft="20dp"
                                 android:layout_gravity="center"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
-                                android:textSize="@dimen/big_text"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                                android:textSize="@dimen/big_text"></com.pacific.others.customtext.Custom_Text_View_Bold>
                         </LinearLayout>
 
 
@@ -74,38 +74,38 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:orientation="vertical">
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    <com.pacific.others.customtext.Custom_Text_View
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/small_text"
                                         android:textColor="@color/bar"
-                                        android:text="Course"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View
+                                        android:text="Course"></com.pacific.others.customtext.Custom_Text_View>
+                                    <com.pacific.others.customtext.Custom_Text_View
                                         android:layout_marginTop="4dp"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/big_text"
                                         android:textColor="@color/color1"
-                                        android:id="@+id/tvCourseTitle"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                        android:id="@+id/tvCourseTitle"></com.pacific.others.customtext.Custom_Text_View>
                                 </LinearLayout>
                                 <LinearLayout
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:orientation="vertical">
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    <com.pacific.others.customtext.Custom_Text_View
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/small_text"
                                         android:textColor="@color/bar"
-                                        android:text="Short Name"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View
+                                        android:text="Short Name"></com.pacific.others.customtext.Custom_Text_View>
+                                    <com.pacific.others.customtext.Custom_Text_View
                                         android:layout_marginTop="4dp"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/big_text"
                                         android:textColor="@color/black"
-                                        android:id="@+id/tvCourseShortName"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                        android:id="@+id/tvCourseShortName"></com.pacific.others.customtext.Custom_Text_View>
                                 </LinearLayout>
                             </LinearLayout>
                             <LinearLayout
@@ -117,38 +117,38 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:orientation="vertical">
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    <com.pacific.others.customtext.Custom_Text_View
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/small_text"
                                         android:textColor="@color/bar"
-                                        android:text="Credit hours"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View
+                                        android:text="Credit hours"></com.pacific.others.customtext.Custom_Text_View>
+                                    <com.pacific.others.customtext.Custom_Text_View
                                         android:layout_marginTop="4dp"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/big_text"
                                         android:textColor="@color/color1"
-                                        android:id="@+id/tvCredtHours"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                        android:id="@+id/tvCredtHours"></com.pacific.others.customtext.Custom_Text_View>
                                 </LinearLayout>
                                 <LinearLayout
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:orientation="vertical">
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    <com.pacific.others.customtext.Custom_Text_View
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/small_text"
                                         android:textColor="@color/bar"
-                                        android:text="Grade Level"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View
+                                        android:text="Grade Level"></com.pacific.others.customtext.Custom_Text_View>
+                                    <com.pacific.others.customtext.Custom_Text_View
                                         android:layout_marginTop="4dp"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/big_text"
                                         android:textColor="@color/black"
-                                        android:id="@+id/tvGradeLevel"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                        android:id="@+id/tvGradeLevel"></com.pacific.others.customtext.Custom_Text_View>
                                 </LinearLayout>
                             </LinearLayout>
                             <LinearLayout
@@ -160,19 +160,19 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:orientation="vertical">
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    <com.pacific.others.customtext.Custom_Text_View
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/small_text"
                                         android:textColor="@color/bar"
-                                        android:text="Subject"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View
+                                        android:text="Subject"></com.pacific.others.customtext.Custom_Text_View>
+                                    <com.pacific.others.customtext.Custom_Text_View
                                         android:layout_marginTop="4dp"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/big_text"
                                         android:textColor="@color/color1"
-                                        android:id="@+id/tvSubject"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                        android:id="@+id/tvSubject"></com.pacific.others.customtext.Custom_Text_View>
                                 </LinearLayout>
 
                             </LinearLayout>

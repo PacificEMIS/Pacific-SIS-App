@@ -19,13 +19,13 @@
             android:backgroundTint="@color/totalpercentage"
             android:gravity="center"
             android:padding="5dp">
-            <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+            <com.pacific.others.customtext.Custom_Text_View_SemiBold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/medium_text"
                 android:id="@+id/tvLetter"
                 android:textColor="@color/black"
-                android:textAlignment="center"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                android:textAlignment="center"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
         </LinearLayout>
         <LinearLayout
             android:layout_width="0dp"
@@ -33,20 +33,20 @@
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
             android:orientation="vertical">
-            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+            <com.pacific.others.customtext.Custom_Text_View_Bold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/large_text"
                 android:textColor="@color/black"
                 android:id="@+id/tvCourseName"
-                ></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
-            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                ></com.pacific.others.customtext.Custom_Text_View_Bold>
+            <com.pacific.others.customtext.Custom_Text_View_Bold
                 android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/small_text"
                 android:textColor="@color/bar"
-                android:id="@+id/tvPercentage"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                android:id="@+id/tvPercentage"></com.pacific.others.customtext.Custom_Text_View_Bold>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -60,14 +60,14 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/student_user"></de.hdodenhof.circleimageview.CircleImageView>
-        <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+        <com.pacific.others.customtext.Custom_Text_View_Bold
             android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/medium_text"
             android:textColor="@color/black"
             android:id="@+id/tvStaff"
-            android:layout_gravity="center"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+            android:layout_gravity="center"></com.pacific.others.customtext.Custom_Text_View_Bold>
     </LinearLayout>
 
 </LinearLayout>

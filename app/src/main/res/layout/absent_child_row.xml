@@ -7,26 +7,26 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:gravity="center">
-        <com.opensissasstudent.others.customtext.Custom_Text_View
+        <com.pacific.others.customtext.Custom_Text_View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="@dimen/medium_text"
             android:textColor="@color/text_color"
             android:id="@+id/tvPeriod"
-            android:gravity="center"></com.opensissasstudent.others.customtext.Custom_Text_View>
+            android:gravity="center"></com.pacific.others.customtext.Custom_Text_View>
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="@color/bar"></View>
-        <com.opensissasstudent.others.customtext.Custom_Text_View
+        <com.pacific.others.customtext.Custom_Text_View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="@dimen/medium_text"
             android:textColor="@color/text_color"
             android:id="@+id/tvStatus"
-            android:gravity="center"></com.opensissasstudent.others.customtext.Custom_Text_View>
+            android:gravity="center"></com.pacific.others.customtext.Custom_Text_View>
     </LinearLayout>
     <View
         android:layout_width="match_parent"

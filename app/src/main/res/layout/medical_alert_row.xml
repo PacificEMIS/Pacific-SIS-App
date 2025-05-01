@@ -8,20 +8,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <com.opensissasstudent.others.customtext.Custom_Text_View
+        <com.pacific.others.customtext.Custom_Text_View
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/bar"
             android:textSize="@dimen/small_text"
-            android:text="Critical Alert"></com.opensissasstudent.others.customtext.Custom_Text_View>
-        <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+            android:text="Critical Alert"></com.pacific.others.customtext.Custom_Text_View>
+        <com.pacific.others.customtext.Custom_Text_View_SemiBold
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="@dimen/medium_text"
             android:text="Critical Alert"
             android:layout_marginTop="10dp"
-            android:id="@+id/tvCriticalAlert"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+            android:id="@+id/tvCriticalAlert"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
 
     </LinearLayout>
     <LinearLayout
@@ -29,20 +29,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <com.opensissasstudent.others.customtext.Custom_Text_View
+        <com.pacific.others.customtext.Custom_Text_View
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/bar"
             android:textSize="@dimen/small_text"
-            android:text="Alert Description"></com.opensissasstudent.others.customtext.Custom_Text_View>
-        <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+            android:text="Alert Description"></com.pacific.others.customtext.Custom_Text_View>
+        <com.pacific.others.customtext.Custom_Text_View_SemiBold
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="@dimen/medium_text"
             android:text="Critical Alert"
             android:layout_marginTop="10dp"
-            android:id="@+id/tvAlertDesc"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+            android:id="@+id/tvAlertDesc"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
 
     </LinearLayout>
 

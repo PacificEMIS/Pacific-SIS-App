@@ -32,14 +32,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             >
-                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                            <com.pacific.others.customtext.Custom_Text_View_Bold
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/color1"
                                 android:textSize="@dimen/big_text"
                                 android:text="Student Home Address"
                                 android:layout_marginTop="20dp"
-                                android:layout_weight="1"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                                android:layout_weight="1"></com.pacific.others.customtext.Custom_Text_View_Bold>
                             <LinearLayout
                                 android:id="@+id/lnGooglMap"
                                 android:padding="10dp"
@@ -58,18 +58,18 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp">
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    <com.pacific.others.customtext.Custom_Text_View
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/small_text"
                                         android:textColor="@color/text_color"
-                                        android:text="Show on"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                                        android:text="Show on"></com.pacific.others.customtext.Custom_Text_View>
+                                    <com.pacific.others.customtext.Custom_Text_View_Bold
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/medium_text"
                                         android:textColor="@color/text_color"
-                                        android:text="Google Maps"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                                        android:text="Google Maps"></com.pacific.others.customtext.Custom_Text_View_Bold>
                                 </LinearLayout>
                             </LinearLayout>
                         </LinearLayout>
@@ -79,40 +79,40 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
-                            <com.opensissasstudent.others.customtext.Custom_Text_View
+                            <com.pacific.others.customtext.Custom_Text_View
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/medium_text"
                                 android:textColor="@color/bar"
-                                android:text="Street Address 1"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                            <com.opensissasstudent.others.customtext.Custom_Text_View
+                                android:text="Street Address 1"></com.pacific.others.customtext.Custom_Text_View>
+                            <com.pacific.others.customtext.Custom_Text_View
                                 android:layout_marginTop="2dp"
                                 android:id="@+id/tvStreetAddress1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/large_text"
                                 android:textColor="@color/black"
-                                ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                ></com.pacific.others.customtext.Custom_Text_View>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_marginTop="20dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
-                            <com.opensissasstudent.others.customtext.Custom_Text_View
+                            <com.pacific.others.customtext.Custom_Text_View
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/medium_text"
                                 android:textColor="@color/bar"
-                                android:text="Street Address 2"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                            <com.opensissasstudent.others.customtext.Custom_Text_View
+                                android:text="Street Address 2"></com.pacific.others.customtext.Custom_Text_View>
+                            <com.pacific.others.customtext.Custom_Text_View
                                 android:layout_marginTop="2dp"
                                 android:id="@+id/tvStreetAddress2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/large_text"
                                 android:textColor="@color/black"
-                                ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                ></com.pacific.others.customtext.Custom_Text_View>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_marginTop="20dp"
@@ -124,40 +124,40 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/medium_text"
                                     android:textColor="@color/bar"
-                                    android:text="Country"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    android:text="Country"></com.pacific.others.customtext.Custom_Text_View>
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_marginTop="2dp"
                                     android:id="@+id/tvCountry"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/large_text"
                                     android:textColor="@color/black"
-                                    ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                    ></com.pacific.others.customtext.Custom_Text_View>
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/medium_text"
                                     android:textColor="@color/bar"
-                                    android:text="State/Locality"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    android:text="State/Locality"></com.pacific.others.customtext.Custom_Text_View>
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_marginTop="2dp"
                                     android:id="@+id/tvState"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/large_text"
                                     android:textColor="@color/black"
-                                    ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                    ></com.pacific.others.customtext.Custom_Text_View>
                             </LinearLayout>
 
 
@@ -172,40 +172,40 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/medium_text"
                                     android:textColor="@color/bar"
-                                    android:text="City"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    android:text="City"></com.pacific.others.customtext.Custom_Text_View>
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_marginTop="2dp"
                                     android:id="@+id/tvCity"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/large_text"
                                     android:textColor="@color/black"
-                                    ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                    ></com.pacific.others.customtext.Custom_Text_View>
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/medium_text"
                                     android:textColor="@color/bar"
-                                    android:text="Zip/Postal Code"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    android:text="Zip/Postal Code"></com.pacific.others.customtext.Custom_Text_View>
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_marginTop="2dp"
                                     android:id="@+id/tvZip"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/large_text"
                                     android:textColor="@color/black"
-                                    ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                    ></com.pacific.others.customtext.Custom_Text_View>
                             </LinearLayout>
 
 
@@ -220,40 +220,40 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/medium_text"
                                     android:textColor="@color/bar"
-                                    android:text="Bus No"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    android:text="Bus No"></com.pacific.others.customtext.Custom_Text_View>
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_marginTop="2dp"
                                     android:id="@+id/tvBus"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/large_text"
                                     android:textColor="@color/black"
-                                    ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                    ></com.pacific.others.customtext.Custom_Text_View>
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/medium_text"
                                     android:textColor="@color/bar"
-                                    android:text="Bus Pickup"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    android:text="Bus Pickup"></com.pacific.others.customtext.Custom_Text_View>
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_marginTop="2dp"
                                     android:id="@+id/tvBusPickup"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/large_text"
                                     android:textColor="@color/black"
-                                    ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                    ></com.pacific.others.customtext.Custom_Text_View>
                             </LinearLayout>
 
 
@@ -268,20 +268,20 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/medium_text"
                                     android:textColor="@color/bar"
-                                    android:text="Bus Dropoff"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    android:text="Bus Dropoff"></com.pacific.others.customtext.Custom_Text_View>
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_marginTop="2dp"
                                     android:id="@+id/tvBusDropOff"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/large_text"
                                     android:textColor="@color/black"
-                                    ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                    ></com.pacific.others.customtext.Custom_Text_View>
                             </LinearLayout>
 
 
@@ -308,14 +308,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             >
-                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                            <com.pacific.others.customtext.Custom_Text_View_Bold
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/color1"
                                 android:textSize="@dimen/big_text"
                                 android:text="Student Mailing Address"
                                 android:layout_marginTop="20dp"
-                                android:layout_weight="1"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                                android:layout_weight="1"></com.pacific.others.customtext.Custom_Text_View_Bold>
                             <LinearLayout
                                 android:id="@+id/lnAppleMap"
                                 android:padding="10dp"
@@ -334,18 +334,18 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp">
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    <com.pacific.others.customtext.Custom_Text_View
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/small_text"
                                         android:textColor="@color/text_color"
-                                        android:text="Show on"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                                        android:text="Show on"></com.pacific.others.customtext.Custom_Text_View>
+                                    <com.pacific.others.customtext.Custom_Text_View_Bold
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/medium_text"
                                         android:textColor="@color/text_color"
-                                        android:text="Apple Maps"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                                        android:text="Apple Maps"></com.pacific.others.customtext.Custom_Text_View_Bold>
                                 </LinearLayout>
                             </LinearLayout>
                         </LinearLayout>
@@ -355,40 +355,40 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
-                            <com.opensissasstudent.others.customtext.Custom_Text_View
+                            <com.pacific.others.customtext.Custom_Text_View
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/medium_text"
                                 android:textColor="@color/bar"
-                                android:text="Street Address 1"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                            <com.opensissasstudent.others.customtext.Custom_Text_View
+                                android:text="Street Address 1"></com.pacific.others.customtext.Custom_Text_View>
+                            <com.pacific.others.customtext.Custom_Text_View
                                 android:layout_marginTop="2dp"
                                 android:id="@+id/tvMailingStreetAddress1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/large_text"
                                 android:textColor="@color/black"
-                                ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                ></com.pacific.others.customtext.Custom_Text_View>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_marginTop="20dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
-                            <com.opensissasstudent.others.customtext.Custom_Text_View
+                            <com.pacific.others.customtext.Custom_Text_View
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/medium_text"
                                 android:textColor="@color/bar"
-                                android:text="Street Address 2"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                            <com.opensissasstudent.others.customtext.Custom_Text_View
+                                android:text="Street Address 2"></com.pacific.others.customtext.Custom_Text_View>
+                            <com.pacific.others.customtext.Custom_Text_View
                                 android:layout_marginTop="2dp"
                                 android:id="@+id/tvMailingStreetAddress2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/large_text"
                                 android:textColor="@color/black"
-                                ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                ></com.pacific.others.customtext.Custom_Text_View>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_marginTop="20dp"
@@ -400,40 +400,40 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/medium_text"
                                     android:textColor="@color/bar"
-                                    android:text="Country"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    android:text="Country"></com.pacific.others.customtext.Custom_Text_View>
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_marginTop="2dp"
                                     android:id="@+id/tvMailingCountry"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/large_text"
                                     android:textColor="@color/black"
-                                    ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                    ></com.pacific.others.customtext.Custom_Text_View>
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/medium_text"
                                     android:textColor="@color/bar"
-                                    android:text="State/Locality"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    android:text="State/Locality"></com.pacific.others.customtext.Custom_Text_View>
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_marginTop="2dp"
                                     android:id="@+id/tvMailingState"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/large_text"
                                     android:textColor="@color/black"
-                                    ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                    ></com.pacific.others.customtext.Custom_Text_View>
                             </LinearLayout>
 
 
@@ -448,40 +448,40 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/medium_text"
                                     android:textColor="@color/bar"
-                                    android:text="City"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    android:text="City"></com.pacific.others.customtext.Custom_Text_View>
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_marginTop="2dp"
                                     android:id="@+id/tvMailingCity"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/large_text"
                                     android:textColor="@color/black"
-                                    ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                    ></com.pacific.others.customtext.Custom_Text_View>
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/medium_text"
                                     android:textColor="@color/bar"
-                                    android:text="Zip/Postal Code"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    android:text="Zip/Postal Code"></com.pacific.others.customtext.Custom_Text_View>
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_marginTop="2dp"
                                     android:id="@+id/tvMailingZip"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/large_text"
                                     android:textColor="@color/black"
-                                    ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                    ></com.pacific.others.customtext.Custom_Text_View>
                             </LinearLayout>
 
 
@@ -508,14 +508,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             >
-                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                            <com.pacific.others.customtext.Custom_Text_View_Bold
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/color1"
                                 android:textSize="@dimen/big_text"
                                 android:text="Personal Contact Information"
                                 android:layout_marginTop="20dp"
-                                android:layout_weight="1"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                                android:layout_weight="1"></com.pacific.others.customtext.Custom_Text_View_Bold>
 
                         </LinearLayout>
 
@@ -529,40 +529,40 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/medium_text"
                                     android:textColor="@color/bar"
-                                    android:text="Home Phone"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    android:text="Home Phone"></com.pacific.others.customtext.Custom_Text_View>
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_marginTop="2dp"
                                     android:id="@+id/tvHomePhone"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/large_text"
                                     android:textColor="@color/black"
-                                    ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                    ></com.pacific.others.customtext.Custom_Text_View>
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/medium_text"
                                     android:textColor="@color/bar"
-                                    android:text="Mobile Phone"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    android:text="Mobile Phone"></com.pacific.others.customtext.Custom_Text_View>
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_marginTop="2dp"
                                     android:id="@+id/tvMobilePhone"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/large_text"
                                     android:textColor="@color/black"
-                                    ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                    ></com.pacific.others.customtext.Custom_Text_View>
                             </LinearLayout>
 
 
@@ -577,20 +577,20 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/medium_text"
                                     android:textColor="@color/bar"
-                                    android:text="Personal Email"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    android:text="Personal Email"></com.pacific.others.customtext.Custom_Text_View>
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_marginTop="2dp"
                                     android:id="@+id/tvPersonalEmail"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/large_text"
                                     android:textColor="@color/black"
-                                    ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                    ></com.pacific.others.customtext.Custom_Text_View>
                             </LinearLayout>
 
 
@@ -606,20 +606,20 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/medium_text"
                                     android:textColor="@color/bar"
-                                    android:text="School Email"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    android:text="School Email"></com.pacific.others.customtext.Custom_Text_View>
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_marginTop="2dp"
                                     android:id="@+id/tvSchoolEmail"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/large_text"
                                     android:textColor="@color/black"
-                                    ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                    ></com.pacific.others.customtext.Custom_Text_View>
                             </LinearLayout>
 
 

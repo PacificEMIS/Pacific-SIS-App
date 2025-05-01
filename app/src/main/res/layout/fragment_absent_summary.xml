@@ -32,7 +32,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                            <com.pacific.others.customtext.Custom_Text_View_Bold
                                 android:text="Absence Summary"
                                 android:layout_marginLeft="20dp"
                                 android:layout_gravity="center"
@@ -40,7 +40,7 @@
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/big_text"
-                                android:layout_weight="0.5"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                                android:layout_weight="0.5"></com.pacific.others.customtext.Custom_Text_View_Bold>
 
 
 
@@ -74,12 +74,12 @@
                                 android:padding="10dp"
                                 android:background="@drawable/llgreystrokedesign"
                                 android:orientation="vertical">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/medium_text"
                                     android:textColor="@color/bar"
-                                    android:text="Show Report by"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                    android:text="Show Report by"></com.pacific.others.customtext.Custom_Text_View>
                                 <Spinner
                                     android:background="@drawable/llgreystrokedesign"
                                     android:id="@+id/spQTR"
@@ -94,12 +94,12 @@
                                 android:padding="10dp"
                                 android:background="@drawable/llgreystrokedesign"
                                 android:orientation="vertical">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/medium_text"
                                     android:textColor="@color/bar"
-                                    android:text="Period"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                    android:text="Period"></com.pacific.others.customtext.Custom_Text_View>
                                 <Spinner
                                     android:id="@+id/spPeriod"
                                     android:layout_marginTop="5dp"
@@ -118,19 +118,19 @@
                                     android:layout_weight="1"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent">
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    <com.pacific.others.customtext.Custom_Text_View
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/medium_text"
                                         android:textColor="@color/bar"
-                                        android:text="From Date"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View
+                                        android:text="From Date"></com.pacific.others.customtext.Custom_Text_View>
+                                    <com.pacific.others.customtext.Custom_Text_View
                                         android:layout_marginTop="5dp"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/medium_text"
                                         android:textColor="@color/black"
-                                        android:id="@+id/tvFromDate"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                        android:id="@+id/tvFromDate"></com.pacific.others.customtext.Custom_Text_View>
                                 </LinearLayout>
                                 <LinearLayout
                                     android:id="@+id/llFromDate"
@@ -158,19 +158,19 @@
                                     android:layout_weight="1"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent">
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    <com.pacific.others.customtext.Custom_Text_View
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/medium_text"
                                         android:textColor="@color/bar"
-                                        android:text="To Date"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View
+                                        android:text="To Date"></com.pacific.others.customtext.Custom_Text_View>
+                                    <com.pacific.others.customtext.Custom_Text_View
                                         android:layout_marginTop="5dp"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textSize="@dimen/medium_text"
                                         android:textColor="@color/black"
-                                        android:id="@+id/tvToDate"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                        android:id="@+id/tvToDate"></com.pacific.others.customtext.Custom_Text_View>
                                 </LinearLayout>
                                 <LinearLayout
                                     android:id="@+id/llToDate"
@@ -186,7 +186,7 @@
 
 
                             </LinearLayout>
-                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                            <com.pacific.others.customtext.Custom_Text_View_Bold
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:layout_marginTop="20dp"
@@ -195,7 +195,7 @@
                                 android:backgroundTint="@color/text_color"
                                 android:textColor="@color/white"
                                 android:text="Search"
-                                android:id="@+id/tvSearch"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                                android:id="@+id/tvSearch"></com.pacific.others.customtext.Custom_Text_View_Bold>
 
 
 

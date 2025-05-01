@@ -35,14 +35,14 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                            <com.pacific.others.customtext.Custom_Text_View_Bold
                                 android:id="@+id/tvTitle"
                                 android:layout_gravity="center"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Notices"
                                 android:textColor="@color/white"
-                                android:textSize="@dimen/big_text"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                                android:textSize="@dimen/big_text"></com.pacific.others.customtext.Custom_Text_View_Bold>
                         </LinearLayout>
 
 
@@ -63,7 +63,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
                             android:background="@color/color5">
-                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                            <com.pacific.others.customtext.Custom_Text_View_Bold
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/medium_text"
@@ -72,8 +72,8 @@
                                 android:text="Current"
                                 android:layout_weight="1"
                                 android:layout_gravity="center"
-                                android:id="@+id/tvCurrent"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
-                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                                android:id="@+id/tvCurrent"></com.pacific.others.customtext.Custom_Text_View_Bold>
+                            <com.pacific.others.customtext.Custom_Text_View_Bold
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:textSize="@dimen/medium_text"
@@ -82,7 +82,7 @@
                                 android:text="Past"
                                 android:layout_weight="1"
                                 android:layout_gravity="center"
-                                android:id="@+id/tvPast"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                                android:id="@+id/tvPast"></com.pacific.others.customtext.Custom_Text_View_Bold>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"

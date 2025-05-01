@@ -33,7 +33,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                            <com.pacific.others.customtext.Custom_Text_View_Bold
                                 android:text="My Schedule"
                                 android:layout_marginLeft="20dp"
                                 android:layout_gravity="center"
@@ -41,7 +41,7 @@
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/big_text"
-                                android:layout_weight="0.5"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                                android:layout_weight="0.5"></com.pacific.others.customtext.Custom_Text_View_Bold>
                             <LinearLayout
                                 android:gravity="end"
                                 android:layout_width="0dp"
@@ -73,13 +73,13 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/switch_button"></com.suke.widget.SwitchButton>
-                            <com.opensissasstudent.others.customtext.Custom_Text_View
+                            <com.pacific.others.customtext.Custom_Text_View
                                 android:layout_gravity="center"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/medium_text"
-                                android:text="Show Dropped Courses"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                android:text="Show Dropped Courses"></com.pacific.others.customtext.Custom_Text_View>
                         </LinearLayout>
 
 
@@ -120,14 +120,14 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:background="@color/white">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:layout_gravity="center"
                                     android:layout_marginLeft="10dp"
                                     android:textColor="@color/text_color"
-                                    android:id="@+id/tvMonth"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                    android:id="@+id/tvMonth"></com.pacific.others.customtext.Custom_Text_View>
                                 <LinearLayout
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
@@ -170,12 +170,12 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:layout_marginTop="20dp">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                                <com.pacific.others.customtext.Custom_Text_View_Bold
                                     android:textAlignment="center"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/large_text"
-                                    android:id="@+id/tvDateText"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                                    android:id="@+id/tvDateText"></com.pacific.others.customtext.Custom_Text_View_Bold>
                             </LinearLayout>
                             <androidx.recyclerview.widget.RecyclerView
                                 android:layout_marginTop="20dp"

@@ -12,7 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+        <com.pacific.others.customtext.Custom_Text_View_SemiBold
             android:textColor="@color/white"
             android:layout_width="0dp"
             android:layout_height="50dp"
@@ -23,7 +23,7 @@
             android:layout_marginRight="10dp"
             android:textSize="14sp"
             android:text="Get Gradebook \nGrades"
-            android:id="@+id/btnGetGradeBook"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+            android:id="@+id/btnGetGradeBook"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -47,28 +47,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp">
-                <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                <com.pacific.others.customtext.Custom_Text_View_SemiBold
                     android:layout_width="0dp"
                     android:layout_weight="0.5"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="14sp"
                     android:text="Student Details"
-                    android:layout_gravity="center"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                    android:layout_gravity="center"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
                 <LinearLayout
                     android:visibility="visible"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginLeft="10dp">
-                    <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                    <com.pacific.others.customtext.Custom_Text_View_SemiBold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="14sp"
                         android:text="Percent"
                         android:layout_gravity="center"
                         android:textColor="@color/black"
-                        android:visibility="gone"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                        android:visibility="gone"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
                     <com.suke.widget.SwitchButton
                         android:layout_marginLeft="5dp"
                         android:id="@+id/switch_button"
@@ -92,12 +92,12 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:orientation="vertical">
-                <com.opensissasstudent.others.customtext.Custom_Text_View
+                <com.pacific.others.customtext.Custom_Text_View
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/medium_text"
                     android:textColor="@color/black"
-                    android:text="Teacher Comments"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                    android:text="Teacher Comments"></com.pacific.others.customtext.Custom_Text_View>
                 <EditText
                     android:textSize="@dimen/small_text"
                     android:id="@+id/etComments"
@@ -114,7 +114,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="0.3"
                     android:gravity="center|right">
-                    <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                    <com.pacific.others.customtext.Custom_Text_View_SemiBold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
@@ -126,7 +126,7 @@
                         android:paddingRight="10dp"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
-                        android:textSize="@dimen/big_text"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                        android:textSize="@dimen/big_text"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
                 </LinearLayout>
             </LinearLayout>
 

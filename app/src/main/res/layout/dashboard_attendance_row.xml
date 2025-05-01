@@ -9,12 +9,12 @@
         android:layout_height="40dp"
         android:background="@drawable/oval"
         android:gravity="center">
-        <com.opensissasstudent.others.customtext.Custom_Text_View
+        <com.pacific.others.customtext.Custom_Text_View
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/small_text"
             android:textColor="@color/white"
-            android:id="@+id/tvStatus"></com.opensissasstudent.others.customtext.Custom_Text_View>
+            android:id="@+id/tvStatus"></com.pacific.others.customtext.Custom_Text_View>
     </LinearLayout>
 
 

@@ -14,28 +14,28 @@
             android:layout_height="30dp"
             android:src="@drawable/healthcare"
           ></ImageView>
-        <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+        <com.pacific.others.customtext.Custom_Text_View_SemiBold
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/medium_text"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:id="@+id/tvReordType"
-            android:textColor="@color/black"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+            android:textColor="@color/black"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="30dp">
-        <com.opensissasstudent.others.customtext.Custom_Text_View
+        <com.pacific.others.customtext.Custom_Text_View
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/small_text"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:id="@+id/tvRecordDate"
-            android:textColor="@color/bar"></com.opensissasstudent.others.customtext.Custom_Text_View>
+            android:textColor="@color/bar"></com.pacific.others.customtext.Custom_Text_View>
     </LinearLayout>
     <LinearLayout
 
@@ -43,14 +43,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="30dp">
-        <com.opensissasstudent.others.customtext.Custom_Text_View
+        <com.pacific.others.customtext.Custom_Text_View
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/medium_text"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:id="@+id/tvRecordDesc"
-            android:textColor="@color/black"></com.opensissasstudent.others.customtext.Custom_Text_View>
+            android:textColor="@color/black"></com.pacific.others.customtext.Custom_Text_View>
     </LinearLayout>
 
 </LinearLayout>

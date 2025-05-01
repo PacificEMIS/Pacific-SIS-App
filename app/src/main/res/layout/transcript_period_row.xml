@@ -16,26 +16,26 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
-            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+            <com.pacific.others.customtext.Custom_Text_View_Bold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="@dimen/medium_text"
                 android:id="@+id/tvMarkingPeriod"
-                ></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                ></com.pacific.others.customtext.Custom_Text_View_Bold>
             <LinearLayout
                 android:visibility="visible"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                <com.pacific.others.customtext.Custom_Text_View_Bold
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/grey"
                     android:textSize="@dimen/small_text"
                     android:id="@+id/tvCreditAttemted"
-                    android:layout_weight="1"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                    android:layout_weight="1"></com.pacific.others.customtext.Custom_Text_View_Bold>
                 <View
                     android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
@@ -44,14 +44,14 @@
                     android:layout_height="10dp"
                     android:background="@drawable/llwhitedesign"
                     android:backgroundTint="@color/grey"></View>
-                <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                <com.pacific.others.customtext.Custom_Text_View_Bold
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/grey"
                     android:textSize="@dimen/small_text"
                     android:id="@+id/tvCreditEarned"
-                    android:layout_weight="1"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                    android:layout_weight="1"></com.pacific.others.customtext.Custom_Text_View_Bold>
             </LinearLayout>
 
         </LinearLayout>

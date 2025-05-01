@@ -5,13 +5,13 @@
 
    android:layout_marginBottom="10dp">
 
-            <com.opensissasstudent.others.customtext.Custom_Text_View
+            <com.pacific.others.customtext.Custom_Text_View
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/small_text"
                 android:textColor="@color/black"
                 android:id="@+id/tvDate"
-                ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                ></com.pacific.others.customtext.Custom_Text_View>
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_marginLeft="15dp"
                 android:layout_width="match_parent"

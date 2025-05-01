@@ -18,12 +18,12 @@
        android:id="@+id/lnNoData"
        android:orientation="horizontal"
        android:gravity="center">
-      <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+      <com.pacific.others.customtext.Custom_Text_View_SemiBold
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:textSize="@dimen/medium_text"
           android:textColor="@color/text_color"
-          android:text="No Record Found"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+          android:text="No Record Found"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
    </LinearLayout>
 
 

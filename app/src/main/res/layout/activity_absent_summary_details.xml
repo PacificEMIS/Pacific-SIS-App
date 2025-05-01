@@ -37,7 +37,7 @@
                                 android:layout_height="30dp"
                                 android:src="@drawable/arrow_back_white_48dp"></ImageView>
 
-                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                            <com.pacific.others.customtext.Custom_Text_View_Bold
                                 android:text="Absence Summary"
                                 android:layout_marginLeft="20dp"
                                 android:layout_gravity="center"
@@ -45,7 +45,7 @@
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/big_text"
-                                android:layout_weight="0.5"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                                android:layout_weight="0.5"></com.pacific.others.customtext.Custom_Text_View_Bold>
 
 
 

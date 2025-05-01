@@ -46,19 +46,19 @@
             android:padding="20dp"
             android:visibility="visible">
 
-            <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+            <com.pacific.others.customtext.Custom_Text_View_SemiBold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Type your school’s openSIS web address below"
+                android:text="Type your school’s Pacific SIS web address below"
                 android:textColor="@color/white"
-                android:textSize="@dimen/large_text"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
-            <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                android:textSize="@dimen/large_text"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
+            <com.pacific.others.customtext.Custom_Text_View_SemiBold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Example : https://name.opensis.com"
                 android:textColor="@color/white"
                 android:textSize="@dimen/medium_text"
-                android:layout_marginTop="20dp"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                android:layout_marginTop="20dp"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
             <LinearLayout
 
                 android:layout_width="match_parent"
@@ -84,7 +84,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
-            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+            <com.pacific.others.customtext.Custom_Text_View_Bold
                 android:id="@+id/tvSubmit"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -94,18 +94,18 @@
                 android:gravity="center"
                 android:text="Submit"
                 android:textColor="@color/black"
-                android:textSize="@dimen/large_text"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                android:textSize="@dimen/large_text"></com.pacific.others.customtext.Custom_Text_View_Bold>
 
-            <com.opensissasstudent.others.customtext.Custom_Text_View
+            <com.pacific.others.customtext.Custom_Text_View
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Note: This openSIS app is for Parent, Student &amp; Teacher
+                android:text="Note: This Pacific SIS app is for Parent, Student &amp; Teacher
 portal functionalities and works with an
 active openSIS SaaS subscription."
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="@dimen/small_text"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                android:textSize="@dimen/small_text"></com.pacific.others.customtext.Custom_Text_View>
         </LinearLayout>
 
         <LinearLayout
@@ -132,13 +132,13 @@ active openSIS SaaS subscription."
                         android:background="@drawable/llwhitestrokedesign"
                         android:padding="10dp">
 
-                        <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                        <com.pacific.others.customtext.Custom_Text_View_SemiBold
                             android:id="@+id/tvUrl"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/large_text"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                            android:textSize="@dimen/large_text"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
 
                         <LinearLayout
                             android:id="@+id/lnEdit"
@@ -155,6 +155,7 @@ active openSIS SaaS subscription."
                     </LinearLayout>
 
                     <LinearLayout
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_marginTop="20dp"
@@ -163,7 +164,7 @@ active openSIS SaaS subscription."
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                        <com.pacific.others.customtext.Custom_Text_View_SemiBold
                             android:id="@+id/tvSchool"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -225,7 +226,7 @@ active openSIS SaaS subscription."
                         </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
 
-                    <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                    <com.pacific.others.customtext.Custom_Text_View_Bold
                         android:id="@+id/tvLogin"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
@@ -235,9 +236,9 @@ active openSIS SaaS subscription."
                         android:gravity="center"
                         android:text="Login"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/large_text"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                        android:textSize="@dimen/large_text"></com.pacific.others.customtext.Custom_Text_View_Bold>
 
-                    <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                    <com.pacific.others.customtext.Custom_Text_View_Bold
                         android:id="@+id/tvForgotUser"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
@@ -245,18 +246,18 @@ active openSIS SaaS subscription."
                         android:gravity="center"
                         android:text="Forgot Username/Password"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/large_text"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                        android:textSize="@dimen/large_text"></com.pacific.others.customtext.Custom_Text_View_Bold>
 
-                    <com.opensissasstudent.others.customtext.Custom_Text_View
+                    <com.pacific.others.customtext.Custom_Text_View
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Note: This openSIS app is for Parent, Student &amp; Teacher
+                        android:text="Note: This Pacific SIS app is for Parent, Student &amp; Teacher
 portal functionalities and works with an
 active openSIS SaaS subscription."
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/small_text"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                        android:textSize="@dimen/small_text"></com.pacific.others.customtext.Custom_Text_View>
                 </LinearLayout>
             </ScrollView>
 
@@ -274,16 +275,16 @@ active openSIS SaaS subscription."
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/apple"></ImageView>
-            <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+            <com.pacific.others.customtext.Custom_Text_View_SemiBold
                 android:textAlignment="center"
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/large_text"
                 android:textColor="@color/white"
-                android:text="We can’t find the school that you are looking for"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                android:text="We can’t find the school that you are looking for"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
 
-            <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+            <com.pacific.others.customtext.Custom_Text_View_SemiBold
                 android:id="@+id/tvTryAgain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -295,7 +296,7 @@ active openSIS SaaS subscription."
                 android:paddingRight="20dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:text="Try Again"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                android:text="Try Again"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
         </LinearLayout>
     </LinearLayout>
 

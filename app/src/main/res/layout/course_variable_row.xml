@@ -7,34 +7,34 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp">
-        <com.opensissasstudent.others.customtext.Custom_Text_View
+        <com.pacific.others.customtext.Custom_Text_View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/black"
             android:textSize="@dimen/small_text"
-            android:id="@+id/tvDay"></com.opensissasstudent.others.customtext.Custom_Text_View>
-        <com.opensissasstudent.others.customtext.Custom_Text_View
+            android:id="@+id/tvDay"></com.pacific.others.customtext.Custom_Text_View>
+        <com.pacific.others.customtext.Custom_Text_View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/black"
             android:textSize="@dimen/small_text"
-            android:id="@+id/tvPeriod"></com.opensissasstudent.others.customtext.Custom_Text_View>
-        <com.opensissasstudent.others.customtext.Custom_Text_View
+            android:id="@+id/tvPeriod"></com.pacific.others.customtext.Custom_Text_View>
+        <com.pacific.others.customtext.Custom_Text_View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="@color/black"
             android:textSize="@dimen/small_text"
-            android:id="@+id/tvTime"></com.opensissasstudent.others.customtext.Custom_Text_View>
-        <com.opensissasstudent.others.customtext.Custom_Text_View
+            android:id="@+id/tvTime"></com.pacific.others.customtext.Custom_Text_View>
+        <com.pacific.others.customtext.Custom_Text_View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/black"
             android:textSize="@dimen/small_text"
-            android:id="@+id/tvRoom"></com.opensissasstudent.others.customtext.Custom_Text_View>
+            android:id="@+id/tvRoom"></com.pacific.others.customtext.Custom_Text_View>
     </LinearLayout>
     <View
         android:layout_width="match_parent"

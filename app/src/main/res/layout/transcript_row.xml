@@ -11,29 +11,29 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1">
-            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+            <com.pacific.others.customtext.Custom_Text_View_Bold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="@dimen/big_text"
-                android:id="@+id/tvGarde"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
-            <com.opensissasstudent.others.customtext.Custom_Text_View
+                android:id="@+id/tvGarde"></com.pacific.others.customtext.Custom_Text_View_Bold>
+            <com.pacific.others.customtext.Custom_Text_View
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="@dimen/small_text"
                 android:id="@+id/tvSchool"
-                android:layout_marginLeft="5dp"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                android:layout_marginLeft="5dp"></com.pacific.others.customtext.Custom_Text_View>
         </LinearLayout>
 
 
-        <com.opensissasstudent.others.customtext.Custom_Text_View
+        <com.pacific.others.customtext.Custom_Text_View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/black"
             android:textSize="@dimen/small_text"
-            android:id="@+id/tvSchoolYear"></com.opensissasstudent.others.customtext.Custom_Text_View>
+            android:id="@+id/tvSchoolYear"></com.pacific.others.customtext.Custom_Text_View>
 
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView

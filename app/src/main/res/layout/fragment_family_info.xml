@@ -29,13 +29,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                        <com.pacific.others.customtext.Custom_Text_View_Bold
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/color1"
                             android:textSize="@dimen/big_text"
                             android:text="Contacts"
-                            android:layout_marginTop="20dp"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                            android:layout_marginTop="20dp"></com.pacific.others.customtext.Custom_Text_View_Bold>
                         <androidx.recyclerview.widget.RecyclerView
                             android:nestedScrollingEnabled="false"
                             android:layout_width="match_parent"
@@ -60,13 +60,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                        <com.pacific.others.customtext.Custom_Text_View_Bold
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/color1"
                             android:textSize="@dimen/big_text"
                             android:text="Sibling Info"
-                            android:layout_marginTop="20dp"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                            android:layout_marginTop="20dp"></com.pacific.others.customtext.Custom_Text_View_Bold>
                         <androidx.recyclerview.widget.RecyclerView
                             android:nestedScrollingEnabled="false"
                             android:layout_width="match_parent"

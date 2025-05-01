@@ -22,19 +22,19 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/bookwithbookmark"></ImageView>
-                <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                <com.pacific.others.customtext.Custom_Text_View_Bold
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
                     android:textColor="@color/black"
                     android:id="@+id/tvCourseTitle"
-                    android:textSize="@dimen/big_text"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                    android:textSize="@dimen/big_text"></com.pacific.others.customtext.Custom_Text_View_Bold>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <com.opensissasstudent.others.customtext.Custom_Text_View
+                <com.pacific.others.customtext.Custom_Text_View
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -42,7 +42,7 @@
                     android:textColor="@color/color7"
                     android:id="@+id/tvCourseShortName"
                     android:layout_marginTop="5dp"
-                    android:textSize="@dimen/medium_text"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                    android:textSize="@dimen/medium_text"></com.pacific.others.customtext.Custom_Text_View>
             </LinearLayout>
         </LinearLayout>
         <ImageView

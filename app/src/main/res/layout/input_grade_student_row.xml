@@ -23,23 +23,23 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginLeft="5dp">
-            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+            <com.pacific.others.customtext.Custom_Text_View_Bold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/small_text"
                 android:textColor="@color/black"
-                android:id="@+id/tvStudentName"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                android:id="@+id/tvStudentName"></com.pacific.others.customtext.Custom_Text_View_Bold>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp">
-                <com.opensissasstudent.others.customtext.Custom_Text_View
+                <com.pacific.others.customtext.Custom_Text_View
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/small_text"
                     android:textColor="@color/black"
-                    android:id="@+id/tvGrade"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                    android:id="@+id/tvGrade"></com.pacific.others.customtext.Custom_Text_View>
 
             </LinearLayout>
         </LinearLayout>
@@ -61,12 +61,12 @@
             android:orientation="vertical"
             android:gravity="center"
             android:layout_weight="1">
-            <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+            <com.pacific.others.customtext.Custom_Text_View_SemiBold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
                 android:textColor="@color/text_color"
-                android:text="Percent"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                android:text="Percent"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
 
             <EditText
                 android:inputType="number"
@@ -87,14 +87,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center">
-            <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+            <com.pacific.others.customtext.Custom_Text_View_SemiBold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
                 android:textColor="@color/text_color"
-                android:text="Letter Grade"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                android:text="Letter Grade"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
 
-            <com.opensissasstudent.others.customtext.Custom_EditText
+            <com.pacific.others.customtext.Custom_EditText
                 android:layout_marginLeft="5dp"
                 android:gravity="center"
                 android:textColor="@color/black"
@@ -103,7 +103,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@drawable/llgreystrokedesign"
-                android:visibility="gone"></com.opensissasstudent.others.customtext.Custom_EditText>
+                android:visibility="gone"></com.pacific.others.customtext.Custom_EditText>
             <LinearLayout
                 android:id="@+id/llLetterGrade"
                 android:gravity="center"
@@ -116,12 +116,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/spLetter"></Spinner>
-                <com.opensissasstudent.others.customtext.Custom_Text_View
+                <com.pacific.others.customtext.Custom_Text_View
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/medium_text"
-                    android:id="@+id/tvLetterGrade"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                    android:id="@+id/tvLetterGrade"></com.pacific.others.customtext.Custom_Text_View>
             </LinearLayout>
 
 
@@ -136,12 +136,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
-            <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+            <com.pacific.others.customtext.Custom_Text_View_SemiBold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
                 android:textColor="@color/text_color"
-                android:text="Credit Earned"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                android:text="Credit Earned"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
 
             <EditText
                 android:inputType="number"

@@ -33,60 +33,60 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Running Water"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                            android:text="Running Water"></com.pacific.others.customtext.Custom_Text_View>
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvRunningWater"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                            ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                            ></com.pacific.others.customtext.Custom_Text_View>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_marginTop="44dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Currently Available"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                            android:text="Currently Available"></com.pacific.others.customtext.Custom_Text_View>
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvCurAvailable"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                            ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                            ></com.pacific.others.customtext.Custom_Text_View>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_marginTop="20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Soap Water Available"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                            android:text="Soap Water Available"></com.pacific.others.customtext.Custom_Text_View>
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvSopaWater"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                           ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                           ></com.pacific.others.customtext.Custom_Text_View>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -99,60 +99,60 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Main Source Drinking Water"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                            android:text="Main Source Drinking Water"></com.pacific.others.customtext.Custom_Text_View>
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvMainDrinkingWater"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                            ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                            ></com.pacific.others.customtext.Custom_Text_View>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_marginTop="44dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Handwashing Available"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                            android:text="Handwashing Available"></com.pacific.others.customtext.Custom_Text_View>
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvHandwashing"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                            ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                            ></com.pacific.others.customtext.Custom_Text_View>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_marginTop="20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Hygine Education"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                            android:text="Hygine Education"></com.pacific.others.customtext.Custom_Text_View>
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvHygineEducation"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                           ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                           ></com.pacific.others.customtext.Custom_Text_View>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -166,12 +166,12 @@
             android:padding="20dp"
             android:background="@drawable/llwhitestrokedesign"
             android:backgroundTint="@color/white">
-            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+            <com.pacific.others.customtext.Custom_Text_View_Bold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/big_text"
                 android:textColor="@color/missing_attendance"
-                android:text="Female Toilet Information"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                android:text="Female Toilet Information"></com.pacific.others.customtext.Custom_Text_View_Bold>
             <LinearLayout
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
@@ -186,40 +186,40 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Female Toilet Type"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                            android:text="Female Toilet Type"></com.pacific.others.customtext.Custom_Text_View>
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvFemaleToiletType"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                            ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                            ></com.pacific.others.customtext.Custom_Text_View>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_marginTop="20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Total Female Toilets \nUsable"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                            android:text="Total Female Toilets \nUsable"></com.pacific.others.customtext.Custom_Text_View>
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvTotalFemale"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                          ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                          ></com.pacific.others.customtext.Custom_Text_View>
                     </LinearLayout>
 
 
@@ -233,40 +233,40 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Total Female Toilets"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                            android:text="Total Female Toilets"></com.pacific.others.customtext.Custom_Text_View>
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvTotalFemaleToilets"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                           ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                           ></com.pacific.others.customtext.Custom_Text_View>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_marginTop="20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Female Toilet Accessibility"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                            android:text="Female Toilet Accessibility"></com.pacific.others.customtext.Custom_Text_View>
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvFemaleToiletAccessbility"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                            ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                            ></com.pacific.others.customtext.Custom_Text_View>
                     </LinearLayout>
 
 
@@ -281,12 +281,12 @@
             android:padding="20dp"
             android:background="@drawable/llwhitestrokedesign"
             android:backgroundTint="@color/white">
-            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+            <com.pacific.others.customtext.Custom_Text_View_Bold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/big_text"
                 android:textColor="@color/missing_attendance"
-                android:text="Male Toilet Information"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                android:text="Male Toilet Information"></com.pacific.others.customtext.Custom_Text_View_Bold>
             <LinearLayout
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
@@ -301,40 +301,40 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Male Toilet Type"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                            android:text="Male Toilet Type"></com.pacific.others.customtext.Custom_Text_View>
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvMaleToiletType"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                           ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                           ></com.pacific.others.customtext.Custom_Text_View>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_marginTop="20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Total Male Toilets Usable"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                            android:text="Total Male Toilets Usable"></com.pacific.others.customtext.Custom_Text_View>
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvTotalMaleUsable"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                           ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                           ></com.pacific.others.customtext.Custom_Text_View>
                     </LinearLayout>
 
 
@@ -348,40 +348,40 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Total Male Toilets"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                            android:text="Total Male Toilets"></com.pacific.others.customtext.Custom_Text_View>
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvTotalMaleToilets"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                            ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                            ></com.pacific.others.customtext.Custom_Text_View>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_marginTop="20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Male Toilet Accessibility"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                            android:text="Male Toilet Accessibility"></com.pacific.others.customtext.Custom_Text_View>
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvMaleToiletAccessbility"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                           ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                           ></com.pacific.others.customtext.Custom_Text_View>
                     </LinearLayout>
 
 
@@ -396,12 +396,12 @@
             android:padding="20dp"
             android:background="@drawable/llwhitestrokedesign"
             android:backgroundTint="@color/white">
-            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+            <com.pacific.others.customtext.Custom_Text_View_Bold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/big_text"
                 android:textColor="@color/missing_attendance"
-                android:text="Common Toilet Information"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                android:text="Common Toilet Information"></com.pacific.others.customtext.Custom_Text_View_Bold>
             <LinearLayout
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
@@ -416,40 +416,40 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Common Toilet Type"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                            android:text="Common Toilet Type"></com.pacific.others.customtext.Custom_Text_View>
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvCommonToiletType"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                           ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                           ></com.pacific.others.customtext.Custom_Text_View>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_marginTop="20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Total Common Toilets Usable"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                            android:text="Total Common Toilets Usable"></com.pacific.others.customtext.Custom_Text_View>
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvTotalCommonUsable"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                            ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                            ></com.pacific.others.customtext.Custom_Text_View>
                     </LinearLayout>
 
 
@@ -463,40 +463,40 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Total Common Toilets"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                            android:text="Total Common Toilets"></com.pacific.others.customtext.Custom_Text_View>
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvTotalCommonToilets"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                            ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                            ></com.pacific.others.customtext.Custom_Text_View>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_marginTop="20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/medium_text"
                             android:textColor="@color/bar"
-                            android:text="Common Toilet Accessibility"></com.opensissasstudent.others.customtext.Custom_Text_View>
-                        <com.opensissasstudent.others.customtext.Custom_Text_View
+                            android:text="Common Toilet Accessibility"></com.pacific.others.customtext.Custom_Text_View>
+                        <com.pacific.others.customtext.Custom_Text_View
                             android:layout_marginTop="2dp"
                             android:id="@+id/tvCommonToiletAccessbility"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/large_text"
                             android:textColor="@color/black"
-                            ></com.opensissasstudent.others.customtext.Custom_Text_View>
+                            ></com.pacific.others.customtext.Custom_Text_View>
                     </LinearLayout>
 
 

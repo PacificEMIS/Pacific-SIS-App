@@ -18,13 +18,13 @@
             android:src="@drawable/check_black_48dp"
             app:tint="@color/white"></ImageView>
     </LinearLayout>
-    <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+    <com.pacific.others.customtext.Custom_Text_View_SemiBold
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/text_color"
         android:textSize="@dimen/medium_text"
         android:layout_gravity="center"
         android:layout_marginLeft="10dp"
-        android:id="@+id/tvGrade"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+        android:id="@+id/tvGrade"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
 
 </LinearLayout>

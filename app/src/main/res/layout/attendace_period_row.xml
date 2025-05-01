@@ -6,13 +6,13 @@
     android:orientation="horizontal"
     android:layout_marginRight="10dp"
     android:gravity="center">
-    <com.opensissasstudent.others.customtext.Custom_Text_View
+    <com.pacific.others.customtext.Custom_Text_View
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textSize="@dimen/medium_text"
         android:id="@+id/tvPeriod"
         android:text="P1"
-       ></com.opensissasstudent.others.customtext.Custom_Text_View>
+       ></com.pacific.others.customtext.Custom_Text_View>
 
 </LinearLayout>

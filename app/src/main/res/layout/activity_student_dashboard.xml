@@ -156,13 +156,13 @@
                                 android:visibility="gone"></ImageView>
                         </FrameLayout>
 
-                        <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                        <com.pacific.others.customtext.Custom_Text_View_SemiBold
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
                             android:text="Home"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/medium_text"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                            android:textSize="@dimen/medium_text"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
                     </LinearLayout>
 
                     <LinearLayout
@@ -202,13 +202,13 @@
                                 android:visibility="visible"></ImageView>
                         </FrameLayout>
 
-                        <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                        <com.pacific.others.customtext.Custom_Text_View_SemiBold
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
                             android:text="Messages"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/medium_text"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                            android:textSize="@dimen/medium_text"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
                     </LinearLayout>
 
                     <LinearLayout
@@ -247,13 +247,13 @@
                                 android:src="@drawable/classes"></ImageView>
                         </FrameLayout>
 
-                        <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                        <com.pacific.others.customtext.Custom_Text_View_SemiBold
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
                             android:text="Classes"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/medium_text"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                            android:textSize="@dimen/medium_text"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
                     </LinearLayout>
 
                     <LinearLayout
@@ -293,13 +293,13 @@
                                 android:visibility="visible"></ImageView>
                         </FrameLayout>
 
-                        <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                        <com.pacific.others.customtext.Custom_Text_View_SemiBold
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
                             android:text="Schedule"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/medium_text"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                            android:textSize="@dimen/medium_text"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
                     </LinearLayout>
 
                     <LinearLayout
@@ -340,13 +340,13 @@
                                 android:visibility="visible"></ImageView>
                         </FrameLayout>
 
-                        <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                        <com.pacific.others.customtext.Custom_Text_View_SemiBold
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
                             android:text="Reports"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/medium_text"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                            android:textSize="@dimen/medium_text"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -406,12 +406,12 @@
                                 android:paddingTop="5dp"
                                 android:paddingRight="10dp">
 
-                                <com.opensissasstudent.others.customtext.Custom_Text_View
+                                <com.pacific.others.customtext.Custom_Text_View
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="School"
                                     android:textColor="@color/bar"
-                                    android:textSize="@dimen/small_text"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                    android:textSize="@dimen/small_text"></com.pacific.others.customtext.Custom_Text_View>
 
                                 <Spinner
                                     android:id="@+id/spSchool"
@@ -434,12 +434,12 @@
                                     android:paddingTop="5dp"
                                     android:paddingRight="10dp">
 
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    <com.pacific.others.customtext.Custom_Text_View
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="School Year"
                                         android:textColor="@color/bar"
-                                        android:textSize="@dimen/small_text"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                        android:textSize="@dimen/small_text"></com.pacific.others.customtext.Custom_Text_View>
 
                                     <Spinner
                                         android:id="@+id/spSchoolYear"
@@ -460,12 +460,12 @@
                                     android:paddingLeft="10dp"
                                     android:paddingRight="10dp"
                                     android:paddingTop="5dp">
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View
+                                    <com.pacific.others.customtext.Custom_Text_View
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textColor="@color/bar"
                                         android:textSize="@dimen/small_text"
-                                        android:text="Marking Period"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                                        android:text="Marking Period"></com.pacific.others.customtext.Custom_Text_View>
                                     <Spinner
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
@@ -473,7 +473,7 @@
                                 </LinearLayout>
                             </LinearLayout>
 
-                            <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                            <com.pacific.others.customtext.Custom_Text_View_SemiBold
                                 android:id="@+id/tvSubmit"
                                 android:layout_width="match_parent"
                                 android:layout_height="50dp"
@@ -483,7 +483,7 @@
                                 android:gravity="center"
                                 android:text="Submit"
                                 android:textColor="@color/white"
-                                android:textSize="10sp"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                                android:textSize="10sp"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
 
                         </LinearLayout>
                     </androidx.core.widget.NestedScrollView>

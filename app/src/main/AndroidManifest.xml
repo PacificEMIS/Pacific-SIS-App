@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.opensissasstudent">
+    package="com.pacific">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -17,70 +17,70 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Opensis"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.teacher.activity.ClassDetailsActivity"
+        <activity android:name="com.pacific.ui.teacher.activity.ClassDetailsActivity"
             android:screenOrientation="userPortrait"></activity>
-        <activity android:name=".ui.common.activity.ForgotPasswordActivity"
+        <activity android:name="com.pacific.ui.common.activity.ForgotPasswordActivity"
             android:screenOrientation="userPortrait"></activity>
-        <activity android:name=".ui.teacher.activity.MissingClassAttendanceActivity"
+        <activity android:name="com.pacific.ui.teacher.activity.MissingClassAttendanceActivity"
             android:screenOrientation="userPortrait"></activity>
-        <activity android:name=".ui.teacher.activity.MissingAttendanceActivity"
+        <activity android:name="com.pacific.ui.teacher.activity.MissingAttendanceActivity"
             android:screenOrientation="userPortrait"></activity>
-        <activity android:name=".ui.teacher.activity.TeacherDashboardActivity"
+        <activity android:name="com.pacific.ui.teacher.activity.TeacherDashboardActivity"
             android:screenOrientation="userPortrait"></activity>
         <activity
-            android:name=".ui.common.activity.ChangePasswordActivity"
+            android:name="com.pacific.ui.common.activity.ChangePasswordActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.student.activity.AbsentSummaryDetailsActivity"
+            android:name="com.pacific.ui.student.activity.AbsentSummaryDetailsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.student.activity.TranscriptActivity"
+            android:name="com.pacific.ui.student.activity.TranscriptActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.student.activity.TranscriptReportActivity"
+            android:name="com.pacific.ui.student.activity.TranscriptReportActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.student.activity.ReportCardDetailsActivity"
+            android:name="com.pacific.ui.student.activity.ReportCardDetailsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.student.activity.MyGardeBookGradeDetailsActivity"
+            android:name="com.pacific.ui.student.activity.MyGardeBookGradeDetailsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.student.activity.ScheduleDetailsActivity"
+            android:name="com.pacific.ui.student.activity.ScheduleDetailsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.student.activity.CourseCatalogDetailsActivity"
+            android:name="com.pacific.ui.student.activity.CourseCatalogDetailsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.student.activity.MarkingPeriodDetailsActivity"
+            android:name="com.pacific.ui.student.activity.MarkingPeriodDetailsActivity"
             android:exported="false"
             android:screenOrientation="userPortrait">
             <meta-data
@@ -88,7 +88,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.common.activity.SpalshActivity"
+            android:name="com.pacific.ui.common.activity.SpalshActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -96,17 +96,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.student.activity.AssignmentDetailsActivity" />
-        <activity android:name=".ui.student.activity.SchoolDetailsActivity" />
+        <activity android:name="com.pacific.ui.student.activity.AssignmentDetailsActivity" />
+        <activity android:name="com.pacific.ui.student.activity.SchoolDetailsActivity" />
         <activity
-            android:name=".ui.student.activity.StudentDashboardActivity"
+            android:name="com.pacific.ui.student.activity.StudentDashboardActivity"
             android:screenOrientation="userPortrait" />
         <activity
-            android:name=".ui.common.activity.LoginActivity"
+            android:name="com.pacific.ui.common.activity.LoginActivity"
             android:screenOrientation="userPortrait" />
-        <activity android:name=".ui.teacher.activity.AssignmentDetailsActivity"
+        <activity android:name="com.pacific.ui.teacher.activity.AssignmentDetailsActivity"
             android:screenOrientation="userPortrait"></activity>
-        <activity android:name=".ui.teacher.activity.StudentOfGradeActivity"
+        <activity android:name="com.pacific.ui.teacher.activity.StudentOfGradeActivity"
             android:screenOrientation="userPortrait"></activity>
     </application>
 

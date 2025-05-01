@@ -20,14 +20,14 @@
             android:background="@drawable/llwhiteonesidecurvedesign"
             android:backgroundTint="@color/greencolor"></LinearLayout>
 
-        <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+        <com.pacific.others.customtext.Custom_Text_View_SemiBold
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="20dp"
             android:textColor="@color/black"
-            android:textSize="@dimen/large_text"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+            android:textSize="@dimen/large_text"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
     </LinearLayout>
 
 </LinearLayout>

@@ -36,14 +36,14 @@
                             android:layout_width="34dp"
                             android:layout_height="34dp"
                             android:src="@drawable/arrow_back_white_48dp"></ImageView>
-                        <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                        <com.pacific.others.customtext.Custom_Text_View_Bold
                             android:id="@+id/tvSchoolName"
                             android:layout_marginLeft="20dp"
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/big_text"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                            android:textSize="@dimen/big_text"></com.pacific.others.customtext.Custom_Text_View_Bold>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_marginTop="20dp"
@@ -57,7 +57,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
-                                <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                                <com.pacific.others.customtext.Custom_Text_View_SemiBold
                                     android:id="@+id/tvGeneralInfo"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -68,8 +68,8 @@
                                     android:background="@drawable/llwhitecurvedesign"
                                     android:textColor="@color/text_color"
                                     android:textSize="@dimen/medium_text"
-                                    android:text="General Info"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
-                                <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                                    android:text="General Info"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
+                                <com.pacific.others.customtext.Custom_Text_View_SemiBold
                                     android:layout_marginLeft="20dp"
                                     android:id="@+id/tvSchoolEnrollMent"
                                     android:layout_width="wrap_content"
@@ -82,8 +82,8 @@
                                     android:backgroundTint="@color/text_color"
                                     android:textColor="@color/white"
                                     android:textSize="@dimen/medium_text"
-                                    android:text="School and Enrollment"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
-                                <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                                    android:text="School and Enrollment"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
+                                <com.pacific.others.customtext.Custom_Text_View_SemiBold
                                     android:layout_marginLeft="20dp"
                                     android:id="@+id/tvAddressContact"
                                     android:layout_width="wrap_content"
@@ -96,8 +96,8 @@
                                     android:backgroundTint="@color/text_color"
                                     android:textColor="@color/white"
                                     android:textSize="@dimen/medium_text"
-                                    android:text="Address and Contact"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
-                                <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                                    android:text="Address and Contact"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
+                                <com.pacific.others.customtext.Custom_Text_View_SemiBold
                                     android:layout_marginLeft="20dp"
                                     android:id="@+id/tvFamily"
                                     android:layout_width="wrap_content"
@@ -110,8 +110,8 @@
                                     android:backgroundTint="@color/text_color"
                                     android:textColor="@color/white"
                                     android:textSize="@dimen/medium_text"
-                                    android:text="Family Info"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
-                                <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                                    android:text="Family Info"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
+                                <com.pacific.others.customtext.Custom_Text_View_SemiBold
                                     android:layout_marginLeft="20dp"
                                     android:id="@+id/tvMedical"
                                     android:layout_width="wrap_content"
@@ -124,7 +124,7 @@
                                     android:backgroundTint="@color/text_color"
                                     android:textColor="@color/white"
                                     android:textSize="@dimen/medium_text"
-                                    android:text="Medical Info"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                                    android:text="Medical Info"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
                             </LinearLayout>
                         </HorizontalScrollView>
                     </LinearLayout>

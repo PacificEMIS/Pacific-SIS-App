@@ -33,7 +33,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+                            <com.pacific.others.customtext.Custom_Text_View_Bold
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -41,7 +41,7 @@
                                 android:layout_weight="0.5"
                                 android:text="Daily Attendance"
                                 android:textColor="@color/white"
-                                android:textSize="@dimen/big_text"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                                android:textSize="@dimen/big_text"></com.pacific.others.customtext.Custom_Text_View_Bold>
 
 
                         </LinearLayout>
@@ -54,7 +54,7 @@
                             android:orientation="horizontal"
                             android:visibility="gone">
 
-                            <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                            <com.pacific.others.customtext.Custom_Text_View_SemiBold
                                 android:id="@+id/tvPeriod"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -65,9 +65,9 @@
                                 android:paddingBottom="10dp"
                                 android:text="Attendance by Period"
                                 android:textColor="@color/text_color"
-                                android:textSize="@dimen/medium_text"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                                android:textSize="@dimen/medium_text"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
 
-                            <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                            <com.pacific.others.customtext.Custom_Text_View_SemiBold
                                 android:id="@+id/tvDay"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
                                 android:paddingBottom="10dp"
                                 android:text="Attendance by Day"
                                 android:textColor="@color/white"
-                                android:textSize="@dimen/medium_text"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                                android:textSize="@dimen/medium_text"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
 
                         </LinearLayout>
 
@@ -113,12 +113,12 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
 
-                                    <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+                                    <com.pacific.others.customtext.Custom_Text_View_SemiBold
                                         android:layout_width="100dp"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center"
                                         android:text="Date"
-                                        android:textSize="@dimen/small_text"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                                        android:textSize="@dimen/small_text"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
 
                                     <androidx.recyclerview.widget.RecyclerView
                                         android:id="@+id/rvPeriod"

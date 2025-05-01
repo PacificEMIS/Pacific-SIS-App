@@ -18,14 +18,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.opensissasstudent.others.customtext.Custom_Text_View_Bold
+            <com.pacific.others.customtext.Custom_Text_View_Bold
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/medium_text"
                 android:textColor="@color/text_color"
                 android:text="Comments"
-                android:id="@+id/tvNoticeTitle"></com.opensissasstudent.others.customtext.Custom_Text_View_Bold>
+                android:id="@+id/tvNoticeTitle"></com.pacific.others.customtext.Custom_Text_View_Bold>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -72,14 +72,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imgNotice"></ImageView>
-            <com.opensissasstudent.others.customtext.Custom_Text_View
+            <com.pacific.others.customtext.Custom_Text_View
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/medium_text"
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/black"
                 android:text="Comments"
-                android:id="@+id/tvNoticeDetails"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                android:id="@+id/tvNoticeDetails"></com.pacific.others.customtext.Custom_Text_View>
         </LinearLayout>
 
     </LinearLayout>

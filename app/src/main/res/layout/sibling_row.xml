@@ -19,28 +19,28 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="1">
-            <com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold
+            <com.pacific.others.customtext.Custom_Text_View_SemiBold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/large_text"
                 android:textColor="@color/black"
-                android:id="@+id/tvName"></com.opensissasstudent.others.customtext.Custom_Text_View_SemiBold>
+                android:id="@+id/tvName"></com.pacific.others.customtext.Custom_Text_View_SemiBold>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:weightSum="2">
-                <com.opensissasstudent.others.customtext.Custom_Text_View
+                <com.pacific.others.customtext.Custom_Text_View
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:textColor="@color/bar"
                     android:textSize="@dimen/small_text"
                     android:id="@+id/tvSchoolName"
                     android:layout_weight="1"
-                    android:layout_gravity="center"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                    android:layout_gravity="center"></com.pacific.others.customtext.Custom_Text_View>
 
 
-                <com.opensissasstudent.others.customtext.Custom_Text_View
+                <com.pacific.others.customtext.Custom_Text_View
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
@@ -51,7 +51,7 @@
                     android:gravity="center"
                     android:id="@+id/tvGrade"
                     android:layout_gravity="center"
-                    android:visibility="gone"></com.opensissasstudent.others.customtext.Custom_Text_View>
+                    android:visibility="gone"></com.pacific.others.customtext.Custom_Text_View>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
